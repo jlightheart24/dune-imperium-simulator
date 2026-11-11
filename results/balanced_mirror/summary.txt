@@ -1,0 +1,29 @@
+$ python3 -m dune_sim batch -n 400 --fixed-seats --detail -p balanced balanced balanced balanced --save balanced_mirror
+
+400 games, 4 players, avg 9.7 rounds
+
+strategy                       win %        95% CI   avg VP  avg rank  alliances   deck  end $  3rd agent  council  mentats
+---------------------------------------------------------------------------------------------------------------------------
+balanced                       25.0%     22.9-27.2     7.55      2.50       0.79   22.4    5.7        65%      96%      1.1
+
+(fair share = 25.0% per seat; 95% CI = Wilson interval on win %; end $ = solari left at game end; mentats = Mentat uses per game)
+
+== balanced: averages per player per game ==
+  earned over the game : spice 16.6, solari 21.7, water 8.0, troops recruited 20.8
+  conflict             : troops sent 21.6 per game (2.22 per round), fought in 77% of rounds, won 2.30 conflicts outright
+  when they fought     : 1st 31%, 2nd 32%, 3rd 29%, no reward 8% (1.0 troops per game lost for nothing)
+  at game end          : 22.4 cards owned, 0.5 trashed, 1.08 Spice Must Flow, 0.6 intrigue in hand
+  bought cards by type : none 32%, fremen 29%, guild 14%, bene_gesserit 13%, emperor 12%
+  by round (held at end of round; troops/strength = committed to that round's conflict):
+  round     VP  spice  solari  water  garrison  cards  troops  strength  games
+      1   0.22   0.39    2.01   1.17      2.54   10.8    1.57      3.81   1600
+      2   0.81   1.30    3.34   1.45      1.83   11.6    1.92      4.79   1600
+      3   1.40   3.14    3.69   1.51      1.36   13.0    1.82      4.82   1600
+      4   1.99   3.69    4.10   2.00      1.47   14.4    1.73      4.69   1600
+      5   2.66   4.21    4.35   2.54      1.70   15.9    1.82      4.91   1600
+      6   3.30   5.03    4.38   3.01      2.01   17.3    1.93      5.31   1600
+      7   4.25   5.98    4.46   3.40      2.02   18.8    2.73      7.18   1600
+      8   5.32   6.61    4.77   3.68      2.10   20.2    2.89      7.73   1600
+      9   6.49   7.02    4.97   3.82      2.12   21.6    2.98      8.05   1548
+     10   7.64   7.33    6.06   3.89      2.14   22.8    3.09      8.46   1204
+win % by seat: P1 21.5%, P2 24.5%, P3 27.0%, P4 27.0%

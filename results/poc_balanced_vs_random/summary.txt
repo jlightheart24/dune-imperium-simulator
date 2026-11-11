@@ -1,0 +1,10 @@
+$ python3 -m dune_sim batch -n 200 -p balanced random random random --save poc_balanced_vs_random
+
+200 games, 4 players, avg 8.9 rounds
+
+strategy                       win %        95% CI   avg VP  avg rank  alliances   deck  end $  3rd agent  council  mentats
+---------------------------------------------------------------------------------------------------------------------------
+balanced                      100.0%    98.1-100.0    11.04      1.00       1.46   19.6    4.8        70%      97%      0.9
+random                          0.0%       0.0-0.6     2.77      3.00       0.16   19.1   10.6        23%      38%      0.8
+
+(fair share = 25.0% per seat; 95% CI = Wilson interval on win %; end $ = solari left at game end; mentats = Mentat uses per game)

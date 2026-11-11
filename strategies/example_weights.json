@@ -1,0 +1,7 @@
+{
+  "name": "bg-intrigue",
+  "intrigue": 3.0,
+  "influence": {"emperor": 1.0, "guild": 1.0, "bene_gesserit": 4.0, "fremen": 1.0},
+  "draw": 2.0,
+  "aggression": 0.2
+}

@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulation Replay</title>
+<style>
+:root {
+  --bg: #f6f3ee; --panel: #ffffff; --panel-2: #f0ece5; --ink: #1f1b16; --muted: #6f675c;
+  --line: #ddd5c8; --accent: #b4621d; --hl: #fff1c9;
+  --p0: #2f6fd6; --p1: #c23b3b; --p2: #2a9a5b; --p3: #8a4fc7;
+  --f-emperor: #8c6d1f; --f-guild: #b8541f; --f-bene_gesserit: #5b5b8f; --f-fremen: #2f7f8f;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15130f; --panel: #1f1c17; --panel-2: #2a261f; --ink: #ece6dc; --muted: #a39a8c;
+    --line: #3a342b; --accent: #e08a3c; --hl: #4a3d1c;
+    --p0: #6aa0ff; --p1: #ff7a7a; --p2: #5fd08f; --p3: #c08cff;
+    --f-emperor: #d6b04f; --f-guild: #f0884a; --f-bene_gesserit: #9a9ae0; --f-fremen: #5fc3d4;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #15130f; --panel: #1f1c17; --panel-2: #2a261f; --ink: #ece6dc; --muted: #a39a8c;
+  --line: #3a342b; --accent: #e08a3c; --hl: #4a3d1c;
+  --p0: #6aa0ff; --p1: #ff7a7a; --p2: #5fd08f; --p3: #c08cff;
+  --f-emperor: #d6b04f; --f-guild: #f0884a; --f-bene_gesserit: #9a9ae0; --f-fremen: #5fc3d4;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 13px/1.4 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+header { position: sticky; top: 0; z-index: 5; background: var(--panel); border-bottom: 1px solid var(--line);
+  padding: 10px 16px; display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; }
+h1 { font-size: 15px; margin: 0; font-weight: 650; }
+.muted { color: var(--muted); }
+.controls { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+button, select { font: inherit; color: var(--ink); background: var(--panel-2); border: 1px solid var(--line);
+  border-radius: 6px; padding: 4px 10px; cursor: pointer; }
+button:hover { border-color: var(--accent); }
+button.primary { background: var(--accent); color: #fff; border-color: var(--accent); min-width: 64px; }
+input[type=range] { width: min(320px, 60vw); accent-color: var(--accent); }
+.step { font-variant-numeric: tabular-nums; min-width: 110px; }
+main { padding: 12px 16px 24px; display: grid; gap: 12px;
+  grid-template-columns: minmax(0, 1fr); grid-template-areas: "event" "players" "board" "log"; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+.event { grid-area: event; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.event .msg { font-size: 15px; font-weight: 600; flex: 1 1 300px; }
+.chip { display: inline-block; padding: 1px 8px; border-radius: 999px; background: var(--panel-2);
+  border: 1px solid var(--line); font-size: 12px; white-space: nowrap; }
+.board { grid-area: board; display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); align-content: start; }
+.area h3 { margin: 0 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.area { border-top: 3px solid var(--line); }
+.tiles { display: grid; gap: 6px; }
+.tile { border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; background: var(--panel-2); position: relative; }
+.tile .nm { font-weight: 600; display: flex; justify-content: space-between; gap: 6px; }
+.tile .fx { color: var(--muted); font-size: 12px; }
+.tile.occ { border-width: 2px; }
+.tile.flash { background: var(--hl); }
+.agent { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex: none; }
+.conflict { border-top: 3px solid var(--accent); }
+.rank { display: flex; justify-content: space-between; gap: 8px; padding: 2px 0; }
+.log { grid-area: log; max-height: 340px; overflow: auto; padding: 0; position: relative; }
+.log h3 { position: sticky; top: 0; background: var(--panel); margin: 0; padding: 10px 12px; font-size: 13px; border-bottom: 1px solid var(--line); }
+.log ol { list-style: none; margin: 0; padding: 4px 0; }
+.log li.round { border-top: 1px solid var(--line); padding-top: 6px; }
+.log li { padding: 3px 12px; cursor: pointer; border-left: 3px solid transparent; font-size: 12px; }
+.log li:hover { background: var(--panel-2); }
+.log li.cur { background: var(--hl); border-left-color: var(--accent); }
+.log li.round { font-weight: 650; margin-top: 6px; }
+.log li .note { color: var(--muted); display: block; padding-left: 10px; }
+.players { grid-area: players; display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+.pl { border-top: 4px solid var(--pc); }
+.pl.active { box-shadow: 0 0 0 2px var(--pc); }
+.pl .top { display: flex; justify-content: space-between; align-items: baseline; }
+.pl .nm { font-weight: 700; font-size: 15px; color: var(--pc); }
+.vp { font-size: 26px; font-weight: 750; font-variant-numeric: tabular-nums; line-height: 1; }
+.vp small { font-size: 12px; font-weight: 500; color: var(--muted); }
+.res { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; margin: 8px 0; }
+.res div { background: var(--panel-2); border-radius: 6px; padding: 3px 6px; text-align: center; }
+.res b { display: block; font-size: 15px; font-variant-numeric: tabular-nums; }
+.res span { font-size: 11px; color: var(--muted); }
+.inf { display: grid; grid-template-columns: 96px 1fr 18px; gap: 4px 6px; align-items: center; font-size: 12px; }
+.bar { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px; }
+.bar i { height: 8px; border-radius: 2px; background: var(--line); }
+.bar i.on { background: var(--fc); }
+.bar i.t { outline: 1px dashed var(--muted); outline-offset: 1px; }
+.zone { margin-top: 6px; font-size: 12px; }
+.zone b { color: var(--muted); font-weight: 600; margin-right: 4px; }
+.cards { display: inline; }
+.cards span { display: inline-block; background: var(--panel-2); border: 1px solid var(--line); border-radius: 4px; padding: 0 5px; margin: 1px 2px 1px 0; }
+.empty { text-align: center; padding: 60px 16px; }
+.win { color: var(--accent); font-weight: 700; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Simulation Replay</h1>
+  <span id="meta" class="muted"></span>
+  <div class="controls">
+    <button id="first" title="First (Home)">⏮</button>
+    <button id="prevRound" title="Previous round (Shift+←)">« R</button>
+    <button id="prev" title="Back (←)">◀</button>
+    <button id="play" class="primary" title="Play/Pause (Space)">Play</button>
+    <button id="next" title="Forward (→)">▶</button>
+    <button id="nextRound" title="Next round (Shift+→)">R »</button>
+    <button id="last" title="Last (End)">⏭</button>
+    <select id="speed" title="Playback speed">
+      <option value="1500">0.5×</option><option value="800" selected>1×</option>
+      <option value="400">2×</option><option value="150">5×</option>
+    </select>
+  </div>
+  <input id="slider" type="range" min="0" value="0">
+  <span id="step" class="step muted"></span>
+  <label class="muted" style="margin-left:auto">Load replay JSON <input id="file" type="file" accept=".json"></label>
+</header>
+<main id="app"><div class="card empty" style="grid-column:1/-1">No replay embedded. Run <code>python -m dune_sim watch ...</code> or load a replay JSON.</div></main>
+
+<script>
+const EMBEDDED = /*__REPLAY__*/null;
+const FACTIONS = ["emperor", "guild", "bene_gesserit", "fremen"];
+const FLABEL = {emperor: "Emperor", guild: "Spacing Guild", bene_gesserit: "Bene Gesserit", fremen: "Fremen"};
+const AREA_ORDER = ["Emperor", "Spacing Guild", "Bene Gesserit", "Fremen", "Landsraad", "CHOAM", "Arrakis", "Desert"];
+const AREA_COLOR = {Emperor: "--f-emperor", "Spacing Guild": "--f-guild", "Bene Gesserit": "--f-bene_gesserit", Fremen: "--f-fremen"};
+let R = null, i = 0, timer = null;
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const pc = (k) => `var(--p${k % 4})`;
+const costStr = (c) => Object.entries(c || {}).map(([k, v]) => `${v} ${k}`).join(", ");
+const cards = (arr) => arr.length ? `<span class="cards">${arr.map(n => `<span>${esc(n)}</span>`).join("")}</span>` : `<span class="muted">—</span>`;
+
+function load(rep) {
+  R = rep; i = 0; stop();
+  $("slider").max = R.frames.length - 1;
+  const res = R.meta.result;
+  $("meta").textContent = `seed ${R.meta.seed} · ${R.meta.specs.join(" vs ")} · winner: ` +
+    res.winners.map(w => `${res.players[w].name} (${res.players[w].strategy})`).join(", ");
+  $("app").innerHTML = `
+    <section class="card event" id="event"></section>
+    <section class="board" id="board"></section>
+    <aside class="card log"><h3>Game log</h3><ol id="log"></ol></aside>
+    <section class="players" id="players"></section>`;
+  buildLog();
+  render();
+}
+
+function buildLog() {
+  $("log").innerHTML = R.frames.map((f, k) => {
+    const round = f.msg.startsWith("Round ") || f.msg.startsWith("Game");
+    const notes = (f.notes || []).map(n => `<span class="note">${esc(n)}</span>`).join("");
+    const dot = f.actor != null ? `<span class="dot" style="background:${pc(f.actor)}"></span> ` : "";
+    return `<li data-k="${k}" class="${round ? "round" : ""}">${dot}${esc(f.msg)}${notes}</li>`;
+  }).join("");
+  $("log").onclick = (e) => { const li = e.target.closest("li"); if (li) { stop(); go(+li.dataset.k); } };
+}
+
+function render() {
+  const f = R.frames[i], s = f.state, prev = i > 0 ? R.frames[i - 1].state : null;
+  $("slider").value = i;
+  $("step").textContent = `step ${i + 1}/${R.frames.length}`;
+  const names = s.players.map(p => p.name);
+
+  // event bar
+  const cf = s.conflict;
+  $("event").innerHTML = `
+    <span class="chip">Round ${s.round || "–"}</span>
+    <span class="chip">${esc(s.phase)}</span>
+    <span class="msg">${f.actor != null ? `<span class="dot" style="background:${pc(f.actor)}"></span> ` : ""}${esc(f.msg)}</span>
+    <span class="chip">First player: ${esc(names[s.first])}</span>
+    <span class="chip">Conflicts left: ${s.conflicts_left}</span>`;
+
+  // board grouped by area
+  const byArea = {};
+  R.spaces.forEach(sp => (byArea[sp.area] = byArea[sp.area] || []).push(sp));
+  let html = AREA_ORDER.filter(a => byArea[a]).map(a => {
+    const col = AREA_COLOR[a] ? `var(${AREA_COLOR[a]})` : "var(--line)";
+    const tiles = byArea[a].map(sp => {
+      const b = s.board[sp.name], pb = prev && prev.board[sp.name];
+      const occ = b.agent != null;
+      const flash = occ && (!pb || pb.agent !== b.agent);
+      const tags = [sp.combat ? "⚔" : "", sp.cost && Object.keys(sp.cost).length ? costStr(sp.cost) : "",
+        Object.keys(sp.requires || {}).length ? "needs " + Object.entries(sp.requires).map(([k, v]) => `${v} ${FLABEL[k]}`).join("") : ""].filter(Boolean).join(" · ");
+      return `<div class="tile ${occ ? "occ" : ""} ${flash ? "flash" : ""}" style="${occ ? `border-color:${pc(b.agent)}` : ""}">
+        <div class="nm"><span>${esc(sp.name)}</span>${occ ? `<span class="agent" style="color:${pc(b.agent)}"><span class="dot" style="background:${pc(b.agent)}"></span>${esc(names[b.agent])}</span>` : ""}</div>
+        <div class="fx">${esc(sp.effect)}${tags ? ` <span>(${esc(tags)})</span>` : ""}</div>
+        ${b.bonus ? `<div class="fx" style="color:var(--accent)">+${b.bonus} bonus spice</div>` : ""}
+        ${b.control != null ? `<div class="fx">controlled by <b style="color:${pc(b.control)}">${esc(names[b.control])}</b></div>` : ""}
+      </div>`;
+    }).join("");
+    return `<div class="card area" style="border-top-color:${col}"><h3>${esc(a)}</h3><div class="tiles">${tiles}</div></div>`;
+  }).join("");
+
+  // conflict panel
+  if (cf) {
+    const ranked = s.players.map((p, k) => ({p, k})).filter(x => x.p.conflict > 0 || x.p.strength > 0)
+      .sort((a, b) => b.p.strength - a.p.strength);
+    html += `<div class="card conflict"><h3 style="margin:0 0 4px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)">Conflict · level ${cf.level}</h3>
+      <div style="font-weight:650;font-size:14px">${esc(cf.name)}${cf.control ? ` <span class="chip">control: ${esc(cf.control)}</span>` : ""}</div>
+      ${cf.rewards.map((r, k) => `<div class="fx muted">${["1st", "2nd", "3rd"][k]}: ${esc(r)}</div>`).join("")}
+      <div style="margin-top:6px">${ranked.length ? ranked.map(x => `<div class="rank"><span><span class="dot" style="background:${pc(x.k)}"></span> ${esc(x.p.name)}</span><span>${x.p.conflict} troops · ${x.p.revealed ? x.p.swords + " swords" : "swords hidden"} · <b>${x.p.strength}</b></span></div>`).join("") : `<span class="muted">No troops committed</span>`}</div>
+    </div>`;
+    const row = s.row.map(c => `<span style="${c.type ? `border-left:3px solid var(--f-${c.type})` : ""}">${esc(c.name)} <span class="muted">(${c.cost})</span> <span style="font-size:11px;${c.type ? `color:var(--f-${c.type})` : "color:var(--muted)"}">${c.type ? FLABEL[c.type] : "no type"}</span></span>`).join("");
+    html += `<div class="card"><h3 style="margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)">Imperium row</h3><div class="cards">${row}</div>
+      <div class="fx muted" style="margin-top:6px">Reserve: ${Object.entries(s.reserve).map(([k, v]) => `${esc(k)} ×${v}`).join(" · ")}</div></div>`;
+  }
+  $("board").innerHTML = html;
+
+  // players
+  const res = R.meta.result;
+  const lastFrame = i === R.frames.length - 1;
+  $("players").innerHTML = s.players.map((p, k) => {
+    const inf = FACTIONS.map(fa => {
+      const ally = s.alliance[fa] === k;
+      const bars = [1,2,3,4,5,6].map(n => `<i class="${p.influence[fa] >= n ? "on" : ""} ${n === 2 || n === 4 ? "t" : ""}"></i>`).join("");
+      return `<span>${FLABEL[fa]}</span><span class="bar" style="--fc:var(--f-${fa})">${bars}</span><span title="alliance">${ally ? "★" : ""}</span>`;
+    }).join("");
+    const agents = Array.from({length: p.agents_total}, (_, n) => `<span class="dot" style="background:${n < p.agents_used ? "var(--line)" : pc(k)}"></span>`).join(" ");
+    const won = lastFrame && res.winners.includes(k);
+    return `<div class="card pl ${f.actor === k ? "active" : ""}" style="--pc:${pc(k)}">
+      <div class="top"><div><div class="nm">${esc(p.name)} ${s.first === k ? "<span class='chip'>first</span>" : ""} ${won ? "<span class='win'>WINNER</span>" : ""}</div>
+        <div class="muted">${esc(p.strategy)}</div></div>
+        <div class="vp">${p.vp}<small> VP</small></div></div>
+      <div class="res">
+        <div><b>${p.spice}</b><span>spice</span></div><div><b>${p.solari}</b><span>solari</span></div>
+        <div><b>${p.water}</b><span>water</span></div><div><b>${p.garrison}</b><span>garrison</span></div>
+        <div><b>${p.conflict}</b><span>in conflict</span></div><div><b>${p.strength}</b><span>strength</span></div>
+        <div><b>${p.persuasion}</b><span>persuasion</span></div><div><b>${p.intrigue.length}</b><span>intrigue</span></div>
+      </div>
+      <div class="inf">${inf}</div>
+      <div class="zone"><b>Agents</b> ${agents} ${p.seat ? "<span class='chip'>High Council</span>" : ""} ${p.revealed ? "<span class='chip'>revealed</span>" : ""}</div>
+      <div class="zone"><b>Hand</b>${cards(p.hand)}</div>
+      <div class="zone"><b>Played</b>${cards(p.in_play)}</div>
+      ${p.revealed_cards.length ? `<div class="zone"><b>Revealed</b>${cards(p.revealed_cards)}</div>` : ""}
+      <div class="zone"><b>Intrigue</b>${cards(p.intrigue)}</div>
+      <div class="zone muted">Deck ${p.deck} · Discard ${p.discard} · ${p.deck_total} cards owned</div>
+    </div>`;
+  }).join("");
+
+  // log highlight
+  const lis = $("log").children;
+  for (const li of lis) li.classList.remove("cur");
+  if (lis[i]) { lis[i].classList.add("cur"); const box = lis[i].closest(".log"); box.scrollTop = lis[i].offsetTop - box.clientHeight / 2; }
+}
+
+function go(k) { if (!R) return; i = Math.max(0, Math.min(R.frames.length - 1, k)); render(); }
+function jumpRound(dir) {
+  if (!R) return;
+  const isR = (k) => R.frames[k].msg.startsWith("Round ");
+  let k = i + dir;
+  while (k > 0 && k < R.frames.length - 1 && !isR(k)) k += dir;
+  go(k);
+}
+function stop() { clearInterval(timer); timer = null; $("play").textContent = "Play"; }
+function play() {
+  if (!R) return;
+  if (timer) return stop();
+  if (i >= R.frames.length - 1) i = 0;
+  $("play").textContent = "Pause";
+  timer = setInterval(() => { if (i >= R.frames.length - 1) stop(); else go(i + 1); }, +$("speed").value);
+}
+$("first").onclick = () => { stop(); go(0); };
+$("last").onclick = () => { stop(); go(1e9); };
+$("prev").onclick = () => { stop(); go(i - 1); };
+$("next").onclick = () => { stop(); go(i + 1); };
+$("prevRound").onclick = () => { stop(); jumpRound(-1); };
+$("nextRound").onclick = () => { stop(); jumpRound(1); };
+$("play").onclick = play;
+$("speed").onchange = () => { if (timer) { stop(); play(); } };
+$("slider").oninput = (e) => { stop(); go(+e.target.value); };
+$("file").onchange = async (e) => { const f = e.target.files[0]; if (f) load(JSON.parse(await f.text())); };
+document.addEventListener("keydown", (e) => {
+  if (e.target.tagName === "INPUT" && e.target.type !== "range") return;
+  if (e.key === "ArrowRight") { stop(); e.shiftKey ? jumpRound(1) : go(i + 1); e.preventDefault(); }
+  else if (e.key === "ArrowLeft") { stop(); e.shiftKey ? jumpRound(-1) : go(i - 1); e.preventDefault(); }
+  else if (e.key === " ") { play(); e.preventDefault(); }
+  else if (e.key === "Home") { stop(); go(0); }
+  else if (e.key === "End") { stop(); go(1e9); }
+});
+if (EMBEDDED) load(EMBEDDED);
+</script>
+</body>
+</html>

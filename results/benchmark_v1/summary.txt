@@ -1,0 +1,25 @@
+$ python3 -m dune_sim benchmark -n 200 --save benchmark_v1
+Benchmark: 1 x <strategy> vs 3 x balanced, 200 games each, seeds 1..200, seating shuffled per game
+fair share = 25.0%
+
+strategy                       win %        95% CI   avg VP  +/-SE  base VP  avg rank  verdict
+----------------------------------------------------------------------------------------------
+random                          0.0%       0.0-1.9     2.23   0.09     8.31      3.99  worse than baseline
+legacy                          9.0%      5.8-13.8     5.74   0.16     8.00      3.25  worse than baseline
+military                       19.5%     14.6-25.5     6.74   0.15     7.62      2.76  no clear difference
+spice                          21.0%     15.9-27.2     6.78   0.17     7.68      2.78  no clear difference
+factions                       28.0%     22.2-34.6     7.76   0.16     7.51      2.46  no clear difference
+fremen_faction                  9.0%      5.8-13.8     5.87   0.14     7.86      3.21  worse than baseline
+deckbuilder                    27.0%     21.3-33.5     7.96   0.16     7.60      2.42  no clear difference
+thin_deck                      18.0%     13.3-23.9     7.23   0.14     7.56      2.68  worse than baseline
+spice_must_flow                20.0%     15.0-26.1     7.32   0.16     7.78      2.67  no clear difference
+emperor_faction                30.0%     24.1-36.7     7.40   0.16     7.31      2.45  no clear difference
+guild_faction                  20.0%     15.0-26.1     7.24   0.15     7.58      2.67  no clear difference
+bene_gesserit_faction          31.5%     25.5-38.2     7.96   0.15     7.31      2.26  better than baseline
+alliances                      28.5%     22.7-35.1     7.75   0.17     7.41      2.42  no clear difference
+emperor_cards                  20.0%     15.0-26.1     7.29   0.16     7.57      2.64  no clear difference
+guild_cards                    21.0%     15.9-27.2     7.20   0.16     7.62      2.67  no clear difference
+bene_gesserit_cards            19.0%     14.2-25.0     7.20   0.15     7.64      2.65  no clear difference
+fremen_cards                   22.0%     16.8-28.2     6.91   0.17     7.67      2.73  no clear difference
+
+verdict: 'better'/'worse' when the 95% interval on win % excludes the fair share.

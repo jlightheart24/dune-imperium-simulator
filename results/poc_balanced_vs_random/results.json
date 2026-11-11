@@ -1,0 +1,63 @@
+{
+ "meta": {
+  "command": "python3 -m dune_sim batch -n 200 -p balanced random random random --save poc_balanced_vs_random",
+  "date": "2026-11-11T10:20:02",
+  "python": "3.9.6",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "git_commit": null,
+  "seed": 1,
+  "games": 200,
+  "players": [
+   "balanced",
+   "random",
+   "random",
+   "random"
+  ],
+  "fixed_seats": false,
+  "avg_rounds": 8.875
+ },
+ "strategies": [
+  {
+   "strategy": "balanced",
+   "seats": 200,
+   "wins": 200.0,
+   "win_pct": 100.0,
+   "ci_low": 98.11539940816793,
+   "ci_high": 100.0,
+   "avg_vp": 11.04,
+   "vp_sd": 1.069635733796827,
+   "vp_se": 0.07563466807671851,
+   "avg_rank": 1.0,
+   "alliances": 1.46,
+   "deck": 19.575,
+   "end_solari": 4.84,
+   "swordmaster_pct": 70.5,
+   "council_pct": 97.0,
+   "mentats": 0.885
+  },
+  {
+   "strategy": "random",
+   "seats": 600,
+   "wins": 0.0,
+   "win_pct": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.6361933328210577,
+   "avg_vp": 2.765,
+   "vp_sd": 1.5696755935909807,
+   "vp_se": 0.06408173776663673,
+   "avg_rank": 3.0,
+   "alliances": 0.16333333333333333,
+   "deck": 19.09,
+   "end_solari": 10.595,
+   "swordmaster_pct": 23.166666666666668,
+   "council_pct": 38.0,
+   "mentats": 0.8333333333333334
+  }
+ ],
+ "win_pct_by_seat": {
+  "P1": 24.5,
+  "P2": 25.0,
+  "P3": 23.5,
+  "P4": 27.0
+ }
+}
