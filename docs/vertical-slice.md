@@ -145,7 +145,9 @@ error: unsupported table size: 5 players given, the game supports 2 to 4
 ```
 
 **An unsuccessful outcome (case c3).** The agent plays a complete legal game and loses.
-This is reported as "success condition not met", not as an error.
+This is reported as "success condition not met", not as an error. A loss here is a valid
+test result, not a defect: each agent is meant to stay faithful to its strategy so that the
+strategy's effectiveness can be measured.
 
 ## 6. Baseline measurement
 
@@ -291,10 +293,14 @@ search depth, limit the agent, and the final report will say so.
 - Market cards, conflict rewards and intrigue cards use simplified effects that still need
   checking against the physical game.
 
+**Not treated as failures.** A strategy that loses to the baseline, such as
+`fremen_faction` in case c3, is a finding about that strategy. Agents are kept true to
+their strategies so the comparison means something. Improving individual strategies, for
+example by tuning their weights without changing what they prioritise, is possible later
+work and would be measured against this same baseline.
+
 **Known failures and weaknesses.**
 
-- `fremen_faction` loses consistently to the baseline (9% win rate over 200 games in the
-  project definition's benchmark; rank 4 in case c3).
 - The fallback catches every exception from an agent. That keeps runs alive, but it could
   hide a bug in a custom strategy. Fallbacks are counted and reported so this is visible,
   and a test asserts the built-in agents record none.
