@@ -155,17 +155,29 @@ This is reported as "success condition not met", not as an error.
 
 Command: `python3 -m dune_sim cases` (inputs in `cases/vertical_slice.json`, all seed 7).
 
-| Case | Kind | Players | Terminal status | Success condition | VP | Rank | Turn decisions | Options per decision | ms per decision | Near-ties | Fallbacks |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| c1 | Supported | `balanced` vs 3 `random` | 10 VP reached, round 8 | **Met** | 10 | 1 | 16 | 13.7 | 5.65 | 40.0% | 0 |
-| c2 | Supported | `bene_gesserit_faction` vs 3 `balanced` | Conflict deck exhausted, round 10 | **Met** | 8 | 1 | 27 | 13.8 | 6.79 | 29.6% | 0 |
-| c3 | Unsuccessful | `fremen_faction` vs 3 `balanced` | 10 VP reached, round 9 | **Not met** | 4 | 4 | 19 | 16.2 | 8.43 | 26.3% | 0 |
-| c4 | Boundary | `balanced` vs `balanced` (2 players) | 10 VP reached, round 9 | **Met** | 10 | 1 | 20 | 16.1 | 6.35 | 31.6% | 0 |
-| c5 | Failure handling | `FaultyAgent` vs 3 `balanced` | 10 VP reached, round 10 | **Not met** | 2 | 4 | 14 | 12.5 | 0.0 | n/a | 6 |
-| c6 | Unsupported input | unknown strategy name | Rejected, exit code 2, no game | Not applicable | | | | | | | |
-| c7 | Unsupported input | 5 players | Rejected, exit code 2, no game | Not applicable | | | | | | | |
+Outcomes:
 
-All seven cases behaved as their definition expected. Notes on reading the table:
+| Case | Kind | Players (agent under test first) | Terminal status | Success condition | VP | Rank |
+|---|---|---|---|---|---|---|
+| c1 | Supported | `balanced` vs 3 `random` | 10 VP reached, round 8 | **Met** | 10 | 1 |
+| c2 | Supported | `bene_gesserit_faction` vs 3 `balanced` | Conflict deck exhausted, round 10 | **Met** | 8 | 1 |
+| c3 | Unsuccessful | `fremen_faction` vs 3 `balanced` | 10 VP reached, round 9 | **Not met** | 4 | 4 |
+| c4 | Boundary | `balanced` vs `balanced` (2 players) | 10 VP reached, round 9 | **Met** | 10 | 1 |
+| c5 | Failure handling | `FaultyAgent` vs 3 `balanced` | 10 VP reached, round 10 | **Not met** | 2 | 4 |
+| c6 | Unsupported input | Unknown strategy name | Rejected, exit code 2, no game | Not applicable | n/a | n/a |
+| c7 | Unsupported input | 5 players | Rejected, exit code 2, no game | Not applicable | n/a | n/a |
+
+Numerical measures for the agent under test (c6 and c7 ran no game):
+
+| Case | Turn decisions | Legal options per decision | ms per decision | Near-ties | Fallbacks |
+|---|---|---|---|---|---|
+| c1 | 16 | 13.7 | 5.65 | 40.0% | 0 |
+| c2 | 27 | 13.8 | 6.79 | 29.6% | 0 |
+| c3 | 19 | 16.2 | 8.43 | 26.3% | 0 |
+| c4 | 20 | 16.1 | 6.35 | 31.6% | 0 |
+| c5 | 14 | 12.5 | 0.0 | n/a | 6 |
+
+All seven cases behaved as their definition expected. Notes on reading the tables:
 
 - **Turn decisions** counts turns where the agent had more than one legal option.
 - **Near-ties** is the share of scored decisions where the best and second-best options
