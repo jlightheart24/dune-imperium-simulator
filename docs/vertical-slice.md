@@ -73,7 +73,8 @@ The cases are defined in `cases/vertical_slice.json`. Their raw results are reta
         |  4. applies the action: costs, board and card effects, troop deployment
         |  5. records a frame: full state, the options with scores, the choice, timing
         v
- ... until any player has 10 VP at the end of a round, or the conflict deck runs out
+ ... until the 10th round is finished. The game can end early: if a player reaches
+     10 VP during a round, that round is played out and is the last.
         |
         v
  result: terminal status, winner, VP and rank per player, decision statistics
@@ -82,7 +83,7 @@ The cases are defined in `cases/vertical_slice.json`. Their raw results are reta
 
 | Requirement | Where it is met |
 |---|---|
-| Accepts a representative task and reaches a terminal condition | `trace`, `batch` and `cases` take strategies and a seed; every game ends with "10 VP reached" or "conflict deck exhausted" |
+| Accepts a representative task and reaches a terminal condition | `trace`, `batch` and `cases` take strategies and a seed. Every game ends after the 10th round, or early at the end of a round in which a player reached 10 VP, and the result states which |
 | Uses the approved AI strategy, not a hard-coded answer | `HeuristicStrategy.choose_turn` in `dune_sim/strategies.py` scores every legal option by one-step lookahead on each turn |
 | Percepts, actions, state and effects are inspectable | `trace.txt` lists them per decision; `replay.html` shows the full state and a decision panel at every step |
 | Records how the result was produced | Each frame stores the options, their scores, the chosen one, the decision time, and any rule or fallback that applied |
@@ -97,7 +98,7 @@ Swordmaster when affordable"), the frame records the rule and no scores.
 ## 4. Changes from the project definition (U0-HW-10)
 
 The AI strategy, environment, agent interface and evaluation plan are unchanged. Four
-additions and one correction:
+additions:
 
 | Change | Why |
 |---|---|
@@ -105,7 +106,6 @@ additions and one correction:
 | **Agent failures are handled explicitly.** An illegal action or an exception from an agent is replaced by a reveal turn, counted per player and written to the trace. | The definition said illegal actions were replaced, but this was silent and exceptions were not caught. A faulty custom strategy could crash a batch run. |
 | **Input is validated before any game starts.** Unknown strategies and unsupported table sizes give a one-line error and exit code 2. | Previously these produced a Python traceback. |
 | **New measures:** decisions per game, legal options per decision, time per decision, near-tie rate, fallbacks, and how the game ended. | Needed for the baseline, and the near-tie rate motivates the next change (section 8). |
-| **Correction.** The definition said mirror games "usually last the full ten rounds". Measured: games average 9.7 rounds, but 75% end because a player reached 10 VP and only 25% because the conflict deck ran out. | The earlier statement was inferred from game length alone. The end reason is now recorded directly. |
 
 ## 5. Failure handling
 
@@ -159,11 +159,11 @@ Outcomes:
 
 | Case | Kind | Players (agent under test first) | Terminal status | Success condition | VP | Rank |
 |---|---|---|---|---|---|---|
-| c1 | Supported | `balanced` vs 3 `random` | 10 VP reached, round 8 | **Met** | 10 | 1 |
-| c2 | Supported | `bene_gesserit_faction` vs 3 `balanced` | Conflict deck exhausted, round 10 | **Met** | 8 | 1 |
-| c3 | Unsuccessful | `fremen_faction` vs 3 `balanced` | 10 VP reached, round 9 | **Not met** | 4 | 4 |
-| c4 | Boundary | `balanced` vs `balanced` (2 players) | 10 VP reached, round 9 | **Met** | 10 | 1 |
-| c5 | Failure handling | `FaultyAgent` vs 3 `balanced` | 10 VP reached, round 10 | **Not met** | 2 | 4 |
+| c1 | Supported | `balanced` vs 3 `random` | Ended early in round 8 (10 VP reached) | **Met** | 10 | 1 |
+| c2 | Supported | `bene_gesserit_faction` vs 3 `balanced` | Full 10 rounds (no player reached 10 VP) | **Met** | 8 | 1 |
+| c3 | Unsuccessful | `fremen_faction` vs 3 `balanced` | Ended early in round 9 (10 VP reached) | **Not met** | 4 | 4 |
+| c4 | Boundary | `balanced` vs `balanced` (2 players) | Ended early in round 9 (10 VP reached) | **Met** | 10 | 1 |
+| c5 | Failure handling | `FaultyAgent` vs 3 `balanced` | Full 10 rounds (10 VP reached in round 10) | **Not met** | 2 | 4 |
 | c6 | Unsupported input | Unknown strategy name | Rejected, exit code 2, no game | Not applicable | n/a | n/a |
 | c7 | Unsupported input | 5 players | Rejected, exit code 2, no game | Not applicable | n/a | n/a |
 
@@ -179,6 +179,9 @@ Numerical measures for the agent under test (c6 and c7 ran no game):
 
 All seven cases behaved as their definition expected. Notes on reading the tables:
 
+- **Terminal status.** The game ends after the 10th round, but can end early when a player
+  reaches 10 VP during a round. The raw files label this "10 VP reached" or "conflict deck
+  exhausted"; the conflict deck holds one card per round, so it runs out after round 10.
 - **Turn decisions** counts turns where the agent had more than one legal option.
 - **Near-ties** is the share of scored decisions where the best and second-best options
   were within 0.5 utility points. One VP is worth 10 points, so that is 1/20 of a VP.
@@ -194,8 +197,9 @@ Command: `python3 -m dune_sim batch -n 200 --detail -p balanced balanced balance
 |---|---|
 | Win rate per seat | 25.0% (95% interval 22.1 to 28.1) |
 | Average VP | 7.48 |
-| Games ended by a player reaching 10 VP | 75% |
-| Games ended by the conflict deck running out | 25% |
+| Games that ran the full 10 rounds | 74% (148 of 200) |
+| Games that ended early, with a player reaching 10 VP before round 10 | 26% (46 in round 9, 6 in round 8) |
+| Games in which some player reached 10 VP, in any round | 75% |
 | Turn decisions per player per game | 23.0 |
 | Legal options per decision | 13.6 |
 | Time per decision | 14.6 ms (with all CPU cores busy) |
