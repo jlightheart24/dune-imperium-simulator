@@ -4,9 +4,9 @@
 
 | | |
 |---|---|
-| Name | `[YOUR NAME]` |
-| Repository | `[REPOSITORY URL]` |
-| Submitted commit | `[COMMIT HASH]` |
+| Name | Jonny Lightheart |
+| Repository | https://github.com/jlightheart24/dune-imperium-simulator |
+| Submitted commit | COMMIT_HASH_IN_PDF |
 | Date | November 11, 2026 |
 
 ---
@@ -14,13 +14,14 @@
 ## 1. Problem, user, intended use, target outcome
 
 **Problem.** *Dune: Imperium* is a four-player game that mixes worker placement, deck
-building and combat. Players argue about which broad approach wins most often: fighting
-for conflict rewards, racing for faction alliances, building an economy, thinning the deck,
-or buying "The Spice Must Flow" for points. Testing these ideas at a table is slow: one game
-takes about two hours, and a few dozen games is not enough to separate skill from luck.
+building and combat. With its complexity and layers, this game is far from solved. A
+single game takes about two hours, so playing enough games at a table to separate a good
+strategy from good luck is not practical. As an avid player myself, I will seek to show
+which strategies work, and against which opponents, by developing heuristic agents that
+test a wide variety of strategies.
 
-**Intended user.** A player or designer who wants evidence about which strategic approach
-performs best, and who is comfortable running a command-line tool.
+**Intended user.** Myself and other players who want evidence about which strategic
+approach performs best.
 
 **Intended use.** The user picks a strategy (a built-in one, a set of weights in a JSON file,
 or a Python class), runs it for hundreds of simulated games against a fixed reference
@@ -204,7 +205,7 @@ benchmark will use 1,000 games (about ±2.7 points).
 Requires Python 3.9 or later; no packages to install.
 
 ```
-git clone [REPOSITORY URL] && cd duneImperiumSimulator
+git clone https://github.com/jlightheart24/dune-imperium-simulator.git && cd dune-imperium-simulator
 python3 -m unittest                                                    # 7 tests, about 1 minute
 python3 -m dune_sim batch -n 200 -p balanced random random random --save poc_balanced_vs_random
 python3 -m dune_sim batch -n 400 --fixed-seats --detail -p balanced balanced balanced balanced --save balanced_mirror
@@ -284,7 +285,7 @@ will use 1,000 games per matchup.
 `spice_must_flow` won with 11 VP over `military` 8, `balanced` 6 and `random` 2. It shows
 every action, the board, and each player's resources at every step.
 
-`[INSERT SCREENSHOT OF THE REPLAY VIEWER]`
+![Replay viewer at step 45 of seed 7: player panels, board with agents placed, conflict and game log](img/replay_viewer.png)
 
 ### Evidence 5: tests
 

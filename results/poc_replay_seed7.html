@@ -275,7 +275,11 @@ document.addEventListener("keydown", (e) => {
   else if (e.key === "Home") { stop(); go(0); }
   else if (e.key === "End") { stop(); go(1e9); }
 });
-if (EMBEDDED) load(EMBEDDED);
+if (EMBEDDED) {
+  load(EMBEDDED);
+  const m = /step=(\d+)/.exec(location.hash);   // e.g. game.html#step=45 opens at that step
+  if (m) go(+m[1] - 1);
+}
 </script>
 </body>
 </html>
