@@ -1,0 +1,2 @@
+error: unknown or unloadable strategy 'no_such_strategy' (unknown strategy 'no_such_strategy'). Run `python3 -m dune_sim list` to see the built-in names
+exit code 2, no game run

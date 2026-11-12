@@ -1,0 +1,30 @@
+$ python3 -m dune_sim batch -n 200 --detail -p balanced balanced balanced balanced --save results/vertical_slice/baseline_mirror
+
+200 games, 4 players, avg 9.7 rounds
+
+strategy                       win %        95% CI   avg VP  avg rank  alliances   deck  end $  3rd agent  council  mentats
+---------------------------------------------------------------------------------------------------------------------------
+balanced                       25.0%     22.1-28.1     7.48      2.50       0.78   22.4    5.8        64%      96%      1.1
+
+(fair share = 25.0% per seat; 95% CI = Wilson interval on win %; end $ = solari left at game end; mentats = Mentat uses per game)
+games ended by: 10 VP reached 75%, conflict deck exhausted 25%
+
+== balanced: averages per player per game ==
+  earned over the game : spice 16.4, solari 21.6, water 8.0, troops recruited 20.5
+  conflict             : troops sent 21.5 per game (2.22 per round), fought in 77% of rounds, won 2.29 conflicts outright
+  when they fought     : 1st 30%, 2nd 32%, 3rd 29%, no reward 8% (1.0 troops per game lost for nothing)
+  at game end          : 22.4 cards owned, 0.5 trashed, 1.08 Spice Must Flow, 0.6 intrigue in hand
+  turn decisions       : 23.0 per game, 13.6 legal options each, 14.6 ms each, near-ties 38% of scored decisions, 0.00 fallbacks per game
+  bought cards by type : none 32%, fremen 29%, guild 14%, bene_gesserit 13%, emperor 12%
+  by round (held at end of round; troops/strength = committed to that round's conflict):
+  round     VP  spice  solari  water  garrison  cards  troops  strength  games
+      1   0.21   0.39    2.03   1.19      2.55   10.8    1.57      3.81    800
+      2   0.81   1.25    3.31   1.49      1.86   11.6    1.91      4.77    800
+      3   1.40   3.19    3.58   1.57      1.36   13.0    1.82      4.84    800
+      4   1.98   3.68    4.17   2.04      1.45   14.4    1.70      4.71    800
+      5   2.63   4.21    4.24   2.60      1.66   15.9    1.88      5.05    800
+      6   3.26   4.96    4.33   3.04      1.94   17.4    1.90      5.20    800
+      7   4.23   5.88    4.38   3.43      1.96   18.8    2.76      7.21    800
+      8   5.30   6.50    4.80   3.70      2.03   20.2    2.85      7.69    800
+      9   6.48   6.94    5.05   3.85      1.92   21.6    2.99      8.12    776
+     10   7.59   7.36    6.26   3.92      1.93   22.8    3.04      8.45    592

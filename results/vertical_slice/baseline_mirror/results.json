@@ -1,0 +1,45 @@
+{
+ "meta": {
+  "command": "python3 -m dune_sim batch -n 200 --detail -p balanced balanced balanced balanced --save results/vertical_slice/baseline_mirror",
+  "date": "2026-11-11T19:51:47",
+  "python": "3.9.6",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "git_commit": "36d73aa8483e271dcb0a9f6301378c9c0ab536e4",
+  "seed": 1,
+  "games": 200,
+  "players": [
+   "balanced",
+   "balanced",
+   "balanced",
+   "balanced"
+  ],
+  "fixed_seats": false,
+  "avg_rounds": 9.71
+ },
+ "strategies": [
+  {
+   "strategy": "balanced",
+   "seats": 800,
+   "wins": 200.0,
+   "win_pct": 25.0,
+   "ci_low": 22.123646640276423,
+   "ci_high": 28.115305909579163,
+   "avg_vp": 7.4825,
+   "vp_sd": 2.3439414085378325,
+   "vp_se": 0.08287084323405246,
+   "avg_rank": 2.5,
+   "alliances": 0.78,
+   "deck": 22.4175,
+   "end_solari": 5.79625,
+   "swordmaster_pct": 63.875,
+   "council_pct": 95.875,
+   "mentats": 1.05625
+  }
+ ],
+ "win_pct_by_seat": {
+  "P1": 19.5,
+  "P2": 28.5,
+  "P3": 24.0,
+  "P4": 28.0
+ }
+}

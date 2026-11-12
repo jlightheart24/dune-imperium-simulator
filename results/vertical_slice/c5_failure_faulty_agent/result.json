@@ -1,0 +1,29 @@
+{
+ "players": [
+  "dune_sim.faulty:FaultyAgent",
+  "balanced",
+  "balanced",
+  "balanced"
+ ],
+ "seed": 7,
+ "agent_seat": 1,
+ "agent_strategy": "faulty",
+ "terminal_status": "10 VP reached after 10 rounds",
+ "agent_won": false,
+ "final_vp": [
+  2,
+  10,
+  9,
+  3
+ ],
+ "measures": {
+  "vp": 2,
+  "rank": 4,
+  "decisions": 14,
+  "avg_options": 12.5,
+  "ms_per_decision": 0.0,
+  "near_tie_pct": null,
+  "fallbacks": 6
+ },
+ "total_fallbacks": 6
+}

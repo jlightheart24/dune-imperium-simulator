@@ -1,0 +1,8080 @@
+[
+ {
+  "step": 1,
+  "round": 0,
+  "actor": null,
+  "msg": "Game start",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 2,
+  "round": 1,
+  "actor": null,
+  "msg": "Round 1: conflict Skirmish (B)",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 3,
+  "round": 1,
+  "actor": 0,
+  "msg": "P1 plays Signet Ring -> Carthag, deploys 1",
+  "decision": {
+   "actor": 0,
+   "options": [
+    {
+     "label": "Signet Ring -> Carthag",
+     "score": 25.34,
+     "chosen": true
+    },
+    {
+     "label": "Signet Ring -> Arrakeen",
+     "score": 23.69,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Imperial Basin",
+     "score": 23.64,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hagga Basin",
+     "score": 22.44,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 22.24,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 21.04,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": 20.97,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 19.97,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": 19.89,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 18.94,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 17.79,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 16.39,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 14.91,
+     "chosen": false
+    }
+   ],
+   "n_options": 13,
+   "ms": 6.46,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 4,
+  "round": 1,
+  "actor": 1,
+  "msg": "P2 plays Seek Allies -> Stillsuits, deploys 2",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Seek Allies -> Stillsuits",
+     "score": 26.67,
+     "chosen": true
+    },
+    {
+     "label": "Seek Allies -> Hardy Warriors",
+     "score": 24.87,
+     "chosen": false
+    },
+    {
+     "label": "Seek Allies -> Wealth",
+     "score": 19.79,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": 19.57,
+     "chosen": false
+    },
+    {
+     "label": "Seek Allies -> Secrets",
+     "score": 19.2,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": 18.49,
+     "chosen": false
+    },
+    {
+     "label": "Seek Allies -> Foldspace",
+     "score": 18.1,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Arrakeen",
+     "score": 18.06,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Imperial Basin",
+     "score": 17.56,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 17.54,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hagga Basin",
+     "score": 16.96,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Arrakeen",
+     "score": 16.66,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 16.39,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 11.42,
+     "chosen": false
+    }
+   ],
+   "n_options": 14,
+   "ms": 6.69,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 5,
+  "round": 1,
+  "actor": 2,
+  "msg": "P3 plays Seek Allies -> Hardy Warriors, deploys 4",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Seek Allies -> Hardy Warriors",
+     "score": 22.72,
+     "chosen": true
+    },
+    {
+     "label": "Diplomacy -> Hardy Warriors",
+     "score": 22.01,
+     "chosen": false
+    },
+    {
+     "label": "Seek Allies -> Wealth",
+     "score": 20.23,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": 20.02,
+     "chosen": false
+    },
+    {
+     "label": "Seek Allies -> Secrets",
+     "score": 19.65,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Wealth",
+     "score": 19.52,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 19.02,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": 18.94,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Arrakeen",
+     "score": 18.94,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Secrets",
+     "score": 18.94,
+     "chosen": false
+    },
+    {
+     "label": "Seek Allies -> Foldspace",
+     "score": 18.55,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Imperial Basin",
+     "score": 18.44,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hagga Basin",
+     "score": 17.84,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 17.84,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 17.04,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 16.84,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 16.44,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 15.44,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 12.63,
+     "chosen": false
+    }
+   ],
+   "n_options": 19,
+   "ms": 9.36,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 6,
+  "round": 1,
+  "actor": 3,
+  "msg": "P4 plays Signet Ring -> Secure Contract",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": 21.62,
+     "chosen": true
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 20.62,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": 20.54,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Arrakeen",
+     "score": 20.09,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Imperial Basin",
+     "score": 20.04,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hagga Basin",
+     "score": 19.44,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Arrakeen",
+     "score": 19.14,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 18.64,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 18.44,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 18.29,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 18.04,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 17.04,
+     "chosen": false
+    }
+   ],
+   "n_options": 12,
+   "ms": 5.56,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 7,
+  "round": 1,
+  "actor": 0,
+  "msg": "P1 plays intrigue Bribery",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 8,
+  "round": 1,
+  "actor": 0,
+  "msg": "P1 plays Dagger -> Hall of Oratory",
+  "decision": {
+   "actor": 0,
+   "options": [
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 17.81,
+     "chosen": true
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 16.86,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 15.66,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 15.26,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 15.02,
+     "chosen": false
+    }
+   ],
+   "n_options": 5,
+   "ms": 2.45,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 9,
+  "round": 1,
+  "actor": 1,
+  "msg": "P2 plays Signet Ring -> Arrakeen",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Signet Ring -> Arrakeen",
+     "score": 17.62,
+     "chosen": true
+    },
+    {
+     "label": "Signet Ring -> Imperial Basin",
+     "score": 17.12,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hagga Basin",
+     "score": 16.52,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Arrakeen",
+     "score": 16.22,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> The Great Flat",
+     "score": 15.92,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 15.52,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 13.55,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Research Station",
+     "score": 13.07,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Research Station",
+     "score": 11.67,
+     "chosen": false
+    }
+   ],
+   "n_options": 9,
+   "ms": 4.31,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 10,
+  "round": 1,
+  "actor": 2,
+  "msg": "P3 plays Diplomacy -> Wealth",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Diplomacy -> Wealth",
+     "score": 23.0,
+     "chosen": true
+    },
+    {
+     "label": "Diplomacy -> Secrets",
+     "score": 22.42,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Imperial Basin",
+     "score": 21.92,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 21.32,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 20.52,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 20.32,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 19.11,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 18.92,
+     "chosen": false
+    }
+   ],
+   "n_options": 8,
+   "ms": 3.84,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 11,
+  "round": 1,
+  "actor": 3,
+  "msg": "P4 plays Dune, The Desert Planet -> Imperial Basin",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 19.43,
+     "chosen": true
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 18.82,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 18.55,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 17.82,
+     "chosen": false
+    }
+   ],
+   "n_options": 4,
+   "ms": 1.99,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 12,
+  "round": 1,
+  "actor": 0,
+  "msg": "P1 reveals Dune, The Desert Planet, Dune, The Desert Planet, Convincing Argument (swords 0); buys Chani",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 13,
+  "round": 1,
+  "actor": 1,
+  "msg": "P2 reveals Dagger, Convincing Argument, Reconnaissance, Dune, The Desert Planet (swords 1); buys Duncan Idaho",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 14,
+  "round": 1,
+  "actor": 2,
+  "msg": "P3 reveals Dune, The Desert Planet, Convincing Argument, Signet Ring (swords 0); buys Fremen Camp",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 15,
+  "round": 1,
+  "actor": 3,
+  "msg": "P4 reveals Convincing Argument, Convincing Argument, Reconnaissance (swords 0); buys Carryall",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 16,
+  "round": 1,
+  "actor": null,
+  "msg": "Combat Skirmish (B): P3 #1 (8), P2 #2 (5), P1 #3 (2)",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 17,
+  "round": 1,
+  "actor": null,
+  "msg": "End of round 1",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 18,
+  "round": 2,
+  "actor": null,
+  "msg": "Round 2: conflict Cloak and Dagger",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 19,
+  "round": 2,
+  "actor": 1,
+  "msg": "P2 plays Diplomacy -> Stillsuits, deploys 1",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Diplomacy -> Stillsuits",
+     "score": 40.23,
+     "chosen": true
+    },
+    {
+     "label": "Duncan Idaho -> Carthag",
+     "score": 39.03,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Hardy Warriors",
+     "score": 38.43,
+     "chosen": false
+    },
+    {
+     "label": "Duncan Idaho -> Arrakeen",
+     "score": 37.38,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 36.83,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 36.23,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 35.83,
+     "chosen": false
+    },
+    {
+     "label": "Duncan Idaho -> Research Station",
+     "score": 34.08,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Wealth",
+     "score": 27.66,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Secrets",
+     "score": 27.48,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 27.16,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 26.53,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 26.38,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 23.98,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 18.8,
+     "chosen": false
+    }
+   ],
+   "n_options": 15,
+   "ms": 7.41,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 20,
+  "round": 2,
+  "actor": 2,
+  "msg": "P3 plays Reconnaissance -> Carthag, deploys 2",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Reconnaissance -> Carthag",
+     "score": 42.8,
+     "chosen": true
+    },
+    {
+     "label": "Reconnaissance -> Arrakeen",
+     "score": 41.6,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 33.55,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 33.1,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 32.25,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 32.22,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 30.55,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 26.21,
+     "chosen": false
+    }
+   ],
+   "n_options": 8,
+   "ms": 3.85,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 21,
+  "round": 2,
+  "actor": 3,
+  "msg": "P4 plays Seek Allies -> Hardy Warriors, deploys 3",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Seek Allies -> Hardy Warriors",
+     "score": 32.53,
+     "chosen": true
+    },
+    {
+     "label": "Diplomacy -> Hardy Warriors",
+     "score": 31.82,
+     "chosen": false
+    },
+    {
+     "label": "Seek Allies -> Wealth",
+     "score": 26.48,
+     "chosen": false
+    },
+    {
+     "label": "Seek Allies -> Secrets",
+     "score": 26.48,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Wealth",
+     "score": 25.77,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Secrets",
+     "score": 25.77,
+     "chosen": false
+    },
+    {
+     "label": "Seek Allies -> Foldspace",
+     "score": 25.38,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 25.32,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 25.27,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 24.97,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 24.82,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 24.67,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 23.97,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Rally Troops",
+     "score": 23.34,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 22.27,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 19.03,
+     "chosen": false
+    }
+   ],
+   "n_options": 16,
+   "ms": 7.92,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 22,
+  "round": 2,
+  "actor": 0,
+  "msg": "P1 plays Seek Allies -> Wealth",
+  "decision": {
+   "actor": 0,
+   "options": [
+    {
+     "label": "Seek Allies -> Wealth",
+     "score": 28.25,
+     "chosen": true
+    },
+    {
+     "label": "Seek Allies -> Secrets",
+     "score": 28.25,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 27.71,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Wealth",
+     "score": 27.54,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Secrets",
+     "score": 27.54,
+     "chosen": false
+    },
+    {
+     "label": "Seek Allies -> Foldspace",
+     "score": 27.15,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 27.09,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 26.44,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Arrakeen",
+     "score": 25.86,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 20.55,
+     "chosen": false
+    }
+   ],
+   "n_options": 10,
+   "ms": 4.71,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 23,
+  "round": 2,
+  "actor": 1,
+  "msg": "P2 plays Duncan Idaho -> Sietch Tabr",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Duncan Idaho -> Sietch Tabr",
+     "score": 39.26,
+     "chosen": true
+    },
+    {
+     "label": "Duncan Idaho -> Arrakeen",
+     "score": 37.86,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 37.16,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 36.86,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 36.81,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 36.26,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 35.86,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 34.26,
+     "chosen": false
+    },
+    {
+     "label": "Duncan Idaho -> Research Station",
+     "score": 34.11,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 32.78,
+     "chosen": false
+    }
+   ],
+   "n_options": 10,
+   "ms": 5.47,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 24,
+  "round": 2,
+  "actor": 2,
+  "msg": "P3 plays Dune, The Desert Planet -> Secure Contract",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 31.85,
+     "chosen": true
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 31.4,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 30.52,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 30.45,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 28.85,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 28.31,
+     "chosen": false
+    }
+   ],
+   "n_options": 6,
+   "ms": 3.28,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 25,
+  "round": 2,
+  "actor": 3,
+  "msg": "P4 plays Diplomacy -> Secrets",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Diplomacy -> Secrets",
+     "score": 32.23,
+     "chosen": true
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 31.78,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 31.28,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 31.13,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 30.33,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Rally Troops",
+     "score": 29.8,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 28.73,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 28.49,
+     "chosen": false
+    }
+   ],
+   "n_options": 8,
+   "ms": 3.85,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 26,
+  "round": 2,
+  "actor": 0,
+  "msg": "P1 plays Reconnaissance -> Arrakeen, deploys 2",
+  "decision": {
+   "actor": 0,
+   "options": [
+    {
+     "label": "Reconnaissance -> Arrakeen",
+     "score": 38.71,
+     "chosen": true
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 28.2,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 27.0,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 26.35,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Rally Troops",
+     "score": 25.52,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 23.46,
+     "chosen": false
+    }
+   ],
+   "n_options": 6,
+   "ms": 2.74,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 27,
+  "round": 2,
+  "actor": 1,
+  "msg": "P2 reveals Dune, The Desert Planet, Dagger, Convincing Argument (swords 1); buys Guild Bankers",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 28,
+  "round": 2,
+  "actor": 2,
+  "msg": "P3 reveals Convincing Argument, Dagger, Dagger (swords 2); buys Arrakis Liaison",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 29,
+  "round": 2,
+  "actor": 3,
+  "msg": "P4 reveals Dagger, Dagger, Dune, The Desert Planet (swords 2)",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 30,
+  "round": 2,
+  "actor": 0,
+  "msg": "P1 reveals Diplomacy, Convincing Argument, Dagger, Dune, The Desert Planet (swords 1); buys Fremen Camp",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 31,
+  "round": 2,
+  "actor": 2,
+  "msg": "P3 plays combat intrigue Master Tactician",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 32,
+  "round": 2,
+  "actor": 3,
+  "msg": "P4 plays combat intrigue Ambush",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 33,
+  "round": 2,
+  "actor": null,
+  "msg": "Combat Cloak and Dagger: P4 #1 (12), P3 #2 (9), P1 #3 (5)",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 34,
+  "round": 2,
+  "actor": null,
+  "msg": "End of round 2",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 35,
+  "round": 3,
+  "actor": null,
+  "msg": "Round 3: conflict Raid Stockpiles",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 36,
+  "round": 3,
+  "actor": 2,
+  "msg": "P3 plays Dagger -> High Council",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Reconnaissance -> Arrakeen",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Carthag",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> High Council",
+     "score": null,
+     "chosen": true
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Rally Troops",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": null,
+     "chosen": false
+    }
+   ],
+   "n_options": 10,
+   "ms": 0.01,
+   "rule": "priority space: High Council",
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 37,
+  "round": 3,
+  "actor": 3,
+  "msg": "P4 plays intrigue Windfall",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 38,
+  "round": 3,
+  "actor": 3,
+  "msg": "P4 plays intrigue Water Peddlers Union",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 39,
+  "round": 3,
+  "actor": 3,
+  "msg": "P4 plays Reconnaissance -> Carthag, deploys 1",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Reconnaissance -> Carthag",
+     "score": 46.54,
+     "chosen": true
+    },
+    {
+     "label": "Reconnaissance -> Arrakeen",
+     "score": 45.34,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 42.33,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 42.03,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Rally Troops",
+     "score": 41.43,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 36.6,
+     "chosen": false
+    }
+   ],
+   "n_options": 6,
+   "ms": 2.78,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 40,
+  "round": 3,
+  "actor": 0,
+  "msg": "P1 plays Chani -> Stillsuits, deploys 2",
+  "decision": {
+   "actor": 0,
+   "options": [
+    {
+     "label": "Chani -> Stillsuits",
+     "score": 45.41,
+     "chosen": true
+    },
+    {
+     "label": "Signet Ring -> Hagga Basin",
+     "score": 42.71,
+     "chosen": false
+    },
+    {
+     "label": "Chani -> Hardy Warriors",
+     "score": 42.41,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Arrakeen",
+     "score": 42.36,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Imperial Basin",
+     "score": 42.31,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 41.71,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 41.31,
+     "chosen": false
+    },
+    {
+     "label": "Chani -> Arrakeen",
+     "score": 40.21,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Mentat",
+     "score": 36.82,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": 36.32,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 35.77,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Rally Troops",
+     "score": 35.42,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": 35.19,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 35.02,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 34.99,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Rally Troops",
+     "score": 34.87,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 34.22,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 33.22,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 28.88,
+     "chosen": false
+    }
+   ],
+   "n_options": 19,
+   "ms": 9.36,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 41,
+  "round": 3,
+  "actor": 1,
+  "msg": "P2 plays Signet Ring -> Hagga Basin, deploys 2",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Signet Ring -> Hagga Basin",
+     "score": 49.56,
+     "chosen": true
+    },
+    {
+     "label": "Signet Ring -> The Great Flat",
+     "score": 48.96,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sietch Tabr",
+     "score": 48.68,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 48.59,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Imperial Basin",
+     "score": 48.56,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Arrakeen",
+     "score": 48.31,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 47.99,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Sietch Tabr",
+     "score": 47.71,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 47.59,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": 47.32,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Arrakeen",
+     "score": 46.83,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": 46.42,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 46.32,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 45.9,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Research Station",
+     "score": 45.01,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 44.32,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Research Station",
+     "score": 43.71,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 43.35,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 40.51,
+     "chosen": false
+    }
+   ],
+   "n_options": 19,
+   "ms": 9.45,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 42,
+  "round": 3,
+  "actor": 2,
+  "msg": "P3 reveals Reconnaissance, Convincing Argument, Dune, The Desert Planet, Dune, The Desert Planet (swords 0); buys Lady Jessica",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Reveal hand",
+     "score": 41.84,
+     "chosen": true
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 38.61,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Arrakeen",
+     "score": 38.28,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 38.23,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 35.03,
+     "chosen": false
+    }
+   ],
+   "n_options": 5,
+   "ms": 2.47,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 43,
+  "round": 3,
+  "actor": 3,
+  "msg": "P4 plays intrigue Calculated Hire",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 44,
+  "round": 3,
+  "actor": 3,
+  "msg": "P4 plays Dagger -> Swordmaster",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Dagger -> Mentat",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Swordmaster",
+     "score": null,
+     "chosen": true
+    },
+    {
+     "label": "Dagger -> Rally Troops",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": null,
+     "chosen": false
+    }
+   ],
+   "n_options": 5,
+   "ms": 0.01,
+   "rule": "priority space: Swordmaster",
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 45,
+  "round": 3,
+  "actor": 0,
+  "msg": "P1 plays Signet Ring -> Imperial Basin, deploys 1",
+  "decision": {
+   "actor": 0,
+   "options": [
+    {
+     "label": "Signet Ring -> Imperial Basin",
+     "score": 44.51,
+     "chosen": true
+    },
+    {
+     "label": "Signet Ring -> The Great Flat",
+     "score": 43.71,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 43.51,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Arrakeen",
+     "score": 43.41,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": 43.25,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 42.71,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Mentat",
+     "score": 42.5,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Rally Troops",
+     "score": 42.35,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": 42.12,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 41.95,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 41.92,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 41.15,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 40.15,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Research Station",
+     "score": 40.06,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 39.43,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 39.16,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Rally Troops",
+     "score": 38.53,
+     "chosen": false
+    }
+   ],
+   "n_options": 17,
+   "ms": 8.3,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 46,
+  "round": 3,
+  "actor": 1,
+  "msg": "P2 plays Reconnaissance -> Sietch Tabr",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Reconnaissance -> Sietch Tabr",
+     "score": 49.26,
+     "chosen": true
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 48.76,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Arrakeen",
+     "score": 48.38,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 47.79,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 47.26,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 45.79,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 45.34,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 44.76,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Research Station",
+     "score": 44.46,
+     "chosen": false
+    }
+   ],
+   "n_options": 9,
+   "ms": 4.49,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 47,
+  "round": 3,
+  "actor": 3,
+  "msg": "P4 plays Dagger -> Hall of Oratory",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 49.32,
+     "chosen": true
+    },
+    {
+     "label": "Reveal hand",
+     "score": 45.77,
+     "chosen": false
+    }
+   ],
+   "n_options": 2,
+   "ms": 0.99,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 48,
+  "round": 3,
+  "actor": 0,
+  "msg": "P1 reveals Dagger, Convincing Argument, Dune, The Desert Planet (swords 1); buys Test of Humanity",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 49,
+  "round": 3,
+  "actor": 1,
+  "msg": "P2 reveals Convincing Argument, Dune, The Desert Planet, Dagger (swords 1); buys Arrakis Liaison",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 50,
+  "round": 3,
+  "actor": 3,
+  "msg": "P4 reveals Convincing Argument, Convincing Argument (swords 0); buys Piter de Vries",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 51,
+  "round": 3,
+  "actor": null,
+  "msg": "Combat Raid Stockpiles: P1 #1 (7), P2 #2 (5), P4 #3 (2)",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 52,
+  "round": 3,
+  "actor": null,
+  "msg": "End of round 3",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 53,
+  "round": 4,
+  "actor": null,
+  "msg": "Round 4: conflict Siege of Arrakeen",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 54,
+  "round": 4,
+  "actor": 3,
+  "msg": "P4 plays Diplomacy -> Stillsuits, deploys 2",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Diplomacy -> Stillsuits",
+     "score": 77.67,
+     "chosen": true
+    },
+    {
+     "label": "Diplomacy -> Hardy Warriors",
+     "score": 75.87,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Carthag",
+     "score": 68.48,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Arrakeen",
+     "score": 68.13,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Imperial Basin",
+     "score": 66.78,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hagga Basin",
+     "score": 66.18,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 65.57,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Imperial Basin",
+     "score": 65.57,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 64.97,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Hagga Basin",
+     "score": 64.97,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": 60.98,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Wealth",
+     "score": 60.48,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Secrets",
+     "score": 60.27,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": 60.08,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 59.98,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Secure Contract",
+     "score": 59.98,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 59.06,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 57.98,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 56.77,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Sell Melange",
+     "score": 56.77,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 49.38,
+     "chosen": false
+    }
+   ],
+   "n_options": 21,
+   "ms": 10.51,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 55,
+  "round": 4,
+  "actor": 0,
+  "msg": "P1 plays Diplomacy -> Hardy Warriors, deploys 2",
+  "decision": {
+   "actor": 0,
+   "options": [
+    {
+     "label": "Diplomacy -> Hardy Warriors",
+     "score": 63.09,
+     "chosen": true
+    },
+    {
+     "label": "Diplomacy -> Wealth",
+     "score": 61.76,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Conspire",
+     "score": 60.56,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Mentat",
+     "score": 54.24,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> High Council",
+     "score": 53.94,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Carthag",
+     "score": 53.86,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> The Great Flat",
+     "score": 53.44,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Carthag",
+     "score": 53.24,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Arrakeen",
+     "score": 53.24,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Secrets",
+     "score": 52.94,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": 52.66,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Imperial Basin",
+     "score": 52.16,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Rally Troops",
+     "score": 52.14,
+     "chosen": false
+    },
+    {
+     "label": "Test of Humanity -> Secrets",
+     "score": 52.14,
+     "chosen": false
+    },
+    {
+     "label": "Test of Humanity -> High Council",
+     "score": 52.14,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Arrakeen",
+     "score": 52.04,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 51.73,
+     "chosen": false
+    },
+    {
+     "label": "Test of Humanity -> Hall of Oratory",
+     "score": 51.24,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": 51.16,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hagga Basin",
+     "score": 50.96,
+     "chosen": false
+    },
+    {
+     "label": "Test of Humanity -> Mentat",
+     "score": 50.94,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Selective Breeding",
+     "score": 50.84,
+     "chosen": false
+    },
+    {
+     "label": "Test of Humanity -> Rally Troops",
+     "score": 50.34,
+     "chosen": false
+    },
+    {
+     "label": "Test of Humanity -> Selective Breeding",
+     "score": 48.89,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Research Station",
+     "score": 48.59,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 48.56,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Research Station",
+     "score": 47.26,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 45.19,
+     "chosen": false
+    }
+   ],
+   "n_options": 28,
+   "ms": 13.51,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 56,
+  "round": 4,
+  "actor": 1,
+  "msg": "P2 plays intrigue Dispatch an Envoy",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 57,
+  "round": 4,
+  "actor": 1,
+  "msg": "P2 plays Reconnaissance -> Sietch Tabr, deploys 1",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Reconnaissance -> Sietch Tabr",
+     "score": 57.52,
+     "chosen": true
+    },
+    {
+     "label": "Reconnaissance -> Carthag",
+     "score": 57.32,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Arrakeen",
+     "score": 56.92,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 56.92,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 56.64,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 56.47,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 55.86,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 55.62,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 55.59,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 55.02,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Research Station",
+     "score": 53.62,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 49.36,
+     "chosen": false
+    }
+   ],
+   "n_options": 12,
+   "ms": 5.91,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 58,
+  "round": 4,
+  "actor": 2,
+  "msg": "P3 plays Signet Ring -> Carthag",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Signet Ring -> Carthag",
+     "score": 52.27,
+     "chosen": true
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": 52.18,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Arrakeen",
+     "score": 51.87,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Wealth",
+     "score": 51.68,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": 51.07,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Secrets",
+     "score": 51.07,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Imperial Basin",
+     "score": 50.57,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 50.12,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Carthag",
+     "score": 50.07,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Secure Contract",
+     "score": 50.03,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 49.86,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Arrakeen",
+     "score": 49.67,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 48.97,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 48.89,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Imperial Basin",
+     "score": 48.02,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Sell Melange",
+     "score": 46.42,
+     "chosen": false
+    }
+   ],
+   "n_options": 16,
+   "ms": 7.86,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 59,
+  "round": 4,
+  "actor": 3,
+  "msg": "P4 plays Signet Ring -> Arrakeen, deploys 1",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Signet Ring -> Arrakeen",
+     "score": 75.38,
+     "chosen": true
+    },
+    {
+     "label": "Signet Ring -> Research Station",
+     "score": 72.13,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> The Great Flat",
+     "score": 71.98,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 71.05,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> The Great Flat",
+     "score": 71.05,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": 69.68,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": 68.78,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 68.68,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Secure Contract",
+     "score": 68.68,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Imperial Basin",
+     "score": 68.38,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hagga Basin",
+     "score": 67.78,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 67.45,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Imperial Basin",
+     "score": 67.45,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 66.85,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Hagga Basin",
+     "score": 66.85,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 66.68,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 65.75,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Sell Melange",
+     "score": 65.75,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 61.89,
+     "chosen": false
+    }
+   ],
+   "n_options": 19,
+   "ms": 9.85,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 60,
+  "round": 4,
+  "actor": 0,
+  "msg": "P1 plays Signet Ring -> High Council",
+  "decision": {
+   "actor": 0,
+   "options": [
+    {
+     "label": "Signet Ring -> High Council",
+     "score": 63.66,
+     "chosen": true
+    },
+    {
+     "label": "Signet Ring -> Mentat",
+     "score": 62.46,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Rally Troops",
+     "score": 61.86,
+     "chosen": false
+    },
+    {
+     "label": "Test of Humanity -> High Council",
+     "score": 61.86,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> The Great Flat",
+     "score": 61.7,
+     "chosen": false
+    },
+    {
+     "label": "Test of Humanity -> Secrets",
+     "score": 61.13,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": 60.92,
+     "chosen": false
+    },
+    {
+     "label": "Test of Humanity -> Mentat",
+     "score": 60.66,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Imperial Basin",
+     "score": 60.42,
+     "chosen": false
+    },
+    {
+     "label": "Test of Humanity -> Hall of Oratory",
+     "score": 60.23,
+     "chosen": false
+    },
+    {
+     "label": "Test of Humanity -> Rally Troops",
+     "score": 60.06,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": 59.42,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hagga Basin",
+     "score": 59.22,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Research Station",
+     "score": 57.94,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 57.8,
+     "chosen": false
+    },
+    {
+     "label": "Test of Humanity -> Selective Breeding",
+     "score": 57.44,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 56.82,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Research Station",
+     "score": 56.79,
+     "chosen": false
+    }
+   ],
+   "n_options": 18,
+   "ms": 9.55,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 61,
+  "round": 4,
+  "actor": 1,
+  "msg": "P2 plays Dune, The Desert Planet -> Secure Contract",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 56.72,
+     "chosen": true
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 56.3,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 56.27,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 55.56,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 55.32,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 54.72,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 54.27,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 52.7,
+     "chosen": false
+    }
+   ],
+   "n_options": 8,
+   "ms": 4.23,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 62,
+  "round": 4,
+  "actor": 2,
+  "msg": "P3 plays intrigue Recruitment Mission",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 63,
+  "round": 4,
+  "actor": 2,
+  "msg": "P3 plays Diplomacy -> Wealth",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Diplomacy -> Wealth",
+     "score": 52.78,
+     "chosen": true
+    },
+    {
+     "label": "Diplomacy -> Secrets",
+     "score": 52.57,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 52.48,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 51.62,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 51.36,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Imperial Basin",
+     "score": 49.52,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Sell Melange",
+     "score": 47.92,
+     "chosen": false
+    }
+   ],
+   "n_options": 7,
+   "ms": 3.51,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 64,
+  "round": 4,
+  "actor": 3,
+  "msg": "P4 plays Carryall -> The Great Flat",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 76.83,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> The Great Flat",
+     "score": 76.83,
+     "chosen": true
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 73.23,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Imperial Basin",
+     "score": 73.23,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 72.82,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 72.63,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Hagga Basin",
+     "score": 72.63,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 71.63,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Sell Melange",
+     "score": 71.63,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 70.96,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 67.18,
+     "chosen": false
+    }
+   ],
+   "n_options": 11,
+   "ms": 5.49,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 65,
+  "round": 4,
+  "actor": 0,
+  "msg": "P1 reveals Convincing Argument, Reconnaissance, Test of Humanity (swords 0); buys Opulence, Assassination Mission",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 66,
+  "round": 4,
+  "actor": 1,
+  "msg": "P2 reveals Dagger, Convincing Argument, Dagger (swords 2); buys Arrakis Liaison",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 67,
+  "round": 4,
+  "actor": 2,
+  "msg": "P3 reveals Arrakis Liaison, Fremen Camp, Dagger (swords 2); buys Guild Ambassador, Arrakis Liaison",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 68,
+  "round": 4,
+  "actor": 3,
+  "msg": "P4 reveals Dune, The Desert Planet, Dune, The Desert Planet, Dagger (swords 1); buys Arrakis Liaison",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 69,
+  "round": 4,
+  "actor": 0,
+  "msg": "P1 plays combat intrigue Siege Tactics",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 70,
+  "round": 4,
+  "actor": null,
+  "msg": "Combat Siege of Arrakeen: P4 #1 (7), P1 #2 (6), P2 #3 (4)",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 71,
+  "round": 4,
+  "actor": null,
+  "msg": "End of round 4",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 72,
+  "round": 5,
+  "actor": null,
+  "msg": "Round 5: conflict Secure Imperial Basin",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 73,
+  "round": 5,
+  "actor": 0,
+  "msg": "P1 plays Chani -> Hardy Warriors, deploys 1",
+  "decision": {
+   "actor": 0,
+   "options": [
+    {
+     "label": "Chani -> Hardy Warriors",
+     "score": 86.4,
+     "chosen": true
+    },
+    {
+     "label": "Chani -> Sietch Tabr",
+     "score": 86.2,
+     "chosen": false
+    },
+    {
+     "label": "Chani -> Carthag",
+     "score": 85.4,
+     "chosen": false
+    },
+    {
+     "label": "Chani -> Arrakeen",
+     "score": 85.0,
+     "chosen": false
+    },
+    {
+     "label": "Chani -> Stillsuits",
+     "score": 77.96,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Rally Troops",
+     "score": 72.77,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 72.56,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 71.91,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 71.57,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Imperial Basin",
+     "score": 71.41,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 71.36,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 71.25,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 70.27,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Hagga Basin",
+     "score": 70.21,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Secure Contract",
+     "score": 70.1,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Sell Melange",
+     "score": 69.12,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 68.56,
+     "chosen": false
+    },
+    {
+     "label": "Chani -> Research Station",
+     "score": 67.81,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> The Great Flat",
+     "score": 67.41,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 65.16,
+     "chosen": false
+    }
+   ],
+   "n_options": 20,
+   "ms": 10.26,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 74,
+  "round": 5,
+  "actor": 1,
+  "msg": "P2 plays Signet Ring -> High Council",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Signet Ring -> High Council",
+     "score": null,
+     "chosen": true
+    },
+    {
+     "label": "Signet Ring -> Mentat",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Rally Troops",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Arrakeen",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Carthag",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Research Station",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sietch Tabr",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Imperial Basin",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hagga Basin",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> The Great Flat",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Conspire",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Wealth",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Heighliner",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Selective Breeding",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Secrets",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Stillsuits",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Conspire",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Wealth",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Heighliner",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Foldspace",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> High Council",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Mentat",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Rally Troops",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Hall of Oratory",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Duncan Idaho -> Arrakeen",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Duncan Idaho -> Carthag",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Duncan Idaho -> Research Station",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Duncan Idaho -> Sietch Tabr",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": null,
+     "chosen": false
+    }
+   ],
+   "n_options": 33,
+   "ms": 0.03,
+   "rule": "priority space: High Council",
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 75,
+  "round": 5,
+  "actor": 2,
+  "msg": "P3 plays Lady Jessica -> Secrets",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Lady Jessica -> Secrets",
+     "score": 77.98,
+     "chosen": true
+    },
+    {
+     "label": "Lady Jessica -> Carthag",
+     "score": 76.34,
+     "chosen": false
+    },
+    {
+     "label": "Lady Jessica -> Arrakeen",
+     "score": 75.14,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 74.47,
+     "chosen": false
+    },
+    {
+     "label": "Lady Jessica -> Imperial Basin",
+     "score": 74.28,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Imperial Basin",
+     "score": 72.02,
+     "chosen": false
+    },
+    {
+     "label": "Lady Jessica -> Secure Contract",
+     "score": 68.84,
+     "chosen": false
+    },
+    {
+     "label": "Lady Jessica -> Mentat",
+     "score": 68.2,
+     "chosen": false
+    },
+    {
+     "label": "Lady Jessica -> Hall of Oratory",
+     "score": 67.94,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 67.93,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 67.48,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Secure Contract",
+     "score": 66.78,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 66.49,
+     "chosen": false
+    },
+    {
+     "label": "Lady Jessica -> Sell Melange",
+     "score": 65.84,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 65.48,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 64.93,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Sell Melange",
+     "score": 63.78,
+     "chosen": false
+    }
+   ],
+   "n_options": 17,
+   "ms": 8.34,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 76,
+  "round": 5,
+  "actor": 3,
+  "msg": "P4 plays Piter de Vries -> Arrakeen, deploys 2",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Piter de Vries -> Arrakeen",
+     "score": 96.77,
+     "chosen": true
+    },
+    {
+     "label": "Reconnaissance -> Arrakeen",
+     "score": 96.72,
+     "chosen": false
+    },
+    {
+     "label": "Piter de Vries -> Sietch Tabr",
+     "score": 95.57,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Sietch Tabr",
+     "score": 95.52,
+     "chosen": false
+    },
+    {
+     "label": "Piter de Vries -> Carthag",
+     "score": 95.37,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Carthag",
+     "score": 95.32,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 87.37,
+     "chosen": false
+    },
+    {
+     "label": "Piter de Vries -> Hall of Oratory",
+     "score": 86.97,
+     "chosen": false
+    },
+    {
+     "label": "Piter de Vries -> Mentat",
+     "score": 86.83,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 86.43,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 76.21,
+     "chosen": false
+    }
+   ],
+   "n_options": 11,
+   "ms": 5.28,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 77,
+  "round": 5,
+  "actor": 0,
+  "msg": "P1 plays Dagger -> Rally Troops",
+  "decision": {
+   "actor": 0,
+   "options": [
+    {
+     "label": "Dagger -> Rally Troops",
+     "score": 78.36,
+     "chosen": true
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 78.16,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 77.51,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 77.16,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Imperial Basin",
+     "score": 77.01,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 76.96,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 76.84,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 75.86,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Hagga Basin",
+     "score": 75.81,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Secure Contract",
+     "score": 75.69,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 75.12,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Sell Melange",
+     "score": 74.71,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 74.16,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> The Great Flat",
+     "score": 73.01,
+     "chosen": false
+    }
+   ],
+   "n_options": 14,
+   "ms": 7.13,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 78,
+  "round": 5,
+  "actor": 1,
+  "msg": "P2 plays Guild Bankers -> Wealth",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Guild Bankers -> Wealth",
+     "score": 78.04,
+     "chosen": true
+    },
+    {
+     "label": "Guild Bankers -> Conspire",
+     "score": 76.99,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Conspire",
+     "score": 76.59,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Wealth",
+     "score": 76.37,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Heighliner",
+     "score": 72.27,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Heighliner",
+     "score": 70.27,
+     "chosen": false
+    },
+    {
+     "label": "Duncan Idaho -> Sietch Tabr",
+     "score": 67.69,
+     "chosen": false
+    },
+    {
+     "label": "Duncan Idaho -> Carthag",
+     "score": 67.49,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Foldspace",
+     "score": 67.04,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Hall of Oratory",
+     "score": 66.97,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Mentat",
+     "score": 66.67,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Stillsuits",
+     "score": 66.39,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 65.04,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Selective Breeding",
+     "score": 63.85,
+     "chosen": false
+    },
+    {
+     "label": "Duncan Idaho -> Research Station",
+     "score": 62.54,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 62.16,
+     "chosen": false
+    }
+   ],
+   "n_options": 16,
+   "ms": 8.16,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 79,
+  "round": 5,
+  "actor": 2,
+  "msg": "P3 plays Dune, The Desert Planet -> Secure Contract",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 77.18,
+     "chosen": true
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 76.99,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 76.73,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Secure Contract",
+     "score": 76.03,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 75.7,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Imperial Basin",
+     "score": 74.55,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 74.18,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 73.47,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Sell Melange",
+     "score": 73.03,
+     "chosen": false
+    }
+   ],
+   "n_options": 9,
+   "ms": 4.39,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 80,
+  "round": 5,
+  "actor": 3,
+  "msg": "P4 plays Reconnaissance -> Sietch Tabr",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Reconnaissance -> Sietch Tabr",
+     "score": 95.67,
+     "chosen": true
+    },
+    {
+     "label": "Reconnaissance -> Carthag",
+     "score": 95.47,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Stillsuits",
+     "score": 95.07,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Sietch Tabr",
+     "score": 94.87,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Carthag",
+     "score": 94.67,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 89.06,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 88.0,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 87.21,
+     "chosen": false
+    }
+   ],
+   "n_options": 8,
+   "ms": 3.88,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 81,
+  "round": 5,
+  "actor": 0,
+  "msg": "P1 reveals Dune, The Desert Planet, Dune, The Desert Planet, Fremen Camp (swords 1); buys Stilgar, Missionaria Protectiva",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 82,
+  "round": 5,
+  "actor": 1,
+  "msg": "P2 reveals Convincing Argument, Diplomacy, Duncan Idaho (swords 2); buys Gurney Halleck",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 83,
+  "round": 5,
+  "actor": 2,
+  "msg": "P3 plays intrigue Charisma",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 84,
+  "round": 5,
+  "actor": 2,
+  "msg": "P3 reveals Convincing Argument, Fremen Camp, Dagger (swords 2); buys Gun Thopter, Other Memory",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 85,
+  "round": 5,
+  "actor": 3,
+  "msg": "P4 plays Dagger -> Mentat",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Dagger -> Mentat",
+     "score": 95.48,
+     "chosen": true
+    },
+    {
+     "label": "Arrakis Liaison -> Stillsuits",
+     "score": 94.77,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 94.42,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Carthag",
+     "score": 94.37,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 89.07,
+     "chosen": false
+    }
+   ],
+   "n_options": 5,
+   "ms": 2.33,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 86,
+  "round": 5,
+  "actor": 3,
+  "msg": "P4 plays Dune, The Desert Planet -> Sell Melange",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 93.12,
+     "chosen": true
+    },
+    {
+     "label": "Arrakis Liaison -> Stillsuits",
+     "score": 92.98,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Carthag",
+     "score": 92.58,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 92.07,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 90.35,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 88.03,
+     "chosen": false
+    }
+   ],
+   "n_options": 6,
+   "ms": 2.86,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 87,
+  "round": 5,
+  "actor": 3,
+  "msg": "P4 reveals Convincing Argument, Convincing Argument, Arrakis Liaison (swords 0); buys Thufir Hawat",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 88,
+  "round": 5,
+  "actor": null,
+  "msg": "Combat Secure Imperial Basin: P4 #1 (4), P1 #2 (3)",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 89,
+  "round": 5,
+  "actor": null,
+  "msg": "End of round 5",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 90,
+  "round": 6,
+  "actor": null,
+  "msg": "Round 6: conflict Sort Through the Chaos",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 91,
+  "round": 6,
+  "actor": 1,
+  "msg": "P2 plays Dune, The Desert Planet -> Imperial Basin, deploys 1",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 86.91,
+     "chosen": true
+    },
+    {
+     "label": "Duncan Idaho -> Sietch Tabr",
+     "score": 85.81,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Stillsuits",
+     "score": 85.81,
+     "chosen": false
+    },
+    {
+     "label": "Duncan Idaho -> Carthag",
+     "score": 85.61,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 85.19,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Stillsuits",
+     "score": 85.01,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Heighliner",
+     "score": 84.91,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Sietch Tabr",
+     "score": 84.81,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Carthag",
+     "score": 84.61,
+     "chosen": false
+    },
+    {
+     "label": "Duncan Idaho -> Arrakeen",
+     "score": 84.41,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Secrets",
+     "score": 84.39,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Arrakeen",
+     "score": 84.21,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Hardy Warriors",
+     "score": 84.01,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Wealth",
+     "score": 83.5,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Hardy Warriors",
+     "score": 83.21,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Conspire",
+     "score": 83.2,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 82.99,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 82.95,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 82.65,
+     "chosen": false
+    },
+    {
+     "label": "Duncan Idaho -> Research Station",
+     "score": 81.19,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 80.5,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Selective Breeding",
+     "score": 80.34,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Research Station",
+     "score": 79.66,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 76.51,
+     "chosen": false
+    }
+   ],
+   "n_options": 24,
+   "ms": 12.85,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 92,
+  "round": 6,
+  "actor": 2,
+  "msg": "P3 plays Diplomacy -> Wealth",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Diplomacy -> Wealth",
+     "score": 93.47,
+     "chosen": true
+    },
+    {
+     "label": "Signet Ring -> Arrakeen",
+     "score": 85.83,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Stillsuits",
+     "score": 84.34,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Stillsuits",
+     "score": 83.54,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Carthag",
+     "score": 81.58,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Secrets",
+     "score": 81.14,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": 80.74,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Carthag",
+     "score": 80.34,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Mentat",
+     "score": 79.99,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Rally Troops",
+     "score": 79.84,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": 79.77,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 79.7,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 79.21,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Arrakeen",
+     "score": 78.97,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 78.64,
+     "chosen": false
+    }
+   ],
+   "n_options": 15,
+   "ms": 7.61,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 93,
+  "round": 6,
+  "actor": 3,
+  "msg": "P4 plays Dagger -> High Council",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Dagger -> High Council",
+     "score": null,
+     "chosen": true
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Rally Troops",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> High Council",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Mentat",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Rally Troops",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Arrakeen",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Carthag",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sietch Tabr",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hagga Basin",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Secure Contract",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Sell Melange",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Hagga Basin",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Conspire",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Heighliner",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Selective Breeding",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Secrets",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Hardy Warriors",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Stillsuits",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": null,
+     "chosen": false
+    }
+   ],
+   "n_options": 28,
+   "ms": 0.02,
+   "rule": "priority space: High Council",
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 94,
+  "round": 6,
+  "actor": 0,
+  "msg": "P1 plays Fremen Camp -> Hagga Basin, deploys 2",
+  "decision": {
+   "actor": 0,
+   "options": [
+    {
+     "label": "Fremen Camp -> Hagga Basin",
+     "score": 87.87,
+     "chosen": true
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 86.12,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 85.11,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> The Great Flat",
+     "score": 85.07,
+     "chosen": false
+    },
+    {
+     "label": "Test of Humanity -> Mentat",
+     "score": 84.87,
+     "chosen": false
+    },
+    {
+     "label": "Test of Humanity -> Secrets",
+     "score": 84.76,
+     "chosen": false
+    },
+    {
+     "label": "Test of Humanity -> Selective Breeding",
+     "score": 84.4,
+     "chosen": false
+    },
+    {
+     "label": "Test of Humanity -> Hall of Oratory",
+     "score": 83.86,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Secure Contract",
+     "score": 82.72,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Sell Melange",
+     "score": 81.9,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 79.98,
+     "chosen": false
+    }
+   ],
+   "n_options": 11,
+   "ms": 5.79,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 95,
+  "round": 6,
+  "actor": 1,
+  "msg": "P2 plays Duncan Idaho -> Sietch Tabr, deploys 1",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Duncan Idaho -> Sietch Tabr",
+     "score": 86.53,
+     "chosen": true
+    },
+    {
+     "label": "Diplomacy -> Stillsuits",
+     "score": 86.53,
+     "chosen": false
+    },
+    {
+     "label": "Duncan Idaho -> Carthag",
+     "score": 86.33,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Secrets",
+     "score": 86.33,
+     "chosen": false
+    },
+    {
+     "label": "Duncan Idaho -> Arrakeen",
+     "score": 85.98,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Stillsuits",
+     "score": 85.73,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Heighliner",
+     "score": 85.63,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Sietch Tabr",
+     "score": 85.53,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Carthag",
+     "score": 85.33,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 84.89,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Hardy Warriors",
+     "score": 84.73,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Conspire",
+     "score": 84.58,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Arrakeen",
+     "score": 84.13,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 84.03,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Hardy Warriors",
+     "score": 83.93,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Selective Breeding",
+     "score": 83.53,
+     "chosen": false
+    },
+    {
+     "label": "Duncan Idaho -> Research Station",
+     "score": 82.39,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 81.88,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 81.26,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Research Station",
+     "score": 80.38,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 80.35,
+     "chosen": false
+    }
+   ],
+   "n_options": 21,
+   "ms": 11.14,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 96,
+  "round": 6,
+  "actor": 2,
+  "msg": "P3 plays Signet Ring -> Swordmaster",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Signet Ring -> Mentat",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Swordmaster",
+     "score": null,
+     "chosen": true
+    },
+    {
+     "label": "Signet Ring -> Rally Troops",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Arrakeen",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Carthag",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Stillsuits",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Arrakeen",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Carthag",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": null,
+     "chosen": false
+    }
+   ],
+   "n_options": 12,
+   "ms": 0.02,
+   "rule": "priority space: Swordmaster",
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 97,
+  "round": 6,
+  "actor": 3,
+  "msg": "P4 plays Signet Ring -> Arrakeen",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Signet Ring -> Arrakeen",
+     "score": 102.19,
+     "chosen": true
+    },
+    {
+     "label": "Signet Ring -> Carthag",
+     "score": 100.71,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Stillsuits",
+     "score": 100.11,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Secrets",
+     "score": 99.91,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": 99.51,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Heighliner",
+     "score": 99.21,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Mentat",
+     "score": 98.94,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": 98.54,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 98.47,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Conspire",
+     "score": 98.44,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 98.34,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Secure Contract",
+     "score": 98.34,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Hardy Warriors",
+     "score": 98.31,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Selective Breeding",
+     "score": 96.55,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 95.94,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 95.74,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Sell Melange",
+     "score": 95.74,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 93.33,
+     "chosen": false
+    }
+   ],
+   "n_options": 18,
+   "ms": 9.04,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 98,
+  "round": 6,
+  "actor": 0,
+  "msg": "P1 plays Dagger -> Mentat",
+  "decision": {
+   "actor": 0,
+   "options": [
+    {
+     "label": "Dagger -> Mentat",
+     "score": 89.84,
+     "chosen": true
+    },
+    {
+     "label": "Test of Humanity -> Mentat",
+     "score": 84.92,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 84.8,
+     "chosen": false
+    },
+    {
+     "label": "Test of Humanity -> Secrets",
+     "score": 84.45,
+     "chosen": false
+    },
+    {
+     "label": "Test of Humanity -> Hall of Oratory",
+     "score": 83.55,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 83.25,
+     "chosen": false
+    },
+    {
+     "label": "Test of Humanity -> Selective Breeding",
+     "score": 80.74,
+     "chosen": false
+    }
+   ],
+   "n_options": 7,
+   "ms": 3.68,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 99,
+  "round": 6,
+  "actor": 1,
+  "msg": "P2 reveals Arrakis Liaison, Diplomacy, Dune, The Desert Planet (swords 0); buys Gun Thopter, Imperial Spy",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 100,
+  "round": 6,
+  "actor": 2,
+  "msg": "P3 plays Arrakis Liaison -> Stillsuits, deploys 1",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Arrakis Liaison -> Stillsuits",
+     "score": 94.21,
+     "chosen": true
+    },
+    {
+     "label": "Arrakis Liaison -> Carthag",
+     "score": 93.15,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 92.89,
+     "chosen": false
+    }
+   ],
+   "n_options": 3,
+   "ms": 1.64,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 101,
+  "round": 6,
+  "actor": 3,
+  "msg": "P4 plays Diplomacy -> Secrets",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Diplomacy -> Secrets",
+     "score": 99.94,
+     "chosen": true
+    },
+    {
+     "label": "Reconnaissance -> Carthag",
+     "score": 99.74,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Heighliner",
+     "score": 99.24,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 98.5,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Hardy Warriors",
+     "score": 98.34,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Selective Breeding",
+     "score": 97.38,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Conspire",
+     "score": 97.14,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 97.04,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Secure Contract",
+     "score": 97.04,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 96.4,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 94.44,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Sell Melange",
+     "score": 94.44,
+     "chosen": false
+    }
+   ],
+   "n_options": 12,
+   "ms": 6.08,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 102,
+  "round": 6,
+  "actor": 0,
+  "msg": "P1 reveals Convincing Argument, Dagger, Test of Humanity, Dune, The Desert Planet (swords 1); buys Power Play, Arrakis Liaison",
+  "decision": {
+   "actor": 0,
+   "options": [
+    {
+     "label": "Reveal hand",
+     "score": 85.53,
+     "chosen": true
+    },
+    {
+     "label": "Test of Humanity -> Hall of Oratory",
+     "score": 85.49,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 84.95,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 82.19,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 81.67,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 81.63,
+     "chosen": false
+    },
+    {
+     "label": "Test of Humanity -> Selective Breeding",
+     "score": 78.93,
+     "chosen": false
+    }
+   ],
+   "n_options": 7,
+   "ms": 3.83,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 103,
+  "round": 6,
+  "actor": 2,
+  "msg": "P3 reveals Convincing Argument, Arrakis Liaison (swords 0); buys Arrakis Liaison, Arrakis Liaison, Guild Administrator",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 104,
+  "round": 6,
+  "actor": 3,
+  "msg": "P4 reveals Dune, The Desert Planet, Carryall, Reconnaissance (swords 0); buys Bene Gesserit Sister, Spice Smugglers",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 105,
+  "round": 6,
+  "actor": null,
+  "msg": "Combat Sort Through the Chaos: P1 #1 (5), P2 #2 (4), P3 #3 (2)",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 106,
+  "round": 6,
+  "actor": null,
+  "msg": "End of round 6",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 107,
+  "round": 7,
+  "actor": null,
+  "msg": "Round 7: conflict Battle for Imperial Basin",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 108,
+  "round": 7,
+  "actor": 2,
+  "msg": "P3 plays Arrakis Liaison -> Stillsuits, deploys 2",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Arrakis Liaison -> Stillsuits",
+     "score": 117.69,
+     "chosen": true
+    },
+    {
+     "label": "Arrakis Liaison -> Hardy Warriors",
+     "score": 115.89,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Sietch Tabr",
+     "score": 114.73,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Carthag",
+     "score": 114.53,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Arrakeen",
+     "score": 114.13,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Sietch Tabr",
+     "score": 113.93,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Carthag",
+     "score": 113.73,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Arrakeen",
+     "score": 113.33,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 112.83,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 112.23,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 99.58,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 99.39,
+     "chosen": false
+    },
+    {
+     "label": "Guild Ambassador -> Hall of Oratory",
+     "score": 99.13,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 99.01,
+     "chosen": false
+    },
+    {
+     "label": "Guild Ambassador -> Mentat",
+     "score": 98.14,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 97.03,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 88.77,
+     "chosen": false
+    }
+   ],
+   "n_options": 17,
+   "ms": 8.9,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 109,
+  "round": 7,
+  "actor": 3,
+  "msg": "P4 plays Thufir Hawat -> Secrets",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Thufir Hawat -> Secrets",
+     "score": 121.01,
+     "chosen": true
+    },
+    {
+     "label": "Thufir Hawat -> Selective Breeding",
+     "score": 120.0,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Hardy Warriors",
+     "score": 116.21,
+     "chosen": false
+    },
+    {
+     "label": "Thufir Hawat -> Arrakeen",
+     "score": 111.71,
+     "chosen": false
+    },
+    {
+     "label": "Thufir Hawat -> Sietch Tabr",
+     "score": 110.96,
+     "chosen": false
+    },
+    {
+     "label": "Thufir Hawat -> Carthag",
+     "score": 110.76,
+     "chosen": false
+    },
+    {
+     "label": "Thufir Hawat -> Mentat",
+     "score": 109.48,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Sietch Tabr",
+     "score": 108.16,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Carthag",
+     "score": 107.96,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 107.93,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Arrakeen",
+     "score": 107.76,
+     "chosen": false
+    },
+    {
+     "label": "Thufir Hawat -> Hall of Oratory",
+     "score": 107.61,
+     "chosen": false
+    },
+    {
+     "label": "Thufir Hawat -> Wealth",
+     "score": 107.41,
+     "chosen": false
+    },
+    {
+     "label": "Thufir Hawat -> Rally Troops",
+     "score": 106.24,
+     "chosen": false
+    },
+    {
+     "label": "Thufir Hawat -> Conspire",
+     "score": 106.21,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 106.06,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 106.03,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Rally Troops",
+     "score": 104.69,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 104.11,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 103.83,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 101.51,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 94.09,
+     "chosen": false
+    }
+   ],
+   "n_options": 22,
+   "ms": 11.27,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 110,
+  "round": 7,
+  "actor": 0,
+  "msg": "P1 plays Diplomacy -> Hardy Warriors, deploys 3",
+  "decision": {
+   "actor": 0,
+   "options": [
+    {
+     "label": "Diplomacy -> Hardy Warriors",
+     "score": 122.31,
+     "chosen": true
+    },
+    {
+     "label": "Missionaria Protectiva -> Sietch Tabr",
+     "score": 109.31,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Heighliner",
+     "score": 108.71,
+     "chosen": false
+    },
+    {
+     "label": "Missionaria Protectiva -> Carthag",
+     "score": 108.51,
+     "chosen": false
+    },
+    {
+     "label": "Missionaria Protectiva -> Arrakeen",
+     "score": 107.86,
+     "chosen": false
+    },
+    {
+     "label": "Missionaria Protectiva -> Research Station",
+     "score": 107.46,
+     "chosen": false
+    },
+    {
+     "label": "Stilgar -> Hardy Warriors",
+     "score": 103.12,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Wealth",
+     "score": 98.79,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Conspire",
+     "score": 98.71,
+     "chosen": false
+    },
+    {
+     "label": "Stilgar -> Arrakeen",
+     "score": 90.92,
+     "chosen": false
+    },
+    {
+     "label": "Stilgar -> Sietch Tabr",
+     "score": 90.12,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 89.75,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 89.6,
+     "chosen": false
+    },
+    {
+     "label": "Stilgar -> Carthag",
+     "score": 89.32,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 88.72,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 88.56,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Selective Breeding",
+     "score": 88.36,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 88.08,
+     "chosen": false
+    },
+    {
+     "label": "Stilgar -> Secure Contract",
+     "score": 87.75,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 87.43,
+     "chosen": false
+    },
+    {
+     "label": "Stilgar -> Imperial Basin",
+     "score": 86.6,
+     "chosen": false
+    },
+    {
+     "label": "Stilgar -> Sell Melange",
+     "score": 86.23,
+     "chosen": false
+    },
+    {
+     "label": "Stilgar -> Research Station",
+     "score": 86.17,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 86.07,
+     "chosen": false
+    },
+    {
+     "label": "Stilgar -> Hagga Basin",
+     "score": 84.28,
+     "chosen": false
+    },
+    {
+     "label": "Stilgar -> The Great Flat",
+     "score": 82.92,
+     "chosen": false
+    }
+   ],
+   "n_options": 26,
+   "ms": 13.63,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 111,
+  "round": 7,
+  "actor": 1,
+  "msg": "P2 plays Dagger -> Swordmaster",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Gurney Halleck -> Arrakeen",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Gurney Halleck -> Carthag",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Gurney Halleck -> Research Station",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Gurney Halleck -> Sietch Tabr",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Swordmaster",
+     "score": null,
+     "chosen": true
+    },
+    {
+     "label": "Dagger -> Rally Troops",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Arrakeen",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Carthag",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Research Station",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Sietch Tabr",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Arrakeen",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Carthag",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Research Station",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Sietch Tabr",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Conspire",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Wealth",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Heighliner",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Foldspace",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Mentat",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Swordmaster",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Rally Troops",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Hall of Oratory",
+     "score": null,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": null,
+     "chosen": false
+    }
+   ],
+   "n_options": 25,
+   "ms": 0.02,
+   "rule": "priority space: Swordmaster",
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 112,
+  "round": 7,
+  "actor": 2,
+  "msg": "P3 plays Dune, The Desert Planet -> The Great Flat, deploys 2",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 111.33,
+     "chosen": true
+    },
+    {
+     "label": "Reconnaissance -> Sietch Tabr",
+     "score": 111.23,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Carthag",
+     "score": 111.03,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Arrakeen",
+     "score": 110.98,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 109.33,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 108.73,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Research Station",
+     "score": 107.33,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 101.68,
+     "chosen": false
+    },
+    {
+     "label": "Guild Ambassador -> Hall of Oratory",
+     "score": 101.23,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 101.11,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 100.69,
+     "chosen": false
+    },
+    {
+     "label": "Guild Ambassador -> Mentat",
+     "score": 100.24,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 99.13,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 94.67,
+     "chosen": false
+    }
+   ],
+   "n_options": 14,
+   "ms": 7.47,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 113,
+  "round": 7,
+  "actor": 3,
+  "msg": "P4 plays Arrakis Liaison -> Arrakeen, deploys 1",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Arrakis Liaison -> Arrakeen",
+     "score": 121.94,
+     "chosen": true
+    },
+    {
+     "label": "Arrakis Liaison -> Sietch Tabr",
+     "score": 121.19,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Carthag",
+     "score": 120.99,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 120.48,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 119.76,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 119.06,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Rally Troops",
+     "score": 118.39,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 117.81,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 116.86,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 115.21,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 111.55,
+     "chosen": false
+    }
+   ],
+   "n_options": 11,
+   "ms": 5.69,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 114,
+  "round": 7,
+  "actor": 0,
+  "msg": "P1 plays Missionaria Protectiva -> Sietch Tabr, deploys 1",
+  "decision": {
+   "actor": 0,
+   "options": [
+    {
+     "label": "Missionaria Protectiva -> Sietch Tabr",
+     "score": 121.31,
+     "chosen": true
+    },
+    {
+     "label": "Missionaria Protectiva -> Carthag",
+     "score": 120.51,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 118.81,
+     "chosen": false
+    },
+    {
+     "label": "Stilgar -> Sietch Tabr",
+     "score": 116.86,
+     "chosen": false
+    },
+    {
+     "label": "Missionaria Protectiva -> Research Station",
+     "score": 116.66,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 116.49,
+     "chosen": false
+    },
+    {
+     "label": "Stilgar -> Carthag",
+     "score": 116.06,
+     "chosen": false
+    },
+    {
+     "label": "Stilgar -> Research Station",
+     "score": 112.36,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 102.73,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 102.21,
+     "chosen": false
+    },
+    {
+     "label": "Stilgar -> Sell Melange",
+     "score": 100.88,
+     "chosen": false
+    },
+    {
+     "label": "Stilgar -> Secure Contract",
+     "score": 100.36,
+     "chosen": false
+    },
+    {
+     "label": "Stilgar -> Imperial Basin",
+     "score": 98.6,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 97.46,
+     "chosen": false
+    },
+    {
+     "label": "Stilgar -> Hagga Basin",
+     "score": 96.28,
+     "chosen": false
+    }
+   ],
+   "n_options": 15,
+   "ms": 7.7,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 115,
+  "round": 7,
+  "actor": 1,
+  "msg": "P2 plays Guild Bankers -> Conspire",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Guild Bankers -> Conspire",
+     "score": 96.56,
+     "chosen": true
+    },
+    {
+     "label": "Guild Bankers -> Wealth",
+     "score": 96.24,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Carthag",
+     "score": 96.06,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Carthag",
+     "score": 95.26,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Heighliner",
+     "score": 94.71,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Hall of Oratory",
+     "score": 94.55,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Foldspace",
+     "score": 94.4,
+     "chosen": false
+    },
+    {
+     "label": "Gurney Halleck -> Carthag",
+     "score": 93.66,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Research Station",
+     "score": 91.91,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Research Station",
+     "score": 91.56,
+     "chosen": false
+    },
+    {
+     "label": "Gurney Halleck -> Research Station",
+     "score": 89.51,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 85.09,
+     "chosen": false
+    }
+   ],
+   "n_options": 12,
+   "ms": 6.26,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 116,
+  "round": 7,
+  "actor": 2,
+  "msg": "P3 plays Reconnaissance -> Carthag, deploys 1",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Reconnaissance -> Carthag",
+     "score": 109.53,
+     "chosen": true
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 98.1,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 97.9,
+     "chosen": false
+    },
+    {
+     "label": "Guild Ambassador -> Hall of Oratory",
+     "score": 97.65,
+     "chosen": false
+    },
+    {
+     "label": "Guild Ambassador -> Mentat",
+     "score": 97.45,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 94.87,
+     "chosen": false
+    }
+   ],
+   "n_options": 6,
+   "ms": 3.35,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 117,
+  "round": 7,
+  "actor": 3,
+  "msg": "P4 plays intrigue Bribery",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 118,
+  "round": 7,
+  "actor": 3,
+  "msg": "P4 plays Dagger -> Mentat",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Dagger -> Mentat",
+     "score": 119.41,
+     "chosen": true
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 118.06,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 116.69,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 116.08,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 115.76,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 114.87,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 113.88,
+     "chosen": false
+    }
+   ],
+   "n_options": 7,
+   "ms": 3.7,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 119,
+  "round": 7,
+  "actor": 0,
+  "msg": "P1 reveals Stilgar, Dune, The Desert Planet, Convincing Argument (swords 3); buys Fedaykin Death Commando, Jamis, Arrakis Recruiter",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 120,
+  "round": 7,
+  "actor": 1,
+  "msg": "P2 plays Reconnaissance -> Research Station",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Reconnaissance -> Research Station",
+     "score": 92.36,
+     "chosen": true
+    },
+    {
+     "label": "Arrakis Liaison -> Research Station",
+     "score": 91.07,
+     "chosen": false
+    },
+    {
+     "label": "Gurney Halleck -> Research Station",
+     "score": 89.07,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 87.99,
+     "chosen": false
+    }
+   ],
+   "n_options": 4,
+   "ms": 2.17,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 121,
+  "round": 7,
+  "actor": 2,
+  "msg": "P3 plays intrigue Windfall",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 122,
+  "round": 7,
+  "actor": 2,
+  "msg": "P3 reveals Guild Ambassador, Dagger (swords 1); buys Bene Gesserit Sister",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 123,
+  "round": 7,
+  "actor": 3,
+  "msg": "P4 reveals Convincing Argument, Dune, The Desert Planet, Convincing Argument, Piter de Vries (swords 1); buys The Spice Must Flow, Sardaukar Infantry",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Reveal hand",
+     "score": 120.14,
+     "chosen": true
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 118.69,
+     "chosen": false
+    },
+    {
+     "label": "Piter de Vries -> Hall of Oratory",
+     "score": 117.76,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 116.87,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 116.19,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 113.99,
+     "chosen": false
+    }
+   ],
+   "n_options": 6,
+   "ms": 3.05,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 124,
+  "round": 7,
+  "actor": 1,
+  "msg": "P2 plays intrigue Charisma",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 125,
+  "round": 7,
+  "actor": 1,
+  "msg": "P2 reveals Gurney Halleck, Arrakis Liaison, Convincing Argument, Convincing Argument, Signet Ring (swords 0); buys The Spice Must Flow, Spice Hunt, Sardaukar Infantry",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 126,
+  "round": 7,
+  "actor": 2,
+  "msg": "P3 plays combat intrigue Reinforcements",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 127,
+  "round": 7,
+  "actor": 3,
+  "msg": "P4 plays combat intrigue Master Tactician",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 128,
+  "round": 7,
+  "actor": 1,
+  "msg": "P2 plays combat intrigue Reinforcements",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 129,
+  "round": 7,
+  "actor": null,
+  "msg": "Combat Battle for Imperial Basin: P3 #1 (17), P1 #2 (11), P2 #3 (10)",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 130,
+  "round": 7,
+  "actor": null,
+  "msg": "End of round 7",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 131,
+  "round": 8,
+  "actor": null,
+  "msg": "Round 8: conflict Battle for Carthag",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 132,
+  "round": 8,
+  "actor": 3,
+  "msg": "P4 plays Signet Ring -> Arrakeen, deploys 1",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Signet Ring -> Arrakeen",
+     "score": 131.19,
+     "chosen": true
+    },
+    {
+     "label": "Signet Ring -> Sietch Tabr",
+     "score": 130.83,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Carthag",
+     "score": 130.69,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Stillsuits",
+     "score": 130.07,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Heighliner",
+     "score": 129.44,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Hardy Warriors",
+     "score": 128.81,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Imperial Basin",
+     "score": 128.33,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Imperial Basin",
+     "score": 127.29,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hagga Basin",
+     "score": 127.13,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Hagga Basin",
+     "score": 126.08,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Wealth",
+     "score": 124.24,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Conspire",
+     "score": 123.8,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": 114.2,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Secrets",
+     "score": 114.04,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": 113.87,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Secure Contract",
+     "score": 113.25,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 112.98,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Selective Breeding",
+     "score": 112.8,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 112.05,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Sell Melange",
+     "score": 111.43,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 102.5,
+     "chosen": false
+    }
+   ],
+   "n_options": 21,
+   "ms": 11.65,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 133,
+  "round": 8,
+  "actor": 0,
+  "msg": "P1 plays Reconnaissance -> Sietch Tabr, deploys 2",
+  "decision": {
+   "actor": 0,
+   "options": [
+    {
+     "label": "Reconnaissance -> Sietch Tabr",
+     "score": 110.59,
+     "chosen": true
+    },
+    {
+     "label": "Signet Ring -> Sietch Tabr",
+     "score": 110.45,
+     "chosen": false
+    },
+    {
+     "label": "Chani -> Hardy Warriors",
+     "score": 110.28,
+     "chosen": false
+    },
+    {
+     "label": "Chani -> Sietch Tabr",
+     "score": 110.14,
+     "chosen": false
+    },
+    {
+     "label": "Chani -> Research Station",
+     "score": 110.11,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Carthag",
+     "score": 110.03,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Carthag",
+     "score": 109.89,
+     "chosen": false
+    },
+    {
+     "label": "Chani -> Carthag",
+     "score": 109.58,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Imperial Basin",
+     "score": 108.25,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Research Station",
+     "score": 108.02,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hagga Basin",
+     "score": 106.63,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Research Station",
+     "score": 106.2,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> The Great Flat",
+     "score": 104.67,
+     "chosen": false
+    },
+    {
+     "label": "Opulence -> Conspire",
+     "score": 98.27,
+     "chosen": false
+    },
+    {
+     "label": "Opulence -> Wealth",
+     "score": 95.97,
+     "chosen": false
+    },
+    {
+     "label": "Chani -> Stillsuits",
+     "score": 94.58,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Rally Troops",
+     "score": 91.75,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Mentat",
+     "score": 91.63,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 90.96,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": 89.27,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": 89.21,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 87.34,
+     "chosen": false
+    }
+   ],
+   "n_options": 22,
+   "ms": 12.33,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 134,
+  "round": 8,
+  "actor": 1,
+  "msg": "P2 plays Gun Thopter -> Carthag, deploys 1",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Gun Thopter -> Carthag",
+     "score": 102.41,
+     "chosen": true
+    },
+    {
+     "label": "Arrakis Liaison -> Stillsuits",
+     "score": 102.14,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Carthag",
+     "score": 101.86,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 101.43,
+     "chosen": false
+    },
+    {
+     "label": "Gun Thopter -> Imperial Basin",
+     "score": 101.18,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Hardy Warriors",
+     "score": 100.88,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 100.22,
+     "chosen": false
+    },
+    {
+     "label": "Gun Thopter -> Research Station",
+     "score": 100.22,
+     "chosen": false
+    },
+    {
+     "label": "Gun Thopter -> Hagga Basin",
+     "score": 99.97,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Research Station",
+     "score": 99.22,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 98.68,
+     "chosen": false
+    },
+    {
+     "label": "Gun Thopter -> The Great Flat",
+     "score": 98.43,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 91.04,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 86.62,
+     "chosen": false
+    },
+    {
+     "label": "Gun Thopter -> Secure Contract",
+     "score": 86.59,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 85.72,
+     "chosen": false
+    },
+    {
+     "label": "Gun Thopter -> Sell Melange",
+     "score": 85.31,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 84.44,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 75.31,
+     "chosen": false
+    }
+   ],
+   "n_options": 19,
+   "ms": 10.15,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 135,
+  "round": 8,
+  "actor": 2,
+  "msg": "P3 plays Diplomacy -> Heighliner, deploys 3",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Diplomacy -> Heighliner",
+     "score": 127.55,
+     "chosen": true
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 111.29,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Stillsuits",
+     "score": 109.82,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Stillsuits",
+     "score": 109.02,
+     "chosen": false
+    },
+    {
+     "label": "Gun Thopter -> Imperial Basin",
+     "score": 108.19,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Wealth",
+     "score": 107.73,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Secrets",
+     "score": 107.53,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Conspire",
+     "score": 107.29,
+     "chosen": false
+    },
+    {
+     "label": "Gun Thopter -> Secure Contract",
+     "score": 106.97,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Selective Breeding",
+     "score": 106.43,
+     "chosen": false
+    },
+    {
+     "label": "Gun Thopter -> Sell Melange",
+     "score": 105.15,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 103.33,
+     "chosen": false
+    }
+   ],
+   "n_options": 12,
+   "ms": 6.43,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 136,
+  "round": 8,
+  "actor": 3,
+  "msg": "P4 plays Diplomacy -> Hardy Warriors, deploys 4",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Diplomacy -> Hardy Warriors",
+     "score": 125.48,
+     "chosen": true
+    },
+    {
+     "label": "Diplomacy -> Wealth",
+     "score": 122.72,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Conspire",
+     "score": 121.88,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Stillsuits",
+     "score": 113.58,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Secrets",
+     "score": 113.44,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 112.38,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Selective Breeding",
+     "score": 111.4,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Secure Contract",
+     "score": 111.33,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Imperial Basin",
+     "score": 109.68,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Sell Melange",
+     "score": 109.51,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Hagga Basin",
+     "score": 108.47,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 103.84,
+     "chosen": false
+    }
+   ],
+   "n_options": 12,
+   "ms": 6.31,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 137,
+  "round": 8,
+  "actor": 0,
+  "msg": "P1 plays Opulence -> Conspire",
+  "decision": {
+   "actor": 0,
+   "options": [
+    {
+     "label": "Opulence -> Conspire",
+     "score": 95.52,
+     "chosen": true
+    },
+    {
+     "label": "Opulence -> Wealth",
+     "score": 93.22,
+     "chosen": false
+    },
+    {
+     "label": "Chani -> Stillsuits",
+     "score": 90.52,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Rally Troops",
+     "score": 89.0,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Mentat",
+     "score": 88.43,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 88.21,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Research Station",
+     "score": 87.81,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 87.8,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": 86.52,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": 86.46,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Imperial Basin",
+     "score": 85.48,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hagga Basin",
+     "score": 83.86,
+     "chosen": false
+    },
+    {
+     "label": "Chani -> Research Station",
+     "score": 83.7,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> The Great Flat",
+     "score": 81.9,
+     "chosen": false
+    }
+   ],
+   "n_options": 14,
+   "ms": 7.88,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 138,
+  "round": 8,
+  "actor": 1,
+  "msg": "P2 plays intrigue Recruitment Mission",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 139,
+  "round": 8,
+  "actor": 1,
+  "msg": "P2 plays Dagger -> Mentat",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Dagger -> Mentat",
+     "score": 87.53,
+     "chosen": true
+    },
+    {
+     "label": "Arrakis Liaison -> Stillsuits",
+     "score": 85.39,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 84.61,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 84.39,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 83.9,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 83.33,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 82.69,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Research Station",
+     "score": 82.47,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 81.15,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 78.2,
+     "chosen": false
+    }
+   ],
+   "n_options": 10,
+   "ms": 5.28,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 140,
+  "round": 8,
+  "actor": 2,
+  "msg": "P3 plays Arrakis Liaison -> Stillsuits, deploys 2",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Arrakis Liaison -> Stillsuits",
+     "score": 125.26,
+     "chosen": true
+    },
+    {
+     "label": "Gun Thopter -> Research Station",
+     "score": 124.9,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Research Station",
+     "score": 121.6,
+     "chosen": false
+    },
+    {
+     "label": "Gun Thopter -> Imperial Basin",
+     "score": 112.29,
+     "chosen": false
+    },
+    {
+     "label": "Gun Thopter -> Hagga Basin",
+     "score": 110.75,
+     "chosen": false
+    },
+    {
+     "label": "Gun Thopter -> Secure Contract",
+     "score": 109.96,
+     "chosen": false
+    },
+    {
+     "label": "Gun Thopter -> The Great Flat",
+     "score": 109.21,
+     "chosen": false
+    },
+    {
+     "label": "Gun Thopter -> Sell Melange",
+     "score": 107.82,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 105.6,
+     "chosen": false
+    }
+   ],
+   "n_options": 9,
+   "ms": 4.72,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 141,
+  "round": 8,
+  "actor": 3,
+  "msg": "P4 plays Carryall -> Secure Contract",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Carryall -> Secure Contract",
+     "score": 108.41,
+     "chosen": true
+    },
+    {
+     "label": "Carryall -> Sell Melange",
+     "score": 108.16,
+     "chosen": false
+    },
+    {
+     "label": "Carryall -> Imperial Basin",
+     "score": 105.98,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 103.41,
+     "chosen": false
+    }
+   ],
+   "n_options": 4,
+   "ms": 2.08,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 142,
+  "round": 8,
+  "actor": 0,
+  "msg": "P1 reveals Assassination Mission, Chani, Signet Ring (swords 3); buys Sardaukar Legion",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 143,
+  "round": 8,
+  "actor": 1,
+  "msg": "P2 plays Diplomacy -> Wealth",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Diplomacy -> Wealth",
+     "score": 85.55,
+     "chosen": true
+    },
+    {
+     "label": "Arrakis Liaison -> Research Station",
+     "score": 84.89,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Secrets",
+     "score": 84.36,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Selective Breeding",
+     "score": 83.83,
+     "chosen": false
+    },
+    {
+     "label": "Diplomacy -> Foldspace",
+     "score": 83.29,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 82.99,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 82.11,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 81.78,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 80.24,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 76.4,
+     "chosen": false
+    }
+   ],
+   "n_options": 10,
+   "ms": 5.28,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 144,
+  "round": 8,
+  "actor": 2,
+  "msg": "P3 plays Arrakis Liaison -> Research Station",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Arrakis Liaison -> Research Station",
+     "score": 123.08,
+     "chosen": true
+    },
+    {
+     "label": "Reveal hand",
+     "score": 121.33,
+     "chosen": false
+    },
+    {
+     "label": "Gun Thopter -> Imperial Basin",
+     "score": 110.91,
+     "chosen": false
+    },
+    {
+     "label": "Gun Thopter -> Hagga Basin",
+     "score": 109.37,
+     "chosen": false
+    },
+    {
+     "label": "Gun Thopter -> Research Station",
+     "score": 109.29,
+     "chosen": false
+    },
+    {
+     "label": "Gun Thopter -> Sell Melange",
+     "score": 109.17,
+     "chosen": false
+    },
+    {
+     "label": "Gun Thopter -> The Great Flat",
+     "score": 107.83,
+     "chosen": false
+    }
+   ],
+   "n_options": 7,
+   "ms": 3.56,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 145,
+  "round": 8,
+  "actor": 3,
+  "msg": "P4 reveals Sardaukar Infantry, Convincing Argument, The Spice Must Flow (swords 2); buys Firm Grip, Missionaria Protectiva",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 146,
+  "round": 8,
+  "actor": 1,
+  "msg": "P2 plays Dune, The Desert Planet -> Imperial Basin",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 82.83,
+     "chosen": true
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 81.73,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 81.62,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 80.08,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 79.97,
+     "chosen": false
+    }
+   ],
+   "n_options": 5,
+   "ms": 2.85,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 147,
+  "round": 8,
+  "actor": 2,
+  "msg": "P3 reveals Gun Thopter, Convincing Argument, Dune, The Desert Planet, Arrakis Liaison, Lady Jessica (swords 4); buys The Spice Must Flow",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 148,
+  "round": 8,
+  "actor": 1,
+  "msg": "P2 reveals Sardaukar Infantry, Arrakis Liaison (swords 2); buys Space Travel, Imperial Spy",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 149,
+  "round": 8,
+  "actor": null,
+  "msg": "Combat Battle for Carthag: P3 #1 (14), P4 #2 (12), P1 #3 (7)",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 150,
+  "round": 8,
+  "actor": null,
+  "msg": "End of round 8",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 151,
+  "round": 9,
+  "actor": null,
+  "msg": "Round 9: conflict Battle for Arrakeen",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 152,
+  "round": 9,
+  "actor": 0,
+  "msg": "P1 plays Reconnaissance -> Research Station, deploys 1",
+  "decision": {
+   "actor": 0,
+   "options": [
+    {
+     "label": "Reconnaissance -> Research Station",
+     "score": 100.83,
+     "chosen": true
+    },
+    {
+     "label": "Reconnaissance -> Sietch Tabr",
+     "score": 97.9,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Carthag",
+     "score": 97.58,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Arrakeen",
+     "score": 97.48,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 96.45,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 95.91,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Imperial Basin",
+     "score": 95.3,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 94.79,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Hagga Basin",
+     "score": 94.76,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> The Great Flat",
+     "score": 93.64,
+     "chosen": false
+    },
+    {
+     "label": "Sardaukar Legion -> Swordmaster",
+     "score": 79.94,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 79.65,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Swordmaster",
+     "score": 79.53,
+     "chosen": false
+    },
+    {
+     "label": "Sardaukar Legion -> Mentat",
+     "score": 79.01,
+     "chosen": false
+    },
+    {
+     "label": "Sardaukar Legion -> Hall of Oratory",
+     "score": 77.12,
+     "chosen": false
+    },
+    {
+     "label": "Sardaukar Legion -> Rally Troops",
+     "score": 76.93,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 76.71,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Rally Troops",
+     "score": 76.52,
+     "chosen": false
+    },
+    {
+     "label": "Sardaukar Legion -> Wealth",
+     "score": 76.36,
+     "chosen": false
+    },
+    {
+     "label": "Sardaukar Legion -> Conspire",
+     "score": 76.33,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 75.18,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 74.59,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Secure Contract",
+     "score": 74.03,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Sell Melange",
+     "score": 73.44,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 68.72,
+     "chosen": false
+    }
+   ],
+   "n_options": 25,
+   "ms": 13.24,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 153,
+  "round": 9,
+  "actor": 1,
+  "msg": "P2 plays Reconnaissance -> Arrakeen, deploys 2",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Reconnaissance -> Arrakeen",
+     "score": 89.03,
+     "chosen": true
+    },
+    {
+     "label": "Guild Bankers -> Heighliner",
+     "score": 88.18,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Arrakeen",
+     "score": 87.75,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sietch Tabr",
+     "score": 87.48,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Sietch Tabr",
+     "score": 87.41,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Carthag",
+     "score": 87.4,
+     "chosen": false
+    },
+    {
+     "label": "Reconnaissance -> Carthag",
+     "score": 87.33,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Imperial Basin",
+     "score": 86.27,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hagga Basin",
+     "score": 85.97,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> The Great Flat",
+     "score": 85.09,
+     "chosen": false
+    },
+    {
+     "label": "Imperial Spy -> Conspire",
+     "score": 82.5,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Conspire",
+     "score": 82.21,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Wealth",
+     "score": 81.81,
+     "chosen": false
+    },
+    {
+     "label": "Imperial Spy -> Wealth",
+     "score": 81.65,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Mentat",
+     "score": 74.72,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Mentat",
+     "score": 73.6,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Hall of Oratory",
+     "score": 71.92,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": 71.64,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Foldspace",
+     "score": 71.42,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": 71.21,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 71.05,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 60.74,
+     "chosen": false
+    }
+   ],
+   "n_options": 22,
+   "ms": 11.68,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 154,
+  "round": 9,
+  "actor": 2,
+  "msg": "P3 plays Signet Ring -> Sietch Tabr, deploys 1",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Signet Ring -> Sietch Tabr",
+     "score": 126.97,
+     "chosen": true
+    },
+    {
+     "label": "Signet Ring -> Carthag",
+     "score": 126.41,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": 126.01,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 125.95,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hagga Basin",
+     "score": 125.65,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": 125.46,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Imperial Basin",
+     "score": 125.25,
+     "chosen": false
+    },
+    {
+     "label": "Guild Administrator -> Secure Contract",
+     "score": 125.13,
+     "chosen": false
+    },
+    {
+     "label": "Guild Administrator -> Hagga Basin",
+     "score": 124.89,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> The Great Flat",
+     "score": 124.77,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 124.69,
+     "chosen": false
+    },
+    {
+     "label": "Guild Administrator -> Imperial Basin",
+     "score": 124.49,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Secure Contract",
+     "score": 124.23,
+     "chosen": false
+    },
+    {
+     "label": "Guild Administrator -> The Great Flat",
+     "score": 124.01,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Hagga Basin",
+     "score": 123.99,
+     "chosen": false
+    },
+    {
+     "label": "Guild Administrator -> Sell Melange",
+     "score": 123.93,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Imperial Basin",
+     "score": 123.59,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> The Great Flat",
+     "score": 123.11,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Sell Melange",
+     "score": 123.03,
+     "chosen": false
+    },
+    {
+     "label": "Guild Administrator -> Foldspace",
+     "score": 117.37,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 114.82,
+     "chosen": false
+    }
+   ],
+   "n_options": 21,
+   "ms": 11.06,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 155,
+  "round": 9,
+  "actor": 3,
+  "msg": "P4 plays Thufir Hawat -> Conspire",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Thufir Hawat -> Conspire",
+     "score": 107.45,
+     "chosen": true
+    },
+    {
+     "label": "Thufir Hawat -> Wealth",
+     "score": 105.81,
+     "chosen": false
+    },
+    {
+     "label": "Thufir Hawat -> Mentat",
+     "score": 100.86,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 99.83,
+     "chosen": false
+    },
+    {
+     "label": "Thufir Hawat -> Selective Breeding",
+     "score": 98.88,
+     "chosen": false
+    },
+    {
+     "label": "Bene Gesserit Sister -> Mentat",
+     "score": 98.81,
+     "chosen": false
+    },
+    {
+     "label": "Bene Gesserit Sister -> Selective Breeding",
+     "score": 98.65,
+     "chosen": false
+    },
+    {
+     "label": "Thufir Hawat -> Secrets",
+     "score": 97.93,
+     "chosen": false
+    },
+    {
+     "label": "Thufir Hawat -> Hall of Oratory",
+     "score": 97.85,
+     "chosen": false
+    },
+    {
+     "label": "Thufir Hawat -> Carthag",
+     "score": 97.85,
+     "chosen": false
+    },
+    {
+     "label": "Thufir Hawat -> Rally Troops",
+     "score": 97.81,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 97.5,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Rally Troops",
+     "score": 97.46,
+     "chosen": false
+    },
+    {
+     "label": "Bene Gesserit Sister -> Secrets",
+     "score": 97.13,
+     "chosen": false
+    },
+    {
+     "label": "Bene Gesserit Sister -> Hall of Oratory",
+     "score": 97.05,
+     "chosen": false
+    },
+    {
+     "label": "Bene Gesserit Sister -> Rally Troops",
+     "score": 97.01,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 95.97,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 95.92,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 95.83,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 87.51,
+     "chosen": false
+    }
+   ],
+   "n_options": 20,
+   "ms": 10.57,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 156,
+  "round": 9,
+  "actor": 0,
+  "msg": "P1 plays Power Play -> Heighliner, deploys 2",
+  "decision": {
+   "actor": 0,
+   "options": [
+    {
+     "label": "Power Play -> Heighliner",
+     "score": 104.63,
+     "chosen": true
+    },
+    {
+     "label": "Power Play -> Stillsuits",
+     "score": 96.63,
+     "chosen": false
+    },
+    {
+     "label": "Power Play -> Hardy Warriors",
+     "score": 95.43,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Stillsuits",
+     "score": 93.7,
+     "chosen": false
+    },
+    {
+     "label": "Missionaria Protectiva -> Carthag",
+     "score": 92.9,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Hardy Warriors",
+     "score": 92.5,
+     "chosen": false
+    },
+    {
+     "label": "Arrakis Liaison -> Carthag",
+     "score": 92.1,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 91.77,
+     "chosen": false
+    },
+    {
+     "label": "Power Play -> Selective Breeding",
+     "score": 91.52,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 91.23,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Imperial Basin",
+     "score": 90.62,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> The Great Flat",
+     "score": 90.11,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Hagga Basin",
+     "score": 90.08,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> The Great Flat",
+     "score": 88.96,
+     "chosen": false
+    },
+    {
+     "label": "Power Play -> Secrets",
+     "score": 84.34,
+     "chosen": false
+    },
+    {
+     "label": "Power Play -> Foldspace",
+     "score": 82.97,
+     "chosen": false
+    },
+    {
+     "label": "Sardaukar Legion -> Mentat",
+     "score": 76.96,
+     "chosen": false
+    },
+    {
+     "label": "Sardaukar Legion -> Swordmaster",
+     "score": 76.88,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Swordmaster",
+     "score": 76.47,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Mentat",
+     "score": 75.05,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 74.76,
+     "chosen": false
+    },
+    {
+     "label": "Power Play -> Wealth",
+     "score": 73.94,
+     "chosen": false
+    },
+    {
+     "label": "Sardaukar Legion -> Hall of Oratory",
+     "score": 73.32,
+     "chosen": false
+    },
+    {
+     "label": "Sardaukar Legion -> Rally Troops",
+     "score": 73.13,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 72.91,
+     "chosen": false
+    },
+    {
+     "label": "Dagger -> Rally Troops",
+     "score": 72.72,
+     "chosen": false
+    },
+    {
+     "label": "Sardaukar Legion -> Wealth",
+     "score": 72.56,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 71.38,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 70.79,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Secure Contract",
+     "score": 70.23,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Sell Melange",
+     "score": 69.64,
+     "chosen": false
+    }
+   ],
+   "n_options": 31,
+   "ms": 17.59,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 157,
+  "round": 9,
+  "actor": 1,
+  "msg": "P2 plays Signet Ring -> Carthag, deploys 2",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Signet Ring -> Carthag",
+     "score": 85.08,
+     "chosen": true
+    },
+    {
+     "label": "Signet Ring -> Imperial Basin",
+     "score": 83.95,
+     "chosen": false
+    },
+    {
+     "label": "Gurney Halleck -> Carthag",
+     "score": 83.81,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hagga Basin",
+     "score": 83.65,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> The Great Flat",
+     "score": 82.77,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Wealth",
+     "score": 80.97,
+     "chosen": false
+    },
+    {
+     "label": "Imperial Spy -> Wealth",
+     "score": 79.81,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Mentat",
+     "score": 76.15,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Mentat",
+     "score": 74.16,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Sell Melange",
+     "score": 70.61,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 70.6,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Secure Contract",
+     "score": 70.37,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Hall of Oratory",
+     "score": 70.16,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Hall of Oratory",
+     "score": 70.08,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Foldspace",
+     "score": 69.58,
+     "chosen": false
+    }
+   ],
+   "n_options": 15,
+   "ms": 8.37,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 158,
+  "round": 9,
+  "actor": 2,
+  "msg": "P3 plays Dagger -> Mentat",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Dagger -> Mentat",
+     "score": 127.99,
+     "chosen": true
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 124.78,
+     "chosen": false
+    },
+    {
+     "label": "Guild Administrator -> Hagga Basin",
+     "score": 123.72,
+     "chosen": false
+    },
+    {
+     "label": "Guild Administrator -> Imperial Basin",
+     "score": 123.32,
+     "chosen": false
+    },
+    {
+     "label": "Guild Administrator -> The Great Flat",
+     "score": 122.84,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Hagga Basin",
+     "score": 122.82,
+     "chosen": false
+    },
+    {
+     "label": "Guild Administrator -> Sell Melange",
+     "score": 122.76,
+     "chosen": false
+    },
+    {
+     "label": "Guild Administrator -> Secure Contract",
+     "score": 122.65,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Imperial Basin",
+     "score": 122.42,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> The Great Flat",
+     "score": 121.94,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Sell Melange",
+     "score": 121.86,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Secure Contract",
+     "score": 121.75,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 117.14,
+     "chosen": false
+    },
+    {
+     "label": "Guild Administrator -> Foldspace",
+     "score": 114.15,
+     "chosen": false
+    }
+   ],
+   "n_options": 14,
+   "ms": 7.92,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 159,
+  "round": 9,
+  "actor": 3,
+  "msg": "P4 plays intrigue Water Peddlers Union",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 160,
+  "round": 9,
+  "actor": 3,
+  "msg": "P4 plays intrigue Recruitment Mission",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 161,
+  "round": 9,
+  "actor": 3,
+  "msg": "P4 plays Dagger -> Rally Troops",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Dagger -> Rally Troops",
+     "score": 106.18,
+     "chosen": true
+    },
+    {
+     "label": "Dagger -> Hall of Oratory",
+     "score": 105.74,
+     "chosen": false
+    },
+    {
+     "label": "Bene Gesserit Sister -> Rally Troops",
+     "score": 105.73,
+     "chosen": false
+    },
+    {
+     "label": "Bene Gesserit Sister -> Secrets",
+     "score": 105.37,
+     "chosen": false
+    },
+    {
+     "label": "Bene Gesserit Sister -> Hall of Oratory",
+     "score": 105.29,
+     "chosen": false
+    },
+    {
+     "label": "Bene Gesserit Sister -> Selective Breeding",
+     "score": 105.04,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 104.21,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 103.83,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 103.53,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 103.17,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 99.81,
+     "chosen": false
+    }
+   ],
+   "n_options": 11,
+   "ms": 5.99,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 162,
+  "round": 9,
+  "actor": 0,
+  "msg": "P1 reveals Sardaukar Legion, Dagger, Dune, The Desert Planet, Fremen Camp, Arrakis Liaison, Missionaria Protectiva (swords 4); buys The Spice Must Flow",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 163,
+  "round": 9,
+  "actor": 1,
+  "msg": "P2 plays Guild Bankers -> Wealth",
+  "decision": {
+   "actor": 1,
+   "options": [
+    {
+     "label": "Guild Bankers -> Wealth",
+     "score": 79.93,
+     "chosen": true
+    },
+    {
+     "label": "Imperial Spy -> Wealth",
+     "score": 79.06,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 76.97,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Hall of Oratory",
+     "score": 69.33,
+     "chosen": false
+    },
+    {
+     "label": "Guild Bankers -> Foldspace",
+     "score": 68.83,
+     "chosen": false
+    }
+   ],
+   "n_options": 5,
+   "ms": 2.99,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": [
+   "P3 trashes Dagger"
+  ]
+ },
+ {
+  "step": 164,
+  "round": 9,
+  "actor": 2,
+  "msg": "P3 plays Guild Administrator -> Foldspace",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Guild Administrator -> Foldspace",
+     "score": 122.23,
+     "chosen": true
+    },
+    {
+     "label": "Other Memory -> Secrets",
+     "score": 117.19,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 116.11,
+     "chosen": false
+    },
+    {
+     "label": "Guild Administrator -> Hagga Basin",
+     "score": 115.25,
+     "chosen": false
+    },
+    {
+     "label": "Guild Administrator -> Imperial Basin",
+     "score": 114.85,
+     "chosen": false
+    },
+    {
+     "label": "Guild Administrator -> The Great Flat",
+     "score": 114.37,
+     "chosen": false
+    },
+    {
+     "label": "Guild Administrator -> Sell Melange",
+     "score": 114.29,
+     "chosen": false
+    },
+    {
+     "label": "Guild Administrator -> Secure Contract",
+     "score": 114.09,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Hagga Basin",
+     "score": 114.0,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Imperial Basin",
+     "score": 113.6,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> The Great Flat",
+     "score": 113.12,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Sell Melange",
+     "score": 113.04,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Secure Contract",
+     "score": 112.84,
+     "chosen": false
+    }
+   ],
+   "n_options": 13,
+   "ms": 7.51,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": [
+   "P4 trashes Dagger"
+  ]
+ },
+ {
+  "step": 165,
+  "round": 9,
+  "actor": 3,
+  "msg": "P4 plays Bene Gesserit Sister -> Selective Breeding",
+  "decision": {
+   "actor": 3,
+   "options": [
+    {
+     "label": "Bene Gesserit Sister -> Selective Breeding",
+     "score": 106.15,
+     "chosen": true
+    },
+    {
+     "label": "Bene Gesserit Sister -> Secrets",
+     "score": 103.78,
+     "chosen": false
+    },
+    {
+     "label": "Bene Gesserit Sister -> Hall of Oratory",
+     "score": 103.7,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Secure Contract",
+     "score": 102.62,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 102.24,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Hagga Basin",
+     "score": 101.94,
+     "chosen": false
+    },
+    {
+     "label": "Dune, The Desert Planet -> Sell Melange",
+     "score": 101.58,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 101.57,
+     "chosen": false
+    }
+   ],
+   "n_options": 8,
+   "ms": 4.22,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 166,
+  "round": 9,
+  "actor": 1,
+  "msg": "P2 reveals Imperial Spy, Convincing Argument, Gurney Halleck (swords 1); buys Reverend Mother Mohiam",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 167,
+  "round": 9,
+  "actor": 2,
+  "msg": "P3 plays Other Memory -> Secrets",
+  "decision": {
+   "actor": 2,
+   "options": [
+    {
+     "label": "Other Memory -> Secrets",
+     "score": 120.88,
+     "chosen": true
+    },
+    {
+     "label": "Fremen Camp -> Hagga Basin",
+     "score": 118.31,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Imperial Basin",
+     "score": 117.91,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> The Great Flat",
+     "score": 117.43,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Sell Melange",
+     "score": 117.28,
+     "chosen": false
+    },
+    {
+     "label": "Fremen Camp -> Secure Contract",
+     "score": 117.08,
+     "chosen": false
+    },
+    {
+     "label": "Reveal hand",
+     "score": 115.5,
+     "chosen": false
+    }
+   ],
+   "n_options": 7,
+   "ms": 3.67,
+   "rule": null,
+   "fallback": null
+  },
+  "notes": []
+ },
+ {
+  "step": 168,
+  "round": 9,
+  "actor": 3,
+  "msg": "P4 reveals Dune, The Desert Planet, Dune, The Desert Planet, Arrakis Liaison, Piter de Vries (swords 1); buys The Spice Must Flow",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 169,
+  "round": 9,
+  "actor": 2,
+  "msg": "P3 plays intrigue Dispatch an Envoy",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 170,
+  "round": 9,
+  "actor": 2,
+  "msg": "P3 reveals Fremen Camp, Convincing Argument, Guild Ambassador (swords 1); buys Space Travel, Smuggler's Thopter",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 171,
+  "round": 9,
+  "actor": null,
+  "msg": "Combat Battle for Arrakeen: P2 #1 (13), P1 #2 (10), P3 #3 (3)",
+  "decision": null,
+  "notes": []
+ },
+ {
+  "step": 172,
+  "round": 9,
+  "actor": null,
+  "msg": "Game over: P3 10VP, P4 8VP, P2 6VP, P1 4VP",
+  "decision": null,
+  "notes": []
+ }
+]

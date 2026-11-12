@@ -1,0 +1,29 @@
+{
+ "players": [
+  "fremen_faction",
+  "balanced",
+  "balanced",
+  "balanced"
+ ],
+ "seed": 7,
+ "agent_seat": 1,
+ "agent_strategy": "fremen_faction",
+ "terminal_status": "10 VP reached after 9 rounds",
+ "agent_won": false,
+ "final_vp": [
+  4,
+  6,
+  10,
+  8
+ ],
+ "measures": {
+  "vp": 4,
+  "rank": 4,
+  "decisions": 19,
+  "avg_options": 16.2,
+  "ms_per_decision": 8.43,
+  "near_tie_pct": 26.3,
+  "fallbacks": 0
+ },
+ "total_fallbacks": 0
+}

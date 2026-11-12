@@ -1,0 +1,2 @@
+error: unsupported table size: 5 players given, the game supports 2 to 4
+exit code 2, no game run

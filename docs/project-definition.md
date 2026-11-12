@@ -11,7 +11,7 @@
 
 ---
 
-## 1. Problem, user, intended use, target outcome
+## 1. Problem
 
 **Problem.** *Dune: Imperium* is a four-player game that mixes worker placement, deck
 building and combat. With its complexity and layers, this game is far from solved. A

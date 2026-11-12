@@ -1,0 +1,29 @@
+{
+ "players": [
+  "bene_gesserit_faction",
+  "balanced",
+  "balanced",
+  "balanced"
+ ],
+ "seed": 7,
+ "agent_seat": 1,
+ "agent_strategy": "bene_gesserit_faction",
+ "terminal_status": "conflict deck exhausted after 10 rounds",
+ "agent_won": true,
+ "final_vp": [
+  8,
+  7,
+  7,
+  5
+ ],
+ "measures": {
+  "vp": 8,
+  "rank": 1,
+  "decisions": 27,
+  "avg_options": 13.8,
+  "ms_per_decision": 6.79,
+  "near_tie_pct": 29.6,
+  "fallbacks": 0
+ },
+ "total_fallbacks": 0
+}

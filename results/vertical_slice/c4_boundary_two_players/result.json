@@ -1,0 +1,25 @@
+{
+ "players": [
+  "balanced",
+  "balanced"
+ ],
+ "seed": 7,
+ "agent_seat": 1,
+ "agent_strategy": "balanced",
+ "terminal_status": "10 VP reached after 9 rounds",
+ "agent_won": true,
+ "final_vp": [
+  10,
+  9
+ ],
+ "measures": {
+  "vp": 10,
+  "rank": 1,
+  "decisions": 20,
+  "avg_options": 16.1,
+  "ms_per_decision": 6.35,
+  "near_tie_pct": 31.6,
+  "fallbacks": 0
+ },
+ "total_fallbacks": 0
+}

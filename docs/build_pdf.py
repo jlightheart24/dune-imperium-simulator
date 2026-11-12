@@ -1,6 +1,9 @@
 """Build the submission PDF from project-definition.md.
 
-    python3 docs/build_pdf.py            # cites the current git HEAD as the submitted commit
+    python3 docs/build_pdf.py                   # project-definition.md
+    python3 docs/build_pdf.py vertical-slice    # vertical-slice.md
+
+The PDF cites the current git HEAD as the submitted commit.
 
 Uses only the standard library plus an installed Google Chrome (headless) to print.
 Handles the Markdown subset the document uses: headings, paragraphs, tables, fenced code,
@@ -14,8 +17,10 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-SRC = os.path.join(HERE, "project-definition.md")
-OUT_NAME = "lightheart-jonny-project-definition.pdf"
+# python3 docs/build_pdf.py [project-definition | vertical-slice]
+DOC = sys.argv[1] if len(sys.argv) > 1 else "project-definition"
+SRC = os.path.join(HERE, DOC + ".md")
+OUT_NAME = "lightheart-jonny-%s.pdf" % DOC
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 CSS = """
@@ -116,7 +121,7 @@ def convert(md):
 def main():
     commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT).decode().strip()
     md = open(SRC).read().replace("COMMIT_HASH_IN_PDF", "`%s`" % commit)
-    page = ("<!doctype html><html><head><meta charset='utf-8'><title>Project Definition</title>"
+    page = ("<!doctype html><html lang='en'><head><meta charset='utf-8'><title>%s</title>" % DOC.replace("-", " ").title() +
             "<style>%s</style></head><body>%s</body></html>" % (CSS, convert(md)))
     tmp = os.path.join(HERE, "_project-definition.html")  # next to img/ so the image resolves
     with open(tmp, "w") as fh:

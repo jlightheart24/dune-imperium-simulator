@@ -202,6 +202,17 @@ function render() {
     html += `<div class="card"><h3 style="margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)">Imperium row</h3><div class="cards">${row}</div>
       <div class="fx muted" style="margin-top:6px">Reserve: ${Object.entries(s.reserve).map(([k, v]) => `${esc(k)} ×${v}`).join(" · ")}</div></div>`;
   }
+  // decision panel: what the acting agent could do and how it scored each option
+  const d = f.decision;
+  if (d) {
+    const top = d.options.slice(0, 8).map(o => `<div class="rank" style="${o.chosen ? "font-weight:700;color:var(--accent)" : ""}">
+        <span>${o.chosen ? "▶ " : ""}${esc(o.label)}</span><span>${o.score == null ? "n/a" : o.score.toFixed(2)}</span></div>`).join("");
+    html += `<div class="card conflict"><h3 style="margin:0 0 4px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)">Decision · ${esc(names[d.actor])}</h3>
+      <div class="fx muted">${d.n_options} legal options · ${d.ms} ms${d.rule ? " · " + esc(d.rule) : ""} · utility score per option</div>
+      ${d.fallback ? `<div class="fx" style="color:var(--p1)">Fallback: ${esc(d.fallback)} → reveal turn</div>` : ""}
+      <div style="margin-top:4px">${top}</div>
+      ${d.n_options > 8 ? `<div class="fx muted">… ${d.n_options - 8} more</div>` : ""}</div>`;
+  }
   $("board").innerHTML = html;
 
   // players

@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import copy
 import random
+import time
 from typing import Any, Dict, List, Optional
 
 from . import data
@@ -78,6 +79,13 @@ class Player:
         # statistics (do not affect play)
         self.earned = {"spice": 0, "solari": 0, "water": 0, "troops": 0}
         self.conflict_wins = 0
+        # decision statistics for choose_turn (the main decision point)
+        self.decisions = 0          # times the agent was asked to choose a turn
+        self.decision_time = 0.0    # seconds spent choosing
+        self.options_total = 0      # legal options offered, summed
+        self.scored = 0             # decisions where the agent reported utility scores
+        self.near_ties = 0          # ... of which best and second-best were within NEAR_TIE
+        self.fallbacks = 0          # illegal actions or agent errors replaced by a reveal turn
         self.trashed = 0
         self.history: List[dict] = []   # one entry per round
         self._round_conflict = (0, 0)
@@ -94,8 +102,7 @@ class Player:
         return self.garrison + self.conflict
 
 
-class GameOver(Exception):
-    pass
+NEAR_TIE = 0.5   # utility margin below which two options count as a near-tie (1 VP = 10)
 
 
 class Game:
@@ -141,6 +148,10 @@ class Game:
         self.finished = False
         self.result: Optional[dict] = None
 
+        # Set by an agent inside choose_turn so the engine can record why it chose:
+        self.last_scores: Optional[dict] = None   # {action: utility}
+        self.last_rule: Optional[str] = None      # e.g. "priority space: Swordmaster"
+        self._pending_decision: Optional[dict] = None
         self.recording = record
         self.frames: Optional[list] = [] if record else None
         self._record("Game start", None)
@@ -503,9 +514,7 @@ class Game:
                 if len(acts) == 1:
                     action = acts[0]
                 else:
-                    action = self.strat(p).choose_turn(self, p, acts)
-                    if action not in acts:
-                        action = ("reveal",)
+                    action = self.decide_turn(p, acts)
                 self.do_action(pi, action)
             guard += 1
             if guard > 20:
@@ -544,6 +553,47 @@ class Game:
             self.end_game()
         else:
             self._record(f"End of round {self.round}", None)
+
+    def action_label(self, p: Player, action) -> str:
+        if isinstance(action, tuple) and len(action) == 3 and action[0] == "agent":
+            return f"{p.hand[action[1]].name} -> {action[2]}"
+        return "Reveal hand"
+
+    def decide_turn(self, p: Player, acts: list) -> tuple:
+        """Ask the agent for its turn. An illegal action or an exception from the agent is an
+        expected failure: it is replaced by a reveal turn (always legal), counted and logged,
+        so one faulty agent cannot corrupt or stall the game."""
+        self.last_scores, self.last_rule = None, None
+        fallback = None
+        t0 = time.perf_counter()
+        try:
+            action = self.strat(p).choose_turn(self, p, acts)
+        except Exception as e:  # noqa: BLE001 - any agent failure is handled the same way
+            action, fallback = None, f"agent error {type(e).__name__}: {e}"
+        dt = time.perf_counter() - t0
+        if fallback is None and action not in acts:
+            fallback = f"illegal action {action!r}"
+        if fallback:
+            p.fallbacks += 1
+            action = ("reveal",)
+        p.decisions += 1
+        p.decision_time += dt
+        p.options_total += len(acts)
+        scores = self.last_scores or {}
+        if len(scores) >= 2:
+            top = sorted(scores.values(), reverse=True)
+            p.scored += 1
+            p.near_ties += (top[0] - top[1]) < NEAR_TIE
+        if self.recording:
+            opts = [{"label": self.action_label(p, a),
+                     "score": None if a not in scores else round(scores[a], 2),
+                     "chosen": a == action} for a in acts]
+            opts.sort(key=lambda o: (o["score"] is None, -(o["score"] or 0)))
+            self._pending_decision = {
+                "actor": p.idx, "options": opts, "n_options": len(acts),
+                "ms": round(dt * 1000, 2), "rule": self.last_rule, "fallback": fallback,
+            }
+        return action
 
     def combat_phase(self, order: List[int]):
         self.phase = "combat"
@@ -613,11 +663,16 @@ class Game:
         self.result = {
             "seed": self.seed,
             "rounds": self.round,
+            "end_reason": ("10 VP reached" if any(self.total_vp(q) >= data.VP_TO_END for q in self.players)
+                           else "conflict deck exhausted"),
             "winners": winners,
             "players": [{
                 "name": q.name, "strategy": q.strategy_name, "vp": self.total_vp(q),
                 "rank": standings.index(q) + 1, "spice": q.spice, "solari": q.solari,
                 "water": q.water, "deck_size": len(q.all_cards()),
+                "decisions": q.decisions, "decision_ms": 1000 * q.decision_time,
+                "options_total": q.options_total, "scored": q.scored,
+                "near_ties": q.near_ties, "fallbacks": q.fallbacks,
                 "earned": dict(q.earned), "conflict_wins": q.conflict_wins, "trashed": q.trashed,
                 "smf": sum(1 for c in q.all_cards() if c.name == "The Spice Must Flow"),
                 "history": q.history, "intrigue": len(q.intrigue),
@@ -637,7 +692,14 @@ class Game:
     def _record(self, msg: str, actor: Optional[int]):
         if not self.recording:
             return
-        self.frames.append({"msg": msg, "actor": actor, "state": self.snapshot()})
+        frame = {"msg": msg, "actor": actor, "state": self.snapshot()}
+        d = self._pending_decision
+        if d is not None and d["actor"] == actor:
+            frame["decision"] = d
+            self._pending_decision = None
+            if d["fallback"]:
+                frame["notes"] = [f"FALLBACK: {d['fallback']} -> replaced by a reveal turn"]
+        self.frames.append(frame)
 
     def snapshot(self) -> Dict[str, Any]:
         cc = self.conflict_card

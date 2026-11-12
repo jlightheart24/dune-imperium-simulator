@@ -18,6 +18,7 @@ import platform
 import random
 import subprocess
 import sys
+import textwrap
 import webbrowser
 from collections import defaultdict
 from multiprocessing import Pool
@@ -26,6 +27,26 @@ from .engine import Game, SPACES, fmt_ops
 from .strategies import available_strategies, make_strategy
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MIN_PLAYERS, MAX_PLAYERS = 2, 4
+
+
+class UsageError(Exception):
+    """Unsupported input. Reported as a one-line error with exit code 2; no game is run."""
+
+
+def check_players(specs):
+    """Validate a player list before any game starts. Raises UsageError with the reason."""
+    if not MIN_PLAYERS <= len(specs) <= MAX_PLAYERS:
+        raise UsageError(f"unsupported table size: {len(specs)} players given, "
+                         f"the game supports {MIN_PLAYERS} to {MAX_PLAYERS}")
+    for spec in specs:
+        try:
+            make_strategy(spec, seed=0)
+        except FileNotFoundError as e:
+            raise UsageError(f"cannot load strategy {spec!r}: weights file not found ({e.filename})")
+        except (ValueError, ImportError, AttributeError, TypeError) as e:
+            raise UsageError(f"unknown or unloadable strategy {spec!r} ({e}). "
+                             "Run `python3 -m dune_sim list` to see the built-in names")
 VIEWER_TEMPLATE = os.path.join(ROOT, "viewer", "viewer.html")
 
 
@@ -191,6 +212,7 @@ def save_run(name, text, payload, results_by_file):
 
 def cmd_batch(a):
     specs = a.players
+    check_players(specs)
     tee = _Tee(sys.stdout) if a.save else None
     if tee:
         sys.stdout = tee
@@ -199,6 +221,9 @@ def cmd_batch(a):
         rows, seats = summarize(results, specs)
         avg_rounds = sum(r["rounds"] for r in results) / len(results)
         print_table(rows, len(specs), a.games, avg_rounds)
+        by_vp = sum(r["end_reason"] == "10 VP reached" for r in results)
+        print(f"games ended by: 10 VP reached {100 * by_vp / len(results):.0f}%, "
+              f"conflict deck exhausted {100 - 100 * by_vp / len(results):.0f}%")
         if a.detail:
             print_detail(results)
         if a.fixed_seats:
@@ -220,6 +245,9 @@ def cmd_benchmark(a):
     base = a.baseline
     targets = a.strategies or [s.split(":", 1)[-1] for s in available_strategies()
                                if s.split(":", 1)[-1] != base]
+    check_players([base] * a.table)
+    for t in targets:
+        check_players([t, base])
     fair = 100.0 / a.table
     tee = _Tee(sys.stdout) if a.save else None
     if tee:
@@ -274,6 +302,8 @@ def print_detail(results):
             for k, v in pr["card_types"].items():
                 t["ct_" + k] += v
             t["intrigue"] += pr["intrigue"]
+            for k in ("decisions", "decision_ms", "options_total", "scored", "near_ties", "fallbacks"):
+                t[k] += pr[k]
             for i, h in enumerate(pr["history"]):
                 d = rnd[spec][i]
                 d["n"] += 1
@@ -301,6 +331,10 @@ def print_detail(results):
         print(f"  at game end          : {t['cards'] / n:.1f} cards owned, {t['trashed'] / n:.1f} trashed, "
               f"{t['smf'] / n:.2f} Spice Must Flow, "
               f"{t['intrigue'] / n:.1f} intrigue in hand")
+        dn = max(1, t["decisions"])
+        print(f"  turn decisions       : {t['decisions'] / n:.1f} per game, {t['options_total'] / dn:.1f} legal options each, "
+              f"{t['decision_ms'] / dn:.1f} ms each, near-ties {100 * t['near_ties'] / max(1, t['scored']):.0f}% "
+              f"of scored decisions, {t['fallbacks'] / n:.2f} fallbacks per game")
         ct = {k[3:]: v for k, v in t.items() if k.startswith("ct_")}
         tot_ct = max(1, sum(ct.values()))
         print("  bought cards by type : " + ", ".join(
@@ -347,7 +381,170 @@ def write_viewer(replay, out_path):
         fh.write(html)
 
 
+# --------------------------------------------------------------------------- traces
+def player_measures(pr):
+    d = max(1, pr["decisions"])
+    return {
+        "vp": pr["vp"], "rank": pr["rank"], "decisions": pr["decisions"],
+        "avg_options": round(pr["options_total"] / d, 1),
+        "ms_per_decision": round(pr["decision_ms"] / d, 2),
+        "near_tie_pct": round(100 * pr["near_ties"] / pr["scored"], 1) if pr["scored"] else None,
+        "fallbacks": pr["fallbacks"],
+    }
+
+
+def trace_text(replay, agent):
+    """Human-readable trace of one seat: what it saw, what it could do, what it chose, what changed."""
+    frames, out = replay["frames"], []
+    res = replay["meta"]["result"]
+    name = res["players"][agent]["name"]
+    out.append(f"TRACE of {name} [{res['players'][agent]['strategy']}], seed {replay['meta']['seed']}, "
+               f"players: {', '.join(replay['meta']['specs'])}")
+    keys = ["vp", "spice", "solari", "water", "garrison", "conflict", "persuasion"]
+    for k in range(1, len(frames)):
+        f, prev = frames[k], frames[k - 1]["state"]
+        if f["msg"].startswith(("Round ", "Combat ", "Game over")):
+            out.append(f"\n=== {f['msg']} ===")
+            continue
+        if f["actor"] != agent:
+            continue
+        me, now = prev["players"][agent], f["state"]["players"][agent]
+        out.append(f"\n[step {k + 1}] round {f['state']['round']}")
+        wrap = lambda label, text: textwrap.fill(  # noqa: E731
+            label + text, 100, initial_indent=" " * 13, subsequent_indent=" " * 19)
+        out.append("  percepts : " + ", ".join(f"{x} {me[x]}" for x in keys)
+                   + f", agents left {me['agents_total'] - me['agents_used']}")
+        out.append("             influence: " + ", ".join(f"{k_} {v}" for k_, v in me["influence"].items()))
+        out.append(wrap("hand: ", ", ".join(me["hand"]) or "-"))
+        out.append(wrap("occupied spaces: ", ", ".join(
+            s for s, b in prev["board"].items() if b["agent"] is not None) or "none"))
+        d = f.get("decision")
+        if d:
+            out.append(f"  options  : {d['n_options']} legal, decided in {d['ms']} ms"
+                       + (f" by rule ({d['rule']})" if d["rule"] else ""))
+            for o in d["options"][:6]:
+                score = "   n/a" if o["score"] is None else f"{o['score']:7.2f}"
+                out.append(f"      {'>>' if o['chosen'] else '  '} {score}  {o['label']}")
+            if d["n_options"] > 6:
+                out.append(f"         ... {d['n_options'] - 6} more")
+            if d["fallback"]:
+                out.append(f"  FALLBACK : {d['fallback']} -> replaced by a reveal turn")
+        elif "intrigue" in f["msg"]:
+            out.append("  options  : intrigue card played (a sub-decision; only turn choices are scored)")
+        else:
+            out.append("  options  : 1 legal (forced)")
+        out.append("  action   : " + f["msg"])
+        delta = [f"{x} {now[x] - me[x]:+d}" for x in keys if now[x] != me[x]]
+        delta += [f"{fa} influence {now['influence'][fa] - me['influence'][fa]:+d}"
+                  for fa in me["influence"] if now["influence"][fa] != me["influence"][fa]]
+        out.append("  effect   : " + (", ".join(delta) or "no change to tracked values"))
+        for note in f.get("notes", []):
+            if not note.startswith("FALLBACK"):
+                out.append("             " + note)
+    out.append(f"\nRESULT: {res['end_reason']} after {res['rounds']} rounds; "
+               + ", ".join(f"{p['name']} [{p['strategy']}] {p['vp']} VP (rank {p['rank']})" for p in res["players"]))
+    return "\n".join(out) + "\n"
+
+
+def run_trace(specs, seed, agent, out_dir):
+    """Play one fully recorded game and write trace.txt, trace.json, replay.html, result.json."""
+    check_players(specs)
+    if not 0 <= agent < len(specs):
+        raise UsageError(f"--agent must be between 1 and {len(specs)}")
+    replay = build_replay(specs, seed)
+    res = replay["meta"]["result"]
+    pr = res["players"][agent]
+    summary = {
+        "players": specs, "seed": seed, "agent_seat": agent + 1, "agent_strategy": pr["strategy"],
+        "terminal_status": f"{res['end_reason']} after {res['rounds']} rounds",
+        "agent_won": agent in res["winners"],
+        "final_vp": [p["vp"] for p in res["players"]],
+        "measures": player_measures(pr),
+        "total_fallbacks": sum(p["fallbacks"] for p in res["players"]),
+    }
+    if out_dir:
+        os.makedirs(out_dir, exist_ok=True)
+        with open(os.path.join(out_dir, "trace.txt"), "w") as fh:
+            fh.write(trace_text(replay, agent))
+        with open(os.path.join(out_dir, "trace.json"), "w") as fh:
+            json.dump([{"step": k + 1, "round": f["state"]["round"], "actor": f["actor"], "msg": f["msg"],
+                        "decision": f.get("decision"), "notes": f.get("notes", [])}
+                       for k, f in enumerate(replay["frames"])], fh, indent=1)
+        with open(os.path.join(out_dir, "result.json"), "w") as fh:
+            json.dump(summary, fh, indent=1)
+        write_viewer(replay, os.path.join(out_dir, "replay.html"))
+    return summary, replay
+
+
+def cmd_trace(a):
+    out = None
+    if a.save:
+        out = a.save if os.path.isabs(a.save) or os.sep in a.save else os.path.join(ROOT, "results", a.save)
+    summary, replay = run_trace(a.players, a.seed, a.agent - 1, out)
+    if not out:
+        print(trace_text(replay, a.agent - 1))
+    m = summary["measures"]
+    print(f"terminal status : {summary['terminal_status']}")
+    print(f"agent under test: seat {a.agent} [{summary['agent_strategy']}] "
+          f"{'WON' if summary['agent_won'] else 'did not win'} with {m['vp']} VP (rank {m['rank']})")
+    print(f"measures        : {m['decisions']} decisions, {m['avg_options']} options each, "
+          f"{m['ms_per_decision']} ms each, near-ties {m['near_tie_pct']}%, fallbacks {m['fallbacks']}")
+    if out:
+        print(f"saved to {out}/ (trace.txt, trace.json, result.json, replay.html)")
+
+
+def cmd_cases(a):
+    """Run the retained cases from a JSON file and write a result table plus per-case evidence."""
+    with open(a.file) as fh:
+        cases = json.load(fh)
+    out = a.save if os.path.isabs(a.save) or os.sep in a.save else os.path.join(ROOT, "results", a.save)
+    os.makedirs(out, exist_ok=True)
+    rows = []
+    for c in cases:
+        row = {"id": c["id"], "kind": c["kind"], "players": c["players"], "seed": c.get("seed"),
+               "expect": c["expect"], "what": c.get("what", "")}
+        try:
+            summary, _ = run_trace(c["players"], c.get("seed", 1), c.get("agent", 1) - 1,
+                                   os.path.join(out, c["id"]))
+            row.update(status=summary["terminal_status"], agent=summary["agent_strategy"],
+                       agent_won=summary["agent_won"], total_fallbacks=summary["total_fallbacks"],
+                       **summary["measures"])
+            observed = "win" if summary["agent_won"] else "loss"
+        except UsageError as e:
+            os.makedirs(os.path.join(out, c["id"]), exist_ok=True)
+            with open(os.path.join(out, c["id"], "error.txt"), "w") as fh:
+                fh.write(f"error: {e}\nexit code 2, no game run\n")
+            row.update(status=f"rejected: {e}", agent_won=None)
+            observed = "rejected"
+        # a case 'passes' when the system did what the case says it should
+        row["observed"] = observed
+        row["as_expected"] = (observed == c["expect"] or
+                              (c["expect"] == "completes" and observed in ("win", "loss")))
+        rows.append(row)
+
+    lines = ["| case | kind | terminal status | success condition (agent finishes first) | VP | rank | decisions | ms / decision | near-ties | fallbacks | as expected |",
+             "|---|---|---|---|---|---|---|---|---|---|---|"]
+    for r in rows:
+        if r["agent_won"] is None:
+            lines.append(f"| {r['id']} | {r['kind']} | {r['status']} | not applicable (no game) | - | - | - | - | - | - | {'yes' if r['as_expected'] else 'NO'} |")
+        else:
+            nt = "-" if r["near_tie_pct"] is None else f"{r['near_tie_pct']}%"
+            lines.append(f"| {r['id']} | {r['kind']} | {r['status']} | {'met' if r['agent_won'] else 'not met'} | {r['vp']} | {r['rank']} | "
+                         f"{r['decisions']} | {r['ms_per_decision']} | {nt} | {r['fallbacks']} | {'yes' if r['as_expected'] else 'NO'} |")
+    table = "\n".join(lines)
+    print(table)
+    meta = run_meta(argparse.Namespace(seed=None, games=len(cases)), {"cases_file": a.file})
+    with open(os.path.join(out, "cases.md"), "w") as fh:
+        fh.write("$ " + meta["command"] + "\n\n" + table + "\n")
+    with open(os.path.join(out, "cases.json"), "w") as fh:
+        json.dump({"meta": meta, "cases": rows}, fh, indent=1)
+    print(f"\nsaved to {out}/ (cases.md, cases.json, one folder per case)")
+    if not all(r["as_expected"] for r in rows):
+        raise UsageError("one or more cases did not behave as expected")
+
+
 def cmd_watch(a):
+    check_players(a.players)
     replay = build_replay(a.players, a.seed)
     out = a.out or os.path.join(ROOT, "replays", f"game_{a.seed}.html")
     write_viewer(replay, out)
@@ -405,12 +602,29 @@ def main(argv=None):
     w.add_argument("--open", action="store_true", help="open in your browser")
     w.set_defaults(func=cmd_watch)
 
+    t = sub.add_parser("trace", help="play one game and record every decision of one seat")
+    t.add_argument("-p", "--players", nargs="+", required=True)
+    t.add_argument("--seed", type=int, default=1)
+    t.add_argument("--agent", type=int, default=1, help="seat to trace, 1-based (default 1)")
+    t.add_argument("--save", metavar="NAME", help="write trace, result and replay to results/NAME/")
+    t.set_defaults(func=cmd_trace)
+
+    c = sub.add_parser("cases", help="run the retained cases and write a result table")
+    c.add_argument("--file", default=os.path.join(ROOT, "cases", "vertical_slice.json"))
+    c.add_argument("--save", metavar="NAME", default="vertical_slice")
+    c.set_defaults(func=cmd_cases)
+
     l_ = sub.add_parser("list", help="list strategies")
     l_.set_defaults(func=cmd_list)
 
     a = ap.parse_args(argv)
-    a.func(a)
+    try:
+        a.func(a)
+    except UsageError as e:
+        sys.stderr.write(f"error: {e}\n")
+        return 2
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

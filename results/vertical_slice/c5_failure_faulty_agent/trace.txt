@@ -1,0 +1,323 @@
+TRACE of P1 [faulty], seed 7, players: dune_sim.faulty:FaultyAgent, balanced, balanced, balanced
+
+=== Round 1: conflict Skirmish (B) ===
+
+[step 3] round 1
+  percepts : vp 0, spice 0, solari 0, water 1, garrison 3, conflict 0, persuasion 0, agents left 2
+             influence: emperor 0, guild 0, bene_gesserit 0, fremen 0
+             hand: Dune, The Desert Planet, Dagger, Dune, The Desert Planet, Signet Ring, Convincing
+                   Argument
+             occupied spaces: none
+  options  : 13 legal, decided in 0.0 ms
+            n/a  Dune, The Desert Planet -> Secure Contract
+            n/a  Dune, The Desert Planet -> Sell Melange
+            n/a  Dune, The Desert Planet -> Imperial Basin
+            n/a  Dune, The Desert Planet -> Hagga Basin
+            n/a  Dagger -> Hall of Oratory
+            n/a  Signet Ring -> Hall of Oratory
+         ... 7 more
+  action   : P1 plays Signet Ring -> Secure Contract
+  effect   : solari +4
+
+[step 7] round 1
+  percepts : vp 0, spice 0, solari 4, water 1, garrison 3, conflict 0, persuasion 0, agents left 1
+             influence: emperor 0, guild 0, bene_gesserit 0, fremen 0
+             hand: Dune, The Desert Planet, Dagger, Dune, The Desert Planet, Convincing Argument
+             occupied spaces: Hardy Warriors, Stillsuits, Secure Contract, Carthag
+  options  : 7 legal, decided in 0.0 ms
+            n/a  Dune, The Desert Planet -> Sell Melange
+            n/a  Dune, The Desert Planet -> Imperial Basin
+            n/a  Dune, The Desert Planet -> Hagga Basin
+            n/a  Dagger -> Mentat
+      >>    n/a  Dagger -> Rally Troops
+            n/a  Dagger -> Hall of Oratory
+         ... 1 more
+  action   : P1 plays Dagger -> Rally Troops
+  effect   : solari -4, garrison +4
+
+[step 12] round 1
+  percepts : vp 0, spice 0, solari 0, water 1, garrison 7, conflict 0, persuasion 0, agents left 0
+             influence: emperor 0, guild 0, bene_gesserit 0, fremen 0
+             hand: Dune, The Desert Planet, Dune, The Desert Planet, Convincing Argument
+             occupied spaces: Wealth, Hardy Warriors, Stillsuits, Rally Troops, Secure Contract,
+                   Arrakeen, Carthag
+  options  : 1 legal (forced)
+  action   : P1 reveals Dune, The Desert Planet, Dune, The Desert Planet, Convincing Argument (swords 0); buys Test of Humanity
+  effect   : no change to tracked values
+
+=== Combat Skirmish (B): P2 #1 (9), P3 #2 (6), P4 #3 (2) ===
+
+=== Round 2: conflict Cloak and Dagger ===
+
+[step 21] round 2
+  percepts : vp 0, spice 0, solari 0, water 1, garrison 7, conflict 0, persuasion 0, agents left 2
+             influence: emperor 0, guild 0, bene_gesserit 0, fremen 0
+             hand: Reconnaissance, Diplomacy, Convincing Argument, Dagger, Seek Allies
+             occupied spaces: Hardy Warriors, Stillsuits, Arrakeen
+  options  : 9 legal, decided in 0.0 ms
+            n/a  Reconnaissance -> Carthag
+            n/a  Diplomacy -> Wealth
+            n/a  Diplomacy -> Foldspace
+            n/a  Diplomacy -> Secrets
+            n/a  Dagger -> Hall of Oratory
+            n/a  Seek Allies -> Wealth
+         ... 3 more
+  FALLBACK : illegal action ('agent', 99, 'No Such Space') -> replaced by a reveal turn
+  action   : P1 reveals Reconnaissance, Diplomacy, Convincing Argument, Dagger, Seek Allies (swords 1)
+  effect   : no change to tracked values
+
+=== Combat Cloak and Dagger: P3 #1 (9), P4 #2 (8), P2 #3 (3) ===
+
+=== Round 3: conflict Raid Stockpiles ===
+
+[step 36] round 3
+  percepts : vp 0, spice 0, solari 0, water 1, garrison 7, conflict 0, persuasion 0, agents left 2
+             influence: emperor 0, guild 0, bene_gesserit 0, fremen 0
+             hand: Convincing Argument, Test of Humanity, Seek Allies, Dune, The Desert Planet,
+                   Convincing Argument
+             occupied spaces: Hardy Warriors, High Council
+  options  : 11 legal, decided in 0.0 ms
+            n/a  Test of Humanity -> Secrets
+            n/a  Test of Humanity -> Hall of Oratory
+            n/a  Seek Allies -> Wealth
+      >>    n/a  Seek Allies -> Foldspace
+            n/a  Seek Allies -> Secrets
+            n/a  Seek Allies -> Stillsuits
+         ... 5 more
+  action   : P1 plays Seek Allies -> Foldspace
+  effect   : guild influence +1
+
+[step 40] round 3
+  percepts : vp 0, spice 0, solari 0, water 1, garrison 7, conflict 0, persuasion 0, agents left 1
+             influence: emperor 0, guild 1, bene_gesserit 0, fremen 0
+             hand: Convincing Argument, Test of Humanity, Dune, The Desert Planet, Convincing
+                   Argument
+             occupied spaces: Foldspace, Hardy Warriors, Stillsuits, High Council, Mentat, Sietch
+                   Tabr
+  options  : 7 legal, decided in 0.0 ms
+            n/a  Test of Humanity -> Secrets
+            n/a  Test of Humanity -> Hall of Oratory
+            n/a  Dune, The Desert Planet -> Secure Contract
+            n/a  Dune, The Desert Planet -> Sell Melange
+            n/a  Dune, The Desert Planet -> Imperial Basin
+            n/a  Dune, The Desert Planet -> Hagga Basin
+         ... 1 more
+  FALLBACK : agent error RuntimeError: simulated agent crash -> replaced by a reveal turn
+  action   : P1 reveals Convincing Argument, Test of Humanity, Dune, The Desert Planet, Convincing Argument (swords 0); buys Lady Jessica
+  effect   : no change to tracked values
+
+=== Combat Raid Stockpiles: P2 #1 (13), P3 #2 (9), P4 #3 (7) ===
+
+=== Round 4: conflict Siege of Arrakeen ===
+
+[step 52] round 4
+  percepts : vp 0, spice 0, solari 0, water 1, garrison 7, conflict 0, persuasion 0, agents left 2
+             influence: emperor 0, guild 1, bene_gesserit 0, fremen 0
+             hand: Dagger, Dagger, Diplomacy, Reconnaissance, Signet Ring
+             occupied spaces: Sietch Tabr
+  options  : 16 legal, decided in 0.0 ms
+            n/a  Dagger -> Hall of Oratory
+            n/a  Diplomacy -> Wealth
+            n/a  Diplomacy -> Foldspace
+            n/a  Diplomacy -> Secrets
+            n/a  Diplomacy -> Hardy Warriors
+            n/a  Diplomacy -> Stillsuits
+         ... 10 more
+  FALLBACK : illegal action ('agent', 99, 'No Such Space') -> replaced by a reveal turn
+  action   : P1 reveals Dagger, Dagger, Diplomacy, Reconnaissance, Signet Ring (swords 2); buys Bene Gesserit Sister
+  effect   : no change to tracked values
+
+=== Combat Siege of Arrakeen: P3 #1 (5), tie P2/P4 (3) ===
+
+=== Round 5: conflict Secure Imperial Basin ===
+
+[step 66] round 5
+  percepts : vp 0, spice 0, solari 0, water 1, garrison 7, conflict 0, persuasion 0, agents left 2
+             influence: emperor 0, guild 1, bene_gesserit 0, fremen 0
+             hand: Dune, The Desert Planet, Lady Jessica, Dagger, Dagger, Reconnaissance
+             occupied spaces: none
+  options  : 16 legal, decided in 0.0 ms
+            n/a  Dune, The Desert Planet -> Secure Contract
+            n/a  Dune, The Desert Planet -> Sell Melange
+            n/a  Dune, The Desert Planet -> Imperial Basin
+            n/a  Dune, The Desert Planet -> Hagga Basin
+      >>    n/a  Lady Jessica -> Secrets
+            n/a  Lady Jessica -> Hall of Oratory
+         ... 10 more
+  action   : P1 plays Lady Jessica -> Secrets
+  effect   : vp +1, guild influence +1, bene_gesserit influence +1
+
+[step 70] round 5
+  percepts : vp 1, spice 0, solari 0, water 1, garrison 7, conflict 0, persuasion 0, agents left 1
+             influence: emperor 0, guild 2, bene_gesserit 1, fremen 0
+             hand: Dune, The Desert Planet, Dagger, Dagger, Reconnaissance
+             occupied spaces: Secrets, Swordmaster, Carthag, Sietch Tabr
+  options  : intrigue card played (a sub-decision; only turn choices are scored)
+  action   : P1 plays intrigue Recruitment Mission
+  effect   : garrison +2
+
+[step 71] round 5
+  percepts : vp 1, spice 0, solari 0, water 1, garrison 9, conflict 0, persuasion 0, agents left 1
+             influence: emperor 0, guild 2, bene_gesserit 1, fremen 0
+             hand: Dune, The Desert Planet, Dagger, Dagger, Reconnaissance
+             occupied spaces: Secrets, Swordmaster, Carthag, Sietch Tabr
+  options  : 7 legal, decided in 0.0 ms
+            n/a  Dune, The Desert Planet -> Secure Contract
+            n/a  Dune, The Desert Planet -> Sell Melange
+            n/a  Dune, The Desert Planet -> Imperial Basin
+            n/a  Dune, The Desert Planet -> Hagga Basin
+            n/a  Dagger -> Hall of Oratory
+      >>    n/a  Reconnaissance -> Arrakeen
+         ... 1 more
+  action   : P1 plays Reconnaissance -> Arrakeen, deploys 2
+  effect   : garrison -1, conflict +2
+
+[step 75] round 5
+  percepts : vp 1, spice 0, solari 0, water 1, garrison 8, conflict 2, persuasion 0, agents left 0
+             influence: emperor 0, guild 2, bene_gesserit 1, fremen 0
+             hand: Dune, The Desert Planet, Dagger, Dagger, Foldspace
+             occupied spaces: Foldspace, Secrets, Mentat, Swordmaster, Arrakeen, Carthag, Sietch
+                   Tabr, Imperial Basin
+  options  : 1 legal (forced)
+  action   : P1 reveals Dune, The Desert Planet, Dagger, Dagger, Foldspace (swords 2)
+  effect   : no change to tracked values
+
+=== Combat Secure Imperial Basin: P1 #1 (6), P3 #2 (4), P4 #3 (2) ===
+
+=== Round 6: conflict Sort Through the Chaos ===
+
+[step 88] round 6
+  percepts : vp 2, spice 0, solari 0, water 1, garrison 8, conflict 0, persuasion 0, agents left 2
+             influence: emperor 0, guild 2, bene_gesserit 1, fremen 0
+             hand: Bene Gesserit Sister, Diplomacy, Test of Humanity, Convincing Argument, Dune, The
+                   Desert Planet
+             occupied spaces: Stillsuits, Mentat, Hagga Basin
+  options  : 12 legal, decided in 0.0 ms
+            n/a  Bene Gesserit Sister -> Secrets
+            n/a  Bene Gesserit Sister -> Hall of Oratory
+            n/a  Diplomacy -> Wealth
+            n/a  Diplomacy -> Foldspace
+            n/a  Diplomacy -> Secrets
+            n/a  Diplomacy -> Hardy Warriors
+         ... 6 more
+  FALLBACK : illegal action ('agent', 99, 'No Such Space') -> replaced by a reveal turn
+  action   : P1 reveals Bene Gesserit Sister, Diplomacy, Test of Humanity, Convincing Argument, Dune, The Desert Planet (swords 2); buys Other Memory, Arrakis Liaison
+  effect   : no change to tracked values
+
+=== Combat Sort Through the Chaos: P4 #1 (6), P3 #2 (3), P2 #3 (2) ===
+
+=== Round 7: conflict Battle for Imperial Basin ===
+
+[step 102] round 7
+  percepts : vp 2, spice 0, solari 0, water 1, garrison 8, conflict 0, persuasion 0, agents left 2
+             influence: emperor 0, guild 2, bene_gesserit 1, fremen 0
+             hand: Convincing Argument, Signet Ring, Dagger, Diplomacy, Dagger
+             occupied spaces: Hardy Warriors, Swordmaster
+  options  : 13 legal, decided in 0.0 ms
+            n/a  Signet Ring -> Hall of Oratory
+            n/a  Signet Ring -> Secure Contract
+            n/a  Signet Ring -> Sell Melange
+            n/a  Signet Ring -> Arrakeen
+            n/a  Signet Ring -> Carthag
+            n/a  Signet Ring -> Imperial Basin
+         ... 7 more
+  FALLBACK : agent error RuntimeError: simulated agent crash -> replaced by a reveal turn
+  action   : P1 reveals Convincing Argument, Signet Ring, Dagger, Diplomacy, Dagger (swords 2); buys Fremen Camp
+  effect   : no change to tracked values
+
+=== Combat Battle for Imperial Basin: P3 #1 (7), P4 #2 (4), P2 #3 (2) ===
+
+=== Round 8: conflict Battle for Carthag ===
+
+[step 116] round 8
+  percepts : vp 2, spice 0, solari 0, water 1, garrison 8, conflict 0, persuasion 0, agents left 2
+             influence: emperor 0, guild 2, bene_gesserit 1, fremen 0
+             hand: Dune, The Desert Planet, Lady Jessica, Arrakis Liaison, Reconnaissance, Other
+                   Memory
+             occupied spaces: Sietch Tabr
+  options  : 20 legal, decided in 0.0 ms
+            n/a  Dune, The Desert Planet -> Secure Contract
+            n/a  Dune, The Desert Planet -> Sell Melange
+            n/a  Dune, The Desert Planet -> Imperial Basin
+            n/a  Dune, The Desert Planet -> Hagga Basin
+            n/a  Lady Jessica -> Secrets
+            n/a  Lady Jessica -> Hall of Oratory
+         ... 14 more
+  action   : P1 reveals Dune, The Desert Planet, Lady Jessica, Arrakis Liaison, Reconnaissance, Other Memory (swords 1); buys Sardaukar Infantry, Spice Hunt
+  effect   : no change to tracked values
+
+=== Combat Battle for Carthag: P3 #1 (9), P4 #2 (7), P2 #3 (5) ===
+
+=== Round 9: conflict Battle for Arrakeen ===
+
+[step 133] round 9
+  percepts : vp 2, spice 0, solari 0, water 1, garrison 8, conflict 0, persuasion 0, agents left 2
+             influence: emperor 0, guild 2, bene_gesserit 1, fremen 0
+             hand: Dune, The Desert Planet, Test of Humanity, Bene Gesserit Sister, Foldspace,
+                   Convincing Argument
+             occupied spaces: none
+  options  : 14 legal, decided in 0.0 ms
+            n/a  Dune, The Desert Planet -> Secure Contract
+            n/a  Dune, The Desert Planet -> Sell Melange
+            n/a  Dune, The Desert Planet -> Imperial Basin
+            n/a  Dune, The Desert Planet -> Hagga Basin
+            n/a  Test of Humanity -> Secrets
+            n/a  Test of Humanity -> Hall of Oratory
+         ... 8 more
+  FALLBACK : illegal action ('agent', 99, 'No Such Space') -> replaced by a reveal turn
+  action   : P1 reveals Dune, The Desert Planet, Test of Humanity, Bene Gesserit Sister, Foldspace, Convincing Argument (swords 0); buys Reverend Mother Mohiam
+  effect   : no change to tracked values
+
+=== Combat Battle for Arrakeen: P2 #1 (16), P4 #2 (13), P3 #3 (7) ===
+
+=== Round 10: conflict Grand Vision ===
+
+[step 152] round 10
+  percepts : vp 2, spice 0, solari 0, water 1, garrison 8, conflict 0, persuasion 0, agents left 2
+             influence: emperor 0, guild 2, bene_gesserit 1, fremen 0
+             hand: Dagger, Dune, The Desert Planet, Signet Ring, Convincing Argument, Fremen Camp
+             occupied spaces: Heighliner, Mentat, Research Station
+  options  : 17 legal, decided in 0.01 ms
+      >>    n/a  Dagger -> Hall of Oratory
+            n/a  Dune, The Desert Planet -> Secure Contract
+            n/a  Dune, The Desert Planet -> Sell Melange
+            n/a  Dune, The Desert Planet -> Imperial Basin
+            n/a  Dune, The Desert Planet -> Hagga Basin
+            n/a  Signet Ring -> Hall of Oratory
+         ... 11 more
+  action   : P1 plays Dagger -> Hall of Oratory
+  effect   : garrison +1, persuasion +1
+
+[step 156] round 10
+  percepts : vp 2, spice 0, solari 0, water 1, garrison 9, conflict 0, persuasion 1, agents left 1
+             influence: emperor 0, guild 2, bene_gesserit 1, fremen 0
+             hand: Dune, The Desert Planet, Signet Ring, Convincing Argument, Fremen Camp
+             occupied spaces: Heighliner, Mentat, Hall of Oratory, Arrakeen, Carthag, Research
+                   Station
+  options  : 13 legal, decided in 0.01 ms
+            n/a  Dune, The Desert Planet -> Secure Contract
+            n/a  Dune, The Desert Planet -> Sell Melange
+            n/a  Dune, The Desert Planet -> Imperial Basin
+            n/a  Dune, The Desert Planet -> Hagga Basin
+            n/a  Signet Ring -> Secure Contract
+      >>    n/a  Signet Ring -> Sell Melange
+         ... 7 more
+  action   : P1 plays Signet Ring -> Sell Melange
+  effect   : solari +1
+             P2 trashes Assassination Mission
+
+[step 159] round 10
+  percepts : vp 2, spice 0, solari 1, water 1, garrison 9, conflict 0, persuasion 1, agents left 0
+             influence: emperor 0, guild 2, bene_gesserit 1, fremen 0
+             hand: Dune, The Desert Planet, Convincing Argument, Fremen Camp
+             occupied spaces: Conspire, Heighliner, Selective Breeding, Mentat, Hall of Oratory,
+                   Sell Melange, Arrakeen, Carthag, Research Station
+  options  : 1 legal (forced)
+  action   : P1 reveals Dune, The Desert Planet, Convincing Argument, Fremen Camp (swords 1); buys Crysknife, Jamis
+  effect   : persuasion -1
+
+=== Combat Grand Vision: P2 #1 (14), P4 #2 (9), P3 #3 (3) ===
+
+=== Game over: P2 10VP, P3 9VP, P4 3VP, P1 2VP ===
+
+RESULT: 10 VP reached after 10 rounds; P1 [faulty] 2 VP (rank 4), P2 [balanced] 10 VP (rank 1), P3 [balanced] 9 VP (rank 2), P4 [balanced] 3 VP (rank 3)

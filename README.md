@@ -38,6 +38,22 @@ its strategies, `--seed` and `-n`, so re-running a saved command reproduces its 
 Each saved run records the command, date, Python version and git commit.
 The course project definition is in `docs/project-definition.md`.
 
+## Decision traces and retained cases
+
+```bash
+# one game with every turn decision of seat 1 recorded: percepts, options with scores, choice, effect
+python3 -m dune_sim trace -p balanced random random random --seed 7 --save my_trace
+
+# the retained cases in cases/vertical_slice.json (supported, unsuccessful, boundary, faulty agent, bad input)
+python3 -m dune_sim cases
+```
+
+An agent that returns an illegal action or raises an exception has that turn replaced by a
+reveal; the fallback is counted and logged. Unknown strategies and unsupported table sizes
+are rejected with a one-line error and exit code 2. The replay viewer shows a decision panel
+(options and utility scores) at each step, and `game.html#step=N` opens a replay at step N.
+The vertical-slice write-up is in `docs/vertical-slice.md`.
+
 ## Replay viewer
 
 `watch` writes `replays/game_<seed>.html`, a single self-contained page. Controls:

@@ -460,17 +460,21 @@ class HeuristicStrategy(Strategy):
             for space in self.w["priority_spaces"]:
                 picks = [a for a in actions if a[0] == "agent" and a[2] == space]
                 if picks:
+                    game.last_rule = f"priority space: {space}"
                     # several cards can reach it: give up the one worth least at reveal
                     return min(picks, key=lambda a: self.card_power(game, p, p.hand[a[1]]))
         best, best_v = actions[-1], -1e18
+        scores = {}
         for a in actions:
             g = game.clone()
             g.do_action(p.idx, a)
             v = self.evaluate(g, g.players[p.idx])
             if self.noise:
                 v += self.rng.gauss(0, self.noise)
+            scores[a] = v
             if v > best_v:
                 best, best_v = a, v
+        game.last_scores = scores   # lets the engine record why this action was chosen
         return best
 
     def choose_deploy(self, game, p, max_n):
