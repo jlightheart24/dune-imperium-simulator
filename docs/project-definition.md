@@ -206,11 +206,24 @@ Requires Python 3.9 or later; no packages to install.
 
 ```
 git clone https://github.com/jlightheart24/dune-imperium-simulator.git && cd dune-imperium-simulator
-python3 -m unittest                                                    # 7 tests, about 1 minute
-python3 -m dune_sim batch -n 200 -p balanced random random random --save poc_balanced_vs_random
-python3 -m dune_sim batch -n 400 --fixed-seats --detail -p balanced balanced balanced balanced --save balanced_mirror
+
+# 7 repeatability and sanity tests, about 1 minute
+python3 -m unittest
+
+# Evidence 1: the agent against random play
+python3 -m dune_sim batch -n 200 -p balanced random random random \
+    --save poc_balanced_vs_random
+
+# Evidence 2: four identical agents
+python3 -m dune_sim batch -n 400 --fixed-seats --detail \
+    -p balanced balanced balanced balanced --save balanced_mirror
+
+# Evidence 3: every strategy against the baseline (about 25 minutes)
 python3 -m dune_sim benchmark -n 200 --save benchmark_v1
-python3 -m dune_sim watch -p balanced military spice_must_flow random --seed 7 -o results/poc_replay_seed7.html
+
+# Evidence 4: one game as a step-by-step replay
+python3 -m dune_sim watch -p balanced military spice_must_flow random \
+    --seed 7 -o results/poc_replay_seed7.html
 ```
 
 ### What it demonstrates

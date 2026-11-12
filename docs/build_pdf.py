@@ -35,7 +35,7 @@ th { background: #f0f0f0; }
 thead tr.empty { display: none; }
 code { font: 9pt Menlo, Consolas, monospace; background: #f3f3f3; padding: 0 2pt; border-radius: 2pt; }
 pre { background: #f6f6f6; border: 1px solid #ddd; border-radius: 3pt; padding: 7pt 9pt;
-      font: 7.6pt/1.35 Menlo, Consolas, monospace; white-space: pre; overflow: hidden;
+      font: 7pt/1.35 Menlo, Consolas, monospace; white-space: pre; overflow: hidden;
       break-inside: avoid; margin: 4pt 0 10pt; }
 pre code { background: none; padding: 0; font: inherit; }
 img { max-width: 100%; border: 1px solid #ccc; margin: 4pt 0; }
