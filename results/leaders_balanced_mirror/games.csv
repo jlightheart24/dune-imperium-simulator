@@ -1,0 +1,2401 @@
+seed,rounds,seat,strategy,vp,rank,won,spice,solari,water,deck_size,alliances,leader
+1,10,1,balanced,10,1,1,4,3,4,23,bene_gesserit,"Glossu ""The Beast"" Rabban"
+1,10,2,balanced,9,2,0,7,2,0,24,fremen,Count Memnon Thorvald
+1,10,3,balanced,7,3,0,19,8,4,23,emperor,Countess Ariana Thorvald
+1,10,4,balanced,7,4,0,9,3,7,20,guild,Duke Leto Atreides
+2,9,1,balanced,11,1,1,8,7,2,22,emperor|fremen,Count Memnon Thorvald
+2,9,2,balanced,7,2,0,9,5,2,24,,"Glossu ""The Beast"" Rabban"
+2,9,3,balanced,6,3,0,1,8,3,27,,Paul Atreides
+2,9,4,balanced,5,4,0,10,1,0,20,bene_gesserit,Helena Richese
+3,10,1,balanced,10,1,1,8,4,4,21,,Duke Leto Atreides
+3,10,2,balanced,5,4,0,12,4,0,23,fremen,"Glossu ""The Beast"" Rabban"
+3,10,3,balanced,8,2,0,13,13,2,21,emperor,Count Memnon Thorvald
+3,10,4,balanced,8,3,0,9,4,8,24,guild,Baron Vladimir Harkonnen
+4,8,1,balanced,7,3,0,5,1,6,20,fremen,"Glossu ""The Beast"" Rabban"
+4,8,2,balanced,2,4,0,7,4,10,18,,Count Memnon Thorvald
+4,8,3,balanced,12,1,1,1,3,0,20,emperor|bene_gesserit,Duke Leto Atreides
+4,8,4,balanced,7,2,0,8,0,3,23,,Baron Vladimir Harkonnen
+5,10,1,balanced,12,1,1,6,7,0,22,emperor|bene_gesserit|fremen,Baron Vladimir Harkonnen
+5,10,2,balanced,6,4,0,10,2,1,23,,Paul Atreides
+5,10,3,balanced,8,2,0,5,1,5,24,guild,Duke Leto Atreides
+5,10,4,balanced,7,3,0,13,10,2,24,,Count Memnon Thorvald
+6,10,1,balanced,8,1,1,12,2,3,22,fremen,"Glossu ""The Beast"" Rabban"
+6,10,2,balanced,6,4,0,4,7,4,24,bene_gesserit,Paul Atreides
+6,10,3,balanced,8,2,0,9,3,11,21,guild,Count Memnon Thorvald
+6,10,4,balanced,7,3,0,8,1,2,25,emperor,Duke Leto Atreides
+7,10,1,balanced,9,2,0,10,2,3,24,,"Glossu ""The Beast"" Rabban"
+7,10,2,balanced,11,1,1,8,7,8,21,guild|fremen,Count Memnon Thorvald
+7,10,3,balanced,8,3,0,10,3,4,21,emperor,Baron Vladimir Harkonnen
+7,10,4,balanced,8,4,0,5,4,5,25,bene_gesserit,Duke Leto Atreides
+8,10,1,balanced,7,3,0,3,10,7,23,guild,Baron Vladimir Harkonnen
+8,10,2,balanced,6,4,0,10,5,5,20,fremen,Count Memnon Thorvald
+8,10,3,balanced,12,1,1,10,10,3,24,bene_gesserit,"Glossu ""The Beast"" Rabban"
+8,10,4,balanced,9,2,0,9,8,0,26,emperor,Duke Leto Atreides
+9,10,1,balanced,9,2,0,2,5,1,22,,Duke Leto Atreides
+9,10,2,balanced,7,3,0,5,6,7,26,guild|fremen,Countess Ariana Thorvald
+9,10,3,balanced,11,1,1,10,5,2,19,emperor,"Glossu ""The Beast"" Rabban"
+9,10,4,balanced,6,4,0,4,2,12,23,bene_gesserit,Helena Richese
+10,8,1,balanced,5,3,0,8,5,3,23,fremen,Duke Leto Atreides
+10,8,2,balanced,10,1,1,0,5,3,17,bene_gesserit,Baron Vladimir Harkonnen
+10,8,3,balanced,3,4,0,9,7,5,20,,Count Ilban Richese
+10,8,4,balanced,8,2,0,4,9,2,22,emperor,"Glossu ""The Beast"" Rabban"
+11,10,1,balanced,9,1,1,5,2,5,24,,Helena Richese
+11,10,2,balanced,7,3,0,11,4,8,25,emperor|fremen,Paul Atreides
+11,10,3,balanced,6,4,0,13,8,0,22,,Baron Vladimir Harkonnen
+11,10,4,balanced,8,2,0,13,8,2,19,guild,Count Ilban Richese
+12,8,1,balanced,4,3,0,13,9,3,20,fremen,Duke Leto Atreides
+12,8,2,balanced,10,1,1,3,8,6,20,emperor,"Glossu ""The Beast"" Rabban"
+12,8,3,balanced,4,4,0,12,4,5,20,,Countess Ariana Thorvald
+12,8,4,balanced,5,2,0,11,2,4,22,,Count Memnon Thorvald
+13,10,1,balanced,10,1,1,6,2,6,21,emperor,Count Memnon Thorvald
+13,10,2,balanced,9,2,0,14,7,1,24,guild,Duke Leto Atreides
+13,10,3,balanced,8,3,0,11,6,2,22,fremen,Count Ilban Richese
+13,10,4,balanced,2,4,0,15,4,2,25,,"Glossu ""The Beast"" Rabban"
+14,10,1,balanced,8,2,0,9,10,5,23,,Baron Vladimir Harkonnen
+14,10,2,balanced,7,4,0,6,9,6,22,fremen,Count Ilban Richese
+14,10,3,balanced,10,1,1,3,9,6,22,emperor,Duke Leto Atreides
+14,10,4,balanced,8,3,0,8,1,2,24,guild|bene_gesserit,Paul Atreides
+15,9,1,balanced,5,2,0,15,1,8,20,emperor,Baron Vladimir Harkonnen
+15,9,2,balanced,5,3,0,6,5,5,23,guild,Paul Atreides
+15,9,3,balanced,5,4,0,6,3,3,21,fremen,Helena Richese
+15,9,4,balanced,10,1,1,2,5,2,21,bene_gesserit,Duke Leto Atreides
+16,10,1,balanced,6,4,0,7,4,7,21,guild,Count Ilban Richese
+16,10,2,balanced,11,1,1,9,8,0,23,emperor,Count Memnon Thorvald
+16,10,3,balanced,7,2,0,9,6,7,25,,Baron Vladimir Harkonnen
+16,10,4,balanced,7,3,0,3,4,5,22,fremen,Paul Atreides
+17,9,1,balanced,5,4,0,14,5,6,23,,Helena Richese
+17,9,2,balanced,6,3,0,8,1,2,22,,Baron Vladimir Harkonnen
+17,9,3,balanced,6,2,0,10,3,7,21,fremen,Count Memnon Thorvald
+17,9,4,balanced,10,1,1,5,5,2,23,guild,Count Ilban Richese
+18,10,1,balanced,9,1,1,11,12,6,22,emperor,Count Memnon Thorvald
+18,10,2,balanced,9,2,0,2,2,7,22,,"Glossu ""The Beast"" Rabban"
+18,10,3,balanced,6,4,0,9,12,4,24,guild,Countess Ariana Thorvald
+18,10,4,balanced,7,3,0,18,0,3,21,bene_gesserit|fremen,Baron Vladimir Harkonnen
+19,10,1,balanced,9,2,0,5,5,7,20,,Count Ilban Richese
+19,10,2,balanced,8,4,0,8,3,0,24,bene_gesserit,Helena Richese
+19,10,3,balanced,8,3,0,12,13,3,25,emperor,Baron Vladimir Harkonnen
+19,10,4,balanced,9,1,1,9,1,4,25,fremen,Duke Leto Atreides
+20,9,1,balanced,10,2,0,8,6,2,20,emperor,"Glossu ""The Beast"" Rabban"
+20,9,2,balanced,4,4,0,2,1,6,21,fremen,Duke Leto Atreides
+20,9,3,balanced,7,3,0,11,5,4,23,,Helena Richese
+20,9,4,balanced,10,1,1,9,3,4,21,bene_gesserit,Baron Vladimir Harkonnen
+21,9,1,balanced,11,1,1,5,5,0,24,,Baron Vladimir Harkonnen
+21,9,2,balanced,3,4,0,13,6,4,26,fremen,Paul Atreides
+21,9,3,balanced,6,2,0,10,8,6,22,emperor,Helena Richese
+21,9,4,balanced,5,3,0,10,15,5,20,,Count Ilban Richese
+22,9,1,balanced,8,2,0,6,4,5,21,emperor,Baron Vladimir Harkonnen
+22,9,2,balanced,7,3,0,5,5,4,21,bene_gesserit,Helena Richese
+22,9,3,balanced,12,1,1,9,5,2,23,,Count Ilban Richese
+22,9,4,balanced,4,4,0,10,1,1,24,fremen,Paul Atreides
+23,10,1,balanced,8,3,0,10,4,7,22,emperor,Countess Ariana Thorvald
+23,10,2,balanced,9,2,0,3,3,1,23,,Count Memnon Thorvald
+23,10,3,balanced,7,4,0,10,0,3,20,fremen,Paul Atreides
+23,10,4,balanced,12,1,1,1,3,7,26,guild,Baron Vladimir Harkonnen
+24,9,1,balanced,10,1,1,11,0,9,20,fremen,Duke Leto Atreides
+24,9,2,balanced,5,4,0,5,4,5,23,,Count Ilban Richese
+24,9,3,balanced,7,3,0,11,2,3,23,bene_gesserit,Countess Ariana Thorvald
+24,9,4,balanced,8,2,0,5,6,4,24,emperor|guild,Baron Vladimir Harkonnen
+25,9,1,balanced,5,3,0,13,0,3,20,,Countess Ariana Thorvald
+25,9,2,balanced,6,2,0,3,0,2,19,,Paul Atreides
+25,9,3,balanced,3,4,0,10,12,4,21,emperor,Duke Leto Atreides
+25,9,4,balanced,11,1,1,13,6,0,20,bene_gesserit|fremen,Count Memnon Thorvald
+26,10,1,balanced,8,2,0,6,7,9,23,,"Glossu ""The Beast"" Rabban"
+26,10,2,balanced,7,3,0,6,9,10,23,guild,Countess Ariana Thorvald
+26,10,3,balanced,12,1,1,5,0,0,20,bene_gesserit|fremen,Count Ilban Richese
+26,10,4,balanced,6,4,0,13,7,0,26,emperor,Helena Richese
+27,10,1,balanced,7,3,0,14,5,7,23,emperor|fremen,Paul Atreides
+27,10,2,balanced,8,2,0,7,1,1,21,,Duke Leto Atreides
+27,10,3,balanced,9,1,1,1,5,7,22,,Count Ilban Richese
+27,10,4,balanced,6,4,0,5,1,11,25,,Helena Richese
+28,10,1,balanced,14,1,1,2,3,3,22,emperor,Paul Atreides
+28,10,2,balanced,4,4,0,12,1,4,25,fremen,"Glossu ""The Beast"" Rabban"
+28,10,3,balanced,7,2,0,7,0,6,23,,Count Ilban Richese
+28,10,4,balanced,6,3,0,7,1,5,24,,Baron Vladimir Harkonnen
+29,10,1,balanced,5,4,0,9,7,7,20,fremen,Countess Ariana Thorvald
+29,10,2,balanced,7,3,0,9,8,1,23,emperor,"Glossu ""The Beast"" Rabban"
+29,10,3,balanced,10,2,0,7,3,2,25,guild,Count Memnon Thorvald
+29,10,4,balanced,11,1,1,4,1,9,27,,Helena Richese
+30,10,1,balanced,10,1,1,8,2,0,20,guild,Duke Leto Atreides
+30,10,2,balanced,7,4,0,12,3,4,22,fremen,"Glossu ""The Beast"" Rabban"
+30,10,3,balanced,8,3,0,9,0,4,22,emperor,Paul Atreides
+30,10,4,balanced,9,2,0,6,6,6,25,bene_gesserit,Count Memnon Thorvald
+31,10,1,balanced,9,1,1,11,1,7,22,,Countess Ariana Thorvald
+31,10,2,balanced,8,3,0,4,9,0,21,emperor|bene_gesserit,Count Ilban Richese
+31,10,3,balanced,7,4,0,8,13,2,24,,Baron Vladimir Harkonnen
+31,10,4,balanced,9,2,0,6,3,8,20,fremen,Paul Atreides
+32,10,1,balanced,9,1,1,5,5,6,25,bene_gesserit,Count Memnon Thorvald
+32,10,2,balanced,5,4,0,6,0,10,22,fremen,Baron Vladimir Harkonnen
+32,10,3,balanced,8,3,0,7,2,3,25,guild,Count Ilban Richese
+32,10,4,balanced,8,2,0,12,8,2,21,emperor,Paul Atreides
+33,8,1,balanced,4,4,0,1,6,7,17,fremen,Baron Vladimir Harkonnen
+33,8,2,balanced,10,1,1,4,10,3,20,bene_gesserit,Count Memnon Thorvald
+33,8,3,balanced,6,2,0,7,5,1,25,emperor,Paul Atreides
+33,8,4,balanced,4,3,0,8,0,8,21,,Count Ilban Richese
+34,10,1,balanced,9,2,0,6,0,11,22,,Count Ilban Richese
+34,10,2,balanced,8,3,0,10,12,0,24,guild,Count Memnon Thorvald
+34,10,3,balanced,9,1,1,10,8,1,21,,"Glossu ""The Beast"" Rabban"
+34,10,4,balanced,8,4,0,4,2,4,24,emperor|fremen,Helena Richese
+35,10,1,balanced,9,3,0,3,7,8,25,,Count Ilban Richese
+35,10,2,balanced,7,4,0,7,0,6,22,fremen,Countess Ariana Thorvald
+35,10,3,balanced,13,1,1,7,3,1,22,emperor|bene_gesserit,"Glossu ""The Beast"" Rabban"
+35,10,4,balanced,9,2,0,10,3,1,25,,Helena Richese
+36,10,1,balanced,4,4,0,3,13,8,25,emperor,Baron Vladimir Harkonnen
+36,10,2,balanced,10,1,1,3,0,0,23,,Helena Richese
+36,10,3,balanced,8,3,0,10,9,0,22,,Countess Ariana Thorvald
+36,10,4,balanced,9,2,0,9,5,5,23,guild|fremen,"Glossu ""The Beast"" Rabban"
+37,10,1,balanced,9,1,1,2,1,5,24,bene_gesserit,Count Ilban Richese
+37,10,2,balanced,8,2,0,7,3,0,22,emperor|fremen,Paul Atreides
+37,10,3,balanced,8,3,0,4,4,3,24,guild,Duke Leto Atreides
+37,10,4,balanced,7,4,0,10,16,7,21,,Baron Vladimir Harkonnen
+38,9,1,balanced,6,3,0,6,5,4,23,,Duke Leto Atreides
+38,9,2,balanced,7,2,0,6,16,0,22,fremen,Count Memnon Thorvald
+38,9,3,balanced,3,4,0,7,5,10,21,,Countess Ariana Thorvald
+38,9,4,balanced,10,1,1,8,4,8,24,emperor|guild,Baron Vladimir Harkonnen
+39,9,1,balanced,8,2,0,4,0,9,21,guild,Count Memnon Thorvald
+39,9,2,balanced,4,4,0,4,15,4,21,,"Glossu ""The Beast"" Rabban"
+39,9,3,balanced,10,1,1,2,3,0,22,bene_gesserit|fremen,Paul Atreides
+39,9,4,balanced,5,3,0,12,9,3,21,emperor,Duke Leto Atreides
+40,10,1,balanced,3,4,0,18,5,6,26,fremen,Countess Ariana Thorvald
+40,10,2,balanced,8,3,0,4,5,7,19,guild,Paul Atreides
+40,10,3,balanced,9,1,1,9,4,3,23,,Count Memnon Thorvald
+40,10,4,balanced,9,2,0,1,0,3,22,,Helena Richese
+41,8,1,balanced,11,1,1,12,0,1,19,fremen,Baron Vladimir Harkonnen
+41,8,2,balanced,3,4,0,8,7,6,22,,"Glossu ""The Beast"" Rabban"
+41,8,3,balanced,4,3,0,4,5,1,19,emperor,Duke Leto Atreides
+41,8,4,balanced,5,2,0,9,0,3,18,bene_gesserit,Helena Richese
+42,9,1,balanced,7,3,0,5,3,2,21,,Count Ilban Richese
+42,9,2,balanced,7,2,0,9,6,4,20,fremen,Paul Atreides
+42,9,3,balanced,3,4,0,11,1,9,24,,Helena Richese
+42,9,4,balanced,10,1,1,5,5,3,24,emperor|bene_gesserit,Baron Vladimir Harkonnen
+43,10,1,balanced,8,2,0,13,6,3,21,,"Glossu ""The Beast"" Rabban"
+43,10,2,balanced,3,4,0,7,6,5,21,guild,Paul Atreides
+43,10,3,balanced,12,1,1,4,4,4,24,emperor,Duke Leto Atreides
+43,10,4,balanced,6,3,0,12,4,4,22,bene_gesserit|fremen,Count Memnon Thorvald
+44,10,1,balanced,5,4,0,9,0,7,22,,Paul Atreides
+44,10,2,balanced,8,2,0,11,11,1,23,,Count Ilban Richese
+44,10,3,balanced,8,3,0,9,9,4,23,guild,Count Memnon Thorvald
+44,10,4,balanced,11,1,1,6,0,8,24,emperor|fremen,Countess Ariana Thorvald
+45,9,1,balanced,7,3,0,10,1,5,21,emperor,Baron Vladimir Harkonnen
+45,9,2,balanced,10,2,0,5,4,0,20,fremen,"Glossu ""The Beast"" Rabban"
+45,9,3,balanced,5,4,0,9,7,6,22,,Count Memnon Thorvald
+45,9,4,balanced,10,1,1,5,4,4,20,guild|bene_gesserit,Paul Atreides
+46,10,1,balanced,7,3,0,5,1,5,24,emperor,Count Memnon Thorvald
+46,10,2,balanced,5,4,0,3,6,9,21,,Paul Atreides
+46,10,3,balanced,8,2,0,6,4,7,23,guild,Countess Ariana Thorvald
+46,10,4,balanced,10,1,1,4,1,3,20,bene_gesserit|fremen,Helena Richese
+47,10,1,balanced,9,1,1,13,13,1,23,guild|fremen,Count Ilban Richese
+47,10,2,balanced,7,3,0,4,0,7,22,,Helena Richese
+47,10,3,balanced,9,2,0,9,8,2,23,emperor,Baron Vladimir Harkonnen
+47,10,4,balanced,7,4,0,2,11,2,26,,Duke Leto Atreides
+48,10,1,balanced,9,1,1,11,3,1,20,,"Glossu ""The Beast"" Rabban"
+48,10,2,balanced,4,4,0,10,3,1,23,,Paul Atreides
+48,10,3,balanced,9,2,0,3,5,5,23,,Baron Vladimir Harkonnen
+48,10,4,balanced,7,3,0,1,0,6,21,emperor|fremen,Count Memnon Thorvald
+49,10,1,balanced,9,2,0,7,9,5,24,guild,Paul Atreides
+49,10,2,balanced,9,1,1,13,4,3,22,fremen,Count Ilban Richese
+49,10,3,balanced,4,4,0,10,6,4,24,,Duke Leto Atreides
+49,10,4,balanced,8,3,0,11,0,5,23,emperor,Baron Vladimir Harkonnen
+50,9,1,balanced,3,4,0,10,1,7,23,,Helena Richese
+50,9,2,balanced,4,3,0,6,4,3,19,,Duke Leto Atreides
+50,9,3,balanced,10,1,1,13,1,6,20,emperor,Countess Ariana Thorvald
+50,9,4,balanced,8,2,0,11,2,3,23,fremen,Count Memnon Thorvald
+51,9,1,balanced,7,2,0,6,0,5,25,,Count Ilban Richese
+51,9,2,balanced,10,1,1,3,8,3,22,emperor|guild,Duke Leto Atreides
+51,9,3,balanced,5,4,0,11,2,5,20,,Paul Atreides
+51,9,4,balanced,5,3,0,12,10,4,27,fremen,"Glossu ""The Beast"" Rabban"
+52,9,1,balanced,5,3,0,11,2,2,22,,Baron Vladimir Harkonnen
+52,9,2,balanced,9,2,0,8,2,1,21,fremen,Duke Leto Atreides
+52,9,3,balanced,10,1,1,10,4,0,21,emperor,Count Ilban Richese
+52,9,4,balanced,5,4,0,3,7,13,22,,Count Memnon Thorvald
+53,10,1,balanced,8,2,0,11,7,4,23,guild|fremen,Count Ilban Richese
+53,10,2,balanced,8,3,0,8,9,1,26,,Paul Atreides
+53,10,3,balanced,9,1,1,13,2,4,24,emperor,Count Memnon Thorvald
+53,10,4,balanced,7,4,0,5,5,7,21,,Baron Vladimir Harkonnen
+54,9,1,balanced,6,3,0,8,1,8,22,,Countess Ariana Thorvald
+54,9,2,balanced,3,4,0,11,5,7,20,,Count Memnon Thorvald
+54,9,3,balanced,6,2,0,11,5,3,19,guild|fremen,Baron Vladimir Harkonnen
+54,9,4,balanced,10,1,1,3,6,2,21,emperor|bene_gesserit,Duke Leto Atreides
+55,10,1,balanced,8,2,0,14,3,4,23,,Count Ilban Richese
+55,10,2,balanced,6,4,0,5,2,9,22,fremen,Helena Richese
+55,10,3,balanced,9,1,1,8,10,5,21,emperor|guild,Duke Leto Atreides
+55,10,4,balanced,6,3,0,10,2,4,24,bene_gesserit,Countess Ariana Thorvald
+56,8,1,balanced,10,1,1,10,4,2,19,emperor,Baron Vladimir Harkonnen
+56,8,2,balanced,4,3,0,10,4,6,19,fremen,Helena Richese
+56,8,3,balanced,5,2,0,16,4,3,23,,Count Memnon Thorvald
+56,8,4,balanced,4,4,0,9,4,4,25,guild,Duke Leto Atreides
+57,9,1,balanced,12,1,1,5,2,2,22,emperor|guild,Baron Vladimir Harkonnen
+57,9,2,balanced,5,3,0,5,4,8,23,,Count Ilban Richese
+57,9,3,balanced,6,2,0,16,4,2,24,,"Glossu ""The Beast"" Rabban"
+57,9,4,balanced,5,4,0,1,0,4,23,fremen,Duke Leto Atreides
+58,10,1,balanced,6,3,0,7,0,10,22,,Paul Atreides
+58,10,2,balanced,4,4,0,8,0,6,24,,Baron Vladimir Harkonnen
+58,10,3,balanced,8,2,0,9,5,3,22,emperor|fremen,Countess Ariana Thorvald
+58,10,4,balanced,11,1,1,2,3,1,22,guild,"Glossu ""The Beast"" Rabban"
+59,10,1,balanced,4,4,0,8,8,10,23,,Countess Ariana Thorvald
+59,10,2,balanced,8,2,0,13,2,1,24,emperor|fremen,Count Memnon Thorvald
+59,10,3,balanced,9,1,1,3,4,4,21,bene_gesserit,Paul Atreides
+59,10,4,balanced,8,3,0,10,4,0,22,,Helena Richese
+60,7,1,balanced,5,3,0,14,5,1,18,fremen,"Glossu ""The Beast"" Rabban"
+60,7,2,balanced,3,4,0,2,5,10,18,,Duke Leto Atreides
+60,7,3,balanced,6,2,0,3,2,1,20,emperor|bene_gesserit,Baron Vladimir Harkonnen
+60,7,4,balanced,11,1,1,4,8,3,21,guild,Countess Ariana Thorvald
+61,9,1,balanced,5,4,0,7,5,7,25,,Helena Richese
+61,9,2,balanced,5,2,0,9,9,0,24,fremen,Paul Atreides
+61,9,3,balanced,12,1,1,4,12,2,18,emperor|guild,Count Memnon Thorvald
+61,9,4,balanced,5,3,0,8,7,4,25,,Countess Ariana Thorvald
+62,9,1,balanced,10,2,0,0,13,1,21,emperor|guild,Baron Vladimir Harkonnen
+62,9,2,balanced,4,4,0,9,10,9,22,,"Glossu ""The Beast"" Rabban"
+62,9,3,balanced,10,1,1,7,0,5,22,bene_gesserit|fremen,Duke Leto Atreides
+62,9,4,balanced,6,3,0,11,1,4,20,,Count Memnon Thorvald
+63,10,1,balanced,9,1,1,9,8,13,21,guild|bene_gesserit,Count Ilban Richese
+63,10,2,balanced,6,4,0,6,6,8,23,,Baron Vladimir Harkonnen
+63,10,3,balanced,8,2,0,7,7,1,25,fremen,Countess Ariana Thorvald
+63,10,4,balanced,8,3,0,7,5,5,24,emperor,Count Memnon Thorvald
+64,10,1,balanced,9,2,0,5,5,5,25,guild,Countess Ariana Thorvald
+64,10,2,balanced,6,4,0,6,5,1,26,fremen,Helena Richese
+64,10,3,balanced,10,1,1,11,4,2,22,bene_gesserit,Count Ilban Richese
+64,10,4,balanced,8,3,0,13,9,3,21,,"Glossu ""The Beast"" Rabban"
+65,10,1,balanced,5,4,0,5,4,9,25,,Countess Ariana Thorvald
+65,10,2,balanced,6,2,0,10,7,2,20,emperor,"Glossu ""The Beast"" Rabban"
+65,10,3,balanced,5,3,0,16,5,5,21,,Duke Leto Atreides
+65,10,4,balanced,11,1,1,4,9,7,25,guild|bene_gesserit|fremen,Helena Richese
+66,9,1,balanced,6,3,0,7,6,8,23,emperor,Paul Atreides
+66,9,2,balanced,3,4,0,1,8,8,22,fremen,Helena Richese
+66,9,3,balanced,8,2,0,10,2,1,19,guild,Baron Vladimir Harkonnen
+66,9,4,balanced,10,1,1,8,9,7,23,,"Glossu ""The Beast"" Rabban"
+67,10,1,balanced,6,3,0,6,5,7,20,,Duke Leto Atreides
+67,10,2,balanced,5,4,0,8,10,5,24,emperor,Baron Vladimir Harkonnen
+67,10,3,balanced,11,1,1,18,3,4,24,fremen,Count Memnon Thorvald
+67,10,4,balanced,8,2,0,6,0,2,24,,Helena Richese
+68,9,1,balanced,3,4,0,12,0,15,18,,Helena Richese
+68,9,2,balanced,10,1,1,7,3,8,21,guild|bene_gesserit|fremen,Count Memnon Thorvald
+68,9,3,balanced,5,3,0,1,5,0,24,,Count Ilban Richese
+68,9,4,balanced,6,2,0,9,0,2,27,,"Glossu ""The Beast"" Rabban"
+69,10,1,balanced,5,4,0,16,4,1,23,,Paul Atreides
+69,10,2,balanced,11,2,0,10,7,6,25,bene_gesserit|fremen,Countess Ariana Thorvald
+69,10,3,balanced,9,3,0,4,1,9,21,,Count Ilban Richese
+69,10,4,balanced,12,1,1,3,3,3,20,emperor,Duke Leto Atreides
+70,10,1,balanced,8,3,0,3,3,4,21,bene_gesserit|fremen,Duke Leto Atreides
+70,10,2,balanced,10,1,1,10,9,0,23,emperor|guild,Count Memnon Thorvald
+70,10,3,balanced,6,4,0,7,4,7,24,,Paul Atreides
+70,10,4,balanced,10,2,0,9,9,3,22,,Countess Ariana Thorvald
+71,10,1,balanced,7,4,0,2,0,8,20,fremen,Duke Leto Atreides
+71,10,2,balanced,10,1,1,9,3,4,23,emperor,Baron Vladimir Harkonnen
+71,10,3,balanced,7,3,0,7,2,2,26,guild,Count Memnon Thorvald
+71,10,4,balanced,7,2,0,11,2,5,21,,"Glossu ""The Beast"" Rabban"
+72,10,1,balanced,6,2,0,10,4,6,24,,Countess Ariana Thorvald
+72,10,2,balanced,5,3,0,6,3,7,25,,Paul Atreides
+72,10,3,balanced,4,4,0,7,1,8,22,fremen,Helena Richese
+72,10,4,balanced,9,1,1,12,14,0,20,emperor|bene_gesserit,Count Ilban Richese
+73,10,1,balanced,7,3,0,11,2,2,22,bene_gesserit,Helena Richese
+73,10,2,balanced,8,1,1,8,5,4,24,emperor,Baron Vladimir Harkonnen
+73,10,3,balanced,6,4,0,0,5,4,23,fremen,Count Ilban Richese
+73,10,4,balanced,8,2,0,5,10,7,22,,"Glossu ""The Beast"" Rabban"
+74,10,1,balanced,9,2,0,6,6,9,24,emperor,Countess Ariana Thorvald
+74,10,2,balanced,5,4,0,3,2,5,21,,Count Memnon Thorvald
+74,10,3,balanced,6,3,0,10,3,5,23,,Duke Leto Atreides
+74,10,4,balanced,10,1,1,10,0,1,23,bene_gesserit|fremen,Helena Richese
+75,10,1,balanced,7,3,0,7,4,4,30,,Countess Ariana Thorvald
+75,10,2,balanced,11,1,1,10,6,3,22,emperor|guild,Paul Atreides
+75,10,3,balanced,6,4,0,15,10,2,21,,"Glossu ""The Beast"" Rabban"
+75,10,4,balanced,10,2,0,7,3,8,24,fremen,Baron Vladimir Harkonnen
+76,10,1,balanced,13,1,1,13,4,3,24,emperor|guild,Paul Atreides
+76,10,2,balanced,7,4,0,3,3,7,25,,Count Memnon Thorvald
+76,10,3,balanced,11,2,0,10,6,3,19,fremen,Count Ilban Richese
+76,10,4,balanced,11,3,0,8,8,0,23,,Helena Richese
+77,10,1,balanced,6,4,0,6,0,10,22,fremen,Count Ilban Richese
+77,10,2,balanced,7,3,0,13,5,3,25,bene_gesserit,Duke Leto Atreides
+77,10,3,balanced,9,2,0,1,5,7,24,guild,Countess Ariana Thorvald
+77,10,4,balanced,10,1,1,8,4,2,21,emperor,Count Memnon Thorvald
+78,10,1,balanced,7,4,0,8,0,4,23,,Paul Atreides
+78,10,2,balanced,8,3,0,6,9,4,21,emperor|bene_gesserit,"Glossu ""The Beast"" Rabban"
+78,10,3,balanced,10,1,1,10,6,3,22,fremen,Duke Leto Atreides
+78,10,4,balanced,9,2,0,1,9,1,25,,Helena Richese
+79,10,1,balanced,7,4,0,7,9,4,23,fremen,Baron Vladimir Harkonnen
+79,10,2,balanced,12,1,1,12,5,2,23,,Paul Atreides
+79,10,3,balanced,7,3,0,17,7,5,21,emperor,Count Memnon Thorvald
+79,10,4,balanced,10,2,0,6,3,8,25,guild|bene_gesserit,Countess Ariana Thorvald
+80,10,1,balanced,6,4,0,7,10,3,23,guild,Duke Leto Atreides
+80,10,2,balanced,10,1,1,3,5,2,24,fremen,Countess Ariana Thorvald
+80,10,3,balanced,6,3,0,13,2,4,22,emperor,Helena Richese
+80,10,4,balanced,9,2,0,8,0,9,24,,Count Ilban Richese
+81,9,1,balanced,10,1,1,1,0,1,21,emperor,"Glossu ""The Beast"" Rabban"
+81,9,2,balanced,6,3,0,3,3,7,21,guild,Count Memnon Thorvald
+81,9,3,balanced,5,4,0,5,8,11,23,fremen,Countess Ariana Thorvald
+81,9,4,balanced,6,2,0,11,0,2,23,bene_gesserit,Baron Vladimir Harkonnen
+82,10,1,balanced,11,1,1,4,8,6,22,emperor,Countess Ariana Thorvald
+82,10,2,balanced,5,4,0,0,5,5,25,guild,Helena Richese
+82,10,3,balanced,5,3,0,14,3,7,23,,Paul Atreides
+82,10,4,balanced,6,2,0,16,6,5,22,bene_gesserit|fremen,Count Memnon Thorvald
+83,9,1,balanced,7,2,0,7,3,7,22,guild,Duke Leto Atreides
+83,9,2,balanced,10,1,1,12,4,0,25,emperor,Paul Atreides
+83,9,3,balanced,6,4,0,18,13,3,21,bene_gesserit,Count Memnon Thorvald
+83,9,4,balanced,7,3,0,3,1,0,27,fremen,Count Ilban Richese
+84,10,1,balanced,8,3,0,7,1,6,25,guild,Baron Vladimir Harkonnen
+84,10,2,balanced,11,1,1,12,4,0,23,emperor|fremen,Duke Leto Atreides
+84,10,3,balanced,9,2,0,12,3,0,23,bene_gesserit,Paul Atreides
+84,10,4,balanced,7,4,0,9,6,9,21,,Helena Richese
+85,10,1,balanced,8,3,0,12,7,4,21,fremen,Count Memnon Thorvald
+85,10,2,balanced,11,1,1,14,8,0,25,emperor|guild,Baron Vladimir Harkonnen
+85,10,3,balanced,9,2,0,11,1,2,23,,Count Ilban Richese
+85,10,4,balanced,6,4,0,9,13,3,24,,Paul Atreides
+86,10,1,balanced,10,2,0,5,0,2,23,bene_gesserit,Count Memnon Thorvald
+86,10,2,balanced,10,1,1,7,4,0,25,emperor,"Glossu ""The Beast"" Rabban"
+86,10,3,balanced,5,4,0,17,5,2,24,,Helena Richese
+86,10,4,balanced,7,3,0,6,7,8,22,guild|fremen,Baron Vladimir Harkonnen
+87,8,1,balanced,5,4,0,7,5,8,23,emperor,Count Memnon Thorvald
+87,8,2,balanced,11,1,1,8,1,3,19,bene_gesserit|fremen,Duke Leto Atreides
+87,8,3,balanced,6,2,0,6,3,4,19,,Count Ilban Richese
+87,8,4,balanced,5,3,0,10,1,3,22,,Paul Atreides
+88,10,1,balanced,10,1,1,3,2,1,23,,Countess Ariana Thorvald
+88,10,2,balanced,7,3,0,2,6,2,22,emperor,Paul Atreides
+88,10,3,balanced,8,2,0,7,6,2,21,bene_gesserit|fremen,Duke Leto Atreides
+88,10,4,balanced,4,4,0,14,1,6,26,guild,Baron Vladimir Harkonnen
+89,10,1,balanced,5,4,0,16,1,3,28,fremen,Duke Leto Atreides
+89,10,2,balanced,7,3,0,4,6,0,22,,Paul Atreides
+89,10,3,balanced,8,2,0,9,6,3,23,,"Glossu ""The Beast"" Rabban"
+89,10,4,balanced,10,1,1,7,4,6,20,emperor|bene_gesserit,Count Memnon Thorvald
+90,10,1,balanced,5,4,0,7,14,6,22,,Helena Richese
+90,10,2,balanced,9,2,0,6,2,5,24,bene_gesserit|fremen,Duke Leto Atreides
+90,10,3,balanced,8,3,0,6,6,6,25,emperor,Countess Ariana Thorvald
+90,10,4,balanced,10,1,1,1,2,6,25,guild,Baron Vladimir Harkonnen
+91,10,1,balanced,10,1,1,6,2,6,24,,Baron Vladimir Harkonnen
+91,10,2,balanced,5,4,0,15,7,3,22,fremen,"Glossu ""The Beast"" Rabban"
+91,10,3,balanced,9,2,0,5,3,4,23,emperor|bene_gesserit,Countess Ariana Thorvald
+91,10,4,balanced,8,3,0,9,3,1,24,,Helena Richese
+92,10,1,balanced,7,3,0,7,0,6,23,emperor|fremen,"Glossu ""The Beast"" Rabban"
+92,10,2,balanced,8,2,0,8,7,5,24,,Count Memnon Thorvald
+92,10,3,balanced,12,1,1,6,8,3,22,guild|bene_gesserit,Baron Vladimir Harkonnen
+92,10,4,balanced,5,4,0,15,0,0,24,,Helena Richese
+93,8,1,balanced,5,3,0,1,5,5,20,,Duke Leto Atreides
+93,8,2,balanced,4,4,0,8,3,7,17,,Countess Ariana Thorvald
+93,8,3,balanced,11,1,1,0,2,5,22,bene_gesserit|fremen,Baron Vladimir Harkonnen
+93,8,4,balanced,6,2,0,0,11,7,20,emperor|guild,Helena Richese
+94,10,1,balanced,6,4,0,13,4,5,26,fremen,Helena Richese
+94,10,2,balanced,10,1,1,12,1,2,21,emperor,Count Memnon Thorvald
+94,10,3,balanced,8,3,0,8,4,6,23,guild,Baron Vladimir Harkonnen
+94,10,4,balanced,9,2,0,6,7,0,22,bene_gesserit,Countess Ariana Thorvald
+95,10,1,balanced,6,3,0,13,2,3,26,,Helena Richese
+95,10,2,balanced,10,2,0,9,12,1,24,guild|bene_gesserit,Count Ilban Richese
+95,10,3,balanced,5,4,0,4,5,8,24,,Baron Vladimir Harkonnen
+95,10,4,balanced,11,1,1,1,1,3,25,emperor|fremen,"Glossu ""The Beast"" Rabban"
+96,10,1,balanced,11,1,1,9,5,1,20,emperor,Helena Richese
+96,10,2,balanced,9,2,0,5,0,6,22,bene_gesserit,Count Memnon Thorvald
+96,10,3,balanced,5,3,0,10,9,10,22,,Paul Atreides
+96,10,4,balanced,4,4,0,10,3,3,23,fremen,Duke Leto Atreides
+97,10,1,balanced,7,3,0,5,10,8,24,,Paul Atreides
+97,10,2,balanced,10,2,0,10,4,0,27,emperor|bene_gesserit,Count Memnon Thorvald
+97,10,3,balanced,11,1,1,3,4,1,20,,Helena Richese
+97,10,4,balanced,5,4,0,8,0,7,22,fremen,Countess Ariana Thorvald
+98,10,1,balanced,6,4,0,1,12,4,21,emperor,Paul Atreides
+98,10,2,balanced,7,3,0,6,6,9,25,,Countess Ariana Thorvald
+98,10,3,balanced,10,1,1,4,1,9,24,bene_gesserit|fremen,Count Ilban Richese
+98,10,4,balanced,9,2,0,8,3,3,24,guild,Duke Leto Atreides
+99,10,1,balanced,6,4,0,10,10,7,23,fremen,Count Ilban Richese
+99,10,2,balanced,7,3,0,15,2,2,22,,Paul Atreides
+99,10,3,balanced,11,1,1,2,2,0,22,emperor,Count Memnon Thorvald
+99,10,4,balanced,9,2,0,12,6,2,21,guild,"Glossu ""The Beast"" Rabban"
+100,10,1,balanced,6,4,0,3,5,14,19,,Paul Atreides
+100,10,2,balanced,11,1,1,3,11,4,23,fremen,"Glossu ""The Beast"" Rabban"
+100,10,3,balanced,10,2,0,6,1,2,22,emperor,Duke Leto Atreides
+100,10,4,balanced,9,3,0,5,2,3,21,guild,Baron Vladimir Harkonnen
+101,9,1,balanced,11,1,1,4,4,2,23,,Helena Richese
+101,9,2,balanced,6,4,0,7,11,7,22,fremen,Countess Ariana Thorvald
+101,9,3,balanced,8,2,0,2,9,5,22,guild|bene_gesserit,Baron Vladimir Harkonnen
+101,9,4,balanced,7,3,0,11,2,5,18,emperor,Duke Leto Atreides
+102,10,1,balanced,6,4,0,12,3,5,20,,Duke Leto Atreides
+102,10,2,balanced,7,3,0,14,3,2,24,fremen,"Glossu ""The Beast"" Rabban"
+102,10,3,balanced,8,2,0,1,7,5,24,,Paul Atreides
+102,10,4,balanced,12,1,1,9,7,1,20,emperor|bene_gesserit,Count Ilban Richese
+103,9,1,balanced,5,4,0,10,0,7,19,fremen,Count Ilban Richese
+103,9,2,balanced,9,2,0,8,2,1,22,,Count Memnon Thorvald
+103,9,3,balanced,12,1,1,11,3,2,23,emperor|guild,Baron Vladimir Harkonnen
+103,9,4,balanced,8,3,0,5,0,6,23,,Countess Ariana Thorvald
+104,10,1,balanced,8,3,0,5,10,9,21,fremen,Helena Richese
+104,10,2,balanced,6,4,0,1,2,14,24,,Countess Ariana Thorvald
+104,10,3,balanced,11,2,0,9,4,2,19,emperor,Paul Atreides
+104,10,4,balanced,11,1,1,9,4,4,22,guild,Baron Vladimir Harkonnen
+105,10,1,balanced,6,4,0,10,10,1,21,,"Glossu ""The Beast"" Rabban"
+105,10,2,balanced,11,1,1,8,3,8,23,guild|fremen,Count Memnon Thorvald
+105,10,3,balanced,11,2,0,3,3,3,24,emperor|bene_gesserit,Countess Ariana Thorvald
+105,10,4,balanced,6,3,0,17,1,2,24,,Baron Vladimir Harkonnen
+106,10,1,balanced,11,1,1,0,13,1,26,emperor,Duke Leto Atreides
+106,10,2,balanced,4,4,0,9,3,7,23,fremen,Helena Richese
+106,10,3,balanced,8,3,0,8,5,1,19,guild,Baron Vladimir Harkonnen
+106,10,4,balanced,9,2,0,15,2,4,23,bene_gesserit,Count Ilban Richese
+107,10,1,balanced,8,3,0,12,5,6,22,emperor,Duke Leto Atreides
+107,10,2,balanced,12,1,1,5,0,2,23,bene_gesserit|fremen,Baron Vladimir Harkonnen
+107,10,3,balanced,9,2,0,5,1,9,24,,Countess Ariana Thorvald
+107,10,4,balanced,8,4,0,3,2,7,21,,Paul Atreides
+108,10,1,balanced,12,1,1,10,1,1,26,,Paul Atreides
+108,10,2,balanced,6,3,0,1,8,9,25,guild,"Glossu ""The Beast"" Rabban"
+108,10,3,balanced,8,2,0,7,4,3,21,bene_gesserit,Helena Richese
+108,10,4,balanced,5,4,0,13,8,6,21,fremen,Count Memnon Thorvald
+109,10,1,balanced,12,1,1,0,2,7,19,guild,Paul Atreides
+109,10,2,balanced,6,4,0,12,6,1,22,,Countess Ariana Thorvald
+109,10,3,balanced,10,2,0,3,3,4,22,bene_gesserit|fremen,Baron Vladimir Harkonnen
+109,10,4,balanced,7,3,0,16,5,3,22,emperor,Count Memnon Thorvald
+110,9,1,balanced,8,2,0,1,5,4,22,fremen,Paul Atreides
+110,9,2,balanced,4,4,0,10,1,6,20,,Helena Richese
+110,9,3,balanced,5,3,0,7,11,3,26,,Duke Leto Atreides
+110,9,4,balanced,10,1,1,6,3,3,23,guild,"Glossu ""The Beast"" Rabban"
+111,10,1,balanced,6,4,0,9,2,5,25,,Paul Atreides
+111,10,2,balanced,8,2,0,6,6,4,25,,Count Memnon Thorvald
+111,10,3,balanced,6,3,0,10,7,3,23,emperor|fremen,Helena Richese
+111,10,4,balanced,8,1,1,21,3,4,21,,Countess Ariana Thorvald
+112,9,1,balanced,10,1,1,3,5,7,21,guild,Count Memnon Thorvald
+112,9,2,balanced,6,3,0,10,4,4,22,emperor,Helena Richese
+112,9,3,balanced,4,4,0,9,4,4,23,fremen,Duke Leto Atreides
+112,9,4,balanced,8,2,0,12,1,3,22,bene_gesserit,Baron Vladimir Harkonnen
+113,9,1,balanced,3,4,0,13,15,2,21,,Duke Leto Atreides
+113,9,2,balanced,10,1,1,11,0,3,18,emperor|fremen,"Glossu ""The Beast"" Rabban"
+113,9,3,balanced,5,3,0,5,5,7,20,,Countess Ariana Thorvald
+113,9,4,balanced,6,2,0,8,2,3,21,guild,Count Ilban Richese
+114,10,1,balanced,6,3,0,10,0,13,22,,Paul Atreides
+114,10,2,balanced,10,2,0,4,1,2,26,fremen,Count Memnon Thorvald
+114,10,3,balanced,4,4,0,9,2,4,21,,Duke Leto Atreides
+114,10,4,balanced,11,1,1,8,18,1,23,emperor|guild|bene_gesserit,Count Ilban Richese
+115,10,1,balanced,11,1,1,11,5,6,22,guild,Baron Vladimir Harkonnen
+115,10,2,balanced,7,3,0,8,4,3,23,fremen,Paul Atreides
+115,10,3,balanced,6,4,0,3,8,5,24,,Count Ilban Richese
+115,10,4,balanced,9,2,0,5,5,4,25,emperor,Count Memnon Thorvald
+116,10,1,balanced,6,4,0,12,10,1,21,,Helena Richese
+116,10,2,balanced,8,3,0,4,1,3,22,bene_gesserit|fremen,Count Ilban Richese
+116,10,3,balanced,11,1,1,4,1,4,24,guild,"Glossu ""The Beast"" Rabban"
+116,10,4,balanced,10,2,0,12,3,2,24,emperor,Count Memnon Thorvald
+117,10,1,balanced,4,4,0,9,6,8,24,fremen,Baron Vladimir Harkonnen
+117,10,2,balanced,8,2,0,3,1,7,24,,Paul Atreides
+117,10,3,balanced,6,3,0,13,8,1,25,,Helena Richese
+117,10,4,balanced,13,1,1,3,1,5,21,emperor|guild,Count Memnon Thorvald
+118,10,1,balanced,5,4,0,11,3,2,21,,Paul Atreides
+118,10,2,balanced,7,3,0,1,15,7,22,fremen,Count Memnon Thorvald
+118,10,3,balanced,8,2,0,10,3,2,22,,Duke Leto Atreides
+118,10,4,balanced,12,1,1,7,3,5,24,emperor|guild,Baron Vladimir Harkonnen
+119,10,1,balanced,10,2,0,5,2,7,24,,Helena Richese
+119,10,2,balanced,9,3,0,8,7,5,20,emperor|fremen,Baron Vladimir Harkonnen
+119,10,3,balanced,13,1,1,10,7,0,25,guild|bene_gesserit,Count Ilban Richese
+119,10,4,balanced,7,4,0,9,5,8,23,,Paul Atreides
+120,10,1,balanced,6,4,0,6,0,7,24,,Duke Leto Atreides
+120,10,2,balanced,11,1,1,4,1,2,22,guild,Helena Richese
+120,10,3,balanced,9,2,0,13,7,5,23,,Paul Atreides
+120,10,4,balanced,9,3,0,8,4,6,27,emperor|bene_gesserit|fremen,Count Ilban Richese
+121,10,1,balanced,11,1,1,4,12,4,27,,Count Memnon Thorvald
+121,10,2,balanced,7,4,0,8,2,5,24,fremen,Paul Atreides
+121,10,3,balanced,8,2,0,8,3,2,19,bene_gesserit,Duke Leto Atreides
+121,10,4,balanced,7,3,0,11,1,10,22,emperor,Countess Ariana Thorvald
+122,9,1,balanced,5,2,0,8,2,6,23,,Countess Ariana Thorvald
+122,9,2,balanced,5,3,0,2,6,5,24,fremen,Count Ilban Richese
+122,9,3,balanced,11,1,1,11,8,2,22,emperor,Paul Atreides
+122,9,4,balanced,4,4,0,8,0,5,23,,Helena Richese
+123,8,1,balanced,10,1,1,4,0,2,20,bene_gesserit,Count Ilban Richese
+123,8,2,balanced,8,2,0,2,5,4,23,emperor|fremen,Baron Vladimir Harkonnen
+123,8,3,balanced,5,3,0,10,7,3,22,,Countess Ariana Thorvald
+123,8,4,balanced,3,4,0,20,4,1,17,,Count Memnon Thorvald
+124,8,1,balanced,3,4,0,11,5,1,20,,Count Memnon Thorvald
+124,8,2,balanced,6,3,0,6,3,3,21,,Countess Ariana Thorvald
+124,8,3,balanced,12,1,1,6,2,3,19,emperor|guild,Baron Vladimir Harkonnen
+124,8,4,balanced,7,2,0,7,2,7,22,bene_gesserit|fremen,Paul Atreides
+125,10,1,balanced,5,4,0,13,5,8,22,,"Glossu ""The Beast"" Rabban"
+125,10,2,balanced,9,2,0,7,2,2,28,guild,Baron Vladimir Harkonnen
+125,10,3,balanced,8,3,0,11,2,8,21,bene_gesserit,Countess Ariana Thorvald
+125,10,4,balanced,10,1,1,10,1,2,19,emperor|fremen,Count Memnon Thorvald
+126,10,1,balanced,7,3,0,9,2,2,22,bene_gesserit,Duke Leto Atreides
+126,10,2,balanced,11,1,1,8,3,3,28,guild|fremen,Baron Vladimir Harkonnen
+126,10,3,balanced,7,2,0,9,12,8,20,emperor,"Glossu ""The Beast"" Rabban"
+126,10,4,balanced,6,4,0,9,3,3,22,,Count Ilban Richese
+127,10,1,balanced,4,4,0,14,7,2,24,emperor,Duke Leto Atreides
+127,10,2,balanced,7,2,0,14,7,5,21,,Count Memnon Thorvald
+127,10,3,balanced,5,3,0,8,9,7,19,fremen,Helena Richese
+127,10,4,balanced,11,1,1,9,4,2,25,guild|bene_gesserit,Paul Atreides
+128,10,1,balanced,11,1,1,14,4,2,26,fremen,Baron Vladimir Harkonnen
+128,10,2,balanced,8,3,0,4,0,7,19,,Paul Atreides
+128,10,3,balanced,7,4,0,11,1,3,20,,Count Memnon Thorvald
+128,10,4,balanced,8,2,0,5,12,1,24,emperor,Duke Leto Atreides
+129,10,1,balanced,5,4,0,13,1,5,25,,Helena Richese
+129,10,2,balanced,12,1,1,11,8,2,23,emperor,Count Memnon Thorvald
+129,10,3,balanced,11,2,0,8,4,7,24,guild|fremen,"Glossu ""The Beast"" Rabban"
+129,10,4,balanced,7,3,0,6,5,8,25,,Countess Ariana Thorvald
+130,10,1,balanced,7,4,0,6,14,4,22,guild|fremen,Count Ilban Richese
+130,10,2,balanced,9,2,0,14,7,0,23,emperor,Countess Ariana Thorvald
+130,10,3,balanced,8,3,0,4,4,6,20,bene_gesserit,Count Memnon Thorvald
+130,10,4,balanced,11,1,1,6,3,3,23,,Helena Richese
+131,9,1,balanced,8,4,0,7,1,4,20,,"Glossu ""The Beast"" Rabban"
+131,9,2,balanced,10,1,1,6,3,7,23,bene_gesserit,Count Memnon Thorvald
+131,9,3,balanced,9,2,0,8,2,0,19,fremen,Duke Leto Atreides
+131,9,4,balanced,8,3,0,10,5,0,22,emperor|guild,Baron Vladimir Harkonnen
+132,10,1,balanced,10,1,1,6,1,2,23,emperor|fremen,Count Memnon Thorvald
+132,10,2,balanced,5,4,0,11,10,3,21,,Count Ilban Richese
+132,10,3,balanced,8,2,0,4,10,6,21,,Countess Ariana Thorvald
+132,10,4,balanced,7,3,0,4,2,5,21,,"Glossu ""The Beast"" Rabban"
+133,10,1,balanced,8,2,0,9,8,3,25,,Count Ilban Richese
+133,10,2,balanced,5,4,0,5,0,6,22,fremen,Helena Richese
+133,10,3,balanced,7,3,0,15,8,1,23,emperor,Count Memnon Thorvald
+133,10,4,balanced,11,1,1,8,1,3,26,,Paul Atreides
+134,9,1,balanced,6,2,0,9,10,0,21,emperor,Baron Vladimir Harkonnen
+134,9,2,balanced,5,3,0,3,3,9,24,,Paul Atreides
+134,9,3,balanced,3,4,0,11,3,3,22,fremen,Countess Ariana Thorvald
+134,9,4,balanced,12,1,1,9,0,2,19,bene_gesserit,Count Memnon Thorvald
+135,10,1,balanced,10,1,1,3,3,4,22,emperor|guild,Count Memnon Thorvald
+135,10,2,balanced,8,3,0,10,7,2,22,fremen,"Glossu ""The Beast"" Rabban"
+135,10,3,balanced,5,4,0,3,6,7,24,,Duke Leto Atreides
+135,10,4,balanced,9,2,0,3,10,2,24,bene_gesserit,Helena Richese
+136,10,1,balanced,8,2,0,7,0,0,22,emperor,Count Ilban Richese
+136,10,2,balanced,8,3,0,1,6,11,24,guild|fremen,Helena Richese
+136,10,3,balanced,9,1,1,7,5,2,23,,Count Memnon Thorvald
+136,10,4,balanced,7,4,0,11,14,2,23,,Countess Ariana Thorvald
+137,8,1,balanced,4,3,0,14,5,6,21,,Count Memnon Thorvald
+137,8,2,balanced,3,4,0,5,7,2,18,,Paul Atreides
+137,8,3,balanced,10,1,1,1,2,8,21,guild,Baron Vladimir Harkonnen
+137,8,4,balanced,6,2,0,7,1,2,21,emperor|fremen,"Glossu ""The Beast"" Rabban"
+138,10,1,balanced,7,3,0,14,3,4,22,,Duke Leto Atreides
+138,10,2,balanced,7,4,0,6,15,4,25,fremen,Count Memnon Thorvald
+138,10,3,balanced,11,1,1,7,4,5,22,emperor|bene_gesserit,Countess Ariana Thorvald
+138,10,4,balanced,9,2,0,9,0,0,21,guild,Baron Vladimir Harkonnen
+139,8,1,balanced,3,4,0,4,0,4,21,,Paul Atreides
+139,8,2,balanced,5,2,0,14,3,5,20,fremen,Count Memnon Thorvald
+139,8,3,balanced,5,3,0,10,3,5,20,emperor,"Glossu ""The Beast"" Rabban"
+139,8,4,balanced,10,1,1,6,0,4,19,bene_gesserit,Count Ilban Richese
+140,9,1,balanced,4,4,0,8,8,2,20,emperor,"Glossu ""The Beast"" Rabban"
+140,9,2,balanced,7,3,0,7,2,2,22,fremen,Count Ilban Richese
+140,9,3,balanced,7,2,0,9,6,2,20,guild|bene_gesserit,Duke Leto Atreides
+140,9,4,balanced,11,1,1,3,0,8,18,,Paul Atreides
+141,10,1,balanced,7,4,0,2,2,8,23,bene_gesserit,Count Memnon Thorvald
+141,10,2,balanced,12,1,1,6,8,1,23,emperor|guild|fremen,Duke Leto Atreides
+141,10,3,balanced,9,3,0,9,1,5,24,,Countess Ariana Thorvald
+141,10,4,balanced,9,2,0,10,6,6,24,,Count Ilban Richese
+142,10,1,balanced,11,1,1,0,3,3,23,bene_gesserit,Helena Richese
+142,10,2,balanced,7,4,0,9,8,3,22,emperor,"Glossu ""The Beast"" Rabban"
+142,10,3,balanced,8,3,0,8,1,8,24,fremen,Baron Vladimir Harkonnen
+142,10,4,balanced,8,2,0,12,2,4,23,,Count Ilban Richese
+143,10,1,balanced,8,2,0,3,10,7,22,fremen,Countess Ariana Thorvald
+143,10,2,balanced,11,1,1,2,9,2,23,guild,Count Memnon Thorvald
+143,10,3,balanced,6,3,0,12,2,0,24,emperor,Count Ilban Richese
+143,10,4,balanced,6,4,0,8,1,1,24,,Helena Richese
+144,9,1,balanced,6,3,0,7,10,6,20,emperor,Count Memnon Thorvald
+144,9,2,balanced,5,4,0,10,7,5,22,fremen,Paul Atreides
+144,9,3,balanced,8,2,0,5,1,7,21,,Countess Ariana Thorvald
+144,9,4,balanced,11,1,1,2,4,5,25,bene_gesserit,Count Ilban Richese
+145,7,1,balanced,4,3,0,9,4,4,16,fremen,Duke Leto Atreides
+145,7,2,balanced,10,1,1,0,0,1,20,emperor,Baron Vladimir Harkonnen
+145,7,3,balanced,5,2,0,3,5,5,21,guild,Count Memnon Thorvald
+145,7,4,balanced,2,4,0,14,7,4,19,,"Glossu ""The Beast"" Rabban"
+146,9,1,balanced,5,4,0,4,4,3,24,,Paul Atreides
+146,9,2,balanced,6,3,0,6,5,14,20,,Countess Ariana Thorvald
+146,9,3,balanced,9,2,0,11,1,1,25,fremen,Duke Leto Atreides
+146,9,4,balanced,11,1,1,4,1,5,22,emperor|guild,Count Ilban Richese
+147,9,1,balanced,10,1,1,2,4,2,18,guild,"Glossu ""The Beast"" Rabban"
+147,9,2,balanced,5,4,0,8,4,6,24,bene_gesserit,Helena Richese
+147,9,3,balanced,9,2,0,3,4,3,25,emperor|fremen,Count Ilban Richese
+147,9,4,balanced,6,3,0,9,3,8,24,,Baron Vladimir Harkonnen
+148,10,1,balanced,8,2,0,8,8,1,22,,Duke Leto Atreides
+148,10,2,balanced,6,4,0,10,4,5,25,,Count Ilban Richese
+148,10,3,balanced,11,1,1,14,4,5,21,guild|fremen,Baron Vladimir Harkonnen
+148,10,4,balanced,7,3,0,10,4,5,18,emperor,Count Memnon Thorvald
+149,10,1,balanced,9,2,0,7,4,2,26,emperor|bene_gesserit,Baron Vladimir Harkonnen
+149,10,2,balanced,8,3,0,11,1,3,23,,Duke Leto Atreides
+149,10,3,balanced,10,1,1,12,3,2,21,,"Glossu ""The Beast"" Rabban"
+149,10,4,balanced,6,4,0,10,1,6,22,fremen,Count Ilban Richese
+150,10,1,balanced,10,1,1,8,2,1,23,bene_gesserit,Count Ilban Richese
+150,10,2,balanced,9,2,0,8,0,10,22,guild|fremen,Paul Atreides
+150,10,3,balanced,8,4,0,7,8,4,26,,"Glossu ""The Beast"" Rabban"
+150,10,4,balanced,9,3,0,6,5,1,23,emperor,Baron Vladimir Harkonnen
+151,10,1,balanced,7,3,0,16,6,4,22,fremen,Count Memnon Thorvald
+151,10,2,balanced,9,2,0,3,9,3,18,bene_gesserit,Duke Leto Atreides
+151,10,3,balanced,7,4,0,12,0,6,26,,Baron Vladimir Harkonnen
+151,10,4,balanced,9,1,1,9,9,5,23,guild,Paul Atreides
+152,10,1,balanced,8,2,0,8,11,2,23,,Count Memnon Thorvald
+152,10,2,balanced,11,1,1,6,2,1,18,emperor|bene_gesserit,Baron Vladimir Harkonnen
+152,10,3,balanced,6,4,0,9,16,5,22,fremen,"Glossu ""The Beast"" Rabban"
+152,10,4,balanced,8,3,0,3,5,7,27,guild,Countess Ariana Thorvald
+153,10,1,balanced,12,1,1,4,5,4,23,emperor,Helena Richese
+153,10,2,balanced,7,4,0,5,7,2,22,,Duke Leto Atreides
+153,10,3,balanced,7,3,0,14,6,4,25,guild,Countess Ariana Thorvald
+153,10,4,balanced,9,2,0,8,0,5,23,fremen,"Glossu ""The Beast"" Rabban"
+154,9,1,balanced,11,1,1,13,13,1,21,emperor|fremen,Count Memnon Thorvald
+154,9,2,balanced,5,3,0,3,6,5,24,bene_gesserit,"Glossu ""The Beast"" Rabban"
+154,9,3,balanced,4,4,0,6,10,7,26,,Helena Richese
+154,9,4,balanced,6,2,0,4,1,2,22,,Count Ilban Richese
+155,10,1,balanced,10,1,1,9,3,4,21,,Helena Richese
+155,10,2,balanced,4,4,0,16,4,0,23,fremen,Paul Atreides
+155,10,3,balanced,8,3,0,11,0,10,23,emperor,Baron Vladimir Harkonnen
+155,10,4,balanced,9,2,0,0,8,5,23,guild,Duke Leto Atreides
+156,9,1,balanced,4,3,0,7,7,10,20,emperor,Baron Vladimir Harkonnen
+156,9,2,balanced,9,2,0,8,0,2,22,fremen,Paul Atreides
+156,9,3,balanced,10,1,1,8,3,0,23,,"Glossu ""The Beast"" Rabban"
+156,9,4,balanced,4,4,0,5,2,6,24,,Helena Richese
+157,10,1,balanced,7,3,0,12,2,1,23,emperor,Countess Ariana Thorvald
+157,10,2,balanced,5,4,0,1,4,8,23,,Helena Richese
+157,10,3,balanced,11,1,1,10,2,4,21,bene_gesserit,Count Ilban Richese
+157,10,4,balanced,9,2,0,9,7,2,27,fremen,Paul Atreides
+158,10,1,balanced,6,4,0,8,4,2,25,,Baron Vladimir Harkonnen
+158,10,2,balanced,8,3,0,9,0,5,24,bene_gesserit|fremen,Paul Atreides
+158,10,3,balanced,10,1,1,9,10,7,18,emperor|guild,Duke Leto Atreides
+158,10,4,balanced,9,2,0,9,0,2,25,,Helena Richese
+159,10,1,balanced,12,1,1,1,4,1,20,emperor|bene_gesserit|fremen,Baron Vladimir Harkonnen
+159,10,2,balanced,6,4,0,9,3,2,20,,Count Ilban Richese
+159,10,3,balanced,8,2,0,5,10,0,26,,Helena Richese
+159,10,4,balanced,7,3,0,15,0,7,22,,Duke Leto Atreides
+160,10,1,balanced,7,4,0,5,1,4,22,,Paul Atreides
+160,10,2,balanced,8,3,0,7,3,7,25,emperor|fremen,Baron Vladimir Harkonnen
+160,10,3,balanced,11,1,1,13,4,3,24,,Helena Richese
+160,10,4,balanced,9,2,0,12,1,6,26,bene_gesserit,Countess Ariana Thorvald
+161,10,1,balanced,11,1,1,1,2,4,16,bene_gesserit,Count Ilban Richese
+161,10,2,balanced,9,2,0,8,7,2,26,guild|fremen,Countess Ariana Thorvald
+161,10,3,balanced,3,4,0,10,3,5,25,,Helena Richese
+161,10,4,balanced,8,3,0,6,4,2,24,emperor,Paul Atreides
+162,9,1,balanced,5,4,0,7,0,9,23,emperor,Helena Richese
+162,9,2,balanced,5,3,0,9,6,4,20,fremen,Count Memnon Thorvald
+162,9,3,balanced,10,1,1,12,8,4,24,guild,Count Ilban Richese
+162,9,4,balanced,5,2,0,10,0,2,19,,Countess Ariana Thorvald
+163,8,1,balanced,3,4,0,6,6,9,20,,Count Memnon Thorvald
+163,8,2,balanced,5,3,0,10,4,1,22,bene_gesserit,Paul Atreides
+163,8,3,balanced,6,2,0,6,6,5,21,emperor,Countess Ariana Thorvald
+163,8,4,balanced,10,1,1,7,0,4,19,fremen,Duke Leto Atreides
+164,10,1,balanced,8,1,1,12,7,4,23,emperor,Duke Leto Atreides
+164,10,2,balanced,8,2,0,8,2,1,24,bene_gesserit|fremen,Countess Ariana Thorvald
+164,10,3,balanced,7,3,0,10,0,2,22,,Count Ilban Richese
+164,10,4,balanced,4,4,0,10,13,14,22,,Count Memnon Thorvald
+165,10,1,balanced,7,4,0,16,4,4,21,fremen,Duke Leto Atreides
+165,10,2,balanced,8,3,0,7,0,2,23,guild|bene_gesserit,"Glossu ""The Beast"" Rabban"
+165,10,3,balanced,10,1,1,6,5,2,23,emperor,Count Ilban Richese
+165,10,4,balanced,10,2,0,6,0,3,26,,Helena Richese
+166,10,1,balanced,11,2,0,3,6,5,24,,Baron Vladimir Harkonnen
+166,10,2,balanced,8,3,0,12,3,2,20,emperor|fremen,Count Memnon Thorvald
+166,10,3,balanced,4,4,0,14,9,7,26,,"Glossu ""The Beast"" Rabban"
+166,10,4,balanced,12,1,1,0,0,4,25,guild|bene_gesserit,Duke Leto Atreides
+167,10,1,balanced,7,3,0,3,1,5,25,,Paul Atreides
+167,10,2,balanced,6,4,0,9,11,3,23,,Count Memnon Thorvald
+167,10,3,balanced,9,2,0,8,4,6,21,fremen,"Glossu ""The Beast"" Rabban"
+167,10,4,balanced,11,1,1,11,8,0,24,emperor|guild|bene_gesserit,Baron Vladimir Harkonnen
+168,10,1,balanced,4,4,0,16,8,2,22,,Count Ilban Richese
+168,10,2,balanced,6,2,0,8,9,5,23,emperor,"Glossu ""The Beast"" Rabban"
+168,10,3,balanced,6,3,0,6,9,1,24,fremen,Duke Leto Atreides
+168,10,4,balanced,12,1,1,1,3,4,20,,Count Memnon Thorvald
+169,9,1,balanced,6,4,0,8,0,1,20,emperor,Duke Leto Atreides
+169,9,2,balanced,6,3,0,8,5,5,21,,Countess Ariana Thorvald
+169,9,3,balanced,11,1,1,4,6,7,18,,Count Memnon Thorvald
+169,9,4,balanced,10,2,0,9,8,0,24,bene_gesserit|fremen,Count Ilban Richese
+170,10,1,balanced,8,3,0,15,4,6,27,,Countess Ariana Thorvald
+170,10,2,balanced,11,1,1,4,9,4,20,guild|bene_gesserit,Count Memnon Thorvald
+170,10,3,balanced,9,2,0,7,5,0,27,emperor|fremen,Duke Leto Atreides
+170,10,4,balanced,7,4,0,7,3,5,20,,Paul Atreides
+171,9,1,balanced,2,4,0,13,2,3,22,,Count Memnon Thorvald
+171,9,2,balanced,7,2,0,6,4,3,23,fremen,Baron Vladimir Harkonnen
+171,9,3,balanced,11,1,1,3,3,1,22,emperor,Paul Atreides
+171,9,4,balanced,6,3,0,6,5,8,21,,Duke Leto Atreides
+172,10,1,balanced,8,3,0,4,2,6,24,,Helena Richese
+172,10,2,balanced,9,1,1,11,5,4,20,emperor|guild,Baron Vladimir Harkonnen
+172,10,3,balanced,8,2,0,9,2,5,24,fremen,"Glossu ""The Beast"" Rabban"
+172,10,4,balanced,7,4,0,8,7,4,24,,Countess Ariana Thorvald
+173,10,1,balanced,5,4,0,9,2,4,25,,Count Ilban Richese
+173,10,2,balanced,7,3,0,8,2,0,25,emperor,Count Memnon Thorvald
+173,10,3,balanced,9,1,1,10,5,5,23,guild,"Glossu ""The Beast"" Rabban"
+173,10,4,balanced,9,2,0,6,2,3,18,fremen,Duke Leto Atreides
+174,9,1,balanced,9,2,0,1,1,4,26,,Duke Leto Atreides
+174,9,2,balanced,5,4,0,5,6,3,22,fremen,Paul Atreides
+174,9,3,balanced,6,3,0,7,4,2,21,,Count Memnon Thorvald
+174,9,4,balanced,11,1,1,5,4,0,21,emperor,Helena Richese
+175,10,1,balanced,7,4,0,11,6,6,22,fremen,Baron Vladimir Harkonnen
+175,10,2,balanced,8,3,0,8,3,0,25,,Paul Atreides
+175,10,3,balanced,8,2,0,9,1,5,24,,"Glossu ""The Beast"" Rabban"
+175,10,4,balanced,12,1,1,6,12,3,22,emperor|guild,Count Memnon Thorvald
+176,9,1,balanced,6,3,0,8,2,9,21,,Countess Ariana Thorvald
+176,9,2,balanced,5,4,0,12,2,5,24,fremen,Paul Atreides
+176,9,3,balanced,12,1,1,0,3,0,23,emperor|bene_gesserit,Duke Leto Atreides
+176,9,4,balanced,7,2,0,10,5,6,21,,Baron Vladimir Harkonnen
+177,10,1,balanced,7,3,0,5,0,7,20,,Countess Ariana Thorvald
+177,10,2,balanced,8,2,0,19,2,2,21,emperor|fremen,"Glossu ""The Beast"" Rabban"
+177,10,3,balanced,10,1,1,4,3,4,20,bene_gesserit,Duke Leto Atreides
+177,10,4,balanced,6,4,0,11,9,8,21,guild,Baron Vladimir Harkonnen
+178,10,1,balanced,9,2,0,8,3,5,18,bene_gesserit,Helena Richese
+178,10,2,balanced,8,3,0,9,7,4,22,emperor|fremen,"Glossu ""The Beast"" Rabban"
+178,10,3,balanced,6,4,0,18,10,3,19,,Baron Vladimir Harkonnen
+178,10,4,balanced,12,1,1,1,9,2,22,guild,Duke Leto Atreides
+179,8,1,balanced,4,3,0,8,8,0,23,,Duke Leto Atreides
+179,8,2,balanced,7,2,0,9,2,4,19,fremen,Helena Richese
+179,8,3,balanced,4,4,0,7,2,1,22,emperor,Count Ilban Richese
+179,8,4,balanced,11,1,1,3,3,7,17,guild|bene_gesserit,Baron Vladimir Harkonnen
+180,9,1,balanced,8,2,0,12,2,3,18,emperor,Duke Leto Atreides
+180,9,2,balanced,4,4,0,3,6,7,20,,Helena Richese
+180,9,3,balanced,8,3,0,10,7,6,23,guild|fremen,Baron Vladimir Harkonnen
+180,9,4,balanced,12,1,1,4,7,0,19,bene_gesserit,Count Memnon Thorvald
+181,9,1,balanced,10,1,1,2,9,0,23,emperor|fremen,Duke Leto Atreides
+181,9,2,balanced,4,4,0,14,2,8,19,,"Glossu ""The Beast"" Rabban"
+181,9,3,balanced,9,2,0,1,6,7,20,,Count Ilban Richese
+181,9,4,balanced,5,3,0,2,1,8,23,,Countess Ariana Thorvald
+182,10,1,balanced,7,3,0,7,1,1,22,emperor,Helena Richese
+182,10,2,balanced,7,2,0,8,13,3,25,guild,Count Ilban Richese
+182,10,3,balanced,6,4,0,8,3,3,23,,"Glossu ""The Beast"" Rabban"
+182,10,4,balanced,9,1,1,15,6,11,24,fremen,Countess Ariana Thorvald
+183,10,1,balanced,10,2,0,10,5,1,23,emperor|fremen,Count Memnon Thorvald
+183,10,2,balanced,6,4,0,5,4,6,23,,Baron Vladimir Harkonnen
+183,10,3,balanced,7,3,0,11,10,2,26,bene_gesserit,"Glossu ""The Beast"" Rabban"
+183,10,4,balanced,11,1,1,1,3,2,22,guild,Paul Atreides
+184,10,1,balanced,8,3,0,8,8,3,27,,"Glossu ""The Beast"" Rabban"
+184,10,2,balanced,9,2,0,3,7,4,21,,Countess Ariana Thorvald
+184,10,3,balanced,9,1,1,6,3,2,24,emperor,Duke Leto Atreides
+184,10,4,balanced,7,4,0,12,1,10,24,guild|bene_gesserit|fremen,Count Memnon Thorvald
+185,10,1,balanced,5,4,0,7,1,4,23,fremen,Helena Richese
+185,10,2,balanced,10,1,1,12,4,7,23,,Count Memnon Thorvald
+185,10,3,balanced,8,2,0,4,6,4,22,emperor|bene_gesserit,Countess Ariana Thorvald
+185,10,4,balanced,5,3,0,14,16,0,26,guild,Duke Leto Atreides
+186,10,1,balanced,11,1,1,2,5,8,22,guild,Baron Vladimir Harkonnen
+186,10,2,balanced,10,2,0,9,2,6,21,emperor|fremen,"Glossu ""The Beast"" Rabban"
+186,10,3,balanced,7,4,0,4,1,1,26,,Helena Richese
+186,10,4,balanced,10,3,0,1,7,2,26,,Duke Leto Atreides
+187,10,1,balanced,10,1,1,7,1,5,23,guild,Duke Leto Atreides
+187,10,2,balanced,7,4,0,1,3,10,23,bene_gesserit|fremen,Helena Richese
+187,10,3,balanced,8,2,0,8,2,2,24,,"Glossu ""The Beast"" Rabban"
+187,10,4,balanced,7,3,0,15,1,4,23,emperor,Baron Vladimir Harkonnen
+188,10,1,balanced,6,4,0,10,1,6,27,fremen,"Glossu ""The Beast"" Rabban"
+188,10,2,balanced,12,1,1,4,1,3,20,emperor|bene_gesserit,Baron Vladimir Harkonnen
+188,10,3,balanced,11,2,0,4,3,8,21,guild,Paul Atreides
+188,10,4,balanced,7,3,0,0,5,9,20,,Helena Richese
+189,10,1,balanced,7,3,0,5,5,9,23,guild,"Glossu ""The Beast"" Rabban"
+189,10,2,balanced,4,4,0,11,3,12,25,,Countess Ariana Thorvald
+189,10,3,balanced,8,2,0,12,10,1,19,emperor,Count Memnon Thorvald
+189,10,4,balanced,9,1,1,4,10,2,27,bene_gesserit|fremen,Helena Richese
+190,8,1,balanced,11,1,1,7,4,3,19,fremen,Duke Leto Atreides
+190,8,2,balanced,5,4,0,4,2,2,23,,Count Ilban Richese
+190,8,3,balanced,5,3,0,6,7,4,23,,Paul Atreides
+190,8,4,balanced,5,2,0,11,1,4,20,bene_gesserit,Countess Ariana Thorvald
+191,10,1,balanced,8,2,0,4,4,8,19,,Baron Vladimir Harkonnen
+191,10,2,balanced,9,1,1,9,5,7,27,bene_gesserit,Count Memnon Thorvald
+191,10,3,balanced,7,3,0,11,2,2,24,,Paul Atreides
+191,10,4,balanced,6,4,0,18,15,1,23,fremen,Count Ilban Richese
+192,10,1,balanced,5,3,0,15,2,4,23,,Count Memnon Thorvald
+192,10,2,balanced,5,4,0,6,3,6,20,fremen,Duke Leto Atreides
+192,10,3,balanced,10,1,1,12,16,2,23,,Paul Atreides
+192,10,4,balanced,8,2,0,9,0,4,25,emperor,Baron Vladimir Harkonnen
+193,10,1,balanced,8,2,0,3,5,3,24,fremen,Countess Ariana Thorvald
+193,10,2,balanced,7,4,0,5,6,6,23,,Helena Richese
+193,10,3,balanced,9,1,1,10,8,0,23,emperor,"Glossu ""The Beast"" Rabban"
+193,10,4,balanced,7,3,0,14,11,2,21,,Count Memnon Thorvald
+194,10,1,balanced,6,4,0,9,5,5,21,,Count Memnon Thorvald
+194,10,2,balanced,7,3,0,4,5,5,22,,Duke Leto Atreides
+194,10,3,balanced,10,1,1,6,5,5,23,bene_gesserit|fremen,Paul Atreides
+194,10,4,balanced,8,2,0,6,7,6,24,emperor|guild,Baron Vladimir Harkonnen
+195,9,1,balanced,8,2,0,10,5,1,19,emperor,Duke Leto Atreides
+195,9,2,balanced,10,1,1,6,3,3,22,guild|bene_gesserit,Baron Vladimir Harkonnen
+195,9,3,balanced,7,3,0,9,2,7,20,fremen,Count Ilban Richese
+195,9,4,balanced,4,4,0,6,1,6,21,,Count Memnon Thorvald
+196,10,1,balanced,10,1,1,2,0,0,21,emperor,Helena Richese
+196,10,2,balanced,8,2,0,5,5,4,26,fremen,Duke Leto Atreides
+196,10,3,balanced,7,3,0,12,2,2,24,guild,"Glossu ""The Beast"" Rabban"
+196,10,4,balanced,6,4,0,11,1,2,23,,Count Memnon Thorvald
+197,8,1,balanced,6,3,0,5,2,10,23,guild,Baron Vladimir Harkonnen
+197,8,2,balanced,6,2,0,6,8,5,19,emperor,Countess Ariana Thorvald
+197,8,3,balanced,5,4,0,11,5,7,21,fremen,Duke Leto Atreides
+197,8,4,balanced,11,1,1,0,2,2,18,bene_gesserit,Count Ilban Richese
+198,10,1,balanced,8,3,0,10,6,8,20,bene_gesserit,Paul Atreides
+198,10,2,balanced,9,2,0,13,1,1,24,,"Glossu ""The Beast"" Rabban"
+198,10,3,balanced,8,4,0,5,2,3,21,,Helena Richese
+198,10,4,balanced,10,1,1,5,7,5,24,emperor|fremen,Count Ilban Richese
+199,10,1,balanced,6,4,0,13,6,7,23,guild,Countess Ariana Thorvald
+199,10,2,balanced,10,2,0,3,4,4,21,emperor,Paul Atreides
+199,10,3,balanced,8,3,0,5,5,1,20,fremen,Duke Leto Atreides
+199,10,4,balanced,10,1,1,10,1,5,25,,Baron Vladimir Harkonnen
+200,10,1,balanced,8,3,0,9,11,3,21,,Count Memnon Thorvald
+200,10,2,balanced,10,1,1,3,7,5,22,,"Glossu ""The Beast"" Rabban"
+200,10,3,balanced,9,2,0,3,3,7,26,emperor|fremen,Count Ilban Richese
+200,10,4,balanced,6,4,0,18,5,2,25,,Paul Atreides
+201,8,1,balanced,4,3,0,7,4,4,22,fremen,Helena Richese
+201,8,2,balanced,10,1,1,5,4,2,18,bene_gesserit,"Glossu ""The Beast"" Rabban"
+201,8,3,balanced,2,4,0,10,1,6,23,,Countess Ariana Thorvald
+201,8,4,balanced,8,2,0,6,1,3,21,emperor|guild,Baron Vladimir Harkonnen
+202,10,1,balanced,10,2,0,8,1,10,21,,Countess Ariana Thorvald
+202,10,2,balanced,9,3,0,9,2,1,25,bene_gesserit,Count Ilban Richese
+202,10,3,balanced,5,4,0,7,5,6,22,,Helena Richese
+202,10,4,balanced,11,1,1,1,5,5,22,emperor|fremen,Baron Vladimir Harkonnen
+203,9,1,balanced,6,3,0,9,12,4,23,fremen,Countess Ariana Thorvald
+203,9,2,balanced,8,2,0,2,7,5,23,,Duke Leto Atreides
+203,9,3,balanced,11,1,1,3,5,4,21,bene_gesserit,Count Memnon Thorvald
+203,9,4,balanced,6,4,0,3,9,2,20,,Helena Richese
+204,10,1,balanced,8,3,0,8,7,6,24,emperor,Duke Leto Atreides
+204,10,2,balanced,5,4,0,5,8,10,23,fremen,Countess Ariana Thorvald
+204,10,3,balanced,9,2,0,4,1,1,26,,Count Ilban Richese
+204,10,4,balanced,12,1,1,10,6,1,20,guild|bene_gesserit,Count Memnon Thorvald
+205,10,1,balanced,9,2,0,10,1,6,22,bene_gesserit,"Glossu ""The Beast"" Rabban"
+205,10,2,balanced,10,1,1,9,2,0,22,emperor,Baron Vladimir Harkonnen
+205,10,3,balanced,8,3,0,5,10,9,22,,Countess Ariana Thorvald
+205,10,4,balanced,7,4,0,11,7,2,26,guild|fremen,Duke Leto Atreides
+206,9,1,balanced,2,4,0,14,1,3,25,,Countess Ariana Thorvald
+206,9,2,balanced,6,2,0,8,4,4,22,,Count Ilban Richese
+206,9,3,balanced,5,3,0,15,7,6,23,guild|fremen,Paul Atreides
+206,9,4,balanced,10,1,1,10,4,1,23,emperor|bene_gesserit,Duke Leto Atreides
+207,10,1,balanced,11,1,1,13,7,4,18,bene_gesserit|fremen,Count Memnon Thorvald
+207,10,2,balanced,6,3,0,2,7,2,25,,Helena Richese
+207,10,3,balanced,6,2,0,8,4,5,25,,Paul Atreides
+207,10,4,balanced,5,4,0,10,1,11,24,emperor,Countess Ariana Thorvald
+208,9,1,balanced,10,2,0,4,2,2,21,,"Glossu ""The Beast"" Rabban"
+208,9,2,balanced,4,4,0,9,0,6,21,fremen,Countess Ariana Thorvald
+208,9,3,balanced,6,3,0,7,1,3,24,,Count Memnon Thorvald
+208,9,4,balanced,11,1,1,10,0,2,20,emperor|bene_gesserit,Duke Leto Atreides
+209,10,1,balanced,3,4,0,17,4,3,23,,Paul Atreides
+209,10,2,balanced,7,3,0,14,10,0,27,guild,Baron Vladimir Harkonnen
+209,10,3,balanced,9,1,1,9,1,7,21,,Helena Richese
+209,10,4,balanced,8,2,0,13,2,3,24,fremen,"Glossu ""The Beast"" Rabban"
+210,9,1,balanced,7,3,0,13,2,4,23,bene_gesserit,Countess Ariana Thorvald
+210,9,2,balanced,8,2,0,0,12,7,24,,"Glossu ""The Beast"" Rabban"
+210,9,3,balanced,10,1,1,2,8,4,23,emperor|guild|fremen,Baron Vladimir Harkonnen
+210,9,4,balanced,4,4,0,9,1,4,19,,Paul Atreides
+211,10,1,balanced,8,3,0,9,10,4,22,emperor,Duke Leto Atreides
+211,10,2,balanced,5,4,0,5,7,7,21,,Count Memnon Thorvald
+211,10,3,balanced,13,1,1,10,1,1,24,bene_gesserit|fremen,"Glossu ""The Beast"" Rabban"
+211,10,4,balanced,8,2,0,12,3,4,22,guild,Count Ilban Richese
+212,9,1,balanced,11,1,1,3,4,5,20,bene_gesserit,Duke Leto Atreides
+212,9,2,balanced,5,4,0,4,7,5,20,emperor,Baron Vladimir Harkonnen
+212,9,3,balanced,5,3,0,15,7,6,19,,"Glossu ""The Beast"" Rabban"
+212,9,4,balanced,7,2,0,2,3,4,25,fremen,Countess Ariana Thorvald
+213,10,1,balanced,7,4,0,4,2,4,23,bene_gesserit,Helena Richese
+213,10,2,balanced,8,3,0,2,9,6,21,guild,Duke Leto Atreides
+213,10,3,balanced,9,2,0,8,0,2,25,fremen,"Glossu ""The Beast"" Rabban"
+213,10,4,balanced,12,1,1,8,9,7,24,emperor,Count Memnon Thorvald
+214,10,1,balanced,7,4,0,9,5,7,24,guild,Countess Ariana Thorvald
+214,10,2,balanced,10,2,0,1,1,5,24,emperor,Baron Vladimir Harkonnen
+214,10,3,balanced,10,1,1,14,3,6,21,,Count Memnon Thorvald
+214,10,4,balanced,8,3,0,9,8,4,25,fremen,"Glossu ""The Beast"" Rabban"
+215,10,1,balanced,10,2,0,2,3,4,22,emperor|guild,Countess Ariana Thorvald
+215,10,2,balanced,7,3,0,3,8,3,22,fremen,Duke Leto Atreides
+215,10,3,balanced,10,1,1,6,4,2,20,,Baron Vladimir Harkonnen
+215,10,4,balanced,5,4,0,11,8,9,27,,Count Ilban Richese
+216,9,1,balanced,6,4,0,7,5,5,23,fremen,Countess Ariana Thorvald
+216,9,2,balanced,9,3,0,7,3,4,18,,Duke Leto Atreides
+216,9,3,balanced,9,2,0,10,1,4,20,emperor|guild,Count Memnon Thorvald
+216,9,4,balanced,10,1,1,9,2,0,22,bene_gesserit,Helena Richese
+217,10,1,balanced,10,1,1,4,2,6,24,,Duke Leto Atreides
+217,10,2,balanced,5,4,0,9,10,6,19,,Countess Ariana Thorvald
+217,10,3,balanced,9,2,0,7,3,6,21,guild|bene_gesserit,Helena Richese
+217,10,4,balanced,9,3,0,7,3,3,27,emperor|fremen,Count Memnon Thorvald
+218,10,1,balanced,8,3,0,9,5,9,20,fremen,Count Memnon Thorvald
+218,10,2,balanced,5,4,0,6,3,4,24,,"Glossu ""The Beast"" Rabban"
+218,10,3,balanced,8,2,0,11,6,0,26,,Helena Richese
+218,10,4,balanced,10,1,1,9,4,2,23,emperor,Duke Leto Atreides
+219,10,1,balanced,8,2,0,13,3,2,23,,Count Memnon Thorvald
+219,10,2,balanced,7,3,0,2,9,5,22,fremen,Helena Richese
+219,10,3,balanced,11,1,1,9,6,8,22,emperor|guild,Baron Vladimir Harkonnen
+219,10,4,balanced,6,4,0,3,2,1,25,,Duke Leto Atreides
+220,10,1,balanced,8,4,0,4,7,3,25,guild,Baron Vladimir Harkonnen
+220,10,2,balanced,10,1,1,3,1,4,22,emperor,Paul Atreides
+220,10,3,balanced,8,3,0,5,4,7,22,bene_gesserit,Countess Ariana Thorvald
+220,10,4,balanced,8,2,0,9,5,3,23,fremen,Count Memnon Thorvald
+221,10,1,balanced,10,2,0,5,2,7,23,,Countess Ariana Thorvald
+221,10,2,balanced,8,3,0,11,0,6,24,guild|fremen,Count Memnon Thorvald
+221,10,3,balanced,10,1,1,9,3,1,22,,"Glossu ""The Beast"" Rabban"
+221,10,4,balanced,6,4,0,10,5,2,24,emperor,Baron Vladimir Harkonnen
+222,9,1,balanced,4,4,0,11,2,4,22,,Baron Vladimir Harkonnen
+222,9,2,balanced,10,1,1,7,0,7,18,emperor|bene_gesserit|fremen,Duke Leto Atreides
+222,9,3,balanced,5,3,0,4,7,1,23,,Paul Atreides
+222,9,4,balanced,7,2,0,8,7,2,23,,Count Memnon Thorvald
+223,10,1,balanced,11,1,1,7,3,1,24,,Duke Leto Atreides
+223,10,2,balanced,10,2,0,5,5,3,25,guild,Baron Vladimir Harkonnen
+223,10,3,balanced,7,4,0,11,5,12,19,emperor|bene_gesserit|fremen,Count Memnon Thorvald
+223,10,4,balanced,7,3,0,12,8,1,25,,Helena Richese
+224,10,1,balanced,10,2,0,3,1,6,26,emperor,Helena Richese
+224,10,2,balanced,7,4,0,10,5,6,23,,Count Ilban Richese
+224,10,3,balanced,7,3,0,11,0,1,25,,Paul Atreides
+224,10,4,balanced,11,1,1,7,14,6,23,guild|fremen,"Glossu ""The Beast"" Rabban"
+225,9,1,balanced,3,4,0,12,7,7,21,,"Glossu ""The Beast"" Rabban"
+225,9,2,balanced,8,2,0,8,4,0,20,,Duke Leto Atreides
+225,9,3,balanced,10,1,1,5,6,1,19,emperor|bene_gesserit,Baron Vladimir Harkonnen
+225,9,4,balanced,7,3,0,13,1,2,23,fremen,Count Memnon Thorvald
+226,10,1,balanced,9,1,1,9,4,3,22,emperor,Count Ilban Richese
+226,10,2,balanced,7,4,0,10,14,4,24,,Count Memnon Thorvald
+226,10,3,balanced,9,2,0,7,6,3,25,guild,Baron Vladimir Harkonnen
+226,10,4,balanced,8,3,0,2,1,7,22,fremen,Helena Richese
+227,10,1,balanced,8,2,0,9,9,5,23,emperor,Baron Vladimir Harkonnen
+227,10,2,balanced,7,4,0,4,1,10,20,bene_gesserit,Countess Ariana Thorvald
+227,10,3,balanced,8,3,0,4,7,6,25,fremen,Count Memnon Thorvald
+227,10,4,balanced,10,1,1,3,3,4,21,,"Glossu ""The Beast"" Rabban"
+228,10,1,balanced,7,4,0,8,7,3,24,,Helena Richese
+228,10,2,balanced,11,1,1,3,1,11,21,fremen,Countess Ariana Thorvald
+228,10,3,balanced,10,2,0,1,5,5,24,emperor,Baron Vladimir Harkonnen
+228,10,4,balanced,8,3,0,10,15,5,22,bene_gesserit,Count Ilban Richese
+229,10,1,balanced,8,2,0,6,1,6,19,,Count Ilban Richese
+229,10,2,balanced,7,4,0,12,4,2,27,,Helena Richese
+229,10,3,balanced,9,1,1,7,12,3,21,emperor|guild|bene_gesserit|fremen,Duke Leto Atreides
+229,10,4,balanced,8,3,0,3,5,7,24,,Countess Ariana Thorvald
+230,10,1,balanced,7,2,0,11,5,10,21,fremen,Baron Vladimir Harkonnen
+230,10,2,balanced,8,1,1,2,8,0,22,,Countess Ariana Thorvald
+230,10,3,balanced,7,3,0,9,1,2,23,emperor,Count Ilban Richese
+230,10,4,balanced,5,4,0,6,5,4,24,,Paul Atreides
+231,10,1,balanced,4,4,0,7,0,9,25,fremen,Count Memnon Thorvald
+231,10,2,balanced,4,3,0,13,6,3,19,,"Glossu ""The Beast"" Rabban"
+231,10,3,balanced,10,1,1,5,3,6,24,emperor,Count Ilban Richese
+231,10,4,balanced,8,2,0,7,1,4,22,,Paul Atreides
+232,9,1,balanced,4,3,0,7,1,11,21,,Helena Richese
+232,9,2,balanced,3,4,0,7,2,11,19,,"Glossu ""The Beast"" Rabban"
+232,9,3,balanced,5,2,0,11,11,3,21,emperor,Count Memnon Thorvald
+232,9,4,balanced,11,1,1,9,1,0,22,fremen,Paul Atreides
+233,10,1,balanced,4,4,0,14,7,9,20,fremen,Count Memnon Thorvald
+233,10,2,balanced,11,2,0,3,1,3,25,emperor,"Glossu ""The Beast"" Rabban"
+233,10,3,balanced,5,3,0,6,10,2,23,,Baron Vladimir Harkonnen
+233,10,4,balanced,13,1,1,6,13,3,23,guild|bene_gesserit,Duke Leto Atreides
+234,10,1,balanced,6,4,0,10,0,11,20,bene_gesserit|fremen,Paul Atreides
+234,10,2,balanced,8,3,0,1,3,5,22,,Helena Richese
+234,10,3,balanced,9,2,0,8,8,2,29,emperor,Baron Vladimir Harkonnen
+234,10,4,balanced,9,1,1,10,19,4,22,,"Glossu ""The Beast"" Rabban"
+235,9,1,balanced,7,3,0,3,1,8,25,,Baron Vladimir Harkonnen
+235,9,2,balanced,7,2,0,7,4,7,19,fremen,Countess Ariana Thorvald
+235,9,3,balanced,5,4,0,12,5,4,20,,Count Memnon Thorvald
+235,9,4,balanced,10,1,1,2,1,0,26,emperor|guild,Count Ilban Richese
+236,9,1,balanced,8,2,0,4,6,2,21,,Duke Leto Atreides
+236,9,2,balanced,5,3,0,8,4,0,24,,Baron Vladimir Harkonnen
+236,9,3,balanced,10,1,1,9,0,6,19,emperor|fremen,Count Memnon Thorvald
+236,9,4,balanced,5,4,0,6,0,5,22,,Paul Atreides
+237,9,1,balanced,4,4,0,11,15,3,22,,"Glossu ""The Beast"" Rabban"
+237,9,2,balanced,7,3,0,10,2,1,23,fremen,Baron Vladimir Harkonnen
+237,9,3,balanced,12,1,1,7,0,3,23,emperor|bene_gesserit,Count Memnon Thorvald
+237,9,4,balanced,8,2,0,5,10,8,23,guild,Countess Ariana Thorvald
+238,10,1,balanced,3,4,0,9,0,4,23,,Count Ilban Richese
+238,10,2,balanced,7,3,0,7,0,9,26,bene_gesserit,Countess Ariana Thorvald
+238,10,3,balanced,12,1,1,7,12,0,23,emperor,Baron Vladimir Harkonnen
+238,10,4,balanced,8,2,0,8,9,6,21,guild|fremen,Helena Richese
+239,10,1,balanced,12,1,1,2,5,7,25,bene_gesserit,Duke Leto Atreides
+239,10,2,balanced,7,3,0,12,1,2,22,,Countess Ariana Thorvald
+239,10,3,balanced,10,2,0,4,7,4,21,emperor|guild,Count Memnon Thorvald
+239,10,4,balanced,6,4,0,4,2,4,26,fremen,"Glossu ""The Beast"" Rabban"
+240,10,1,balanced,11,2,0,3,2,6,21,bene_gesserit,Helena Richese
+240,10,2,balanced,11,1,1,9,2,3,21,,Count Memnon Thorvald
+240,10,3,balanced,7,4,0,14,1,2,23,fremen,Countess Ariana Thorvald
+240,10,4,balanced,8,3,0,6,8,0,25,emperor,Paul Atreides
+241,8,1,balanced,6,3,0,5,0,7,19,,Helena Richese
+241,8,2,balanced,5,4,0,6,3,3,19,fremen,Countess Ariana Thorvald
+241,8,3,balanced,10,1,1,2,8,2,21,guild,Baron Vladimir Harkonnen
+241,8,4,balanced,7,2,0,9,3,4,18,emperor|bene_gesserit,Count Ilban Richese
+242,9,1,balanced,7,2,0,6,3,5,19,fremen,Duke Leto Atreides
+242,9,2,balanced,3,4,0,12,0,9,22,,Count Ilban Richese
+242,9,3,balanced,5,3,0,14,10,4,21,emperor,Count Memnon Thorvald
+242,9,4,balanced,12,1,1,2,0,0,24,bene_gesserit,"Glossu ""The Beast"" Rabban"
+243,9,1,balanced,6,3,0,16,5,0,19,fremen,Baron Vladimir Harkonnen
+243,9,2,balanced,4,4,0,11,8,7,20,,Count Memnon Thorvald
+243,9,3,balanced,12,1,1,1,2,8,23,guild,"Glossu ""The Beast"" Rabban"
+243,9,4,balanced,10,2,0,6,1,4,24,emperor,Duke Leto Atreides
+244,8,1,balanced,5,3,0,7,1,2,22,,Paul Atreides
+244,8,2,balanced,4,4,0,5,0,13,18,fremen,Countess Ariana Thorvald
+244,8,3,balanced,5,2,0,11,2,3,18,,Baron Vladimir Harkonnen
+244,8,4,balanced,10,1,1,3,4,3,23,emperor|bene_gesserit,"Glossu ""The Beast"" Rabban"
+245,10,1,balanced,9,3,0,2,7,5,22,bene_gesserit,Count Memnon Thorvald
+245,10,2,balanced,7,4,0,6,5,8,23,fremen,Helena Richese
+245,10,3,balanced,9,2,0,8,2,4,28,emperor,Countess Ariana Thorvald
+245,10,4,balanced,9,1,1,14,8,3,22,,Paul Atreides
+246,9,1,balanced,5,3,0,5,1,11,21,,Baron Vladimir Harkonnen
+246,9,2,balanced,5,4,0,2,7,9,22,fremen,Helena Richese
+246,9,3,balanced,5,2,0,15,1,1,21,,Count Memnon Thorvald
+246,9,4,balanced,10,1,1,10,2,2,20,emperor,Countess Ariana Thorvald
+247,10,1,balanced,7,3,0,12,2,1,22,,Countess Ariana Thorvald
+247,10,2,balanced,6,4,0,8,5,5,26,fremen,Paul Atreides
+247,10,3,balanced,10,1,1,4,4,5,19,bene_gesserit,Duke Leto Atreides
+247,10,4,balanced,8,2,0,12,6,7,27,emperor|guild,Count Ilban Richese
+248,9,1,balanced,5,4,0,4,15,7,21,emperor|fremen,Helena Richese
+248,9,2,balanced,5,3,0,9,0,5,20,,"Glossu ""The Beast"" Rabban"
+248,9,3,balanced,6,2,0,8,2,4,21,,Count Memnon Thorvald
+248,9,4,balanced,11,1,1,6,6,5,22,guild,Paul Atreides
+249,10,1,balanced,9,2,0,10,2,8,22,guild,Count Ilban Richese
+249,10,2,balanced,7,3,0,10,2,6,24,,"Glossu ""The Beast"" Rabban"
+249,10,3,balanced,11,1,1,8,0,0,22,emperor,Baron Vladimir Harkonnen
+249,10,4,balanced,4,4,0,6,0,1,24,fremen,Duke Leto Atreides
+250,9,1,balanced,6,2,0,11,4,8,22,guild,Paul Atreides
+250,9,2,balanced,3,4,0,7,0,2,20,,Helena Richese
+250,9,3,balanced,6,3,0,5,9,3,21,bene_gesserit|fremen,Duke Leto Atreides
+250,9,4,balanced,12,1,1,6,1,2,21,emperor,Count Memnon Thorvald
+251,10,1,balanced,4,4,0,10,0,9,21,,Count Memnon Thorvald
+251,10,2,balanced,6,3,0,10,8,2,21,,Duke Leto Atreides
+251,10,3,balanced,6,2,0,13,4,4,26,fremen,Count Ilban Richese
+251,10,4,balanced,14,1,1,0,8,4,24,emperor|guild,Paul Atreides
+252,10,1,balanced,6,3,0,15,12,7,23,,"Glossu ""The Beast"" Rabban"
+252,10,2,balanced,6,4,0,10,7,2,24,,Countess Ariana Thorvald
+252,10,3,balanced,11,2,0,3,3,5,25,emperor,Helena Richese
+252,10,4,balanced,11,1,1,3,4,3,25,guild|bene_gesserit|fremen,Count Ilban Richese
+253,10,1,balanced,6,4,0,11,0,9,20,,Duke Leto Atreides
+253,10,2,balanced,7,3,0,9,5,11,22,fremen,Countess Ariana Thorvald
+253,10,3,balanced,11,2,0,16,1,4,21,,Baron Vladimir Harkonnen
+253,10,4,balanced,13,1,1,6,6,1,26,emperor|guild,Count Memnon Thorvald
+254,8,1,balanced,4,3,0,10,1,7,19,,Count Memnon Thorvald
+254,8,2,balanced,2,4,0,10,10,2,20,,Paul Atreides
+254,8,3,balanced,10,1,1,1,2,5,22,emperor|guild|fremen,Baron Vladimir Harkonnen
+254,8,4,balanced,5,2,0,11,3,7,22,,Helena Richese
+255,8,1,balanced,5,3,0,9,4,0,22,,Baron Vladimir Harkonnen
+255,8,2,balanced,2,4,0,7,1,11,21,fremen,Duke Leto Atreides
+255,8,3,balanced,11,1,1,7,3,3,18,emperor|bene_gesserit,Countess Ariana Thorvald
+255,8,4,balanced,6,2,0,10,7,1,20,,Count Ilban Richese
+256,10,1,balanced,9,3,0,8,2,6,21,fremen,Duke Leto Atreides
+256,10,2,balanced,9,2,0,8,8,3,25,guild,Count Memnon Thorvald
+256,10,3,balanced,11,1,1,12,6,4,24,emperor,Count Ilban Richese
+256,10,4,balanced,8,4,0,11,1,1,27,bene_gesserit,Helena Richese
+257,8,1,balanced,4,4,0,12,2,4,21,,Paul Atreides
+257,8,2,balanced,11,1,1,11,5,0,18,emperor,Count Memnon Thorvald
+257,8,3,balanced,7,2,0,2,1,6,20,bene_gesserit|fremen,Helena Richese
+257,8,4,balanced,5,3,0,7,1,5,20,,"Glossu ""The Beast"" Rabban"
+258,9,1,balanced,6,4,0,6,1,3,24,fremen,Countess Ariana Thorvald
+258,9,2,balanced,10,1,1,6,4,2,23,guild,Count Memnon Thorvald
+258,9,3,balanced,7,2,0,13,3,5,20,,Baron Vladimir Harkonnen
+258,9,4,balanced,7,3,0,4,2,8,22,,Duke Leto Atreides
+259,10,1,balanced,8,3,0,9,2,1,27,emperor,Count Ilban Richese
+259,10,2,balanced,3,4,0,0,12,6,23,fremen,"Glossu ""The Beast"" Rabban"
+259,10,3,balanced,9,2,0,10,5,5,24,guild,Paul Atreides
+259,10,4,balanced,10,1,1,10,5,0,22,,Helena Richese
+260,10,1,balanced,7,3,0,9,0,2,22,bene_gesserit,Paul Atreides
+260,10,2,balanced,10,1,1,4,3,4,21,fremen,Duke Leto Atreides
+260,10,3,balanced,4,4,0,8,8,6,24,,Countess Ariana Thorvald
+260,10,4,balanced,9,2,0,15,5,3,23,,"Glossu ""The Beast"" Rabban"
+261,10,1,balanced,6,2,0,12,7,7,22,,Count Memnon Thorvald
+261,10,2,balanced,5,3,0,13,1,0,26,fremen,Paul Atreides
+261,10,3,balanced,4,4,0,5,6,7,24,,Countess Ariana Thorvald
+261,10,4,balanced,13,1,1,7,15,3,22,emperor|guild,"Glossu ""The Beast"" Rabban"
+262,10,1,balanced,8,3,0,12,5,4,24,guild|fremen,Paul Atreides
+262,10,2,balanced,10,1,1,6,9,2,22,emperor,Baron Vladimir Harkonnen
+262,10,3,balanced,8,4,0,9,0,8,23,,"Glossu ""The Beast"" Rabban"
+262,10,4,balanced,9,2,0,7,4,7,25,,Countess Ariana Thorvald
+263,8,1,balanced,2,4,0,11,5,8,18,,Countess Ariana Thorvald
+263,8,2,balanced,3,3,0,2,3,8,23,,Helena Richese
+263,8,3,balanced,10,1,1,8,3,1,17,emperor|fremen,Baron Vladimir Harkonnen
+263,8,4,balanced,3,2,0,15,1,8,19,,Count Memnon Thorvald
+264,10,1,balanced,8,3,0,12,1,7,20,,Countess Ariana Thorvald
+264,10,2,balanced,9,1,1,10,2,1,24,fremen,Duke Leto Atreides
+264,10,3,balanced,9,2,0,6,4,3,25,bene_gesserit,Count Ilban Richese
+264,10,4,balanced,8,4,0,5,3,12,23,emperor,Paul Atreides
+265,8,1,balanced,6,2,0,4,5,2,21,,Countess Ariana Thorvald
+265,8,2,balanced,2,4,0,13,8,5,22,fremen,Helena Richese
+265,8,3,balanced,4,3,0,10,3,7,22,,Baron Vladimir Harkonnen
+265,8,4,balanced,11,1,1,4,4,2,20,emperor|bene_gesserit,Count Memnon Thorvald
+266,10,1,balanced,7,3,0,8,5,3,25,fremen,Paul Atreides
+266,10,2,balanced,11,1,1,4,8,8,21,emperor|guild,Count Memnon Thorvald
+266,10,3,balanced,10,2,0,11,6,2,22,,"Glossu ""The Beast"" Rabban"
+266,10,4,balanced,3,4,0,7,11,3,25,,Countess Ariana Thorvald
+267,8,1,balanced,5,2,0,11,0,2,24,,"Glossu ""The Beast"" Rabban"
+267,8,2,balanced,4,4,0,10,7,10,16,fremen,Countess Ariana Thorvald
+267,8,3,balanced,5,3,0,2,0,6,19,,Duke Leto Atreides
+267,8,4,balanced,11,1,1,2,3,2,20,emperor|bene_gesserit,Count Ilban Richese
+268,10,1,balanced,13,1,1,3,7,7,25,guild,Count Ilban Richese
+268,10,2,balanced,8,3,0,12,6,4,21,,Baron Vladimir Harkonnen
+268,10,3,balanced,6,4,0,11,0,9,19,fremen,Countess Ariana Thorvald
+268,10,4,balanced,9,2,0,11,6,0,24,emperor|bene_gesserit,Duke Leto Atreides
+269,8,1,balanced,5,3,0,5,9,2,21,,Paul Atreides
+269,8,2,balanced,4,4,0,4,3,4,19,bene_gesserit,Helena Richese
+269,8,3,balanced,11,1,1,0,0,2,17,guild,Baron Vladimir Harkonnen
+269,8,4,balanced,5,2,0,11,8,9,23,emperor|fremen,Count Memnon Thorvald
+270,10,1,balanced,8,3,0,1,4,5,23,,Count Ilban Richese
+270,10,2,balanced,12,2,0,7,3,4,27,guild|fremen,Duke Leto Atreides
+270,10,3,balanced,13,1,1,3,0,3,22,,Helena Richese
+270,10,4,balanced,7,4,0,7,7,2,25,emperor|bene_gesserit,Paul Atreides
+271,9,1,balanced,5,3,0,1,3,1,24,,Helena Richese
+271,9,2,balanced,8,2,0,6,3,7,21,fremen,Count Memnon Thorvald
+271,9,3,balanced,12,1,1,5,3,1,19,emperor|bene_gesserit,Duke Leto Atreides
+271,9,4,balanced,4,4,0,13,17,5,25,guild,"Glossu ""The Beast"" Rabban"
+272,9,1,balanced,5,4,0,10,3,4,20,,Baron Vladimir Harkonnen
+272,9,2,balanced,6,3,0,6,5,4,22,bene_gesserit,Paul Atreides
+272,9,3,balanced,10,1,1,3,0,3,23,emperor|fremen,"Glossu ""The Beast"" Rabban"
+272,9,4,balanced,6,2,0,7,6,6,20,guild,Duke Leto Atreides
+273,10,1,balanced,7,4,0,8,3,4,23,fremen,Count Ilban Richese
+273,10,2,balanced,8,2,0,10,5,2,23,,Paul Atreides
+273,10,3,balanced,8,3,0,8,9,7,26,guild,"Glossu ""The Beast"" Rabban"
+273,10,4,balanced,9,1,1,7,5,5,22,emperor|bene_gesserit,Duke Leto Atreides
+274,9,1,balanced,8,3,0,6,1,4,20,bene_gesserit|fremen,Duke Leto Atreides
+274,9,2,balanced,8,2,0,8,9,3,22,guild,Count Memnon Thorvald
+274,9,3,balanced,4,4,0,3,1,10,21,,Countess Ariana Thorvald
+274,9,4,balanced,10,1,1,6,2,4,20,emperor,Baron Vladimir Harkonnen
+275,10,1,balanced,9,2,0,4,3,5,24,bene_gesserit,Count Memnon Thorvald
+275,10,2,balanced,4,4,0,11,2,1,22,,Helena Richese
+275,10,3,balanced,7,3,0,7,2,9,22,,"Glossu ""The Beast"" Rabban"
+275,10,4,balanced,9,1,1,10,4,8,23,emperor|fremen,Countess Ariana Thorvald
+276,10,1,balanced,10,2,0,9,2,3,21,,"Glossu ""The Beast"" Rabban"
+276,10,2,balanced,7,3,0,4,7,9,22,guild,Paul Atreides
+276,10,3,balanced,13,1,1,1,6,5,25,emperor|bene_gesserit|fremen,Count Ilban Richese
+276,10,4,balanced,5,4,0,18,1,0,22,,Count Memnon Thorvald
+277,9,1,balanced,10,1,1,4,0,1,22,bene_gesserit,Helena Richese
+277,9,2,balanced,6,3,0,13,5,1,21,,Duke Leto Atreides
+277,9,3,balanced,6,4,0,12,5,5,25,emperor|fremen,Baron Vladimir Harkonnen
+277,9,4,balanced,6,2,0,15,1,5,21,,Count Memnon Thorvald
+278,10,1,balanced,8,3,0,2,1,8,20,fremen,Baron Vladimir Harkonnen
+278,10,2,balanced,9,1,1,11,6,2,26,emperor,Count Ilban Richese
+278,10,3,balanced,9,2,0,6,3,3,22,,Duke Leto Atreides
+278,10,4,balanced,7,4,0,11,8,0,23,bene_gesserit,Helena Richese
+279,9,1,balanced,8,2,0,12,1,2,23,,Baron Vladimir Harkonnen
+279,9,2,balanced,7,3,0,3,6,4,25,emperor|fremen,Count Ilban Richese
+279,9,3,balanced,10,1,1,8,3,7,23,bene_gesserit,Paul Atreides
+279,9,4,balanced,4,4,0,7,1,7,21,,Countess Ariana Thorvald
+280,10,1,balanced,6,4,0,11,7,7,20,fremen,Count Ilban Richese
+280,10,2,balanced,8,3,0,11,3,4,24,,"Glossu ""The Beast"" Rabban"
+280,10,3,balanced,10,2,0,4,5,4,24,,Helena Richese
+280,10,4,balanced,10,1,1,11,2,1,23,emperor,Countess Ariana Thorvald
+281,8,1,balanced,3,4,0,9,0,9,20,fremen,Paul Atreides
+281,8,2,balanced,4,3,0,12,6,4,23,,Count Memnon Thorvald
+281,8,3,balanced,10,1,1,1,7,6,19,,Helena Richese
+281,8,4,balanced,7,2,0,12,3,2,23,emperor|guild,Count Ilban Richese
+282,10,1,balanced,8,3,0,16,1,1,25,,Helena Richese
+282,10,2,balanced,9,2,0,7,6,1,22,bene_gesserit|fremen,Count Memnon Thorvald
+282,10,3,balanced,9,1,1,10,1,7,24,,Duke Leto Atreides
+282,10,4,balanced,7,4,0,6,0,3,22,emperor|guild,Baron Vladimir Harkonnen
+283,8,1,balanced,2,4,0,13,5,5,19,,Paul Atreides
+283,8,2,balanced,11,1,1,6,1,4,19,bene_gesserit|fremen,Helena Richese
+283,8,3,balanced,8,2,0,0,3,3,20,emperor,Duke Leto Atreides
+283,8,4,balanced,5,3,0,6,2,4,20,,"Glossu ""The Beast"" Rabban"
+284,10,1,balanced,11,1,1,6,6,3,29,guild|fremen,Baron Vladimir Harkonnen
+284,10,2,balanced,7,3,0,8,1,2,22,,Duke Leto Atreides
+284,10,3,balanced,5,4,0,5,0,6,26,,Helena Richese
+284,10,4,balanced,9,2,0,17,4,3,21,emperor|bene_gesserit,Paul Atreides
+285,10,1,balanced,10,2,0,10,2,3,21,fremen,Countess Ariana Thorvald
+285,10,2,balanced,4,4,0,14,10,7,23,,Count Memnon Thorvald
+285,10,3,balanced,11,1,1,17,8,3,21,guild|bene_gesserit,"Glossu ""The Beast"" Rabban"
+285,10,4,balanced,8,3,0,11,6,1,25,emperor,Helena Richese
+286,10,1,balanced,10,1,1,3,0,1,23,bene_gesserit,Count Ilban Richese
+286,10,2,balanced,9,2,0,6,4,8,23,emperor|fremen,Helena Richese
+286,10,3,balanced,5,4,0,13,5,5,22,guild,Baron Vladimir Harkonnen
+286,10,4,balanced,7,3,0,10,6,6,24,,Count Memnon Thorvald
+287,8,1,balanced,2,4,0,11,7,4,21,,Count Memnon Thorvald
+287,8,2,balanced,7,3,0,9,1,0,18,,Baron Vladimir Harkonnen
+287,8,3,balanced,7,2,0,11,8,1,21,bene_gesserit|fremen,Duke Leto Atreides
+287,8,4,balanced,12,1,1,2,3,1,20,emperor,Count Ilban Richese
+288,9,1,balanced,5,3,0,16,9,5,21,,"Glossu ""The Beast"" Rabban"
+288,9,2,balanced,8,2,0,7,3,3,22,fremen,Duke Leto Atreides
+288,9,3,balanced,4,4,0,11,11,4,24,guild,Baron Vladimir Harkonnen
+288,9,4,balanced,10,1,1,5,5,4,21,emperor|bene_gesserit,Countess Ariana Thorvald
+289,10,1,balanced,11,1,1,1,6,6,23,,Helena Richese
+289,10,2,balanced,5,4,0,9,6,4,22,fremen,Countess Ariana Thorvald
+289,10,3,balanced,7,3,0,14,2,0,24,emperor,Duke Leto Atreides
+289,10,4,balanced,9,2,0,4,5,10,25,,Count Memnon Thorvald
+290,8,1,balanced,12,1,1,6,5,0,16,emperor|bene_gesserit,Duke Leto Atreides
+290,8,2,balanced,3,4,0,8,7,3,27,,Count Ilban Richese
+290,8,3,balanced,5,3,0,7,6,4,22,,Count Memnon Thorvald
+290,8,4,balanced,7,2,0,12,0,1,18,fremen,"Glossu ""The Beast"" Rabban"
+291,10,1,balanced,8,3,0,6,0,0,25,emperor,Duke Leto Atreides
+291,10,2,balanced,8,2,0,10,7,1,26,guild|fremen,Count Memnon Thorvald
+291,10,3,balanced,7,4,0,5,5,8,21,,Count Ilban Richese
+291,10,4,balanced,12,1,1,7,16,8,23,,Paul Atreides
+292,9,1,balanced,7,3,0,5,6,4,19,,Count Memnon Thorvald
+292,9,2,balanced,9,2,0,10,4,0,22,emperor,Paul Atreides
+292,9,3,balanced,10,1,1,7,8,3,22,guild,Count Ilban Richese
+292,9,4,balanced,6,4,0,12,6,5,22,bene_gesserit|fremen,Duke Leto Atreides
+293,9,1,balanced,11,1,1,12,1,3,26,,Helena Richese
+293,9,2,balanced,7,2,0,10,7,0,22,,Paul Atreides
+293,9,3,balanced,6,3,0,5,11,8,24,guild|fremen,Baron Vladimir Harkonnen
+293,9,4,balanced,5,4,0,8,4,0,21,emperor|bene_gesserit,Count Memnon Thorvald
+294,9,1,balanced,5,4,0,5,0,3,24,,Countess Ariana Thorvald
+294,9,2,balanced,6,2,0,9,3,6,21,,"Glossu ""The Beast"" Rabban"
+294,9,3,balanced,5,3,0,5,5,4,23,,Count Ilban Richese
+294,9,4,balanced,10,1,1,8,8,0,19,emperor|fremen,Duke Leto Atreides
+295,10,1,balanced,9,2,0,15,9,3,20,emperor,Paul Atreides
+295,10,2,balanced,6,4,0,10,6,7,26,,Countess Ariana Thorvald
+295,10,3,balanced,6,3,0,11,0,5,25,fremen,Baron Vladimir Harkonnen
+295,10,4,balanced,11,1,1,10,10,2,24,guild|bene_gesserit,Duke Leto Atreides
+296,10,1,balanced,7,3,0,4,1,5,23,,"Glossu ""The Beast"" Rabban"
+296,10,2,balanced,7,2,0,10,3,2,20,fremen,Countess Ariana Thorvald
+296,10,3,balanced,8,1,1,8,12,5,26,emperor,Baron Vladimir Harkonnen
+296,10,4,balanced,5,4,0,11,15,7,22,,Count Memnon Thorvald
+297,10,1,balanced,7,4,0,2,8,12,22,guild,"Glossu ""The Beast"" Rabban"
+297,10,2,balanced,10,2,0,8,5,1,24,bene_gesserit|fremen,Count Memnon Thorvald
+297,10,3,balanced,10,3,0,4,3,0,25,emperor,Duke Leto Atreides
+297,10,4,balanced,10,1,1,9,6,3,20,,Baron Vladimir Harkonnen
+298,10,1,balanced,7,4,0,2,6,9,26,emperor,Paul Atreides
+298,10,2,balanced,7,3,0,8,5,1,19,guild,Count Memnon Thorvald
+298,10,3,balanced,11,1,1,4,5,4,25,fremen,"Glossu ""The Beast"" Rabban"
+298,10,4,balanced,8,2,0,17,4,1,25,,Countess Ariana Thorvald
+299,10,1,balanced,7,3,0,3,11,1,24,,Helena Richese
+299,10,2,balanced,9,1,1,16,5,1,26,emperor,Count Ilban Richese
+299,10,3,balanced,6,4,0,9,4,5,22,bene_gesserit|fremen,"Glossu ""The Beast"" Rabban"
+299,10,4,balanced,7,2,0,11,14,4,23,,Duke Leto Atreides
+300,8,1,balanced,6,2,0,7,0,2,19,,Helena Richese
+300,8,2,balanced,4,4,0,11,5,6,20,,"Glossu ""The Beast"" Rabban"
+300,8,3,balanced,5,3,0,9,8,2,19,fremen,Count Memnon Thorvald
+300,8,4,balanced,10,1,1,8,4,1,21,emperor,Baron Vladimir Harkonnen
+301,9,1,balanced,12,1,1,2,11,6,21,emperor|fremen,Count Memnon Thorvald
+301,9,2,balanced,6,3,0,9,5,8,25,,Helena Richese
+301,9,3,balanced,6,2,0,9,6,0,22,,Count Ilban Richese
+301,9,4,balanced,1,4,0,9,0,11,20,,Paul Atreides
+302,10,1,balanced,3,4,0,12,5,5,24,fremen,Paul Atreides
+302,10,2,balanced,11,1,1,13,4,3,27,guild|bene_gesserit,Baron Vladimir Harkonnen
+302,10,3,balanced,11,2,0,3,4,5,20,emperor,Count Ilban Richese
+302,10,4,balanced,9,3,0,1,2,4,25,,"Glossu ""The Beast"" Rabban"
+303,10,1,balanced,5,4,0,9,3,4,24,,Count Memnon Thorvald
+303,10,2,balanced,10,2,0,1,1,7,24,,Countess Ariana Thorvald
+303,10,3,balanced,9,3,0,4,5,5,23,bene_gesserit|fremen,Count Ilban Richese
+303,10,4,balanced,10,1,1,6,1,1,20,emperor,Baron Vladimir Harkonnen
+304,9,1,balanced,6,3,0,4,4,5,22,,Helena Richese
+304,9,2,balanced,11,1,1,3,5,1,22,guild|fremen,Baron Vladimir Harkonnen
+304,9,3,balanced,8,2,0,5,5,5,21,emperor|bene_gesserit,Duke Leto Atreides
+304,9,4,balanced,5,4,0,8,1,5,19,,Countess Ariana Thorvald
+305,10,1,balanced,8,2,0,7,11,11,23,guild,Countess Ariana Thorvald
+305,10,2,balanced,5,4,0,7,9,3,24,fremen,Duke Leto Atreides
+305,10,3,balanced,9,1,1,4,3,9,22,bene_gesserit,Helena Richese
+305,10,4,balanced,6,3,0,9,3,2,21,emperor,Baron Vladimir Harkonnen
+306,9,1,balanced,6,2,0,16,2,4,19,,"Glossu ""The Beast"" Rabban"
+306,9,2,balanced,6,3,0,2,6,5,21,,Paul Atreides
+306,9,3,balanced,12,1,1,10,2,2,21,emperor|guild,Baron Vladimir Harkonnen
+306,9,4,balanced,4,4,0,9,5,4,21,fremen,Countess Ariana Thorvald
+307,10,1,balanced,8,3,0,12,5,3,22,,Duke Leto Atreides
+307,10,2,balanced,10,1,1,8,5,5,25,guild|bene_gesserit,Baron Vladimir Harkonnen
+307,10,3,balanced,6,4,0,11,0,10,23,emperor|fremen,Count Memnon Thorvald
+307,10,4,balanced,10,2,0,8,5,3,21,,Helena Richese
+308,10,1,balanced,11,1,1,1,10,7,25,emperor|bene_gesserit,Count Memnon Thorvald
+308,10,2,balanced,8,3,0,12,5,1,19,fremen,"Glossu ""The Beast"" Rabban"
+308,10,3,balanced,9,2,0,2,7,5,24,guild,Duke Leto Atreides
+308,10,4,balanced,7,4,0,5,6,4,27,,Helena Richese
+309,8,1,balanced,4,3,0,4,0,9,17,fremen,"Glossu ""The Beast"" Rabban"
+309,8,2,balanced,3,4,0,7,4,0,22,emperor,Count Memnon Thorvald
+309,8,3,balanced,10,1,1,7,5,3,21,,Paul Atreides
+309,8,4,balanced,5,2,0,3,4,5,21,guild,Baron Vladimir Harkonnen
+310,10,1,balanced,9,2,0,5,2,2,18,guild|bene_gesserit,Baron Vladimir Harkonnen
+310,10,2,balanced,8,4,0,4,2,5,26,fremen,Duke Leto Atreides
+310,10,3,balanced,8,3,0,10,5,2,21,,Count Ilban Richese
+310,10,4,balanced,9,1,1,10,12,1,25,emperor,"Glossu ""The Beast"" Rabban"
+311,10,1,balanced,9,1,1,10,8,3,20,bene_gesserit,"Glossu ""The Beast"" Rabban"
+311,10,2,balanced,7,4,0,7,4,5,22,guild,Count Ilban Richese
+311,10,3,balanced,9,2,0,5,2,0,24,emperor,Helena Richese
+311,10,4,balanced,7,3,0,10,3,6,21,fremen,Duke Leto Atreides
+312,10,1,balanced,7,3,0,4,1,6,23,fremen,Countess Ariana Thorvald
+312,10,2,balanced,10,2,0,4,4,2,22,,Count Ilban Richese
+312,10,3,balanced,17,1,1,2,8,4,20,emperor|guild|bene_gesserit,Duke Leto Atreides
+312,10,4,balanced,3,4,0,13,5,9,26,,"Glossu ""The Beast"" Rabban"
+313,8,1,balanced,7,2,0,8,4,0,17,,"Glossu ""The Beast"" Rabban"
+313,8,2,balanced,3,4,0,1,5,7,21,,Countess Ariana Thorvald
+313,8,3,balanced,6,3,0,11,5,4,20,fremen,Baron Vladimir Harkonnen
+313,8,4,balanced,12,1,1,3,1,2,21,emperor|bene_gesserit,Count Ilban Richese
+314,10,1,balanced,7,3,0,11,0,4,19,,Baron Vladimir Harkonnen
+314,10,2,balanced,9,2,0,5,0,1,23,,Helena Richese
+314,10,3,balanced,6,4,0,9,7,8,23,fremen,Duke Leto Atreides
+314,10,4,balanced,12,1,1,3,5,4,22,emperor|guild,Paul Atreides
+315,10,1,balanced,11,1,1,8,8,4,22,emperor|guild,Baron Vladimir Harkonnen
+315,10,2,balanced,9,3,0,5,4,6,23,fremen,Paul Atreides
+315,10,3,balanced,11,2,0,0,1,6,24,bene_gesserit,Countess Ariana Thorvald
+315,10,4,balanced,7,4,0,14,0,4,25,,"Glossu ""The Beast"" Rabban"
+316,9,1,balanced,7,2,0,2,4,4,22,fremen,Countess Ariana Thorvald
+316,9,2,balanced,6,3,0,8,1,2,26,,Helena Richese
+316,9,3,balanced,10,1,1,8,2,4,25,emperor,Baron Vladimir Harkonnen
+316,9,4,balanced,4,4,0,6,1,6,18,,Paul Atreides
+317,10,1,balanced,9,1,1,6,11,6,20,,Count Ilban Richese
+317,10,2,balanced,8,2,0,9,8,5,25,guild,Baron Vladimir Harkonnen
+317,10,3,balanced,7,3,0,0,4,1,25,emperor,Duke Leto Atreides
+317,10,4,balanced,6,4,0,20,3,0,22,bene_gesserit|fremen,"Glossu ""The Beast"" Rabban"
+318,10,1,balanced,7,2,0,16,11,0,23,fremen,Duke Leto Atreides
+318,10,2,balanced,7,3,0,9,2,1,22,,Countess Ariana Thorvald
+318,10,3,balanced,4,4,0,3,5,12,23,guild,Helena Richese
+318,10,4,balanced,10,1,1,11,8,0,22,emperor,"Glossu ""The Beast"" Rabban"
+319,9,1,balanced,6,4,0,14,0,4,20,,Paul Atreides
+319,9,2,balanced,9,3,0,4,13,3,26,guild|bene_gesserit|fremen,Count Ilban Richese
+319,9,3,balanced,9,2,0,6,2,7,22,,"Glossu ""The Beast"" Rabban"
+319,9,4,balanced,10,1,1,12,1,2,19,emperor,Count Memnon Thorvald
+320,10,1,balanced,8,3,0,12,2,8,20,,"Glossu ""The Beast"" Rabban"
+320,10,2,balanced,6,4,0,8,0,4,24,,Paul Atreides
+320,10,3,balanced,10,2,0,5,3,3,24,emperor|fremen,Helena Richese
+320,10,4,balanced,11,1,1,9,9,4,24,guild,Count Memnon Thorvald
+321,9,1,balanced,6,3,0,7,7,3,23,emperor,Count Memnon Thorvald
+321,9,2,balanced,11,1,1,3,7,4,25,guild|fremen,"Glossu ""The Beast"" Rabban"
+321,9,3,balanced,6,2,0,10,2,1,22,,Count Ilban Richese
+321,9,4,balanced,3,4,0,8,9,7,22,,Paul Atreides
+322,9,1,balanced,4,4,0,7,0,7,21,,Countess Ariana Thorvald
+322,9,2,balanced,10,1,1,5,5,4,21,guild|fremen,Count Ilban Richese
+322,9,3,balanced,9,2,0,16,2,2,23,emperor|bene_gesserit,Helena Richese
+322,9,4,balanced,5,3,0,8,0,4,20,,Count Memnon Thorvald
+323,10,1,balanced,7,4,0,6,3,4,25,,Count Ilban Richese
+323,10,2,balanced,8,2,0,9,2,3,23,guild,Count Memnon Thorvald
+323,10,3,balanced,12,1,1,10,5,2,21,bene_gesserit|fremen,Countess Ariana Thorvald
+323,10,4,balanced,7,3,0,7,13,4,21,emperor,Helena Richese
+324,9,1,balanced,2,4,0,15,2,9,20,,Count Ilban Richese
+324,9,2,balanced,6,3,0,5,2,11,19,,Countess Ariana Thorvald
+324,9,3,balanced,10,1,1,9,4,0,19,emperor,Baron Vladimir Harkonnen
+324,9,4,balanced,7,2,0,7,3,3,23,fremen,Helena Richese
+325,8,1,balanced,4,3,0,0,6,9,21,fremen,Baron Vladimir Harkonnen
+325,8,2,balanced,3,4,0,10,11,2,22,,Duke Leto Atreides
+325,8,3,balanced,10,1,1,2,1,9,17,bene_gesserit,"Glossu ""The Beast"" Rabban"
+325,8,4,balanced,6,2,0,10,5,1,21,emperor,Count Ilban Richese
+326,10,1,balanced,10,1,1,6,1,2,26,emperor|bene_gesserit,Helena Richese
+326,10,2,balanced,9,2,0,12,3,4,23,guild,Duke Leto Atreides
+326,10,3,balanced,8,3,0,8,1,6,20,,Paul Atreides
+326,10,4,balanced,6,4,0,8,4,1,25,fremen,Count Ilban Richese
+327,10,1,balanced,8,2,0,7,0,4,25,,Paul Atreides
+327,10,2,balanced,7,3,0,13,11,3,24,emperor,"Glossu ""The Beast"" Rabban"
+327,10,3,balanced,9,1,1,12,4,1,22,fremen,Duke Leto Atreides
+327,10,4,balanced,5,4,0,12,6,5,23,bene_gesserit,Count Memnon Thorvald
+328,9,1,balanced,7,3,0,4,7,3,22,fremen,Helena Richese
+328,9,2,balanced,5,4,0,7,3,2,24,,Baron Vladimir Harkonnen
+328,9,3,balanced,9,2,0,10,2,5,22,emperor|bene_gesserit,"Glossu ""The Beast"" Rabban"
+328,9,4,balanced,10,1,1,8,5,3,24,,Count Ilban Richese
+329,10,1,balanced,9,1,1,8,8,4,21,,"Glossu ""The Beast"" Rabban"
+329,10,2,balanced,9,2,0,7,7,0,21,emperor|fremen,Paul Atreides
+329,10,3,balanced,7,4,0,10,1,3,26,,Count Memnon Thorvald
+329,10,4,balanced,8,3,0,11,0,7,26,,Countess Ariana Thorvald
+330,10,1,balanced,5,4,0,8,1,10,22,bene_gesserit,Count Memnon Thorvald
+330,10,2,balanced,10,1,1,11,3,2,23,fremen,Count Ilban Richese
+330,10,3,balanced,10,2,0,1,9,5,24,emperor,Baron Vladimir Harkonnen
+330,10,4,balanced,9,3,0,8,6,2,22,,Paul Atreides
+331,10,1,balanced,8,3,0,10,3,3,23,,"Glossu ""The Beast"" Rabban"
+331,10,2,balanced,8,4,0,5,5,3,21,,Paul Atreides
+331,10,3,balanced,8,2,0,11,0,7,24,emperor,Baron Vladimir Harkonnen
+331,10,4,balanced,8,1,1,14,10,7,22,fremen,Countess Ariana Thorvald
+332,10,1,balanced,7,4,0,10,1,6,22,emperor|fremen,Count Memnon Thorvald
+332,10,2,balanced,8,3,0,11,2,6,22,,Countess Ariana Thorvald
+332,10,3,balanced,12,1,1,6,10,3,21,guild|bene_gesserit,Baron Vladimir Harkonnen
+332,10,4,balanced,10,2,0,7,3,7,24,,Helena Richese
+333,10,1,balanced,7,3,0,5,7,9,21,fremen,"Glossu ""The Beast"" Rabban"
+333,10,2,balanced,6,4,0,0,3,9,22,,Count Ilban Richese
+333,10,3,balanced,11,1,1,11,4,3,26,emperor,Baron Vladimir Harkonnen
+333,10,4,balanced,8,2,0,5,6,2,23,bene_gesserit,Helena Richese
+334,9,1,balanced,8,2,0,0,9,7,25,,Countess Ariana Thorvald
+334,9,2,balanced,10,1,1,5,0,2,21,guild|fremen,"Glossu ""The Beast"" Rabban"
+334,9,3,balanced,6,3,0,11,6,4,21,emperor,Baron Vladimir Harkonnen
+334,9,4,balanced,5,4,0,5,5,8,19,bene_gesserit,Paul Atreides
+335,10,1,balanced,7,2,0,10,14,3,22,emperor,Duke Leto Atreides
+335,10,2,balanced,6,4,0,7,12,4,24,guild,Count Ilban Richese
+335,10,3,balanced,7,3,0,6,6,2,26,,Helena Richese
+335,10,4,balanced,10,1,1,0,4,10,22,fremen,Baron Vladimir Harkonnen
+336,10,1,balanced,9,1,1,7,9,1,23,bene_gesserit|fremen,Baron Vladimir Harkonnen
+336,10,2,balanced,7,3,0,7,2,6,25,,Count Ilban Richese
+336,10,3,balanced,9,2,0,6,9,4,24,emperor,Countess Ariana Thorvald
+336,10,4,balanced,6,4,0,1,4,4,21,,Duke Leto Atreides
+337,9,1,balanced,6,3,0,9,2,4,22,guild,Countess Ariana Thorvald
+337,9,2,balanced,8,2,0,8,0,2,21,bene_gesserit,Count Ilban Richese
+337,9,3,balanced,11,1,1,3,2,2,20,emperor,Helena Richese
+337,9,4,balanced,5,4,0,8,8,10,20,fremen,"Glossu ""The Beast"" Rabban"
+338,10,1,balanced,8,4,0,5,3,5,21,,Baron Vladimir Harkonnen
+338,10,2,balanced,10,1,1,9,1,3,22,fremen,Count Memnon Thorvald
+338,10,3,balanced,9,2,0,13,1,3,26,emperor,"Glossu ""The Beast"" Rabban"
+338,10,4,balanced,9,3,0,6,10,8,21,guild|bene_gesserit,Duke Leto Atreides
+339,9,1,balanced,7,3,0,9,7,5,23,fremen,"Glossu ""The Beast"" Rabban"
+339,9,2,balanced,6,4,0,6,6,1,25,,Countess Ariana Thorvald
+339,9,3,balanced,10,1,1,5,6,3,22,emperor,Duke Leto Atreides
+339,9,4,balanced,8,2,0,3,9,3,25,guild,Count Memnon Thorvald
+340,9,1,balanced,5,3,0,6,5,6,22,guild,Count Ilban Richese
+340,9,2,balanced,4,4,0,9,5,5,21,fremen,Paul Atreides
+340,9,3,balanced,8,2,0,9,0,3,21,,Count Memnon Thorvald
+340,9,4,balanced,10,1,1,3,4,2,21,emperor,Duke Leto Atreides
+341,9,1,balanced,3,4,0,1,7,8,21,,Helena Richese
+341,9,2,balanced,8,2,0,5,6,4,23,fremen,Duke Leto Atreides
+341,9,3,balanced,6,3,0,15,0,0,21,emperor,Count Memnon Thorvald
+341,9,4,balanced,10,1,1,5,7,5,25,guild,Count Ilban Richese
+342,9,1,balanced,11,1,1,5,9,5,19,emperor|guild,Baron Vladimir Harkonnen
+342,9,2,balanced,8,3,0,5,2,1,20,,"Glossu ""The Beast"" Rabban"
+342,9,3,balanced,8,2,0,7,5,3,22,bene_gesserit,Duke Leto Atreides
+342,9,4,balanced,4,4,0,14,1,8,22,fremen,Countess Ariana Thorvald
+343,10,1,balanced,7,3,0,4,8,3,23,fremen,"Glossu ""The Beast"" Rabban"
+343,10,2,balanced,9,2,0,12,8,1,25,emperor|guild,Duke Leto Atreides
+343,10,3,balanced,10,1,1,8,3,3,22,,Helena Richese
+343,10,4,balanced,4,4,0,5,2,12,22,,Baron Vladimir Harkonnen
+344,9,1,balanced,11,1,1,2,0,5,20,,Helena Richese
+344,9,2,balanced,7,2,0,4,1,6,20,,Baron Vladimir Harkonnen
+344,9,3,balanced,5,3,0,9,7,8,23,fremen,"Glossu ""The Beast"" Rabban"
+344,9,4,balanced,3,4,0,10,1,8,21,,Countess Ariana Thorvald
+345,10,1,balanced,4,4,0,13,2,4,19,,Helena Richese
+345,10,2,balanced,5,3,0,8,1,8,21,,Paul Atreides
+345,10,3,balanced,8,2,0,7,3,2,21,fremen,Duke Leto Atreides
+345,10,4,balanced,12,1,1,3,0,0,29,emperor,Count Ilban Richese
+346,8,1,balanced,10,1,1,5,0,6,21,emperor|guild|bene_gesserit|fremen,Baron Vladimir Harkonnen
+346,8,2,balanced,3,3,0,6,4,8,19,,Count Ilban Richese
+346,8,3,balanced,4,2,0,8,5,1,19,,Countess Ariana Thorvald
+346,8,4,balanced,3,4,0,5,6,8,21,,Helena Richese
+347,10,1,balanced,4,4,0,10,0,13,22,,Countess Ariana Thorvald
+347,10,2,balanced,11,1,1,5,1,2,23,bene_gesserit,Paul Atreides
+347,10,3,balanced,9,2,0,16,2,4,19,emperor,Baron Vladimir Harkonnen
+347,10,4,balanced,8,3,0,4,15,1,27,guild|fremen,Duke Leto Atreides
+348,10,1,balanced,9,3,0,3,1,2,26,,Duke Leto Atreides
+348,10,2,balanced,6,4,0,12,9,2,22,,Countess Ariana Thorvald
+348,10,3,balanced,10,1,1,1,2,3,20,bene_gesserit|fremen,"Glossu ""The Beast"" Rabban"
+348,10,4,balanced,9,2,0,5,2,9,23,emperor,Baron Vladimir Harkonnen
+349,8,1,balanced,4,4,0,3,3,9,19,,Duke Leto Atreides
+349,8,2,balanced,6,2,0,9,5,2,20,,Count Memnon Thorvald
+349,8,3,balanced,5,3,0,11,8,2,22,guild,Paul Atreides
+349,8,4,balanced,12,1,1,0,2,0,22,emperor|bene_gesserit|fremen,Baron Vladimir Harkonnen
+350,10,1,balanced,9,1,1,6,2,9,28,guild,Paul Atreides
+350,10,2,balanced,7,4,0,9,3,6,22,,Countess Ariana Thorvald
+350,10,3,balanced,7,3,0,18,2,2,21,emperor|fremen,Count Memnon Thorvald
+350,10,4,balanced,8,2,0,5,5,2,21,,"Glossu ""The Beast"" Rabban"
+351,10,1,balanced,7,3,0,11,5,5,25,fremen,Count Memnon Thorvald
+351,10,2,balanced,10,1,1,2,7,6,20,emperor,Baron Vladimir Harkonnen
+351,10,3,balanced,9,2,0,10,8,0,23,,Duke Leto Atreides
+351,10,4,balanced,6,4,0,7,8,1,25,bene_gesserit,Paul Atreides
+352,10,1,balanced,7,3,0,11,4,5,23,guild,Paul Atreides
+352,10,2,balanced,8,2,0,13,4,1,22,,Helena Richese
+352,10,3,balanced,10,1,1,6,4,5,23,emperor,Countess Ariana Thorvald
+352,10,4,balanced,6,4,0,11,2,8,24,fremen,Count Memnon Thorvald
+353,10,1,balanced,9,2,0,7,1,2,25,,Countess Ariana Thorvald
+353,10,2,balanced,9,3,0,3,3,6,20,fremen,Helena Richese
+353,10,3,balanced,8,4,0,9,0,5,25,emperor,Baron Vladimir Harkonnen
+353,10,4,balanced,10,1,1,10,7,2,25,guild|bene_gesserit,"Glossu ""The Beast"" Rabban"
+354,9,1,balanced,10,1,1,7,3,6,21,guild,Count Ilban Richese
+354,9,2,balanced,5,4,0,9,7,3,24,,Duke Leto Atreides
+354,9,3,balanced,7,2,0,6,7,10,22,fremen,Countess Ariana Thorvald
+354,9,4,balanced,6,3,0,6,3,2,23,emperor,Helena Richese
+355,9,1,balanced,5,4,0,11,2,3,22,fremen,Helena Richese
+355,9,2,balanced,7,2,0,7,2,2,22,,Paul Atreides
+355,9,3,balanced,7,3,0,5,5,8,22,emperor,Count Memnon Thorvald
+355,9,4,balanced,10,1,1,9,7,0,20,bene_gesserit,Baron Vladimir Harkonnen
+356,10,1,balanced,8,2,0,9,5,3,22,guild|fremen,Paul Atreides
+356,10,2,balanced,7,4,0,8,1,4,24,,Baron Vladimir Harkonnen
+356,10,3,balanced,8,3,0,3,7,2,26,emperor,Count Memnon Thorvald
+356,10,4,balanced,9,1,1,9,5,6,22,,Helena Richese
+357,9,1,balanced,8,2,0,4,3,4,20,,"Glossu ""The Beast"" Rabban"
+357,9,2,balanced,10,1,1,2,5,1,22,emperor|guild,Count Memnon Thorvald
+357,9,3,balanced,7,3,0,5,1,0,23,,Count Ilban Richese
+357,9,4,balanced,6,4,0,8,6,6,21,bene_gesserit|fremen,Countess Ariana Thorvald
+358,8,1,balanced,6,2,0,7,3,3,20,bene_gesserit,Duke Leto Atreides
+358,8,2,balanced,10,1,1,9,4,5,20,emperor,Baron Vladimir Harkonnen
+358,8,3,balanced,3,4,0,2,8,1,22,fremen,Count Ilban Richese
+358,8,4,balanced,3,3,0,9,2,6,21,,Countess Ariana Thorvald
+359,9,1,balanced,7,3,0,7,4,4,21,,Count Ilban Richese
+359,9,2,balanced,5,4,0,3,2,5,20,fremen,Helena Richese
+359,9,3,balanced,10,1,1,13,1,2,24,emperor,Duke Leto Atreides
+359,9,4,balanced,10,2,0,8,8,3,24,guild,Baron Vladimir Harkonnen
+360,9,1,balanced,10,1,1,2,7,3,25,bene_gesserit,Baron Vladimir Harkonnen
+360,9,2,balanced,6,2,0,6,2,8,21,emperor,Countess Ariana Thorvald
+360,9,3,balanced,5,3,0,13,1,6,20,fremen,Count Memnon Thorvald
+360,9,4,balanced,3,4,0,7,9,4,22,,Paul Atreides
+361,10,1,balanced,8,2,0,9,9,4,23,emperor,Count Memnon Thorvald
+361,10,2,balanced,8,3,0,4,6,6,22,guild,Baron Vladimir Harkonnen
+361,10,3,balanced,9,1,1,7,1,2,24,bene_gesserit,Count Ilban Richese
+361,10,4,balanced,8,4,0,4,4,8,20,fremen,Duke Leto Atreides
+362,10,1,balanced,8,2,0,6,4,4,23,fremen,Countess Ariana Thorvald
+362,10,2,balanced,3,4,0,14,9,9,22,,Count Ilban Richese
+362,10,3,balanced,6,3,0,11,0,0,25,,Helena Richese
+362,10,4,balanced,11,1,1,10,4,2,23,emperor,Count Memnon Thorvald
+363,9,1,balanced,4,4,0,4,4,6,22,,Countess Ariana Thorvald
+363,9,2,balanced,11,1,1,2,2,4,23,bene_gesserit,Duke Leto Atreides
+363,9,3,balanced,8,2,0,9,5,5,21,emperor|guild,Count Memnon Thorvald
+363,9,4,balanced,5,3,0,10,4,4,23,fremen,Helena Richese
+364,10,1,balanced,9,1,1,14,2,1,22,fremen,Duke Leto Atreides
+364,10,2,balanced,4,4,0,4,11,9,26,guild,Baron Vladimir Harkonnen
+364,10,3,balanced,8,2,0,9,0,1,25,emperor,Count Memnon Thorvald
+364,10,4,balanced,6,3,0,9,1,6,22,,Count Ilban Richese
+365,10,1,balanced,10,3,0,8,4,1,22,,Helena Richese
+365,10,2,balanced,10,2,0,8,5,1,23,emperor|fremen,Count Memnon Thorvald
+365,10,3,balanced,8,4,0,6,5,5,24,,Count Ilban Richese
+365,10,4,balanced,10,1,1,11,7,5,23,guild|bene_gesserit,Paul Atreides
+366,10,1,balanced,10,1,1,1,9,7,22,emperor|guild,Duke Leto Atreides
+366,10,2,balanced,5,4,0,14,1,5,26,,Paul Atreides
+366,10,3,balanced,7,2,0,12,13,5,20,,"Glossu ""The Beast"" Rabban"
+366,10,4,balanced,7,3,0,2,7,3,22,fremen,Count Memnon Thorvald
+367,9,1,balanced,6,3,0,11,1,0,24,fremen,Duke Leto Atreides
+367,9,2,balanced,6,4,0,8,0,6,18,,Paul Atreides
+367,9,3,balanced,10,1,1,10,5,2,19,emperor,Count Ilban Richese
+367,9,4,balanced,9,2,0,12,4,1,20,,Helena Richese
+368,10,1,balanced,5,4,0,13,1,7,24,,Paul Atreides
+368,10,2,balanced,10,2,0,7,3,1,21,emperor|bene_gesserit,Baron Vladimir Harkonnen
+368,10,3,balanced,11,1,1,2,2,6,22,,Countess Ariana Thorvald
+368,10,4,balanced,9,3,0,18,2,6,24,fremen,Count Memnon Thorvald
+369,10,1,balanced,11,1,1,6,2,3,21,guild,Count Memnon Thorvald
+369,10,2,balanced,7,3,0,12,5,8,25,,Countess Ariana Thorvald
+369,10,3,balanced,6,4,0,11,2,4,22,bene_gesserit|fremen,Baron Vladimir Harkonnen
+369,10,4,balanced,9,2,0,2,5,3,25,emperor,Paul Atreides
+370,9,1,balanced,10,1,1,8,5,1,22,emperor,Paul Atreides
+370,9,2,balanced,5,4,0,7,6,1,25,fremen,Count Ilban Richese
+370,9,3,balanced,8,3,0,4,6,5,19,,Count Memnon Thorvald
+370,9,4,balanced,8,2,0,8,2,9,22,guild,"Glossu ""The Beast"" Rabban"
+371,9,1,balanced,7,2,0,11,4,8,17,fremen,Countess Ariana Thorvald
+371,9,2,balanced,11,1,1,6,3,5,21,emperor|guild,Baron Vladimir Harkonnen
+371,9,3,balanced,7,3,0,8,10,2,20,bene_gesserit,Count Ilban Richese
+371,9,4,balanced,6,4,0,10,4,7,22,,"Glossu ""The Beast"" Rabban"
+372,10,1,balanced,4,4,0,8,10,6,25,,Count Memnon Thorvald
+372,10,2,balanced,6,3,0,6,3,3,27,fremen,"Glossu ""The Beast"" Rabban"
+372,10,3,balanced,10,1,1,7,7,4,20,emperor,Helena Richese
+372,10,4,balanced,9,2,0,5,2,4,21,bene_gesserit,Duke Leto Atreides
+373,10,1,balanced,6,4,0,9,3,5,23,fremen,Count Ilban Richese
+373,10,2,balanced,9,1,1,10,8,1,22,emperor,Countess Ariana Thorvald
+373,10,3,balanced,9,2,0,7,3,6,23,,Helena Richese
+373,10,4,balanced,8,3,0,3,3,2,21,bene_gesserit,Duke Leto Atreides
+374,10,1,balanced,8,3,0,6,1,5,21,,Countess Ariana Thorvald
+374,10,2,balanced,9,2,0,5,9,4,22,fremen,Count Memnon Thorvald
+374,10,3,balanced,7,4,0,10,15,8,23,guild,Paul Atreides
+374,10,4,balanced,10,1,1,6,8,2,24,emperor,Count Ilban Richese
+375,10,1,balanced,8,2,0,3,4,4,21,fremen,Count Ilban Richese
+375,10,2,balanced,5,4,0,5,3,5,24,guild,Helena Richese
+375,10,3,balanced,9,1,1,12,3,3,21,emperor,Paul Atreides
+375,10,4,balanced,6,3,0,1,3,6,25,,Countess Ariana Thorvald
+376,10,1,balanced,13,1,1,0,9,4,23,guild|fremen,Baron Vladimir Harkonnen
+376,10,2,balanced,8,4,0,6,2,9,20,,Count Memnon Thorvald
+376,10,3,balanced,8,3,0,10,0,4,23,bene_gesserit,Duke Leto Atreides
+376,10,4,balanced,8,2,0,20,9,3,26,emperor,Countess Ariana Thorvald
+377,10,1,balanced,8,1,1,5,18,6,21,emperor|fremen,Baron Vladimir Harkonnen
+377,10,2,balanced,7,4,0,5,6,0,17,,Count Ilban Richese
+377,10,3,balanced,8,2,0,5,5,3,23,,"Glossu ""The Beast"" Rabban"
+377,10,4,balanced,8,3,0,3,0,10,21,,Countess Ariana Thorvald
+378,10,1,balanced,7,4,0,5,3,7,24,bene_gesserit|fremen,Countess Ariana Thorvald
+378,10,2,balanced,8,3,0,8,5,5,23,,Helena Richese
+378,10,3,balanced,9,2,0,9,6,0,23,emperor,"Glossu ""The Beast"" Rabban"
+378,10,4,balanced,10,1,1,11,2,2,26,guild,Duke Leto Atreides
+379,10,1,balanced,7,2,0,11,1,5,21,bene_gesserit|fremen,Countess Ariana Thorvald
+379,10,2,balanced,3,4,0,14,4,6,19,,Helena Richese
+379,10,3,balanced,7,3,0,6,6,5,24,,Count Memnon Thorvald
+379,10,4,balanced,10,1,1,11,0,0,21,emperor,"Glossu ""The Beast"" Rabban"
+380,10,1,balanced,4,4,0,16,0,5,20,fremen,Countess Ariana Thorvald
+380,10,2,balanced,7,3,0,7,11,8,22,guild,"Glossu ""The Beast"" Rabban"
+380,10,3,balanced,10,1,1,6,3,4,25,emperor,Count Ilban Richese
+380,10,4,balanced,7,2,0,9,5,5,21,,Helena Richese
+381,9,1,balanced,4,4,0,8,5,8,21,fremen,"Glossu ""The Beast"" Rabban"
+381,9,2,balanced,8,3,0,10,7,4,25,bene_gesserit,Count Ilban Richese
+381,9,3,balanced,8,2,0,13,7,3,21,guild,Duke Leto Atreides
+381,9,4,balanced,10,1,1,2,2,3,22,emperor,Baron Vladimir Harkonnen
+382,8,1,balanced,5,4,0,10,2,8,19,fremen,Countess Ariana Thorvald
+382,8,2,balanced,11,1,1,1,0,1,24,bene_gesserit,Count Ilban Richese
+382,8,3,balanced,5,3,0,14,6,3,20,,Duke Leto Atreides
+382,8,4,balanced,6,2,0,5,4,4,20,emperor,Baron Vladimir Harkonnen
+383,9,1,balanced,10,1,1,3,3,4,21,emperor,Duke Leto Atreides
+383,9,2,balanced,3,4,0,13,3,3,21,,Paul Atreides
+383,9,3,balanced,7,3,0,4,7,3,21,fremen,Count Ilban Richese
+383,9,4,balanced,9,2,0,7,7,7,22,bene_gesserit,Helena Richese
+384,10,1,balanced,6,4,0,12,5,8,23,,Countess Ariana Thorvald
+384,10,2,balanced,6,3,0,12,11,7,21,,Paul Atreides
+384,10,3,balanced,9,2,0,9,7,1,24,emperor,Duke Leto Atreides
+384,10,4,balanced,10,1,1,3,1,3,24,bene_gesserit|fremen,Helena Richese
+385,8,1,balanced,4,3,0,13,1,2,21,,Helena Richese
+385,8,2,balanced,11,1,1,2,2,4,20,emperor|bene_gesserit|fremen,Paul Atreides
+385,8,3,balanced,6,2,0,7,4,4,20,,Duke Leto Atreides
+385,8,4,balanced,4,4,0,11,5,2,21,,"Glossu ""The Beast"" Rabban"
+386,10,1,balanced,6,3,0,10,3,2,25,fremen,Paul Atreides
+386,10,2,balanced,6,4,0,8,5,13,21,,Baron Vladimir Harkonnen
+386,10,3,balanced,11,1,1,1,10,3,23,guild|bene_gesserit,Count Memnon Thorvald
+386,10,4,balanced,9,2,0,11,5,3,24,emperor,Countess Ariana Thorvald
+387,10,1,balanced,9,1,1,14,5,2,22,,Baron Vladimir Harkonnen
+387,10,2,balanced,5,4,0,6,10,4,24,guild|fremen,Paul Atreides
+387,10,3,balanced,9,2,0,10,3,6,23,emperor,Count Ilban Richese
+387,10,4,balanced,8,3,0,6,1,9,20,,Helena Richese
+388,10,1,balanced,5,4,0,15,4,6,22,fremen,"Glossu ""The Beast"" Rabban"
+388,10,2,balanced,8,3,0,0,4,6,28,guild,Count Ilban Richese
+388,10,3,balanced,10,1,1,13,2,0,23,emperor,Duke Leto Atreides
+388,10,4,balanced,10,2,0,11,3,1,24,,Helena Richese
+389,10,1,balanced,10,1,1,11,2,2,25,,"Glossu ""The Beast"" Rabban"
+389,10,2,balanced,8,3,0,16,0,3,21,,Countess Ariana Thorvald
+389,10,3,balanced,9,2,0,5,3,6,21,emperor|fremen,Count Memnon Thorvald
+389,10,4,balanced,7,4,0,3,0,7,23,,Duke Leto Atreides
+390,10,1,balanced,8,2,0,7,3,2,26,guild,Duke Leto Atreides
+390,10,2,balanced,8,3,0,7,2,0,24,,Helena Richese
+390,10,3,balanced,8,4,0,1,18,3,22,emperor|fremen,Paul Atreides
+390,10,4,balanced,11,1,1,2,2,10,23,,Count Memnon Thorvald
+391,9,1,balanced,10,1,1,5,6,3,25,guild,Countess Ariana Thorvald
+391,9,2,balanced,8,3,0,9,1,6,18,bene_gesserit,Count Ilban Richese
+391,9,3,balanced,5,4,0,9,12,6,19,fremen,Baron Vladimir Harkonnen
+391,9,4,balanced,9,2,0,3,4,2,24,emperor,"Glossu ""The Beast"" Rabban"
+392,10,1,balanced,7,2,0,10,2,12,22,,Paul Atreides
+392,10,2,balanced,6,3,0,15,8,5,21,fremen,"Glossu ""The Beast"" Rabban"
+392,10,3,balanced,6,4,0,10,0,2,28,,Helena Richese
+392,10,4,balanced,9,1,1,12,6,1,20,emperor,Baron Vladimir Harkonnen
+393,10,1,balanced,9,2,0,2,2,2,24,bene_gesserit,Paul Atreides
+393,10,2,balanced,8,3,0,2,10,7,19,emperor|fremen,Countess Ariana Thorvald
+393,10,3,balanced,6,4,0,7,14,8,25,,Count Memnon Thorvald
+393,10,4,balanced,12,1,1,5,2,2,25,,Helena Richese
+394,10,1,balanced,8,1,1,8,9,5,22,emperor|fremen,"Glossu ""The Beast"" Rabban"
+394,10,2,balanced,6,4,0,9,3,5,25,,Helena Richese
+394,10,3,balanced,7,3,0,4,14,3,18,,Count Memnon Thorvald
+394,10,4,balanced,8,2,0,5,8,6,21,,Baron Vladimir Harkonnen
+395,10,1,balanced,6,4,0,8,12,8,19,,Duke Leto Atreides
+395,10,2,balanced,12,1,1,2,11,5,21,guild|fremen,Count Ilban Richese
+395,10,3,balanced,9,2,0,7,3,2,27,emperor|bene_gesserit,Countess Ariana Thorvald
+395,10,4,balanced,8,3,0,10,5,6,21,,"Glossu ""The Beast"" Rabban"
+396,9,1,balanced,6,2,0,2,5,6,21,,Baron Vladimir Harkonnen
+396,9,2,balanced,4,4,0,3,13,3,27,guild,Countess Ariana Thorvald
+396,9,3,balanced,4,3,0,12,1,6,21,fremen,Helena Richese
+396,9,4,balanced,11,1,1,3,5,1,21,emperor,Count Ilban Richese
+397,9,1,balanced,6,3,0,6,1,3,20,bene_gesserit,Helena Richese
+397,9,2,balanced,7,2,0,12,2,3,23,,Count Memnon Thorvald
+397,9,3,balanced,6,4,0,4,8,7,18,fremen,Duke Leto Atreides
+397,9,4,balanced,11,1,1,3,1,3,23,emperor,Countess Ariana Thorvald
+398,10,1,balanced,6,3,0,9,2,2,23,,Duke Leto Atreides
+398,10,2,balanced,5,4,0,9,0,5,23,fremen,Paul Atreides
+398,10,3,balanced,9,1,1,11,11,5,20,emperor|guild,Baron Vladimir Harkonnen
+398,10,4,balanced,8,2,0,11,0,4,26,,Countess Ariana Thorvald
+399,10,1,balanced,6,4,0,13,2,6,23,bene_gesserit,Count Memnon Thorvald
+399,10,2,balanced,8,2,0,11,7,10,18,,Helena Richese
+399,10,3,balanced,11,1,1,13,4,2,27,emperor,"Glossu ""The Beast"" Rabban"
+399,10,4,balanced,7,3,0,6,5,5,22,fremen,Count Ilban Richese
+400,10,1,balanced,8,2,0,7,6,4,22,,Countess Ariana Thorvald
+400,10,2,balanced,3,4,0,12,3,5,23,,Duke Leto Atreides
+400,10,3,balanced,8,3,0,6,3,5,22,emperor|fremen,Count Ilban Richese
+400,10,4,balanced,9,1,1,0,4,7,25,guild,"Glossu ""The Beast"" Rabban"
+401,10,1,balanced,10,1,1,11,13,2,21,emperor|bene_gesserit,Count Memnon Thorvald
+401,10,2,balanced,9,3,0,0,8,13,22,,Count Ilban Richese
+401,10,3,balanced,10,2,0,2,4,6,26,guild,Paul Atreides
+401,10,4,balanced,7,4,0,10,2,1,25,fremen,Baron Vladimir Harkonnen
+402,9,1,balanced,6,4,0,5,1,8,20,,Paul Atreides
+402,9,2,balanced,7,3,0,5,13,3,20,guild,Duke Leto Atreides
+402,9,3,balanced,10,1,1,9,5,5,19,emperor|fremen,Count Memnon Thorvald
+402,9,4,balanced,8,2,0,2,3,5,22,bene_gesserit,Count Ilban Richese
+403,10,1,balanced,12,1,1,7,1,2,24,emperor|bene_gesserit,Baron Vladimir Harkonnen
+403,10,2,balanced,5,4,0,10,1,5,26,,Paul Atreides
+403,10,3,balanced,6,3,0,1,3,7,22,,Duke Leto Atreides
+403,10,4,balanced,9,2,0,9,1,4,20,fremen,Countess Ariana Thorvald
+404,10,1,balanced,8,2,0,9,5,1,23,emperor,Count Ilban Richese
+404,10,2,balanced,8,4,0,2,10,5,23,,Helena Richese
+404,10,3,balanced,9,1,1,10,7,5,21,bene_gesserit,Count Memnon Thorvald
+404,10,4,balanced,8,3,0,7,7,3,25,guild|fremen,Countess Ariana Thorvald
+405,9,1,balanced,7,3,0,6,7,1,24,guild,Count Ilban Richese
+405,9,2,balanced,4,4,0,6,5,7,21,,Helena Richese
+405,9,3,balanced,10,1,1,5,5,3,22,fremen,Duke Leto Atreides
+405,9,4,balanced,7,2,0,10,3,4,25,emperor,Count Memnon Thorvald
+406,10,1,balanced,8,2,0,15,6,4,20,,Helena Richese
+406,10,2,balanced,7,3,0,9,8,1,22,,"Glossu ""The Beast"" Rabban"
+406,10,3,balanced,9,1,1,3,7,1,21,emperor,Baron Vladimir Harkonnen
+406,10,4,balanced,7,4,0,7,9,10,22,fremen,Paul Atreides
+407,8,1,balanced,10,1,1,4,2,3,20,,Paul Atreides
+407,8,2,balanced,8,2,0,6,2,4,21,emperor,Baron Vladimir Harkonnen
+407,8,3,balanced,4,4,0,12,1,2,19,,Count Ilban Richese
+407,8,4,balanced,7,3,0,0,3,7,22,fremen,Count Memnon Thorvald
+408,10,1,balanced,10,2,0,1,5,6,21,emperor,Countess Ariana Thorvald
+408,10,2,balanced,8,3,0,13,7,4,24,,Baron Vladimir Harkonnen
+408,10,3,balanced,10,1,1,5,6,2,25,,Helena Richese
+408,10,4,balanced,7,4,0,8,9,3,26,bene_gesserit|fremen,"Glossu ""The Beast"" Rabban"
+409,10,1,balanced,9,2,0,11,7,2,20,,"Glossu ""The Beast"" Rabban"
+409,10,2,balanced,6,4,0,15,5,5,24,fremen,Count Memnon Thorvald
+409,10,3,balanced,10,1,1,2,8,5,22,guild,Duke Leto Atreides
+409,10,4,balanced,9,3,0,7,5,2,23,emperor|bene_gesserit,Count Ilban Richese
+410,10,1,balanced,5,4,0,0,8,8,20,,"Glossu ""The Beast"" Rabban"
+410,10,2,balanced,7,3,0,0,8,4,22,,Paul Atreides
+410,10,3,balanced,8,2,0,11,8,4,22,fremen,Countess Ariana Thorvald
+410,10,4,balanced,11,1,1,12,2,2,24,emperor|bene_gesserit,Baron Vladimir Harkonnen
+411,9,1,balanced,5,3,0,9,4,9,18,,Duke Leto Atreides
+411,9,2,balanced,6,2,0,8,4,1,24,fremen,Helena Richese
+411,9,3,balanced,13,1,1,4,1,4,18,emperor|guild,Baron Vladimir Harkonnen
+411,9,4,balanced,5,4,0,4,4,7,18,,Paul Atreides
+412,10,1,balanced,9,1,1,1,7,9,22,emperor|guild,Baron Vladimir Harkonnen
+412,10,2,balanced,8,2,0,8,6,7,25,,"Glossu ""The Beast"" Rabban"
+412,10,3,balanced,7,4,0,3,2,5,22,bene_gesserit|fremen,Count Ilban Richese
+412,10,4,balanced,8,3,0,7,5,1,22,,Paul Atreides
+413,10,1,balanced,9,2,0,10,2,0,24,,"Glossu ""The Beast"" Rabban"
+413,10,2,balanced,6,4,0,4,12,11,29,guild|fremen,Helena Richese
+413,10,3,balanced,9,3,0,6,7,3,23,,Duke Leto Atreides
+413,10,4,balanced,9,1,1,13,1,7,21,emperor,Count Memnon Thorvald
+414,10,1,balanced,6,4,0,11,3,7,22,,Countess Ariana Thorvald
+414,10,2,balanced,8,2,0,5,8,3,23,emperor,Count Ilban Richese
+414,10,3,balanced,7,3,0,9,6,5,28,fremen,Paul Atreides
+414,10,4,balanced,12,1,1,15,10,2,23,guild,"Glossu ""The Beast"" Rabban"
+415,10,1,balanced,11,1,1,10,1,1,21,bene_gesserit,Paul Atreides
+415,10,2,balanced,5,4,0,5,11,7,22,,Countess Ariana Thorvald
+415,10,3,balanced,9,2,0,14,5,2,28,,Baron Vladimir Harkonnen
+415,10,4,balanced,7,3,0,15,2,8,20,emperor|fremen,Count Memnon Thorvald
+416,10,1,balanced,9,1,1,9,11,3,23,emperor|guild,Duke Leto Atreides
+416,10,2,balanced,8,2,0,1,2,2,25,,Baron Vladimir Harkonnen
+416,10,3,balanced,7,4,0,3,2,5,22,fremen,Paul Atreides
+416,10,4,balanced,7,3,0,12,7,8,21,,Count Memnon Thorvald
+417,9,1,balanced,7,3,0,7,15,6,21,emperor,Count Memnon Thorvald
+417,9,2,balanced,11,1,1,7,5,4,21,fremen,Paul Atreides
+417,9,3,balanced,5,4,0,6,5,5,23,,"Glossu ""The Beast"" Rabban"
+417,9,4,balanced,10,2,0,6,3,4,26,bene_gesserit,Helena Richese
+418,10,1,balanced,9,2,0,7,0,2,22,,Paul Atreides
+418,10,2,balanced,5,4,0,11,9,6,27,fremen,Count Ilban Richese
+418,10,3,balanced,8,3,0,12,1,7,21,guild,Baron Vladimir Harkonnen
+418,10,4,balanced,11,1,1,7,3,5,22,emperor|bene_gesserit,Countess Ariana Thorvald
+419,10,1,balanced,7,2,0,12,7,4,23,,Paul Atreides
+419,10,2,balanced,6,4,0,11,3,2,24,,Count Ilban Richese
+419,10,3,balanced,11,1,1,1,8,3,24,emperor|fremen,Baron Vladimir Harkonnen
+419,10,4,balanced,7,3,0,6,0,5,27,guild,Duke Leto Atreides
+420,10,1,balanced,6,3,0,14,7,3,29,fremen,Countess Ariana Thorvald
+420,10,2,balanced,9,2,0,7,4,5,22,,"Glossu ""The Beast"" Rabban"
+420,10,3,balanced,10,1,1,4,2,3,22,bene_gesserit,Baron Vladimir Harkonnen
+420,10,4,balanced,6,4,0,8,7,2,22,emperor,Helena Richese
+421,10,1,balanced,10,1,1,7,2,12,22,,Countess Ariana Thorvald
+421,10,2,balanced,8,3,0,3,3,6,23,emperor|bene_gesserit,Duke Leto Atreides
+421,10,3,balanced,6,4,0,16,4,0,24,fremen,Helena Richese
+421,10,4,balanced,9,2,0,5,7,1,25,,Paul Atreides
+422,10,1,balanced,9,3,0,5,5,7,22,guild,Paul Atreides
+422,10,2,balanced,7,4,0,6,9,5,24,fremen,Count Ilban Richese
+422,10,3,balanced,13,1,1,2,0,3,24,emperor|bene_gesserit,Helena Richese
+422,10,4,balanced,9,2,0,8,12,2,21,,"Glossu ""The Beast"" Rabban"
+423,10,1,balanced,8,4,0,8,6,5,20,,Paul Atreides
+423,10,2,balanced,10,2,0,8,3,7,21,,"Glossu ""The Beast"" Rabban"
+423,10,3,balanced,10,1,1,14,0,4,21,emperor|fremen,Count Memnon Thorvald
+423,10,4,balanced,9,3,0,5,3,2,25,,Baron Vladimir Harkonnen
+424,9,1,balanced,6,3,0,6,3,5,23,emperor,Countess Ariana Thorvald
+424,9,2,balanced,8,2,0,6,1,6,24,,Count Memnon Thorvald
+424,9,3,balanced,10,1,1,1,8,1,21,,Helena Richese
+424,9,4,balanced,6,4,0,5,3,7,19,fremen,Duke Leto Atreides
+425,10,1,balanced,11,1,1,7,1,0,23,,Baron Vladimir Harkonnen
+425,10,2,balanced,7,3,0,5,2,4,24,emperor|fremen,Duke Leto Atreides
+425,10,3,balanced,7,4,0,3,13,6,25,,Count Ilban Richese
+425,10,4,balanced,10,2,0,8,6,4,22,guild|bene_gesserit,Paul Atreides
+426,9,1,balanced,2,4,0,3,4,8,21,,Helena Richese
+426,9,2,balanced,6,3,0,10,9,2,24,fremen,"Glossu ""The Beast"" Rabban"
+426,9,3,balanced,9,2,0,4,3,4,21,,Count Ilban Richese
+426,9,4,balanced,10,1,1,6,0,2,24,emperor,Count Memnon Thorvald
+427,9,1,balanced,8,2,0,6,4,0,26,,Duke Leto Atreides
+427,9,2,balanced,12,1,1,9,7,0,20,emperor|guild|bene_gesserit,Count Memnon Thorvald
+427,9,3,balanced,4,4,0,18,2,10,21,fremen,Count Ilban Richese
+427,9,4,balanced,5,3,0,3,4,1,21,,"Glossu ""The Beast"" Rabban"
+428,10,1,balanced,9,2,0,8,2,3,22,bene_gesserit,Paul Atreides
+428,10,2,balanced,7,4,0,12,7,3,26,emperor,Baron Vladimir Harkonnen
+428,10,3,balanced,10,1,1,11,0,1,21,fremen,Duke Leto Atreides
+428,10,4,balanced,8,3,0,5,4,5,23,,Helena Richese
+429,10,1,balanced,8,3,0,12,4,6,24,guild|fremen,Baron Vladimir Harkonnen
+429,10,2,balanced,10,2,0,10,5,2,23,,Count Memnon Thorvald
+429,10,3,balanced,5,4,0,1,10,8,21,,Helena Richese
+429,10,4,balanced,11,1,1,4,1,3,24,emperor|bene_gesserit,Duke Leto Atreides
+430,10,1,balanced,5,4,0,11,14,5,22,fremen,Count Ilban Richese
+430,10,2,balanced,10,2,0,8,4,2,22,,Countess Ariana Thorvald
+430,10,3,balanced,10,1,1,9,1,6,22,emperor,"Glossu ""The Beast"" Rabban"
+430,10,4,balanced,7,3,0,4,3,6,27,bene_gesserit,Count Memnon Thorvald
+431,10,1,balanced,9,2,0,7,14,4,19,fremen,Count Ilban Richese
+431,10,2,balanced,8,3,0,3,5,5,22,,Paul Atreides
+431,10,3,balanced,7,4,0,9,7,3,22,emperor,Count Memnon Thorvald
+431,10,4,balanced,10,1,1,6,7,6,24,guild|bene_gesserit,Duke Leto Atreides
+432,10,1,balanced,11,1,1,8,3,2,23,emperor|guild|fremen,Baron Vladimir Harkonnen
+432,10,2,balanced,4,4,0,14,7,3,24,,"Glossu ""The Beast"" Rabban"
+432,10,3,balanced,9,2,0,9,3,3,23,,Duke Leto Atreides
+432,10,4,balanced,5,3,0,19,1,5,23,,Countess Ariana Thorvald
+433,9,1,balanced,7,4,0,4,7,7,21,,Countess Ariana Thorvald
+433,9,2,balanced,7,2,0,15,7,2,22,,Baron Vladimir Harkonnen
+433,9,3,balanced,7,3,0,8,5,7,20,emperor|fremen,"Glossu ""The Beast"" Rabban"
+433,9,4,balanced,10,1,1,0,6,9,23,guild,Count Memnon Thorvald
+434,10,1,balanced,6,4,0,5,7,5,26,fremen,Helena Richese
+434,10,2,balanced,9,2,0,6,5,5,22,,Count Ilban Richese
+434,10,3,balanced,11,1,1,13,2,3,23,emperor,Duke Leto Atreides
+434,10,4,balanced,8,3,0,14,11,6,23,,"Glossu ""The Beast"" Rabban"
+435,10,1,balanced,7,3,0,4,10,0,19,emperor,Helena Richese
+435,10,2,balanced,9,2,0,8,0,3,27,guild|bene_gesserit,Count Memnon Thorvald
+435,10,3,balanced,4,4,0,20,11,8,23,fremen,Countess Ariana Thorvald
+435,10,4,balanced,10,1,1,4,11,6,24,,"Glossu ""The Beast"" Rabban"
+436,9,1,balanced,5,3,0,7,4,5,21,fremen,Paul Atreides
+436,9,2,balanced,7,2,0,6,7,6,23,,"Glossu ""The Beast"" Rabban"
+436,9,3,balanced,5,4,0,2,5,2,24,,Duke Leto Atreides
+436,9,4,balanced,11,1,1,3,4,7,19,emperor|guild,Count Memnon Thorvald
+437,10,1,balanced,11,1,1,9,10,6,20,emperor|guild,Duke Leto Atreides
+437,10,2,balanced,9,3,0,0,2,3,25,fremen,Paul Atreides
+437,10,3,balanced,5,4,0,25,4,4,21,,"Glossu ""The Beast"" Rabban"
+437,10,4,balanced,9,2,0,5,16,1,26,,Baron Vladimir Harkonnen
+438,9,1,balanced,8,3,0,0,4,7,21,emperor|guild,"Glossu ""The Beast"" Rabban"
+438,9,2,balanced,10,1,1,6,2,6,17,,Countess Ariana Thorvald
+438,9,3,balanced,3,4,0,12,12,1,25,,Paul Atreides
+438,9,4,balanced,8,2,0,5,3,7,25,fremen,Count Memnon Thorvald
+439,10,1,balanced,11,1,1,4,8,1,20,emperor|bene_gesserit|fremen,Baron Vladimir Harkonnen
+439,10,2,balanced,5,4,0,7,5,5,24,,Countess Ariana Thorvald
+439,10,3,balanced,9,2,0,4,7,4,23,guild,Count Memnon Thorvald
+439,10,4,balanced,9,3,0,4,1,4,24,,Count Ilban Richese
+440,10,1,balanced,10,1,1,4,9,1,22,,Duke Leto Atreides
+440,10,2,balanced,7,4,0,5,8,5,21,fremen,Count Memnon Thorvald
+440,10,3,balanced,8,3,0,13,6,1,26,emperor,Helena Richese
+440,10,4,balanced,9,2,0,9,2,9,21,,Countess Ariana Thorvald
+441,10,1,balanced,7,4,0,4,0,4,24,,Count Ilban Richese
+441,10,2,balanced,11,1,1,8,7,5,20,bene_gesserit|fremen,Duke Leto Atreides
+441,10,3,balanced,9,2,0,5,7,2,25,emperor,"Glossu ""The Beast"" Rabban"
+441,10,4,balanced,7,3,0,12,5,2,25,guild,Baron Vladimir Harkonnen
+442,9,1,balanced,4,4,0,11,6,6,23,fremen,Countess Ariana Thorvald
+442,9,2,balanced,10,1,1,0,0,5,23,emperor,Baron Vladimir Harkonnen
+442,9,3,balanced,8,2,0,9,6,5,25,bene_gesserit,Count Memnon Thorvald
+442,9,4,balanced,5,3,0,5,5,8,22,guild,"Glossu ""The Beast"" Rabban"
+443,10,1,balanced,6,4,0,5,11,5,24,fremen,Baron Vladimir Harkonnen
+443,10,2,balanced,8,3,0,11,2,1,21,,Paul Atreides
+443,10,3,balanced,10,1,1,7,10,10,20,guild,"Glossu ""The Beast"" Rabban"
+443,10,4,balanced,8,2,0,17,7,2,20,emperor,Count Ilban Richese
+444,10,1,balanced,7,3,0,7,4,3,20,fremen,Duke Leto Atreides
+444,10,2,balanced,5,4,0,8,9,5,22,emperor,Baron Vladimir Harkonnen
+444,10,3,balanced,10,1,1,10,10,2,25,,Helena Richese
+444,10,4,balanced,8,2,0,12,6,5,24,guild,Paul Atreides
+445,10,1,balanced,6,4,0,12,14,1,23,,Duke Leto Atreides
+445,10,2,balanced,9,1,1,5,2,3,22,bene_gesserit,"Glossu ""The Beast"" Rabban"
+445,10,3,balanced,9,2,0,2,1,5,27,emperor,Count Ilban Richese
+445,10,4,balanced,8,3,0,0,4,6,22,guild|fremen,Baron Vladimir Harkonnen
+446,10,1,balanced,7,4,0,10,1,5,23,fremen,Baron Vladimir Harkonnen
+446,10,2,balanced,8,3,0,5,1,4,23,,Paul Atreides
+446,10,3,balanced,8,2,0,7,7,2,22,emperor,Count Memnon Thorvald
+446,10,4,balanced,9,1,1,6,4,8,24,guild,Countess Ariana Thorvald
+447,10,1,balanced,5,4,0,3,9,8,21,fremen,"Glossu ""The Beast"" Rabban"
+447,10,2,balanced,9,1,1,8,7,3,26,guild,Count Memnon Thorvald
+447,10,3,balanced,7,3,0,14,2,5,21,,Countess Ariana Thorvald
+447,10,4,balanced,9,2,0,7,2,2,24,emperor|bene_gesserit,Paul Atreides
+448,9,1,balanced,7,2,0,7,3,9,21,,Count Memnon Thorvald
+448,9,2,balanced,5,3,0,10,4,4,20,emperor,"Glossu ""The Beast"" Rabban"
+448,9,3,balanced,5,4,0,4,5,3,24,fremen,Count Ilban Richese
+448,9,4,balanced,10,1,1,4,3,3,20,bene_gesserit,Duke Leto Atreides
+449,10,1,balanced,5,4,0,2,6,7,21,emperor,Count Memnon Thorvald
+449,10,2,balanced,11,1,1,9,3,4,23,fremen,"Glossu ""The Beast"" Rabban"
+449,10,3,balanced,7,3,0,13,3,0,24,,Count Ilban Richese
+449,10,4,balanced,8,2,0,9,12,9,22,guild|bene_gesserit,Baron Vladimir Harkonnen
+450,10,1,balanced,9,2,0,10,6,4,20,,Count Ilban Richese
+450,10,2,balanced,8,3,0,8,0,5,25,fremen,Duke Leto Atreides
+450,10,3,balanced,7,4,0,0,2,7,24,guild,Countess Ariana Thorvald
+450,10,4,balanced,11,1,1,12,8,3,24,emperor,Count Memnon Thorvald
+451,10,1,balanced,9,2,0,4,5,6,23,emperor,Paul Atreides
+451,10,2,balanced,8,3,0,11,1,2,22,,Count Ilban Richese
+451,10,3,balanced,10,1,1,13,4,2,21,fremen,Baron Vladimir Harkonnen
+451,10,4,balanced,7,4,0,6,10,7,30,guild,Countess Ariana Thorvald
+452,10,1,balanced,8,2,0,5,4,10,20,fremen,Count Memnon Thorvald
+452,10,2,balanced,6,4,0,7,8,4,19,,Countess Ariana Thorvald
+452,10,3,balanced,6,3,0,14,0,1,23,emperor,Helena Richese
+452,10,4,balanced,8,1,1,11,11,1,25,bene_gesserit,Count Ilban Richese
+453,9,1,balanced,8,2,0,6,3,5,20,emperor,Count Memnon Thorvald
+453,9,2,balanced,5,4,0,10,2,5,21,guild,Duke Leto Atreides
+453,9,3,balanced,10,1,1,2,0,4,26,,Count Ilban Richese
+453,9,4,balanced,7,3,0,14,1,3,21,fremen,Baron Vladimir Harkonnen
+454,9,1,balanced,6,3,0,10,6,4,25,guild,"Glossu ""The Beast"" Rabban"
+454,9,2,balanced,10,1,1,4,2,2,23,,Helena Richese
+454,9,3,balanced,6,4,0,2,7,5,21,emperor|fremen,Count Memnon Thorvald
+454,9,4,balanced,7,2,0,1,9,4,24,,Duke Leto Atreides
+455,10,1,balanced,7,2,0,10,8,3,24,,Helena Richese
+455,10,2,balanced,12,1,1,8,6,0,24,emperor|guild|fremen,Count Ilban Richese
+455,10,3,balanced,6,3,0,10,11,6,22,,"Glossu ""The Beast"" Rabban"
+455,10,4,balanced,6,4,0,2,4,8,20,,Paul Atreides
+456,10,1,balanced,8,2,0,7,3,5,23,emperor|bene_gesserit,"Glossu ""The Beast"" Rabban"
+456,10,2,balanced,12,1,1,3,9,1,21,fremen,Helena Richese
+456,10,3,balanced,7,3,0,7,1,4,20,,Baron Vladimir Harkonnen
+456,10,4,balanced,5,4,0,10,4,6,22,,Countess Ariana Thorvald
+457,10,1,balanced,9,2,0,11,3,4,21,emperor,Baron Vladimir Harkonnen
+457,10,2,balanced,7,4,0,2,0,7,23,fremen,Paul Atreides
+457,10,3,balanced,11,1,1,10,4,3,23,guild|bene_gesserit,"Glossu ""The Beast"" Rabban"
+457,10,4,balanced,7,3,0,13,1,1,27,,Countess Ariana Thorvald
+458,10,1,balanced,6,4,0,9,0,3,19,fremen,Countess Ariana Thorvald
+458,10,2,balanced,7,3,0,9,9,5,28,,"Glossu ""The Beast"" Rabban"
+458,10,3,balanced,8,2,0,11,0,3,24,,Baron Vladimir Harkonnen
+458,10,4,balanced,12,1,1,3,9,6,24,emperor|guild,Paul Atreides
+459,10,1,balanced,10,1,1,9,13,4,23,,Countess Ariana Thorvald
+459,10,2,balanced,8,4,0,3,6,5,27,guild,Paul Atreides
+459,10,3,balanced,9,2,0,8,0,2,23,emperor,Helena Richese
+459,10,4,balanced,8,3,0,10,3,0,22,bene_gesserit|fremen,"Glossu ""The Beast"" Rabban"
+460,9,1,balanced,6,3,0,4,7,7,22,,Helena Richese
+460,9,2,balanced,11,1,1,0,7,5,24,guild,Count Ilban Richese
+460,9,3,balanced,5,4,0,10,12,4,23,emperor|fremen,Countess Ariana Thorvald
+460,9,4,balanced,10,2,0,3,4,3,21,bene_gesserit,Baron Vladimir Harkonnen
+461,10,1,balanced,9,1,1,6,1,3,23,bene_gesserit,Count Memnon Thorvald
+461,10,2,balanced,8,2,0,13,3,3,22,fremen,Paul Atreides
+461,10,3,balanced,8,3,0,10,2,3,26,,Count Ilban Richese
+461,10,4,balanced,7,4,0,9,0,4,20,emperor,Duke Leto Atreides
+462,10,1,balanced,7,3,0,6,9,1,24,bene_gesserit,Paul Atreides
+462,10,2,balanced,6,4,0,4,3,11,21,fremen,Count Memnon Thorvald
+462,10,3,balanced,9,1,1,9,5,1,25,emperor,Countess Ariana Thorvald
+462,10,4,balanced,8,2,0,7,6,6,20,guild,Baron Vladimir Harkonnen
+463,10,1,balanced,11,1,1,9,3,6,20,fremen,Baron Vladimir Harkonnen
+463,10,2,balanced,10,2,0,9,5,0,19,bene_gesserit,Helena Richese
+463,10,3,balanced,7,3,0,8,3,8,24,,Countess Ariana Thorvald
+463,10,4,balanced,7,4,0,6,7,8,24,emperor|guild,Count Memnon Thorvald
+464,9,1,balanced,6,4,0,4,1,4,24,,"Glossu ""The Beast"" Rabban"
+464,9,2,balanced,7,3,0,9,4,1,19,fremen,Helena Richese
+464,9,3,balanced,8,2,0,5,3,7,21,guild,Paul Atreides
+464,9,4,balanced,11,1,1,9,2,3,19,emperor,Baron Vladimir Harkonnen
+465,10,1,balanced,6,4,0,18,4,3,24,,Helena Richese
+465,10,2,balanced,11,1,1,5,2,11,19,fremen,"Glossu ""The Beast"" Rabban"
+465,10,3,balanced,9,2,0,9,3,3,27,emperor|guild,Baron Vladimir Harkonnen
+465,10,4,balanced,7,3,0,6,10,5,21,,Paul Atreides
+466,9,1,balanced,11,1,1,8,3,0,25,emperor|guild,Count Ilban Richese
+466,9,2,balanced,4,4,0,9,7,8,19,,Baron Vladimir Harkonnen
+466,9,3,balanced,6,3,0,13,2,2,23,fremen,Duke Leto Atreides
+466,9,4,balanced,6,2,0,13,7,2,19,,"Glossu ""The Beast"" Rabban"
+467,10,1,balanced,6,4,0,12,2,1,23,,Helena Richese
+467,10,2,balanced,14,1,1,4,11,0,22,emperor|guild|bene_gesserit,Count Memnon Thorvald
+467,10,3,balanced,11,2,0,6,1,1,26,,Baron Vladimir Harkonnen
+467,10,4,balanced,7,3,0,12,0,8,21,fremen,Countess Ariana Thorvald
+468,10,1,balanced,7,3,0,5,0,7,21,bene_gesserit|fremen,Duke Leto Atreides
+468,10,2,balanced,5,4,0,15,12,7,20,,Count Ilban Richese
+468,10,3,balanced,10,1,1,9,3,6,25,emperor,Baron Vladimir Harkonnen
+468,10,4,balanced,9,2,0,8,1,5,26,,Count Memnon Thorvald
+469,10,1,balanced,9,2,0,1,4,8,24,,Paul Atreides
+469,10,2,balanced,7,4,0,3,3,9,25,guild,Countess Ariana Thorvald
+469,10,3,balanced,8,3,0,3,5,2,23,fremen,Duke Leto Atreides
+469,10,4,balanced,10,1,1,11,4,1,20,emperor|bene_gesserit,"Glossu ""The Beast"" Rabban"
+470,10,1,balanced,9,2,0,1,1,8,22,emperor|bene_gesserit|fremen,Paul Atreides
+470,10,2,balanced,9,1,1,11,4,0,24,,"Glossu ""The Beast"" Rabban"
+470,10,3,balanced,8,3,0,11,13,5,23,,Count Memnon Thorvald
+470,10,4,balanced,6,4,0,9,0,7,22,guild,Baron Vladimir Harkonnen
+471,10,1,balanced,4,4,0,8,5,9,24,,Count Memnon Thorvald
+471,10,2,balanced,9,3,0,7,8,0,22,guild|bene_gesserit,Duke Leto Atreides
+471,10,3,balanced,9,2,0,9,0,6,22,,Count Ilban Richese
+471,10,4,balanced,10,1,1,11,5,1,21,fremen,"Glossu ""The Beast"" Rabban"
+472,10,1,balanced,4,3,0,7,6,3,26,,Duke Leto Atreides
+472,10,2,balanced,3,4,0,9,7,11,22,,Paul Atreides
+472,10,3,balanced,10,1,1,9,11,0,18,emperor|fremen,Count Memnon Thorvald
+472,10,4,balanced,8,2,0,20,1,1,20,,"Glossu ""The Beast"" Rabban"
+473,10,1,balanced,6,4,0,6,0,6,22,emperor,Countess Ariana Thorvald
+473,10,2,balanced,10,1,1,14,3,1,17,guild|bene_gesserit,"Glossu ""The Beast"" Rabban"
+473,10,3,balanced,8,2,0,11,4,2,26,fremen,Baron Vladimir Harkonnen
+473,10,4,balanced,8,3,0,9,2,3,21,,Count Ilban Richese
+474,9,1,balanced,11,1,1,1,13,2,20,fremen,Helena Richese
+474,9,2,balanced,4,4,0,8,7,5,24,,Paul Atreides
+474,9,3,balanced,5,3,0,4,6,9,23,emperor,Baron Vladimir Harkonnen
+474,9,4,balanced,6,2,0,3,1,7,23,guild,Countess Ariana Thorvald
+475,10,1,balanced,8,2,0,13,2,0,21,bene_gesserit,Count Ilban Richese
+475,10,2,balanced,5,4,0,9,4,6,19,,Countess Ariana Thorvald
+475,10,3,balanced,8,3,0,3,6,8,21,guild|fremen,"Glossu ""The Beast"" Rabban"
+475,10,4,balanced,9,1,1,6,1,1,25,emperor,Helena Richese
+476,10,1,balanced,6,3,0,17,3,3,23,fremen,Count Ilban Richese
+476,10,2,balanced,6,4,0,8,11,3,23,,Count Memnon Thorvald
+476,10,3,balanced,9,1,1,3,1,6,25,emperor|guild,Baron Vladimir Harkonnen
+476,10,4,balanced,8,2,0,13,9,4,22,bene_gesserit,"Glossu ""The Beast"" Rabban"
+477,10,1,balanced,5,4,0,9,8,12,25,guild,"Glossu ""The Beast"" Rabban"
+477,10,2,balanced,10,2,0,2,4,1,21,bene_gesserit|fremen,Count Ilban Richese
+477,10,3,balanced,6,3,0,9,3,8,23,,Countess Ariana Thorvald
+477,10,4,balanced,11,1,1,10,0,1,22,emperor,Baron Vladimir Harkonnen
+478,10,1,balanced,3,4,0,11,7,6,20,,Helena Richese
+478,10,2,balanced,9,3,0,3,10,10,19,guild|fremen,"Glossu ""The Beast"" Rabban"
+478,10,3,balanced,11,2,0,3,7,0,23,emperor|bene_gesserit,Paul Atreides
+478,10,4,balanced,11,1,1,4,4,1,23,,Duke Leto Atreides
+479,9,1,balanced,11,1,1,4,5,7,21,guild,Baron Vladimir Harkonnen
+479,9,2,balanced,4,4,0,5,8,8,21,,Countess Ariana Thorvald
+479,9,3,balanced,7,2,0,10,7,3,22,emperor|fremen,"Glossu ""The Beast"" Rabban"
+479,9,4,balanced,4,3,0,18,2,1,23,bene_gesserit,Count Ilban Richese
+480,10,1,balanced,7,2,0,2,2,7,24,guild|fremen,Baron Vladimir Harkonnen
+480,10,2,balanced,6,3,0,15,4,3,21,,Duke Leto Atreides
+480,10,3,balanced,14,1,1,2,5,6,26,emperor|bene_gesserit,Count Memnon Thorvald
+480,10,4,balanced,4,4,0,10,0,6,23,,"Glossu ""The Beast"" Rabban"
+481,10,1,balanced,6,4,0,10,10,2,20,bene_gesserit,Duke Leto Atreides
+481,10,2,balanced,7,3,0,9,3,8,25,guild,Helena Richese
+481,10,3,balanced,12,1,1,1,7,2,25,fremen,Count Memnon Thorvald
+481,10,4,balanced,9,2,0,6,5,7,26,emperor,Baron Vladimir Harkonnen
+482,8,1,balanced,4,2,0,12,3,8,20,fremen,"Glossu ""The Beast"" Rabban"
+482,8,2,balanced,12,1,1,6,0,1,24,emperor|guild|bene_gesserit,Baron Vladimir Harkonnen
+482,8,3,balanced,4,3,0,12,1,2,21,,Paul Atreides
+482,8,4,balanced,4,4,0,6,1,8,20,,Count Memnon Thorvald
+483,10,1,balanced,9,3,0,6,0,7,23,emperor|fremen,Count Ilban Richese
+483,10,2,balanced,9,2,0,10,9,2,22,guild,"Glossu ""The Beast"" Rabban"
+483,10,3,balanced,9,1,1,11,7,0,24,,Paul Atreides
+483,10,4,balanced,9,4,0,3,2,0,24,,Helena Richese
+484,9,1,balanced,5,4,0,1,4,9,20,,Helena Richese
+484,9,2,balanced,6,3,0,6,3,7,22,guild,Baron Vladimir Harkonnen
+484,9,3,balanced,6,2,0,14,9,3,22,fremen,Paul Atreides
+484,9,4,balanced,12,1,1,0,8,1,25,emperor,"Glossu ""The Beast"" Rabban"
+485,10,1,balanced,5,4,0,10,15,4,22,fremen,"Glossu ""The Beast"" Rabban"
+485,10,2,balanced,9,3,0,5,0,12,22,guild,Countess Ariana Thorvald
+485,10,3,balanced,9,2,0,13,8,3,21,emperor,Count Memnon Thorvald
+485,10,4,balanced,11,1,1,5,4,1,24,bene_gesserit,Paul Atreides
+486,9,1,balanced,7,2,0,11,3,2,25,fremen,Duke Leto Atreides
+486,9,2,balanced,5,4,0,9,1,2,21,,Count Ilban Richese
+486,9,3,balanced,6,3,0,8,3,8,20,,"Glossu ""The Beast"" Rabban"
+486,9,4,balanced,10,1,1,4,0,0,22,emperor|guild,Baron Vladimir Harkonnen
+487,10,1,balanced,7,4,0,5,10,7,21,fremen,Paul Atreides
+487,10,2,balanced,10,2,0,10,2,3,21,,"Glossu ""The Beast"" Rabban"
+487,10,3,balanced,8,3,0,4,10,10,24,guild,Countess Ariana Thorvald
+487,10,4,balanced,11,1,1,5,5,3,22,emperor|bene_gesserit,Baron Vladimir Harkonnen
+488,9,1,balanced,8,2,0,4,6,4,23,fremen,Duke Leto Atreides
+488,9,2,balanced,5,3,0,16,1,7,23,,Countess Ariana Thorvald
+488,9,3,balanced,5,4,0,9,6,1,22,,Helena Richese
+488,9,4,balanced,10,1,1,8,1,3,24,emperor,"Glossu ""The Beast"" Rabban"
+489,10,1,balanced,6,4,0,2,7,8,25,guild,Baron Vladimir Harkonnen
+489,10,2,balanced,12,1,1,4,11,1,24,fremen,Countess Ariana Thorvald
+489,10,3,balanced,10,2,0,8,3,5,21,emperor|bene_gesserit,Count Ilban Richese
+489,10,4,balanced,8,3,0,5,4,5,24,,Paul Atreides
+490,10,1,balanced,4,4,0,13,9,10,21,guild,Count Ilban Richese
+490,10,2,balanced,10,1,1,5,4,1,22,,Baron Vladimir Harkonnen
+490,10,3,balanced,9,2,0,9,3,2,23,bene_gesserit,"Glossu ""The Beast"" Rabban"
+490,10,4,balanced,8,3,0,9,8,4,25,emperor|fremen,Duke Leto Atreides
+491,9,1,balanced,5,3,0,11,3,1,21,,Count Memnon Thorvald
+491,9,2,balanced,12,1,1,3,2,2,21,emperor|guild,Baron Vladimir Harkonnen
+491,9,3,balanced,4,4,0,20,0,6,21,fremen,Paul Atreides
+491,9,4,balanced,5,2,0,15,3,7,24,,Helena Richese
+492,10,1,balanced,8,4,0,3,4,7,25,bene_gesserit,Countess Ariana Thorvald
+492,10,2,balanced,11,1,1,4,8,2,26,,"Glossu ""The Beast"" Rabban"
+492,10,3,balanced,9,3,0,2,9,3,24,fremen,Helena Richese
+492,10,4,balanced,9,2,0,10,2,6,20,emperor,Count Memnon Thorvald
+493,10,1,balanced,4,4,0,9,4,7,21,,"Glossu ""The Beast"" Rabban"
+493,10,2,balanced,9,2,0,4,5,1,25,fremen,Count Ilban Richese
+493,10,3,balanced,9,1,1,4,9,6,24,,Countess Ariana Thorvald
+493,10,4,balanced,7,3,0,14,3,7,23,emperor,Paul Atreides
+494,10,1,balanced,9,2,0,10,8,0,22,,Paul Atreides
+494,10,2,balanced,9,4,0,2,12,2,23,fremen,Duke Leto Atreides
+494,10,3,balanced,9,3,0,9,0,4,27,emperor|guild,"Glossu ""The Beast"" Rabban"
+494,10,4,balanced,11,1,1,6,2,5,21,,Baron Vladimir Harkonnen
+495,8,1,balanced,6,2,0,2,8,2,19,,Paul Atreides
+495,8,2,balanced,4,3,0,8,5,2,19,emperor,Helena Richese
+495,8,3,balanced,11,1,1,1,4,4,23,guild|bene_gesserit,Baron Vladimir Harkonnen
+495,8,4,balanced,4,4,0,1,7,9,22,fremen,Duke Leto Atreides
+496,10,1,balanced,7,4,0,14,2,8,23,,Paul Atreides
+496,10,2,balanced,11,1,1,11,0,3,20,emperor,Count Memnon Thorvald
+496,10,3,balanced,8,3,0,7,5,4,26,bene_gesserit,Countess Ariana Thorvald
+496,10,4,balanced,9,2,0,4,3,0,27,guild|fremen,Helena Richese
+497,10,1,balanced,6,3,0,9,9,8,22,guild,Baron Vladimir Harkonnen
+497,10,2,balanced,11,1,1,1,5,0,23,emperor,"Glossu ""The Beast"" Rabban"
+497,10,3,balanced,8,2,0,12,16,4,23,fremen,Count Memnon Thorvald
+497,10,4,balanced,4,4,0,9,1,5,22,,Paul Atreides
+498,9,1,balanced,6,3,0,13,5,5,23,,Count Ilban Richese
+498,9,2,balanced,5,4,0,10,5,6,25,fremen,Countess Ariana Thorvald
+498,9,3,balanced,10,1,1,1,4,1,23,emperor|guild,Baron Vladimir Harkonnen
+498,9,4,balanced,8,2,0,4,5,4,23,bene_gesserit,Duke Leto Atreides
+499,10,1,balanced,10,1,1,3,10,3,23,fremen,Count Memnon Thorvald
+499,10,2,balanced,9,4,0,5,2,2,21,,Helena Richese
+499,10,3,balanced,9,3,0,7,4,4,25,guild|bene_gesserit,Baron Vladimir Harkonnen
+499,10,4,balanced,9,2,0,13,3,2,24,emperor,Count Ilban Richese
+500,10,1,balanced,6,2,0,12,5,5,24,,Countess Ariana Thorvald
+500,10,2,balanced,6,3,0,8,4,3,22,fremen,Count Ilban Richese
+500,10,3,balanced,5,4,0,4,7,12,22,,"Glossu ""The Beast"" Rabban"
+500,10,4,balanced,11,1,1,5,5,1,22,emperor|bene_gesserit,Helena Richese
+501,10,1,balanced,5,4,0,8,2,9,22,,"Glossu ""The Beast"" Rabban"
+501,10,2,balanced,6,3,0,17,6,6,19,,Countess Ariana Thorvald
+501,10,3,balanced,11,1,1,7,3,5,21,,Helena Richese
+501,10,4,balanced,10,2,0,7,4,0,27,emperor|fremen,Count Memnon Thorvald
+502,9,1,balanced,4,4,0,5,1,8,23,,Countess Ariana Thorvald
+502,9,2,balanced,10,1,1,9,1,2,22,fremen,Baron Vladimir Harkonnen
+502,9,3,balanced,7,2,0,9,5,9,20,emperor,Count Ilban Richese
+502,9,4,balanced,6,3,0,12,5,1,25,,Helena Richese
+503,10,1,balanced,12,1,1,7,5,0,23,,"Glossu ""The Beast"" Rabban"
+503,10,2,balanced,6,3,0,11,4,6,26,fremen,Paul Atreides
+503,10,3,balanced,11,2,0,1,6,7,21,emperor|guild|bene_gesserit,Count Memnon Thorvald
+503,10,4,balanced,3,4,0,12,0,10,21,,Helena Richese
+504,10,1,balanced,6,4,0,10,7,7,21,,Countess Ariana Thorvald
+504,10,2,balanced,9,2,0,12,0,2,22,,Duke Leto Atreides
+504,10,3,balanced,9,3,0,9,5,4,18,emperor|guild|fremen,Baron Vladimir Harkonnen
+504,10,4,balanced,10,1,1,6,3,1,23,,Helena Richese
+505,10,1,balanced,8,2,0,13,1,3,20,,Count Memnon Thorvald
+505,10,2,balanced,8,3,0,8,2,4,25,fremen,Duke Leto Atreides
+505,10,3,balanced,13,1,1,9,4,3,20,emperor|bene_gesserit,"Glossu ""The Beast"" Rabban"
+505,10,4,balanced,8,4,0,6,10,10,26,guild,Countess Ariana Thorvald
+506,10,1,balanced,6,3,0,5,8,7,24,fremen,Countess Ariana Thorvald
+506,10,2,balanced,10,1,1,12,4,2,20,,Duke Leto Atreides
+506,10,3,balanced,9,2,0,4,2,4,21,emperor|bene_gesserit,Count Ilban Richese
+506,10,4,balanced,5,4,0,7,5,10,23,,Paul Atreides
+507,8,1,balanced,6,2,0,11,6,2,19,,Duke Leto Atreides
+507,8,2,balanced,5,3,0,3,4,6,21,,Count Ilban Richese
+507,8,3,balanced,4,4,0,7,12,4,18,bene_gesserit,Paul Atreides
+507,8,4,balanced,11,1,1,9,7,0,26,emperor|guild|fremen,Baron Vladimir Harkonnen
+508,9,1,balanced,5,4,0,3,0,7,23,bene_gesserit|fremen,Helena Richese
+508,9,2,balanced,5,3,0,8,2,4,22,,Duke Leto Atreides
+508,9,3,balanced,10,1,1,8,2,6,22,guild,Countess Ariana Thorvald
+508,9,4,balanced,10,2,0,5,8,1,24,emperor,Baron Vladimir Harkonnen
+509,10,1,balanced,7,3,0,15,5,0,23,fremen,"Glossu ""The Beast"" Rabban"
+509,10,2,balanced,7,4,0,5,12,8,24,emperor,Paul Atreides
+509,10,3,balanced,10,2,0,7,8,0,25,guild|bene_gesserit,Duke Leto Atreides
+509,10,4,balanced,11,1,1,10,4,5,24,,Count Ilban Richese
+510,10,1,balanced,8,2,0,6,7,3,25,guild,Count Ilban Richese
+510,10,2,balanced,8,1,1,9,8,1,25,bene_gesserit,Count Memnon Thorvald
+510,10,3,balanced,7,3,0,9,10,9,23,emperor,"Glossu ""The Beast"" Rabban"
+510,10,4,balanced,4,4,0,15,1,7,20,fremen,Paul Atreides
+511,10,1,balanced,6,4,0,0,4,8,24,emperor,Helena Richese
+511,10,2,balanced,8,1,1,11,3,7,20,,"Glossu ""The Beast"" Rabban"
+511,10,3,balanced,6,3,0,4,2,4,23,fremen,Count Memnon Thorvald
+511,10,4,balanced,6,2,0,11,2,0,22,,Duke Leto Atreides
+512,10,1,balanced,7,3,0,9,5,4,24,,Helena Richese
+512,10,2,balanced,8,2,0,2,4,8,24,,Countess Ariana Thorvald
+512,10,3,balanced,13,1,1,7,5,5,23,emperor|guild|fremen,Count Memnon Thorvald
+512,10,4,balanced,5,4,0,11,11,5,22,,"Glossu ""The Beast"" Rabban"
+513,10,1,balanced,9,1,1,3,3,10,20,guild|fremen,Baron Vladimir Harkonnen
+513,10,2,balanced,8,2,0,9,5,1,22,emperor,Count Memnon Thorvald
+513,10,3,balanced,5,4,0,16,4,3,22,,Paul Atreides
+513,10,4,balanced,8,3,0,6,14,5,25,,"Glossu ""The Beast"" Rabban"
+514,8,1,balanced,8,2,0,5,0,1,18,fremen,Baron Vladimir Harkonnen
+514,8,2,balanced,3,4,0,6,6,7,20,,Count Ilban Richese
+514,8,3,balanced,5,3,0,4,8,3,22,,Countess Ariana Thorvald
+514,8,4,balanced,10,1,1,6,7,1,22,emperor,Paul Atreides
+515,8,1,balanced,10,1,1,8,4,3,19,emperor,Baron Vladimir Harkonnen
+515,8,2,balanced,3,4,0,0,0,11,22,,Duke Leto Atreides
+515,8,3,balanced,5,3,0,11,14,1,22,,Count Ilban Richese
+515,8,4,balanced,6,2,0,3,3,3,21,fremen,Helena Richese
+516,10,1,balanced,6,4,0,9,3,1,24,,Count Ilban Richese
+516,10,2,balanced,7,3,0,9,2,4,21,fremen,Paul Atreides
+516,10,3,balanced,8,2,0,17,6,10,24,emperor|bene_gesserit,"Glossu ""The Beast"" Rabban"
+516,10,4,balanced,10,1,1,3,7,10,25,guild,Countess Ariana Thorvald
+517,9,1,balanced,6,3,0,1,1,6,21,fremen,Duke Leto Atreides
+517,9,2,balanced,11,1,1,4,2,8,21,guild,Countess Ariana Thorvald
+517,9,3,balanced,5,4,0,15,6,2,22,,"Glossu ""The Beast"" Rabban"
+517,9,4,balanced,6,2,0,10,10,8,20,,Baron Vladimir Harkonnen
+518,10,1,balanced,6,4,0,3,8,9,23,fremen,Duke Leto Atreides
+518,10,2,balanced,10,1,1,5,0,5,23,guild,Baron Vladimir Harkonnen
+518,10,3,balanced,8,3,0,7,0,2,25,bene_gesserit,Helena Richese
+518,10,4,balanced,9,2,0,11,10,1,22,emperor,Count Ilban Richese
+519,10,1,balanced,9,2,0,9,7,1,22,,Count Ilban Richese
+519,10,2,balanced,6,4,0,7,2,2,19,,"Glossu ""The Beast"" Rabban"
+519,10,3,balanced,6,3,0,10,3,10,21,guild|fremen,Baron Vladimir Harkonnen
+519,10,4,balanced,12,1,1,4,5,4,23,emperor|bene_gesserit,Count Memnon Thorvald
+520,10,1,balanced,6,3,0,8,12,6,21,fremen,Duke Leto Atreides
+520,10,2,balanced,5,4,0,6,7,5,25,,Paul Atreides
+520,10,3,balanced,9,2,0,3,9,3,24,guild,Baron Vladimir Harkonnen
+520,10,4,balanced,9,1,1,6,2,5,21,emperor|bene_gesserit,Count Ilban Richese
+521,10,1,balanced,9,3,0,6,0,9,22,fremen,Helena Richese
+521,10,2,balanced,10,1,1,6,8,0,23,,Count Memnon Thorvald
+521,10,3,balanced,9,2,0,10,7,1,25,emperor,"Glossu ""The Beast"" Rabban"
+521,10,4,balanced,8,4,0,9,0,8,25,guild,Paul Atreides
+522,9,1,balanced,6,3,0,5,8,6,21,guild,Count Ilban Richese
+522,9,2,balanced,9,2,0,3,5,2,23,,Baron Vladimir Harkonnen
+522,9,3,balanced,11,1,1,5,2,1,23,emperor|bene_gesserit,Paul Atreides
+522,9,4,balanced,4,4,0,7,4,5,19,fremen,Duke Leto Atreides
+523,9,1,balanced,6,4,0,8,6,6,21,fremen,Paul Atreides
+523,9,2,balanced,7,2,0,17,6,3,25,emperor,Baron Vladimir Harkonnen
+523,9,3,balanced,10,1,1,6,9,1,20,bene_gesserit,"Glossu ""The Beast"" Rabban"
+523,9,4,balanced,6,3,0,9,2,5,19,guild,Duke Leto Atreides
+524,10,1,balanced,12,1,1,2,4,8,21,,"Glossu ""The Beast"" Rabban"
+524,10,2,balanced,6,4,0,6,1,5,23,fremen,Count Memnon Thorvald
+524,10,3,balanced,7,3,0,14,4,2,26,emperor,Countess Ariana Thorvald
+524,10,4,balanced,8,2,0,11,13,2,21,bene_gesserit,Count Ilban Richese
+525,10,1,balanced,11,1,1,9,0,0,23,emperor|bene_gesserit,Count Ilban Richese
+525,10,2,balanced,10,2,0,6,4,3,23,fremen,Count Memnon Thorvald
+525,10,3,balanced,6,3,0,10,5,4,23,guild,Baron Vladimir Harkonnen
+525,10,4,balanced,5,4,0,14,0,2,23,,Countess Ariana Thorvald
+526,10,1,balanced,8,1,1,7,4,6,22,,"Glossu ""The Beast"" Rabban"
+526,10,2,balanced,5,4,0,9,8,0,24,emperor,Paul Atreides
+526,10,3,balanced,6,3,0,8,1,9,22,fremen,Countess Ariana Thorvald
+526,10,4,balanced,6,2,0,8,8,8,23,,Duke Leto Atreides
+527,9,1,balanced,10,2,0,11,12,4,20,emperor|guild,Paul Atreides
+527,9,2,balanced,11,1,1,7,2,3,20,fremen,Count Memnon Thorvald
+527,9,3,balanced,5,4,0,13,6,2,20,,"Glossu ""The Beast"" Rabban"
+527,9,4,balanced,6,3,0,8,5,9,21,,Baron Vladimir Harkonnen
+528,10,1,balanced,5,4,0,1,1,11,25,fremen,Helena Richese
+528,10,2,balanced,5,3,0,5,3,8,27,guild,Baron Vladimir Harkonnen
+528,10,3,balanced,10,1,1,5,0,6,19,,Duke Leto Atreides
+528,10,4,balanced,9,2,0,11,4,1,23,emperor,Countess Ariana Thorvald
+529,10,1,balanced,8,3,0,8,9,3,24,fremen,Duke Leto Atreides
+529,10,2,balanced,7,4,0,2,5,12,20,,Countess Ariana Thorvald
+529,10,3,balanced,11,1,1,5,7,5,25,guild,"Glossu ""The Beast"" Rabban"
+529,10,4,balanced,8,2,0,22,3,0,26,emperor,Helena Richese
+530,10,1,balanced,6,4,0,6,1,7,21,,"Glossu ""The Beast"" Rabban"
+530,10,2,balanced,8,2,0,11,6,0,23,,Paul Atreides
+530,10,3,balanced,7,3,0,2,3,4,23,,Helena Richese
+530,10,4,balanced,9,1,1,7,12,5,26,emperor|fremen,Countess Ariana Thorvald
+531,10,1,balanced,6,4,0,10,0,5,24,guild,Duke Leto Atreides
+531,10,2,balanced,7,3,0,12,9,8,25,emperor,Countess Ariana Thorvald
+531,10,3,balanced,9,2,0,9,2,0,23,fremen,Count Ilban Richese
+531,10,4,balanced,12,1,1,7,1,3,21,,Baron Vladimir Harkonnen
+532,9,1,balanced,10,1,1,7,6,3,21,emperor|bene_gesserit,Duke Leto Atreides
+532,9,2,balanced,6,4,0,11,0,3,24,fremen,Count Ilban Richese
+532,9,3,balanced,7,3,0,7,1,7,20,,Paul Atreides
+532,9,4,balanced,8,2,0,11,9,3,22,guild,Count Memnon Thorvald
+533,9,1,balanced,5,2,0,12,6,9,23,,Baron Vladimir Harkonnen
+533,9,2,balanced,10,1,1,6,3,0,22,bene_gesserit|fremen,Count Ilban Richese
+533,9,3,balanced,5,3,0,8,7,5,20,emperor,"Glossu ""The Beast"" Rabban"
+533,9,4,balanced,5,4,0,4,4,8,23,,Helena Richese
+534,10,1,balanced,10,1,1,4,4,1,28,,Helena Richese
+534,10,2,balanced,4,4,0,14,4,9,21,fremen,"Glossu ""The Beast"" Rabban"
+534,10,3,balanced,7,2,0,11,9,3,20,emperor,Duke Leto Atreides
+534,10,4,balanced,7,3,0,6,3,6,23,guild,Count Ilban Richese
+535,10,1,balanced,6,4,0,15,2,3,24,fremen,Count Ilban Richese
+535,10,2,balanced,8,3,0,6,1,6,22,,Helena Richese
+535,10,3,balanced,12,1,1,6,3,8,23,emperor|guild|bene_gesserit,Paul Atreides
+535,10,4,balanced,8,2,0,11,13,3,24,,Count Memnon Thorvald
+536,9,1,balanced,7,3,0,8,6,2,21,,Helena Richese
+536,9,2,balanced,5,4,0,6,7,8,24,guild,Duke Leto Atreides
+536,9,3,balanced,8,2,0,4,3,3,26,emperor,Count Ilban Richese
+536,9,4,balanced,10,1,1,4,0,3,20,fremen,Count Memnon Thorvald
+537,10,1,balanced,4,4,0,12,5,9,25,fremen,Paul Atreides
+537,10,2,balanced,10,1,1,12,0,1,21,,Count Memnon Thorvald
+537,10,3,balanced,7,2,0,8,5,6,21,emperor,Countess Ariana Thorvald
+537,10,4,balanced,6,3,0,6,9,8,24,,Duke Leto Atreides
+538,10,1,balanced,6,3,0,4,0,3,26,fremen,Count Memnon Thorvald
+538,10,2,balanced,13,1,1,8,1,0,19,emperor|bene_gesserit,"Glossu ""The Beast"" Rabban"
+538,10,3,balanced,9,2,0,7,7,5,21,,Countess Ariana Thorvald
+538,10,4,balanced,5,4,0,11,2,4,23,,Count Ilban Richese
+539,9,1,balanced,10,1,1,8,3,3,22,fremen,Countess Ariana Thorvald
+539,9,2,balanced,9,2,0,10,4,3,23,,Count Ilban Richese
+539,9,3,balanced,8,3,0,5,2,3,24,emperor|bene_gesserit,Duke Leto Atreides
+539,9,4,balanced,6,4,0,9,0,3,24,,"Glossu ""The Beast"" Rabban"
+540,9,1,balanced,6,4,0,10,7,1,23,,Count Ilban Richese
+540,9,2,balanced,7,3,0,8,1,2,22,,Helena Richese
+540,9,3,balanced,12,1,1,5,6,5,23,emperor|guild,"Glossu ""The Beast"" Rabban"
+540,9,4,balanced,8,2,0,5,3,9,21,bene_gesserit|fremen,Duke Leto Atreides
+541,9,1,balanced,9,2,0,5,5,5,23,,Duke Leto Atreides
+541,9,2,balanced,5,3,0,9,5,1,21,,Paul Atreides
+541,9,3,balanced,4,4,0,6,2,4,22,,Helena Richese
+541,9,4,balanced,12,1,1,7,3,2,21,emperor|bene_gesserit|fremen,"Glossu ""The Beast"" Rabban"
+542,10,1,balanced,8,4,0,9,0,7,20,,Duke Leto Atreides
+542,10,2,balanced,9,2,0,8,13,6,20,emperor,Paul Atreides
+542,10,3,balanced,10,1,1,7,4,2,25,,Count Memnon Thorvald
+542,10,4,balanced,8,3,0,12,2,3,24,fremen,Baron Vladimir Harkonnen
+543,9,1,balanced,6,3,0,2,3,4,23,,Count Memnon Thorvald
+543,9,2,balanced,5,4,0,13,6,1,22,fremen,Count Ilban Richese
+543,9,3,balanced,6,2,0,8,6,4,19,emperor,Duke Leto Atreides
+543,9,4,balanced,11,1,1,5,1,3,23,,Baron Vladimir Harkonnen
+544,10,1,balanced,11,2,0,4,9,4,24,emperor|guild|bene_gesserit,Count Ilban Richese
+544,10,2,balanced,12,1,1,8,5,1,23,fremen,"Glossu ""The Beast"" Rabban"
+544,10,3,balanced,5,4,0,7,9,7,20,,Paul Atreides
+544,10,4,balanced,6,3,0,7,5,4,23,,Duke Leto Atreides
+545,10,1,balanced,5,4,0,15,6,2,23,fremen,Count Memnon Thorvald
+545,10,2,balanced,6,2,0,3,3,9,20,,Countess Ariana Thorvald
+545,10,3,balanced,6,3,0,2,7,9,22,guild,Paul Atreides
+545,10,4,balanced,10,1,1,8,2,2,21,emperor,"Glossu ""The Beast"" Rabban"
+546,9,1,balanced,11,1,1,2,0,4,27,emperor|guild|fremen,Count Ilban Richese
+546,9,2,balanced,3,4,0,12,3,5,18,,Count Memnon Thorvald
+546,9,3,balanced,10,2,0,8,1,3,23,,Baron Vladimir Harkonnen
+546,9,4,balanced,6,3,0,6,0,5,21,,Paul Atreides
+547,9,1,balanced,6,4,0,2,0,3,20,,Count Memnon Thorvald
+547,9,2,balanced,10,1,1,7,5,4,23,guild|fremen,Countess Ariana Thorvald
+547,9,3,balanced,7,3,0,3,4,6,25,emperor,"Glossu ""The Beast"" Rabban"
+547,9,4,balanced,7,2,0,8,6,5,21,,Paul Atreides
+548,10,1,balanced,6,4,0,10,0,2,24,,Count Memnon Thorvald
+548,10,2,balanced,8,3,0,11,10,1,22,bene_gesserit,Duke Leto Atreides
+548,10,3,balanced,11,1,1,2,2,2,24,fremen,Helena Richese
+548,10,4,balanced,8,2,0,12,14,3,24,emperor|guild,Paul Atreides
+549,9,1,balanced,2,4,0,17,1,2,22,,Countess Ariana Thorvald
+549,9,2,balanced,3,3,0,13,3,1,19,,Count Memnon Thorvald
+549,9,3,balanced,10,1,1,1,3,10,24,emperor|guild|fremen,Helena Richese
+549,9,4,balanced,9,2,0,7,2,5,20,bene_gesserit,Paul Atreides
+550,10,1,balanced,6,3,0,13,8,3,26,,Helena Richese
+550,10,2,balanced,11,2,0,4,5,9,21,emperor|guild|bene_gesserit,Count Memnon Thorvald
+550,10,3,balanced,6,4,0,6,4,3,23,,Count Ilban Richese
+550,10,4,balanced,11,1,1,16,0,2,26,fremen,Paul Atreides
+551,10,1,balanced,9,1,1,10,2,6,24,emperor,Paul Atreides
+551,10,2,balanced,8,3,0,10,3,2,20,fremen,Count Memnon Thorvald
+551,10,3,balanced,8,4,0,5,3,6,20,bene_gesserit,Countess Ariana Thorvald
+551,10,4,balanced,8,2,0,12,9,9,19,,"Glossu ""The Beast"" Rabban"
+552,10,1,balanced,8,4,0,7,3,3,22,guild,Count Memnon Thorvald
+552,10,2,balanced,8,2,0,12,4,1,25,,Helena Richese
+552,10,3,balanced,8,3,0,9,3,6,22,bene_gesserit|fremen,Paul Atreides
+552,10,4,balanced,11,1,1,5,1,6,23,,"Glossu ""The Beast"" Rabban"
+553,8,1,balanced,4,3,0,7,5,3,21,,Helena Richese
+553,8,2,balanced,8,2,0,9,13,1,18,emperor,Count Memnon Thorvald
+553,8,3,balanced,2,4,0,6,5,16,21,,Countess Ariana Thorvald
+553,8,4,balanced,10,1,1,1,4,2,23,guild|fremen,Baron Vladimir Harkonnen
+554,10,1,balanced,7,4,0,4,3,9,22,,Helena Richese
+554,10,2,balanced,8,3,0,5,8,3,22,guild,Duke Leto Atreides
+554,10,3,balanced,8,2,0,12,6,4,23,fremen,Baron Vladimir Harkonnen
+554,10,4,balanced,9,1,1,8,7,2,23,emperor|bene_gesserit,Count Ilban Richese
+555,10,1,balanced,5,4,0,8,5,6,24,,"Glossu ""The Beast"" Rabban"
+555,10,2,balanced,12,1,1,7,5,3,23,guild,Paul Atreides
+555,10,3,balanced,6,3,0,6,2,4,26,fremen,Count Ilban Richese
+555,10,4,balanced,11,2,0,5,7,4,22,emperor|bene_gesserit,Baron Vladimir Harkonnen
+556,10,1,balanced,4,4,0,13,12,4,22,,Countess Ariana Thorvald
+556,10,2,balanced,10,1,1,10,0,5,22,fremen,Count Ilban Richese
+556,10,3,balanced,10,2,0,6,7,2,28,guild,Helena Richese
+556,10,4,balanced,8,3,0,11,0,0,23,emperor,Duke Leto Atreides
+557,9,1,balanced,4,4,0,7,8,7,19,,Count Ilban Richese
+557,9,2,balanced,7,2,0,4,8,2,23,guild,"Glossu ""The Beast"" Rabban"
+557,9,3,balanced,5,3,0,7,7,9,22,fremen,Helena Richese
+557,9,4,balanced,10,1,1,3,2,0,25,emperor,Duke Leto Atreides
+558,9,1,balanced,6,3,0,12,7,3,19,,Count Memnon Thorvald
+558,9,2,balanced,7,2,0,11,1,3,21,,Count Ilban Richese
+558,9,3,balanced,5,4,0,2,5,7,24,,Countess Ariana Thorvald
+558,9,4,balanced,11,1,1,7,1,5,21,emperor|guild|fremen,Baron Vladimir Harkonnen
+559,10,1,balanced,4,4,0,12,2,4,24,,Countess Ariana Thorvald
+559,10,2,balanced,10,1,1,6,2,2,22,bene_gesserit,Helena Richese
+559,10,3,balanced,9,2,0,12,3,2,24,emperor|fremen,Baron Vladimir Harkonnen
+559,10,4,balanced,8,3,0,7,2,4,21,,"Glossu ""The Beast"" Rabban"
+560,10,1,balanced,8,2,0,0,12,7,23,,Paul Atreides
+560,10,2,balanced,6,3,0,6,3,7,26,,Countess Ariana Thorvald
+560,10,3,balanced,10,1,1,3,3,7,25,guild|fremen,"Glossu ""The Beast"" Rabban"
+560,10,4,balanced,6,4,0,4,10,6,21,emperor,Count Ilban Richese
+561,9,1,balanced,5,4,0,10,5,3,22,fremen,Helena Richese
+561,9,2,balanced,11,1,1,6,9,4,24,emperor,Baron Vladimir Harkonnen
+561,9,3,balanced,6,3,0,7,6,4,22,,Count Memnon Thorvald
+561,9,4,balanced,7,2,0,10,2,5,20,,Countess Ariana Thorvald
+562,10,1,balanced,6,3,0,4,4,7,23,,Countess Ariana Thorvald
+562,10,2,balanced,11,2,0,7,0,4,25,guild,Baron Vladimir Harkonnen
+562,10,3,balanced,11,1,1,10,10,8,23,emperor|fremen,Duke Leto Atreides
+562,10,4,balanced,6,4,0,1,6,10,24,,Helena Richese
+563,10,1,balanced,5,4,0,8,6,12,24,,Countess Ariana Thorvald
+563,10,2,balanced,13,1,1,8,2,5,21,emperor|guild|bene_gesserit,Count Memnon Thorvald
+563,10,3,balanced,10,2,0,7,4,1,24,,"Glossu ""The Beast"" Rabban"
+563,10,4,balanced,5,3,0,13,4,0,23,fremen,Duke Leto Atreides
+564,9,1,balanced,7,3,0,5,4,2,25,bene_gesserit|fremen,Duke Leto Atreides
+564,9,2,balanced,8,2,0,12,2,4,22,,Count Memnon Thorvald
+564,9,3,balanced,4,4,0,10,7,7,20,emperor,Countess Ariana Thorvald
+564,9,4,balanced,11,1,1,2,8,5,22,,"Glossu ""The Beast"" Rabban"
+565,10,1,balanced,7,3,0,9,9,1,23,bene_gesserit,Count Ilban Richese
+565,10,2,balanced,7,4,0,2,3,10,24,guild,Helena Richese
+565,10,3,balanced,8,1,1,11,2,2,23,emperor,Paul Atreides
+565,10,4,balanced,7,2,0,10,5,7,24,fremen,Countess Ariana Thorvald
+566,9,1,balanced,4,3,0,6,8,5,21,fremen,Countess Ariana Thorvald
+566,9,2,balanced,2,4,0,10,0,6,22,,"Glossu ""The Beast"" Rabban"
+566,9,3,balanced,4,2,0,9,1,3,27,,Paul Atreides
+566,9,4,balanced,11,1,1,5,1,3,16,emperor,Baron Vladimir Harkonnen
+567,10,1,balanced,9,2,0,7,1,4,23,guild,Duke Leto Atreides
+567,10,2,balanced,3,4,0,14,8,6,22,,Helena Richese
+567,10,3,balanced,9,3,0,0,3,6,27,emperor|fremen,Count Ilban Richese
+567,10,4,balanced,10,1,1,8,1,3,23,bene_gesserit,"Glossu ""The Beast"" Rabban"
+568,9,1,balanced,6,2,0,12,4,2,23,,Countess Ariana Thorvald
+568,9,2,balanced,6,3,0,6,2,4,21,fremen,Paul Atreides
+568,9,3,balanced,10,1,1,3,4,5,22,emperor,Baron Vladimir Harkonnen
+568,9,4,balanced,5,4,0,7,9,6,23,guild,"Glossu ""The Beast"" Rabban"
+569,9,1,balanced,6,2,0,11,4,9,22,,Countess Ariana Thorvald
+569,9,2,balanced,6,3,0,5,2,3,22,fremen,Helena Richese
+569,9,3,balanced,10,1,1,5,4,2,20,emperor|bene_gesserit,Count Ilban Richese
+569,9,4,balanced,5,4,0,5,1,6,26,,Paul Atreides
+570,10,1,balanced,8,2,0,10,8,5,23,emperor,Paul Atreides
+570,10,2,balanced,9,1,1,14,2,8,22,bene_gesserit,Countess Ariana Thorvald
+570,10,3,balanced,8,3,0,3,0,2,24,guild|fremen,Baron Vladimir Harkonnen
+570,10,4,balanced,5,4,0,8,9,6,23,,"Glossu ""The Beast"" Rabban"
+571,10,1,balanced,8,2,0,12,1,1,26,,Count Memnon Thorvald
+571,10,2,balanced,7,4,0,5,0,10,20,,"Glossu ""The Beast"" Rabban"
+571,10,3,balanced,8,3,0,3,3,5,27,guild|fremen,Duke Leto Atreides
+571,10,4,balanced,11,1,1,7,8,8,21,emperor|bene_gesserit,Baron Vladimir Harkonnen
+572,10,1,balanced,6,4,0,7,6,7,22,,"Glossu ""The Beast"" Rabban"
+572,10,2,balanced,6,3,0,11,1,5,22,emperor,Count Ilban Richese
+572,10,3,balanced,10,1,1,7,5,1,25,fremen,Baron Vladimir Harkonnen
+572,10,4,balanced,9,2,0,9,11,3,24,guild,Helena Richese
+573,10,1,balanced,7,3,0,6,3,13,24,,Countess Ariana Thorvald
+573,10,2,balanced,9,2,0,7,2,6,17,,Count Ilban Richese
+573,10,3,balanced,6,4,0,9,17,3,20,fremen,"Glossu ""The Beast"" Rabban"
+573,10,4,balanced,11,1,1,10,3,0,23,emperor|guild,Duke Leto Atreides
+574,10,1,balanced,10,1,1,10,3,8,25,fremen,Paul Atreides
+574,10,2,balanced,7,4,0,7,7,3,23,,Duke Leto Atreides
+574,10,3,balanced,10,2,0,3,3,4,18,bene_gesserit,Count Ilban Richese
+574,10,4,balanced,7,3,0,10,8,7,23,,Helena Richese
+575,10,1,balanced,9,1,1,6,8,1,25,emperor|guild,Helena Richese
+575,10,2,balanced,8,3,0,9,1,8,20,fremen,Countess Ariana Thorvald
+575,10,3,balanced,4,4,0,17,1,6,24,,"Glossu ""The Beast"" Rabban"
+575,10,4,balanced,8,2,0,10,1,1,21,,Paul Atreides
+576,8,1,balanced,5,4,0,0,2,10,18,,Baron Vladimir Harkonnen
+576,8,2,balanced,10,1,1,5,3,3,22,emperor|fremen,Count Ilban Richese
+576,8,3,balanced,6,2,0,5,3,4,19,bene_gesserit,Paul Atreides
+576,8,4,balanced,5,3,0,3,6,2,21,guild,Count Memnon Thorvald
+577,10,1,balanced,11,1,1,5,2,4,24,bene_gesserit,"Glossu ""The Beast"" Rabban"
+577,10,2,balanced,9,2,0,4,5,2,23,emperor,Duke Leto Atreides
+577,10,3,balanced,7,3,0,14,8,4,20,fremen,Paul Atreides
+577,10,4,balanced,7,4,0,1,3,9,22,guild,Countess Ariana Thorvald
+578,10,1,balanced,8,2,0,7,8,6,23,guild,Paul Atreides
+578,10,2,balanced,7,4,0,6,4,7,20,,Count Ilban Richese
+578,10,3,balanced,11,1,1,5,6,3,23,emperor|fremen,Duke Leto Atreides
+578,10,4,balanced,7,3,0,7,5,1,27,bene_gesserit,Baron Vladimir Harkonnen
+579,10,1,balanced,8,2,0,8,4,3,26,fremen,"Glossu ""The Beast"" Rabban"
+579,10,2,balanced,7,3,0,10,8,12,18,,Count Memnon Thorvald
+579,10,3,balanced,9,1,1,10,6,2,22,emperor,Helena Richese
+579,10,4,balanced,6,4,0,10,0,1,21,,Paul Atreides
+580,10,1,balanced,7,4,0,4,11,1,23,fremen,Helena Richese
+580,10,2,balanced,10,1,1,7,4,1,21,,"Glossu ""The Beast"" Rabban"
+580,10,3,balanced,9,3,0,6,4,4,27,emperor,Paul Atreides
+580,10,4,balanced,9,2,0,8,5,3,22,guild|bene_gesserit,Duke Leto Atreides
+581,10,1,balanced,6,3,0,17,1,8,19,bene_gesserit,"Glossu ""The Beast"" Rabban"
+581,10,2,balanced,8,2,0,9,8,5,24,fremen,Duke Leto Atreides
+581,10,3,balanced,6,4,0,7,7,5,22,,Countess Ariana Thorvald
+581,10,4,balanced,12,1,1,9,11,7,21,emperor,Paul Atreides
+582,9,1,balanced,10,1,1,3,6,4,20,,"Glossu ""The Beast"" Rabban"
+582,9,2,balanced,5,4,0,12,0,3,20,fremen,Count Memnon Thorvald
+582,9,3,balanced,6,2,0,9,1,3,25,emperor,Baron Vladimir Harkonnen
+582,9,4,balanced,6,3,0,5,4,7,20,guild,Duke Leto Atreides
+583,10,1,balanced,8,2,0,2,6,7,24,emperor|bene_gesserit,Paul Atreides
+583,10,2,balanced,6,3,0,5,4,3,23,fremen,Helena Richese
+583,10,3,balanced,4,4,0,16,0,7,22,,Count Memnon Thorvald
+583,10,4,balanced,11,1,1,4,14,2,21,guild,"Glossu ""The Beast"" Rabban"
+584,9,1,balanced,11,1,1,4,4,7,23,,Baron Vladimir Harkonnen
+584,9,2,balanced,5,3,0,17,7,3,23,emperor,Paul Atreides
+584,9,3,balanced,4,4,0,11,6,9,20,fremen,Countess Ariana Thorvald
+584,9,4,balanced,7,2,0,8,1,2,22,,Helena Richese
+585,10,1,balanced,8,2,0,14,5,5,23,,Paul Atreides
+585,10,2,balanced,7,3,0,10,4,2,27,,Baron Vladimir Harkonnen
+585,10,3,balanced,12,1,1,12,7,8,22,emperor|guild|bene_gesserit|fremen,Count Memnon Thorvald
+585,10,4,balanced,7,4,0,3,0,6,22,,Duke Leto Atreides
+586,9,1,balanced,6,3,0,11,4,2,23,guild,Count Ilban Richese
+586,9,2,balanced,6,2,0,14,0,6,23,bene_gesserit|fremen,Count Memnon Thorvald
+586,9,3,balanced,10,1,1,10,0,1,21,emperor,Baron Vladimir Harkonnen
+586,9,4,balanced,4,4,0,6,3,8,24,,Countess Ariana Thorvald
+587,10,1,balanced,9,2,0,4,6,7,23,guild|bene_gesserit,Countess Ariana Thorvald
+587,10,2,balanced,8,3,0,8,4,7,22,,"Glossu ""The Beast"" Rabban"
+587,10,3,balanced,9,1,1,5,11,2,23,fremen,Count Memnon Thorvald
+587,10,4,balanced,7,4,0,12,13,0,25,emperor,Paul Atreides
+588,10,1,balanced,4,4,0,13,5,11,21,,"Glossu ""The Beast"" Rabban"
+588,10,2,balanced,10,2,0,6,0,2,24,emperor|fremen,Baron Vladimir Harkonnen
+588,10,3,balanced,9,3,0,9,5,5,27,guild|bene_gesserit,Duke Leto Atreides
+588,10,4,balanced,10,1,1,16,6,0,22,,Helena Richese
+589,8,1,balanced,5,4,0,11,1,5,21,emperor,Count Ilban Richese
+589,8,2,balanced,5,3,0,12,8,2,20,fremen,"Glossu ""The Beast"" Rabban"
+589,8,3,balanced,10,1,1,0,2,7,23,guild,Countess Ariana Thorvald
+589,8,4,balanced,7,2,0,0,1,1,20,,Count Memnon Thorvald
+590,10,1,balanced,9,1,1,11,8,3,22,,Count Ilban Richese
+590,10,2,balanced,9,2,0,5,2,0,23,,Baron Vladimir Harkonnen
+590,10,3,balanced,9,3,0,3,5,5,25,emperor|guild|bene_gesserit,Duke Leto Atreides
+590,10,4,balanced,7,4,0,11,3,11,22,fremen,Count Memnon Thorvald
+591,10,1,balanced,6,4,0,6,8,2,24,fremen,Paul Atreides
+591,10,2,balanced,10,1,1,7,7,6,26,guild,Count Memnon Thorvald
+591,10,3,balanced,10,2,0,4,12,5,20,,"Glossu ""The Beast"" Rabban"
+591,10,4,balanced,7,3,0,9,8,6,24,emperor,Countess Ariana Thorvald
+592,10,1,balanced,8,3,0,8,6,0,24,,Count Ilban Richese
+592,10,2,balanced,11,1,1,9,3,7,22,emperor,Baron Vladimir Harkonnen
+592,10,3,balanced,10,2,0,7,0,7,23,bene_gesserit|fremen,Countess Ariana Thorvald
+592,10,4,balanced,6,4,0,10,3,8,23,,"Glossu ""The Beast"" Rabban"
+593,9,1,balanced,4,4,0,8,5,6,23,,Countess Ariana Thorvald
+593,9,2,balanced,7,2,0,0,1,2,22,,Duke Leto Atreides
+593,9,3,balanced,6,3,0,8,1,4,24,guild|fremen,Helena Richese
+593,9,4,balanced,10,1,1,6,1,3,20,emperor,Baron Vladimir Harkonnen
+594,10,1,balanced,10,2,0,4,12,7,21,fremen,Paul Atreides
+594,10,2,balanced,7,3,0,4,5,4,28,,Countess Ariana Thorvald
+594,10,3,balanced,11,1,1,6,3,4,21,emperor,Count Memnon Thorvald
+594,10,4,balanced,4,4,0,9,11,5,23,,Duke Leto Atreides
+595,9,1,balanced,6,3,0,8,5,6,22,fremen,Count Memnon Thorvald
+595,9,2,balanced,12,1,1,7,1,1,20,emperor|bene_gesserit,Count Ilban Richese
+595,9,3,balanced,7,2,0,7,5,2,25,guild,Duke Leto Atreides
+595,9,4,balanced,4,4,0,9,0,12,22,,Countess Ariana Thorvald
+596,8,1,balanced,4,4,0,6,1,6,22,,Baron Vladimir Harkonnen
+596,8,2,balanced,5,2,0,10,6,4,20,fremen,Count Ilban Richese
+596,8,3,balanced,5,3,0,6,2,6,19,,Count Memnon Thorvald
+596,8,4,balanced,13,1,1,7,2,1,20,emperor|bene_gesserit,Helena Richese
+597,10,1,balanced,7,4,0,5,9,5,22,bene_gesserit,"Glossu ""The Beast"" Rabban"
+597,10,2,balanced,9,2,0,0,8,7,22,emperor,Countess Ariana Thorvald
+597,10,3,balanced,9,1,1,12,7,3,25,guild,Helena Richese
+597,10,4,balanced,8,3,0,8,3,3,25,fremen,Count Ilban Richese
+598,9,1,balanced,6,3,0,4,3,9,22,fremen,Countess Ariana Thorvald
+598,9,2,balanced,5,4,0,5,1,8,22,,Paul Atreides
+598,9,3,balanced,9,2,0,5,2,3,21,emperor|bene_gesserit,Baron Vladimir Harkonnen
+598,9,4,balanced,11,1,1,3,2,4,20,,Count Ilban Richese
+599,8,1,balanced,3,4,0,9,6,8,20,fremen,Count Memnon Thorvald
+599,8,2,balanced,4,3,0,4,2,1,22,emperor,Duke Leto Atreides
+599,8,3,balanced,10,1,1,2,3,2,19,guild,Baron Vladimir Harkonnen
+599,8,4,balanced,5,2,0,8,2,4,19,,Paul Atreides
+600,9,1,balanced,8,2,0,3,2,5,21,bene_gesserit,Paul Atreides
+600,9,2,balanced,5,4,0,14,4,4,19,fremen,Duke Leto Atreides
+600,9,3,balanced,6,3,0,4,11,7,22,guild,Countess Ariana Thorvald
+600,9,4,balanced,10,1,1,3,4,4,21,emperor,Baron Vladimir Harkonnen

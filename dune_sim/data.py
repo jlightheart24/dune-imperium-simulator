@@ -298,3 +298,61 @@ INTRIGUE = [
     _intrigue("Corner the Market", "endgame", [{"special": "corner_the_market"}]),
     _intrigue("Tiebreaker", "endgame", [{"gain": {"spice": 2}}]),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Leaders (base game). Each has a `signet` effect list, which replaces the Signet
+# Ring's placeholder agent effect, and optional passive hooks the engine understands:
+#   start            ops applied once at setup
+#   space_discount   {"icon": ..., "solari": n}   board spaces with that icon cost less
+#   on_pay_solari    ops applied whenever the leader pays solari for a board space
+#   on_high_council  ops applied when the leader takes a High Council seat
+#   maker_tax        {"spice": n, "draw": m}      on desert spaces: n less spice, draw m cards
+#   ignore_occupied  [icons]   may use spaces with these icons even if an opponent is there
+#   masterstroke     {"round": r, "factions": n}  at the start of round r, +1 influence in n factions
+#   prescience       True      knows the top card of their own deck when planning
+# NOTE: written from memory of the base game and simplified where an ability does not
+# fit the engine. Check against your copy and edit.
+LEADERS = [
+    {"name": "Paul Atreides", "house": "Atreides",
+     "ability": "Prescience: knows the top card of his deck.",
+     "signet_text": "Discipline: draw 1 card.",
+     "signet": [{"gain": {"draw": 1}}], "prescience": True},
+    {"name": "Duke Leto Atreides", "house": "Atreides",
+     "ability": "Landsraad Popularity: Landsraad spaces cost 1 solari less.",
+     "signet_text": "Prudent Diplomacy: may pay 1 spice for 1 influence with any faction.",
+     "signet": [{"optional": [{"pay": {"spice": 1}}, {"influence": "any"}]}],
+     "space_discount": {"icon": "landsraad", "solari": 1}},
+    {"name": "Baron Vladimir Harkonnen", "house": "Harkonnen",
+     "ability": "Masterstroke: at the start of round 2, +1 influence with two different factions.",
+     "signet_text": "Scheme: may pay 1 solari to draw 1 intrigue card.",
+     "signet": [{"optional": [{"pay": {"solari": 1}}, {"gain": {"intrigue": 1}}]}],
+     "masterstroke": {"round": 2, "factions": 2}},
+    {"name": "Glossu \"The Beast\" Rabban", "house": "Harkonnen",
+     "ability": "Arrakis Fiefdom: starts with 1 extra spice and 1 extra solari.",
+     "signet_text": "Brutality: gain 1 troop, or 2 if he holds an alliance.",
+     "signet": [{"gain": {"troops": 1}}, {"if_any_alliance": True, "then": [{"gain": {"troops": 1}}]}],
+     "start": [{"gain": {"spice": 1, "solari": 1}}]},
+    {"name": "Count Memnon Thorvald", "house": "Thorvald",
+     "ability": "Connections: gains 1 influence with any faction on taking a High Council seat.",
+     "signet_text": "Spice Hoard: gain 1 spice.",
+     "signet": [{"gain": {"spice": 1}}],
+     "on_high_council": [{"influence": "any"}]},
+    {"name": "Countess Ariana Thorvald", "house": "Thorvald",
+     "ability": "Spice Addict: on desert spaces, gains 1 less spice and draws 1 card.",
+     "signet_text": "Hidden Reservoir: gain 1 water.",
+     "signet": [{"gain": {"water": 1}}],
+     "maker_tax": {"spice": 1, "draw": 1}},
+    {"name": "Count Ilban Richese", "house": "Richese",
+     "ability": "Ruthless Negotiator: draws 1 card whenever he pays solari for a board space.",
+     "signet_text": "Manufacturing: gain 1 solari.",
+     "signet": [{"gain": {"solari": 1}}],
+     "on_pay_solari": [{"gain": {"draw": 1}}]},
+    {"name": "Helena Richese", "house": "Richese",
+     "ability": "Eyes Everywhere: opponents' agents do not block her at Landsraad and city spaces.",
+     "signet_text": "Manipulate: takes a card out of the Imperium row (the row refills); "
+                    "in her reveal this round she may buy it for 1 persuasion less.",
+     "signet": [{"special": "manipulate"}],
+     "ignore_occupied": ["landsraad", "city"]},
+]
+LEADER_BY_NAME = {l["name"]: l for l in LEADERS}

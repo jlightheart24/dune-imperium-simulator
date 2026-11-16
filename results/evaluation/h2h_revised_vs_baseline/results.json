@@ -1,0 +1,67 @@
+{
+ "meta": {
+  "command": "python3 -m dune_sim batch -n 1000 --no-leaders -p balanced weights:strategies/balanced_flat_water.json weights:strategies/balanced_flat_water.json weights:strategies/balanced_flat_water.json --save results/evaluation/h2h_revised_vs_baseline",
+  "code_differs_from_commit": true,
+  "date": "2026-11-14T15:17:34",
+  "python": "3.9.6",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "git_commit": "11dab03a60e4b1208a54c96a03b044e075a8c989",
+  "seed": 1,
+  "games": 1000,
+  "leaders": "none",
+  "water": "capped",
+  "players": [
+   "balanced",
+   "weights:strategies/balanced_flat_water.json",
+   "weights:strategies/balanced_flat_water.json",
+   "weights:strategies/balanced_flat_water.json"
+  ],
+  "fixed_seats": false,
+  "avg_rounds": 9.703
+ },
+ "strategies": [
+  {
+   "strategy": "weights:strategies/balanced_flat_water.json",
+   "seats": 3000,
+   "wins": 766.0,
+   "win_pct": 25.533333333333335,
+   "ci_low": 24.004928624229745,
+   "ci_high": 27.124318670301374,
+   "avg_vp": 7.577,
+   "vp_sd": 2.3180154008259137,
+   "vp_se": 0.04232097745589107,
+   "avg_rank": 2.5056666666666665,
+   "alliances": 0.7916666666666666,
+   "deck": 22.405666666666665,
+   "end_solari": 5.675,
+   "swordmaster_pct": 63.86666666666667,
+   "council_pct": 95.63333333333334,
+   "mentats": 1.046
+  },
+  {
+   "strategy": "balanced",
+   "seats": 1000,
+   "wins": 234.0,
+   "win_pct": 23.4,
+   "ci_low": 20.880755932590187,
+   "ci_high": 26.122835072205795,
+   "avg_vp": 7.63,
+   "vp_sd": 2.219465256773815,
+   "vp_se": 0.07018565399015711,
+   "avg_rank": 2.483,
+   "alliances": 0.807,
+   "deck": 22.36,
+   "end_solari": 5.653,
+   "swordmaster_pct": 65.7,
+   "council_pct": 97.1,
+   "mentats": 1.031
+  }
+ ],
+ "win_pct_by_seat": {
+  "P1": 22.1,
+  "P2": 22.3,
+  "P3": 26.3,
+  "P4": 29.3
+ },
+ "leaders": []
+}

@@ -1,0 +1,46 @@
+$ python3 -m dune_sim tournament focus -n 60 --save focus_tournament
+Tournament: 8 strategies, every combination of 4 (70 matchups), 60 games each = 4200 games; seeds 1..60 per matchup, seating shuffled per game
+
+Overall (fair share 25.0%)
+
+ # strategy                  games   win %        95% CI   avg VP  avg rank  verdict
+------------------------------------------------------------------------------------
+ 1 bene_gesserit_faction      2100   30.0%     28.1-32.0     7.84      2.31  above fair share
+ 2 rush_swordmaster           2100   29.2%     27.3-31.2     7.53      2.42  above fair share
+ 3 rush_both                  2100   27.4%     25.5-29.3     7.64      2.44  above fair share
+ 4 emperor_faction            2100   24.8%     23.0-26.7     7.19      2.55  no clear difference
+ 5 factions                   2100   23.8%     22.0-25.7     7.33      2.57  no clear difference
+ 6 alliances                  2100   23.5%     21.8-25.4     7.44      2.54  no clear difference
+ 7 deckbuilder                2100   23.0%     21.3-24.8     7.74      2.47  below fair share
+ 8 rush_council               2100   18.2%     16.6-19.9     7.08      2.70  below fair share
+
+Head-to-head: % of shared games in which the ROW strategy finished ahead of the COLUMN strategy
+(columns numbered as in the table above; each pair shared 900 games)
+
+                                 1      2      3      4      5      6      7      8
+ 1 bene_gesserit_faction         -    56%    52%    56%    58%    56%    56%    60%
+ 2 rush_swordmaster            44%      -    50%    52%    55%    54%    53%    60%
+ 3 rush_both                   48%    50%      -    55%    52%    54%    47%    57%
+ 4 emperor_faction             44%    48%    45%      -    52%    51%    48%    51%
+ 5 factions                    42%    45%    48%    48%      -    50%    47%    54%
+ 6 alliances                   44%    46%    46%    49%    50%      -    48%    57%
+ 7 deckbuilder                 44%    47%    53%    52%    53%    52%      -    56%
+ 8 rush_council                40%    40%    43%    49%    46%    43%    44%      -
+
+Best and worst matchup for each strategy (its win % in that matchup):
+  bene_gesserit_faction    best  45.0% vs emperor_faction, factions, rush_council
+                           worst 18.3% vs rush_both, factions, deckbuilder
+  rush_swordmaster         best  46.7% vs emperor_faction, factions, rush_council
+                           worst 16.7% vs rush_both, bene_gesserit_faction, deckbuilder
+  rush_both                best  38.3% vs emperor_faction, alliances, rush_council
+                           worst 16.7% vs bene_gesserit_faction, emperor_faction, rush_council
+  emperor_faction          best  43.3% vs factions, rush_swordmaster, deckbuilder
+                           worst 13.3% vs bene_gesserit_faction, rush_swordmaster, rush_council
+  factions                 best  36.7% vs rush_both, deckbuilder, rush_council
+                           worst 13.3% vs bene_gesserit_faction, emperor_faction, rush_council
+  alliances                best  35.0% vs bene_gesserit_faction, factions, deckbuilder
+                           worst 11.7% vs rush_both, bene_gesserit_faction, factions
+  deckbuilder              best  35.0% vs alliances, factions, rush_council
+                           worst  6.7% vs emperor_faction, factions, rush_swordmaster
+  rush_council             best  31.7% vs rush_both, emperor_faction, deckbuilder
+                           worst 11.7% vs alliances, rush_swordmaster, deckbuilder

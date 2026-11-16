@@ -1,0 +1,29 @@
+$ python3 -m dune_sim benchmark -n 1000 --no-leaders --water flat --save results/evaluation/benchmark_baseline
+Benchmark: 1 x <strategy> vs 3 x balanced, 1000 games each, seeds 1..1000, seating shuffled per game
+fair share = 25.0%
+
+strategy                       win %        95% CI   avg VP  +/-SE  base VP  avg rank  verdict
+----------------------------------------------------------------------------------------------
+random                          0.0%       0.0-0.4     2.18   0.04     8.26      3.99  worse than baseline
+legacy                          8.4%      6.8-10.3     5.83   0.07     7.85      3.20  worse than baseline
+military                       22.4%     19.9-25.1     6.90   0.07     7.60      2.70  no clear difference
+spice                          19.2%     16.9-21.8     6.90   0.07     7.69      2.74  worse than baseline
+factions                       23.7%     21.2-26.4     7.46   0.07     7.58      2.56  no clear difference
+fremen_faction                  9.5%      7.8-11.5     5.99   0.07     7.82      3.15  worse than baseline
+deckbuilder                    26.5%     23.9-29.3     7.87   0.07     7.61      2.48  no clear difference
+thin_deck                      18.7%     16.4-21.2     7.29   0.06     7.64      2.68  worse than baseline
+spice_must_flow                17.5%     15.3-20.0     7.31   0.07     7.77      2.71  worse than baseline
+emperor_faction                26.4%     23.8-29.2     7.40   0.07     7.45      2.50  no clear difference
+guild_faction                  18.7%     16.4-21.2     7.21   0.07     7.62      2.67  worse than baseline
+bene_gesserit_faction          29.6%     26.9-32.5     8.00   0.07     7.42      2.30  better than baseline
+alliances                      25.0%     22.4-27.8     7.58   0.07     7.55      2.51  no clear difference
+card_draw                      22.7%     20.2-25.4     7.45   0.08     7.64      2.62  no clear difference
+rush_council                   17.1%     14.9-19.6     7.18   0.07     7.67      2.69  worse than baseline
+rush_swordmaster               29.1%     26.4-32.0     7.61   0.07     7.45      2.43  better than baseline
+rush_both                      29.8%     27.0-32.7     7.93   0.07     7.51      2.36  better than baseline
+emperor_cards                  22.4%     19.9-25.1     7.22   0.07     7.60      2.64  no clear difference
+guild_cards                    19.8%     17.4-22.4     7.18   0.07     7.67      2.70  worse than baseline
+bene_gesserit_cards            21.7%     19.3-24.4     7.26   0.07     7.58      2.61  worse than baseline
+fremen_cards                   17.4%     15.2-19.9     6.81   0.07     7.66      2.79  worse than baseline
+
+verdict: 'better'/'worse' when the 95% interval on win % excludes the fair share.

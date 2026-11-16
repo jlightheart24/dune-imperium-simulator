@@ -1,0 +1,1232 @@
+{
+ "meta": {
+  "command": "python3 -m dune_sim tournament focus -n 60 --save focus_tournament",
+  "date": "2026-11-11T21:03:54",
+  "python": "3.9.6",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "git_commit": "11dab03a60e4b1208a54c96a03b044e075a8c989",
+  "seed": 1,
+  "games": 60,
+  "strategies": [
+   "rush_both",
+   "bene_gesserit_faction",
+   "emperor_faction",
+   "alliances",
+   "factions",
+   "rush_swordmaster",
+   "deckbuilder",
+   "rush_council"
+  ],
+  "table": 4,
+  "matchups": 70,
+  "fair_share_pct": 25.0
+ },
+ "overall": [
+  {
+   "strategy": "bene_gesserit_faction",
+   "games": 2100,
+   "win_pct": 30.047619047619047,
+   "ci_low": 28.1246166887912,
+   "ci_high": 32.043487221693326,
+   "avg_vp": 7.835714285714285,
+   "avg_rank": 2.3057142857142856,
+   "verdict": "above fair share"
+  },
+  {
+   "strategy": "rush_swordmaster",
+   "games": 2100,
+   "win_pct": 29.19047619047619,
+   "ci_low": 27.285356868671464,
+   "ci_high": 31.17159160121335,
+   "avg_vp": 7.527619047619048,
+   "avg_rank": 2.4204761904761907,
+   "verdict": "above fair share"
+  },
+  {
+   "strategy": "rush_both",
+   "games": 2100,
+   "win_pct": 27.38095238095238,
+   "ci_low": 25.516350250780295,
+   "ci_high": 29.328158955616246,
+   "avg_vp": 7.637142857142857,
+   "avg_rank": 2.441904761904762,
+   "verdict": "above fair share"
+  },
+  {
+   "strategy": "emperor_faction",
+   "games": 2100,
+   "win_pct": 24.80952380952381,
+   "ci_low": 23.00933727820719,
+   "ci_high": 26.70170560639021,
+   "avg_vp": 7.193809523809524,
+   "avg_rank": 2.5485714285714285,
+   "verdict": "no clear difference"
+  },
+  {
+   "strategy": "factions",
+   "games": 2100,
+   "win_pct": 23.80952380952381,
+   "ci_low": 22.036703036678027,
+   "ci_high": 25.67799183388638,
+   "avg_vp": 7.328571428571428,
+   "avg_rank": 2.5733333333333333,
+   "verdict": "no clear difference"
+  },
+  {
+   "strategy": "alliances",
+   "games": 2100,
+   "win_pct": 23.523809523809526,
+   "ci_low": 21.759058242278176,
+   "ci_high": 25.38525148141966,
+   "avg_vp": 7.440952380952381,
+   "avg_rank": 2.5414285714285714,
+   "verdict": "no clear difference"
+  },
+  {
+   "strategy": "deckbuilder",
+   "games": 2100,
+   "win_pct": 23.0,
+   "ci_low": 21.25033982032066,
+   "ci_high": 24.848263800788466,
+   "avg_vp": 7.736666666666666,
+   "avg_rank": 2.4723809523809526,
+   "verdict": "below fair share"
+  },
+  {
+   "strategy": "rush_council",
+   "games": 2100,
+   "win_pct": 18.238095238095237,
+   "ci_low": 16.644956148079867,
+   "ci_high": 19.947228358586422,
+   "avg_vp": 7.084761904761905,
+   "avg_rank": 2.696190476190476,
+   "verdict": "below fair share"
+  }
+ ],
+ "head_to_head": {
+  "bene_gesserit_faction": {
+   "rush_swordmaster": 56.1,
+   "rush_both": 52.1,
+   "emperor_faction": 56.4,
+   "factions": 58.2,
+   "alliances": 56.1,
+   "deckbuilder": 56.1,
+   "rush_council": 60.2
+  },
+  "rush_swordmaster": {
+   "bene_gesserit_faction": 43.9,
+   "rush_both": 50.2,
+   "emperor_faction": 52.1,
+   "factions": 55.0,
+   "alliances": 54.2,
+   "deckbuilder": 52.7,
+   "rush_council": 60.4
+  },
+  "rush_both": {
+   "bene_gesserit_faction": 47.9,
+   "rush_swordmaster": 49.8,
+   "emperor_faction": 55.3,
+   "factions": 52.4,
+   "alliances": 54.0,
+   "deckbuilder": 46.8,
+   "rush_council": 57.3
+  },
+  "emperor_faction": {
+   "bene_gesserit_faction": 43.6,
+   "rush_swordmaster": 47.9,
+   "rush_both": 44.7,
+   "factions": 52.0,
+   "alliances": 51.0,
+   "deckbuilder": 48.2,
+   "rush_council": 51.3
+  },
+  "factions": {
+   "bene_gesserit_faction": 41.8,
+   "rush_swordmaster": 45.0,
+   "rush_both": 47.6,
+   "emperor_faction": 48.0,
+   "alliances": 49.6,
+   "deckbuilder": 47.3,
+   "rush_council": 53.7
+  },
+  "alliances": {
+   "bene_gesserit_faction": 43.9,
+   "rush_swordmaster": 45.8,
+   "rush_both": 46.0,
+   "emperor_faction": 49.0,
+   "factions": 50.4,
+   "deckbuilder": 48.4,
+   "rush_council": 56.8
+  },
+  "deckbuilder": {
+   "bene_gesserit_faction": 43.9,
+   "rush_swordmaster": 47.3,
+   "rush_both": 53.2,
+   "emperor_faction": 51.8,
+   "factions": 52.7,
+   "alliances": 51.6,
+   "rush_council": 56.0
+  },
+  "rush_council": {
+   "bene_gesserit_faction": 39.8,
+   "rush_swordmaster": 39.6,
+   "rush_both": 42.7,
+   "emperor_faction": 48.7,
+   "factions": 46.3,
+   "alliances": 43.2,
+   "deckbuilder": 44.0
+  }
+ },
+ "matchups": [
+  {
+   "matchup": 1,
+   "players": [
+    "rush_both",
+    "bene_gesserit_faction",
+    "emperor_faction",
+    "alliances"
+   ],
+   "win_pct": {
+    "rush_both": 35.0,
+    "bene_gesserit_faction": 21.7,
+    "emperor_faction": 25.0,
+    "alliances": 18.3
+   }
+  },
+  {
+   "matchup": 2,
+   "players": [
+    "rush_both",
+    "bene_gesserit_faction",
+    "emperor_faction",
+    "factions"
+   ],
+   "win_pct": {
+    "rush_both": 25.0,
+    "bene_gesserit_faction": 30.0,
+    "emperor_faction": 31.7,
+    "factions": 13.3
+   }
+  },
+  {
+   "matchup": 3,
+   "players": [
+    "rush_both",
+    "bene_gesserit_faction",
+    "emperor_faction",
+    "rush_swordmaster"
+   ],
+   "win_pct": {
+    "rush_both": 28.3,
+    "bene_gesserit_faction": 33.3,
+    "emperor_faction": 20.0,
+    "rush_swordmaster": 18.3
+   }
+  },
+  {
+   "matchup": 4,
+   "players": [
+    "rush_both",
+    "bene_gesserit_faction",
+    "emperor_faction",
+    "deckbuilder"
+   ],
+   "win_pct": {
+    "rush_both": 28.3,
+    "bene_gesserit_faction": 33.3,
+    "emperor_faction": 18.3,
+    "deckbuilder": 20.0
+   }
+  },
+  {
+   "matchup": 5,
+   "players": [
+    "rush_both",
+    "bene_gesserit_faction",
+    "emperor_faction",
+    "rush_council"
+   ],
+   "win_pct": {
+    "rush_both": 16.7,
+    "bene_gesserit_faction": 35.0,
+    "emperor_faction": 30.0,
+    "rush_council": 18.3
+   }
+  },
+  {
+   "matchup": 6,
+   "players": [
+    "rush_both",
+    "bene_gesserit_faction",
+    "alliances",
+    "factions"
+   ],
+   "win_pct": {
+    "rush_both": 26.7,
+    "bene_gesserit_faction": 43.3,
+    "alliances": 11.7,
+    "factions": 18.3
+   }
+  },
+  {
+   "matchup": 7,
+   "players": [
+    "rush_both",
+    "bene_gesserit_faction",
+    "alliances",
+    "rush_swordmaster"
+   ],
+   "win_pct": {
+    "rush_both": 31.7,
+    "bene_gesserit_faction": 26.7,
+    "alliances": 18.3,
+    "rush_swordmaster": 23.3
+   }
+  },
+  {
+   "matchup": 8,
+   "players": [
+    "rush_both",
+    "bene_gesserit_faction",
+    "alliances",
+    "deckbuilder"
+   ],
+   "win_pct": {
+    "rush_both": 28.3,
+    "bene_gesserit_faction": 23.3,
+    "alliances": 26.7,
+    "deckbuilder": 21.7
+   }
+  },
+  {
+   "matchup": 9,
+   "players": [
+    "rush_both",
+    "bene_gesserit_faction",
+    "alliances",
+    "rush_council"
+   ],
+   "win_pct": {
+    "rush_both": 31.7,
+    "bene_gesserit_faction": 25.0,
+    "alliances": 26.7,
+    "rush_council": 16.7
+   }
+  },
+  {
+   "matchup": 10,
+   "players": [
+    "rush_both",
+    "bene_gesserit_faction",
+    "factions",
+    "rush_swordmaster"
+   ],
+   "win_pct": {
+    "rush_both": 21.7,
+    "bene_gesserit_faction": 28.3,
+    "factions": 28.3,
+    "rush_swordmaster": 21.7
+   }
+  },
+  {
+   "matchup": 11,
+   "players": [
+    "rush_both",
+    "bene_gesserit_faction",
+    "factions",
+    "deckbuilder"
+   ],
+   "win_pct": {
+    "rush_both": 28.3,
+    "bene_gesserit_faction": 18.3,
+    "factions": 25.0,
+    "deckbuilder": 28.3
+   }
+  },
+  {
+   "matchup": 12,
+   "players": [
+    "rush_both",
+    "bene_gesserit_faction",
+    "factions",
+    "rush_council"
+   ],
+   "win_pct": {
+    "rush_both": 31.7,
+    "bene_gesserit_faction": 26.7,
+    "factions": 26.7,
+    "rush_council": 15.0
+   }
+  },
+  {
+   "matchup": 13,
+   "players": [
+    "rush_both",
+    "bene_gesserit_faction",
+    "rush_swordmaster",
+    "deckbuilder"
+   ],
+   "win_pct": {
+    "rush_both": 21.7,
+    "bene_gesserit_faction": 35.0,
+    "rush_swordmaster": 16.7,
+    "deckbuilder": 26.7
+   }
+  },
+  {
+   "matchup": 14,
+   "players": [
+    "rush_both",
+    "bene_gesserit_faction",
+    "rush_swordmaster",
+    "rush_council"
+   ],
+   "win_pct": {
+    "rush_both": 20.0,
+    "bene_gesserit_faction": 36.7,
+    "rush_swordmaster": 31.7,
+    "rush_council": 11.7
+   }
+  },
+  {
+   "matchup": 15,
+   "players": [
+    "rush_both",
+    "bene_gesserit_faction",
+    "deckbuilder",
+    "rush_council"
+   ],
+   "win_pct": {
+    "rush_both": 26.7,
+    "bene_gesserit_faction": 36.7,
+    "deckbuilder": 25.0,
+    "rush_council": 11.7
+   }
+  },
+  {
+   "matchup": 16,
+   "players": [
+    "rush_both",
+    "emperor_faction",
+    "alliances",
+    "factions"
+   ],
+   "win_pct": {
+    "rush_both": 36.7,
+    "emperor_faction": 16.7,
+    "alliances": 20.0,
+    "factions": 26.7
+   }
+  },
+  {
+   "matchup": 17,
+   "players": [
+    "rush_both",
+    "emperor_faction",
+    "alliances",
+    "rush_swordmaster"
+   ],
+   "win_pct": {
+    "rush_both": 25.0,
+    "emperor_faction": 20.0,
+    "alliances": 18.3,
+    "rush_swordmaster": 36.7
+   }
+  },
+  {
+   "matchup": 18,
+   "players": [
+    "rush_both",
+    "emperor_faction",
+    "alliances",
+    "deckbuilder"
+   ],
+   "win_pct": {
+    "rush_both": 26.7,
+    "emperor_faction": 25.0,
+    "alliances": 30.0,
+    "deckbuilder": 18.3
+   }
+  },
+  {
+   "matchup": 19,
+   "players": [
+    "rush_both",
+    "emperor_faction",
+    "alliances",
+    "rush_council"
+   ],
+   "win_pct": {
+    "rush_both": 38.3,
+    "emperor_faction": 16.7,
+    "alliances": 26.7,
+    "rush_council": 18.3
+   }
+  },
+  {
+   "matchup": 20,
+   "players": [
+    "rush_both",
+    "emperor_faction",
+    "factions",
+    "rush_swordmaster"
+   ],
+   "win_pct": {
+    "rush_both": 26.7,
+    "emperor_faction": 30.0,
+    "factions": 23.3,
+    "rush_swordmaster": 20.0
+   }
+  },
+  {
+   "matchup": 21,
+   "players": [
+    "rush_both",
+    "emperor_faction",
+    "factions",
+    "deckbuilder"
+   ],
+   "win_pct": {
+    "rush_both": 26.7,
+    "emperor_faction": 26.7,
+    "factions": 25.0,
+    "deckbuilder": 21.7
+   }
+  },
+  {
+   "matchup": 22,
+   "players": [
+    "rush_both",
+    "emperor_faction",
+    "factions",
+    "rush_council"
+   ],
+   "win_pct": {
+    "rush_both": 33.3,
+    "emperor_faction": 25.0,
+    "factions": 28.3,
+    "rush_council": 13.3
+   }
+  },
+  {
+   "matchup": 23,
+   "players": [
+    "rush_both",
+    "emperor_faction",
+    "rush_swordmaster",
+    "deckbuilder"
+   ],
+   "win_pct": {
+    "rush_both": 23.3,
+    "emperor_faction": 15.0,
+    "rush_swordmaster": 35.0,
+    "deckbuilder": 26.7
+   }
+  },
+  {
+   "matchup": 24,
+   "players": [
+    "rush_both",
+    "emperor_faction",
+    "rush_swordmaster",
+    "rush_council"
+   ],
+   "win_pct": {
+    "rush_both": 28.3,
+    "emperor_faction": 23.3,
+    "rush_swordmaster": 21.7,
+    "rush_council": 26.7
+   }
+  },
+  {
+   "matchup": 25,
+   "players": [
+    "rush_both",
+    "emperor_faction",
+    "deckbuilder",
+    "rush_council"
+   ],
+   "win_pct": {
+    "rush_both": 25.0,
+    "emperor_faction": 23.3,
+    "deckbuilder": 20.0,
+    "rush_council": 31.7
+   }
+  },
+  {
+   "matchup": 26,
+   "players": [
+    "rush_both",
+    "alliances",
+    "factions",
+    "rush_swordmaster"
+   ],
+   "win_pct": {
+    "rush_both": 25.0,
+    "alliances": 16.7,
+    "factions": 25.0,
+    "rush_swordmaster": 33.3
+   }
+  },
+  {
+   "matchup": 27,
+   "players": [
+    "rush_both",
+    "alliances",
+    "factions",
+    "deckbuilder"
+   ],
+   "win_pct": {
+    "rush_both": 26.7,
+    "alliances": 25.0,
+    "factions": 28.3,
+    "deckbuilder": 20.0
+   }
+  },
+  {
+   "matchup": 28,
+   "players": [
+    "rush_both",
+    "alliances",
+    "factions",
+    "rush_council"
+   ],
+   "win_pct": {
+    "rush_both": 28.3,
+    "alliances": 31.7,
+    "factions": 16.7,
+    "rush_council": 23.3
+   }
+  },
+  {
+   "matchup": 29,
+   "players": [
+    "rush_both",
+    "alliances",
+    "rush_swordmaster",
+    "deckbuilder"
+   ],
+   "win_pct": {
+    "rush_both": 20.0,
+    "alliances": 21.7,
+    "rush_swordmaster": 25.0,
+    "deckbuilder": 33.3
+   }
+  },
+  {
+   "matchup": 30,
+   "players": [
+    "rush_both",
+    "alliances",
+    "rush_swordmaster",
+    "rush_council"
+   ],
+   "win_pct": {
+    "rush_both": 35.0,
+    "alliances": 21.7,
+    "rush_swordmaster": 28.3,
+    "rush_council": 15.0
+   }
+  },
+  {
+   "matchup": 31,
+   "players": [
+    "rush_both",
+    "alliances",
+    "deckbuilder",
+    "rush_council"
+   ],
+   "win_pct": {
+    "rush_both": 30.0,
+    "alliances": 31.7,
+    "deckbuilder": 21.7,
+    "rush_council": 16.7
+   }
+  },
+  {
+   "matchup": 32,
+   "players": [
+    "rush_both",
+    "factions",
+    "rush_swordmaster",
+    "deckbuilder"
+   ],
+   "win_pct": {
+    "rush_both": 25.0,
+    "factions": 26.7,
+    "rush_swordmaster": 26.7,
+    "deckbuilder": 21.7
+   }
+  },
+  {
+   "matchup": 33,
+   "players": [
+    "rush_both",
+    "factions",
+    "rush_swordmaster",
+    "rush_council"
+   ],
+   "win_pct": {
+    "rush_both": 33.3,
+    "factions": 25.0,
+    "rush_swordmaster": 30.0,
+    "rush_council": 11.7
+   }
+  },
+  {
+   "matchup": 34,
+   "players": [
+    "rush_both",
+    "factions",
+    "deckbuilder",
+    "rush_council"
+   ],
+   "win_pct": {
+    "rush_both": 23.3,
+    "factions": 36.7,
+    "deckbuilder": 23.3,
+    "rush_council": 16.7
+   }
+  },
+  {
+   "matchup": 35,
+   "players": [
+    "rush_both",
+    "rush_swordmaster",
+    "deckbuilder",
+    "rush_council"
+   ],
+   "win_pct": {
+    "rush_both": 20.0,
+    "rush_swordmaster": 35.0,
+    "deckbuilder": 21.7,
+    "rush_council": 23.3
+   }
+  },
+  {
+   "matchup": 36,
+   "players": [
+    "bene_gesserit_faction",
+    "emperor_faction",
+    "alliances",
+    "factions"
+   ],
+   "win_pct": {
+    "bene_gesserit_faction": 26.7,
+    "emperor_faction": 20.0,
+    "alliances": 25.0,
+    "factions": 28.3
+   }
+  },
+  {
+   "matchup": 37,
+   "players": [
+    "bene_gesserit_faction",
+    "emperor_faction",
+    "alliances",
+    "rush_swordmaster"
+   ],
+   "win_pct": {
+    "bene_gesserit_faction": 31.7,
+    "emperor_faction": 26.7,
+    "alliances": 15.0,
+    "rush_swordmaster": 26.7
+   }
+  },
+  {
+   "matchup": 38,
+   "players": [
+    "bene_gesserit_faction",
+    "emperor_faction",
+    "alliances",
+    "deckbuilder"
+   ],
+   "win_pct": {
+    "bene_gesserit_faction": 23.3,
+    "emperor_faction": 35.0,
+    "alliances": 18.3,
+    "deckbuilder": 23.3
+   }
+  },
+  {
+   "matchup": 39,
+   "players": [
+    "bene_gesserit_faction",
+    "emperor_faction",
+    "alliances",
+    "rush_council"
+   ],
+   "win_pct": {
+    "bene_gesserit_faction": 31.7,
+    "emperor_faction": 23.3,
+    "alliances": 23.3,
+    "rush_council": 21.7
+   }
+  },
+  {
+   "matchup": 40,
+   "players": [
+    "bene_gesserit_faction",
+    "emperor_faction",
+    "factions",
+    "rush_swordmaster"
+   ],
+   "win_pct": {
+    "bene_gesserit_faction": 21.7,
+    "emperor_faction": 35.0,
+    "factions": 20.0,
+    "rush_swordmaster": 23.3
+   }
+  },
+  {
+   "matchup": 41,
+   "players": [
+    "bene_gesserit_faction",
+    "emperor_faction",
+    "factions",
+    "deckbuilder"
+   ],
+   "win_pct": {
+    "bene_gesserit_faction": 28.3,
+    "emperor_faction": 23.3,
+    "factions": 16.7,
+    "deckbuilder": 31.7
+   }
+  },
+  {
+   "matchup": 42,
+   "players": [
+    "bene_gesserit_faction",
+    "emperor_faction",
+    "factions",
+    "rush_council"
+   ],
+   "win_pct": {
+    "bene_gesserit_faction": 45.0,
+    "emperor_faction": 28.3,
+    "factions": 13.3,
+    "rush_council": 13.3
+   }
+  },
+  {
+   "matchup": 43,
+   "players": [
+    "bene_gesserit_faction",
+    "emperor_faction",
+    "rush_swordmaster",
+    "deckbuilder"
+   ],
+   "win_pct": {
+    "bene_gesserit_faction": 35.0,
+    "emperor_faction": 20.0,
+    "rush_swordmaster": 18.3,
+    "deckbuilder": 26.7
+   }
+  },
+  {
+   "matchup": 44,
+   "players": [
+    "bene_gesserit_faction",
+    "emperor_faction",
+    "rush_swordmaster",
+    "rush_council"
+   ],
+   "win_pct": {
+    "bene_gesserit_faction": 25.0,
+    "emperor_faction": 13.3,
+    "rush_swordmaster": 38.3,
+    "rush_council": 23.3
+   }
+  },
+  {
+   "matchup": 45,
+   "players": [
+    "bene_gesserit_faction",
+    "emperor_faction",
+    "deckbuilder",
+    "rush_council"
+   ],
+   "win_pct": {
+    "bene_gesserit_faction": 31.7,
+    "emperor_faction": 26.7,
+    "deckbuilder": 25.0,
+    "rush_council": 16.7
+   }
+  },
+  {
+   "matchup": 46,
+   "players": [
+    "bene_gesserit_faction",
+    "alliances",
+    "factions",
+    "rush_swordmaster"
+   ],
+   "win_pct": {
+    "bene_gesserit_faction": 21.7,
+    "alliances": 28.3,
+    "factions": 30.0,
+    "rush_swordmaster": 20.0
+   }
+  },
+  {
+   "matchup": 47,
+   "players": [
+    "bene_gesserit_faction",
+    "alliances",
+    "factions",
+    "deckbuilder"
+   ],
+   "win_pct": {
+    "bene_gesserit_faction": 28.3,
+    "alliances": 35.0,
+    "factions": 15.0,
+    "deckbuilder": 21.7
+   }
+  },
+  {
+   "matchup": 48,
+   "players": [
+    "bene_gesserit_faction",
+    "alliances",
+    "factions",
+    "rush_council"
+   ],
+   "win_pct": {
+    "bene_gesserit_faction": 30.0,
+    "alliances": 28.3,
+    "factions": 16.7,
+    "rush_council": 25.0
+   }
+  },
+  {
+   "matchup": 49,
+   "players": [
+    "bene_gesserit_faction",
+    "alliances",
+    "rush_swordmaster",
+    "deckbuilder"
+   ],
+   "win_pct": {
+    "bene_gesserit_faction": 35.0,
+    "alliances": 25.0,
+    "rush_swordmaster": 21.7,
+    "deckbuilder": 18.3
+   }
+  },
+  {
+   "matchup": 50,
+   "players": [
+    "bene_gesserit_faction",
+    "alliances",
+    "rush_swordmaster",
+    "rush_council"
+   ],
+   "win_pct": {
+    "bene_gesserit_faction": 33.3,
+    "alliances": 28.3,
+    "rush_swordmaster": 26.7,
+    "rush_council": 11.7
+   }
+  },
+  {
+   "matchup": 51,
+   "players": [
+    "bene_gesserit_faction",
+    "alliances",
+    "deckbuilder",
+    "rush_council"
+   ],
+   "win_pct": {
+    "bene_gesserit_faction": 30.0,
+    "alliances": 26.7,
+    "deckbuilder": 15.0,
+    "rush_council": 28.3
+   }
+  },
+  {
+   "matchup": 52,
+   "players": [
+    "bene_gesserit_faction",
+    "factions",
+    "rush_swordmaster",
+    "deckbuilder"
+   ],
+   "win_pct": {
+    "bene_gesserit_faction": 33.3,
+    "factions": 28.3,
+    "rush_swordmaster": 21.7,
+    "deckbuilder": 16.7
+   }
+  },
+  {
+   "matchup": 53,
+   "players": [
+    "bene_gesserit_faction",
+    "factions",
+    "rush_swordmaster",
+    "rush_council"
+   ],
+   "win_pct": {
+    "bene_gesserit_faction": 28.3,
+    "factions": 23.3,
+    "rush_swordmaster": 30.0,
+    "rush_council": 18.3
+   }
+  },
+  {
+   "matchup": 54,
+   "players": [
+    "bene_gesserit_faction",
+    "factions",
+    "deckbuilder",
+    "rush_council"
+   ],
+   "win_pct": {
+    "bene_gesserit_faction": 33.3,
+    "factions": 36.7,
+    "deckbuilder": 15.0,
+    "rush_council": 15.0
+   }
+  },
+  {
+   "matchup": 55,
+   "players": [
+    "bene_gesserit_faction",
+    "rush_swordmaster",
+    "deckbuilder",
+    "rush_council"
+   ],
+   "win_pct": {
+    "bene_gesserit_faction": 25.0,
+    "rush_swordmaster": 36.7,
+    "deckbuilder": 21.7,
+    "rush_council": 16.7
+   }
+  },
+  {
+   "matchup": 56,
+   "players": [
+    "emperor_faction",
+    "alliances",
+    "factions",
+    "rush_swordmaster"
+   ],
+   "win_pct": {
+    "emperor_faction": 28.3,
+    "alliances": 16.7,
+    "factions": 25.0,
+    "rush_swordmaster": 30.0
+   }
+  },
+  {
+   "matchup": 57,
+   "players": [
+    "emperor_faction",
+    "alliances",
+    "factions",
+    "deckbuilder"
+   ],
+   "win_pct": {
+    "emperor_faction": 30.0,
+    "alliances": 26.7,
+    "factions": 20.0,
+    "deckbuilder": 23.3
+   }
+  },
+  {
+   "matchup": 58,
+   "players": [
+    "emperor_faction",
+    "alliances",
+    "factions",
+    "rush_council"
+   ],
+   "win_pct": {
+    "emperor_faction": 31.7,
+    "alliances": 33.3,
+    "factions": 20.0,
+    "rush_council": 15.0
+   }
+  },
+  {
+   "matchup": 59,
+   "players": [
+    "emperor_faction",
+    "alliances",
+    "rush_swordmaster",
+    "deckbuilder"
+   ],
+   "win_pct": {
+    "emperor_faction": 33.3,
+    "alliances": 16.7,
+    "rush_swordmaster": 28.3,
+    "deckbuilder": 21.7
+   }
+  },
+  {
+   "matchup": 60,
+   "players": [
+    "emperor_faction",
+    "alliances",
+    "rush_swordmaster",
+    "rush_council"
+   ],
+   "win_pct": {
+    "emperor_faction": 20.0,
+    "alliances": 23.3,
+    "rush_swordmaster": 43.3,
+    "rush_council": 13.3
+   }
+  },
+  {
+   "matchup": 61,
+   "players": [
+    "emperor_faction",
+    "alliances",
+    "deckbuilder",
+    "rush_council"
+   ],
+   "win_pct": {
+    "emperor_faction": 28.3,
+    "alliances": 26.7,
+    "deckbuilder": 25.0,
+    "rush_council": 20.0
+   }
+  },
+  {
+   "matchup": 62,
+   "players": [
+    "emperor_faction",
+    "factions",
+    "rush_swordmaster",
+    "deckbuilder"
+   ],
+   "win_pct": {
+    "emperor_faction": 43.3,
+    "factions": 23.3,
+    "rush_swordmaster": 26.7,
+    "deckbuilder": 6.7
+   }
+  },
+  {
+   "matchup": 63,
+   "players": [
+    "emperor_faction",
+    "factions",
+    "rush_swordmaster",
+    "rush_council"
+   ],
+   "win_pct": {
+    "emperor_faction": 13.3,
+    "factions": 23.3,
+    "rush_swordmaster": 46.7,
+    "rush_council": 16.7
+   }
+  },
+  {
+   "matchup": 64,
+   "players": [
+    "emperor_faction",
+    "factions",
+    "deckbuilder",
+    "rush_council"
+   ],
+   "win_pct": {
+    "emperor_faction": 20.0,
+    "factions": 33.3,
+    "deckbuilder": 25.0,
+    "rush_council": 21.7
+   }
+  },
+  {
+   "matchup": 65,
+   "players": [
+    "emperor_faction",
+    "rush_swordmaster",
+    "deckbuilder",
+    "rush_council"
+   ],
+   "win_pct": {
+    "emperor_faction": 21.7,
+    "rush_swordmaster": 33.3,
+    "deckbuilder": 25.0,
+    "rush_council": 20.0
+   }
+  },
+  {
+   "matchup": 66,
+   "players": [
+    "alliances",
+    "factions",
+    "rush_swordmaster",
+    "deckbuilder"
+   ],
+   "win_pct": {
+    "alliances": 20.0,
+    "factions": 18.3,
+    "rush_swordmaster": 36.7,
+    "deckbuilder": 25.0
+   }
+  },
+  {
+   "matchup": 67,
+   "players": [
+    "alliances",
+    "factions",
+    "rush_swordmaster",
+    "rush_council"
+   ],
+   "win_pct": {
+    "alliances": 26.7,
+    "factions": 15.0,
+    "rush_swordmaster": 36.7,
+    "rush_council": 21.7
+   }
+  },
+  {
+   "matchup": 68,
+   "players": [
+    "alliances",
+    "factions",
+    "deckbuilder",
+    "rush_council"
+   ],
+   "win_pct": {
+    "alliances": 18.3,
+    "factions": 28.3,
+    "deckbuilder": 35.0,
+    "rush_council": 18.3
+   }
+  },
+  {
+   "matchup": 69,
+   "players": [
+    "alliances",
+    "rush_swordmaster",
+    "deckbuilder",
+    "rush_council"
+   ],
+   "win_pct": {
+    "alliances": 16.7,
+    "rush_swordmaster": 41.7,
+    "deckbuilder": 30.0,
+    "rush_council": 11.7
+   }
+  },
+  {
+   "matchup": 70,
+   "players": [
+    "factions",
+    "rush_swordmaster",
+    "deckbuilder",
+    "rush_council"
+   ],
+   "win_pct": {
+    "factions": 25.0,
+    "rush_swordmaster": 31.7,
+    "deckbuilder": 23.3,
+    "rush_council": 20.0
+   }
+  }
+ ]
+}

@@ -11,6 +11,7 @@ import argparse
 import csv
 import datetime
 import io
+import itertools
 import json
 import math
 import os
@@ -23,8 +24,9 @@ import webbrowser
 from collections import defaultdict
 from multiprocessing import Pool
 
+from .data import LEADERS
 from .engine import Game, SPACES, fmt_ops
-from .strategies import available_strategies, make_strategy
+from .strategies import FOCUS, WATER_MODES, available_strategies, make_strategy, set_water_mode
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MIN_PLAYERS, MAX_PLAYERS = 2, 4
@@ -50,25 +52,52 @@ def check_players(specs):
 VIEWER_TEMPLATE = os.path.join(ROOT, "viewer", "viewer.html")
 
 
+def draw_leaders(seed, specs, fixed=None):
+    """One distinct leader per entry of `specs` (same order as specs, before seating).
+
+    The draw depends on the seed AND the line-up, so the same seed gives different leaders
+    in different matchups, and a strategy's position in the list does not tie it to one
+    leader per seed. `fixed` maps a spec index to a leader name that must be used there;
+    the remaining players get distinct random leaders from the rest.
+    """
+    if fixed:
+        # controlled tests: the other leaders depend only on the seed and the fixed leaders,
+        # so every strategy tested in the fixed slot faces the same opponents' leaders
+        rng = random.Random(f"leaders|{seed}|{len(specs)}|{sorted(fixed.items())}")
+    else:
+        fixed = {}
+        rng = random.Random(f"leaders|{seed}|{'|'.join(specs)}")
+    pool = [ld["name"] for ld in LEADERS if ld["name"] not in fixed.values()]
+    rest = rng.sample(pool, len(specs) - len(fixed))
+    return [fixed[i] if i in fixed else rest.pop() for i in range(len(specs))]
+
+
 def run_one(args):
-    specs, seed, rotate = args
+    """args = (specs, seed, rotate[, leaders]); leaders is False/None (no leaders), True
+    (random distinct leaders), or a dict {spec index: leader name} to fix some of them."""
+    specs, seed, rotate = args[:3]
+    leaders = args[3] if len(args) > 3 else None
     rng = random.Random(seed)
     order = list(range(len(specs)))
     if rotate:
         rng.shuffle(order)  # random seating so first-player advantage averages out
     seated = [specs[i] for i in order]
+    seat_leaders = None
+    if leaders:
+        drawn = draw_leaders(seed, specs, leaders if isinstance(leaders, dict) else None)
+        seat_leaders = [drawn[i] for i in order]
     strategies = [make_strategy(s, seed=seed * 31 + k) for k, s in enumerate(seated)]
     names = [f"P{k + 1}" for k in range(len(seated))]
-    g = Game(strategies, seed=seed, names=names)
+    g = Game(strategies, seed=seed, names=names, leaders=seat_leaders)
     res = g.play()
     res["specs"] = seated
     return res
 
 
-def run_games(specs, games, seed, fixed_seats=False, workers=0):
+def run_games(specs, games, seed, fixed_seats=False, workers=0, leaders=False):
     """Play `games` seeded games (seeds seed .. seed+games-1). Deterministic for a given
     (specs, games, seed, fixed_seats), whatever the number of worker processes."""
-    jobs = [(specs, seed + i, not fixed_seats) for i in range(games)]
+    jobs = [(specs, seed + i, not fixed_seats, leaders) for i in range(games)]
     results = []
     workers = workers or os.cpu_count() or 1
     if workers > 1 and games > 1:
@@ -139,6 +168,36 @@ def summarize(results, specs):
     return rows, seats
 
 
+def print_leaders(results, n_players):
+    """Win rate by leader, pooled over every strategy that played them."""
+    st = defaultdict(lambda: defaultdict(float))
+    for r in results:
+        share = 1.0 / len(r["winners"])
+        for seat, pr in enumerate(r["players"]):
+            if pr.get("leader"):
+                s = st[pr["leader"]]
+                s["n"] += 1
+                s["vp"] += pr["vp"]
+                s["rank"] += pr["rank"]
+                s["wins"] += share if seat in r["winners"] else 0
+    if not st:
+        return []
+    fair = 100.0 / n_players
+    print(f"\nby leader (randomly assigned each game; fair share {fair:.1f}%)")
+    hdr = f"{'leader':<30}{'games':>7}{'win %':>8}{'95% CI':>14}{'avg VP':>9}{'avg rank':>10}"
+    print(hdr)
+    print("-" * len(hdr))
+    rows = []
+    for name, s in sorted(st.items(), key=lambda kv: -kv[1]["wins"] / kv[1]["n"]):
+        lo, hi = wilson(s["wins"], s["n"])
+        rows.append({"leader": name, "games": int(s["n"]), "win_pct": 100 * s["wins"] / s["n"],
+                     "ci_low": lo, "ci_high": hi, "avg_vp": s["vp"] / s["n"], "avg_rank": s["rank"] / s["n"]})
+        ci = f"{lo:.1f}-{hi:.1f}"
+        print(f"{name:<30}{int(s['n']):>7}{rows[-1]['win_pct']:>7.1f}%{ci:>14}"
+              f"{rows[-1]['avg_vp']:>9.2f}{rows[-1]['avg_rank']:>10.2f}")
+    return rows
+
+
 def print_table(rows, n_players, games, avg_rounds):
     print(f"\n{games} games, {n_players} players, avg {avg_rounds:.1f} rounds\n")
     sw = max(28, max(len(r["strategy"]) for r in rows) + 2)
@@ -159,12 +218,13 @@ def write_games_csv(path, results):
     with open(path, "w", newline="") as fh:
         wr = csv.writer(fh)
         wr.writerow(["seed", "rounds", "seat", "strategy", "vp", "rank", "won",
-                     "spice", "solari", "water", "deck_size", "alliances"])
+                     "spice", "solari", "water", "deck_size", "alliances", "leader"])
         for r in sorted(results, key=lambda r: r["seed"]):
             for seat, (spec, pr) in enumerate(zip(r["specs"], r["players"])):
                 wr.writerow([r["seed"], r["rounds"], seat + 1, spec, pr["vp"], pr["rank"],
                              int(seat in r["winners"]), pr["spice"], pr["solari"],
-                             pr["water"], pr["deck_size"], "|".join(pr["alliances"])])
+                             pr["water"], pr["deck_size"], "|".join(pr["alliances"]),
+                             pr.get("leader") or ""])
 
 
 class _Tee:
@@ -187,11 +247,20 @@ def run_meta(a, extra=None):
                                          stderr=subprocess.DEVNULL).decode().strip()
     except Exception:
         pass
+    dirty = None
+    try:
+        dirty = bool(subprocess.check_output(["git", "status", "--porcelain", "--", "dune_sim"],
+                                             cwd=ROOT, stderr=subprocess.DEVNULL).strip())
+    except Exception:
+        pass
     meta = {
         "command": "python3 -m dune_sim " + " ".join(sys.argv[1:]),
+        "code_differs_from_commit": dirty,
         "date": datetime.datetime.now().isoformat(timespec="seconds"),
         "python": platform.python_version(), "platform": platform.platform(),
         "git_commit": commit, "seed": a.seed, "games": a.games,
+        "leaders": "random" if getattr(a, "leaders", False) else "none",
+        "water": getattr(a, "water", "capped"),
     }
     meta.update(extra or {})
     return meta
@@ -217,13 +286,14 @@ def cmd_batch(a):
     if tee:
         sys.stdout = tee
     try:
-        results = run_games(specs, a.games, a.seed, a.fixed_seats, a.workers)
+        results = run_games(specs, a.games, a.seed, a.fixed_seats, a.workers, a.leaders)
         rows, seats = summarize(results, specs)
         avg_rounds = sum(r["rounds"] for r in results) / len(results)
         print_table(rows, len(specs), a.games, avg_rounds)
         by_vp = sum(r["end_reason"] == "10 VP reached" for r in results)
         print(f"games ended by: 10 VP reached {100 * by_vp / len(results):.0f}%, "
               f"conflict deck exhausted {100 - 100 * by_vp / len(results):.0f}%")
+        leader_rows = print_leaders(results, len(specs))
         if a.detail:
             print_detail(results)
         if a.fixed_seats:
@@ -236,7 +306,8 @@ def cmd_batch(a):
         print(f"per-game results written to {a.csv}")
     if a.save:
         meta = run_meta(a, {"players": specs, "fixed_seats": a.fixed_seats, "avg_rounds": avg_rounds})
-        save_run(a.save, tee.buf.getvalue(), {"meta": meta, "strategies": rows, "win_pct_by_seat": seats},
+        save_run(a.save, tee.buf.getvalue(), {"meta": meta, "strategies": rows, "win_pct_by_seat": seats,
+                                               "leaders": leader_rows},
                  {"games.csv": results})
 
 
@@ -245,6 +316,8 @@ def cmd_benchmark(a):
     base = a.baseline
     targets = a.strategies or [s.split(":", 1)[-1] for s in available_strategies()
                                if s.split(":", 1)[-1] != base]
+    if targets == ["focus"]:
+        targets = list(FOCUS)
     check_players([base] * a.table)
     for t in targets:
         check_players([t, base])
@@ -263,7 +336,7 @@ def cmd_benchmark(a):
         print("-" * len(hdr))
         for t in targets:
             specs = [t] + [base] * (a.table - 1)
-            results = run_games(specs, a.games, a.seed, False, a.workers)
+            results = run_games(specs, a.games, a.seed, False, a.workers, a.leaders)
             rows, _ = summarize(results, specs)
             row = next(r for r in rows if r["strategy"] == t)
             brow = next((r for r in rows if r["strategy"] == base), row)
@@ -320,7 +393,8 @@ def print_detail(results):
         n = t["n"]
         print(f"\n== {spec}: averages per player per game ==")
         print(f"  earned over the game : spice {t['e_spice'] / n:.1f}, solari {t['e_solari'] / n:.1f}, "
-              f"water {t['e_water'] / n:.1f}, troops recruited {t['e_troops'] / n:.1f}")
+              f"water {t['e_water'] / n:.1f}, troops recruited {t['e_troops'] / n:.1f}, "
+              f"extra cards drawn {t['e_draw'] / n:.1f}")
         print(f"  conflict             : troops sent {t['sent'] / n:.1f} per game "
               f"({t['sent'] / t['rounds']:.2f} per round), fought in {100 * t['fought'] / t['rounds']:.0f}% of rounds, "
               f"won {t['wins'] / n:.2f} conflicts outright")
@@ -356,10 +430,12 @@ def _progress(i, n):
         sys.stderr.flush()
 
 
-def build_replay(specs, seed, names=None):
+def build_replay(specs, seed, names=None, leaders=False):
     strategies = [make_strategy(s, seed=seed * 31 + k) for k, s in enumerate(specs)]
     names = names or [f"P{k + 1}" for k in range(len(specs))]
-    g = Game(strategies, seed=seed, names=names, record=True)
+    # leaders: False/None = none, True = random, or a list of leader names, one per seat
+    lead = "random" if leaders is True else (list(leaders) if leaders else None)
+    g = Game(strategies, seed=seed, names=names, record=True, leaders=lead)
     res = g.play()
     return {
         "meta": {"seed": seed, "specs": specs, "result": res},
@@ -381,6 +457,224 @@ def write_viewer(replay, out_path):
         fh.write(html)
 
 
+def cmd_tournament(a):
+    """Every combination of `table` distinct strategies plays `games` games. Reports each
+    strategy's overall record and a head-to-head matrix (how often A finished ahead of B)."""
+    names = list(FOCUS) if a.strategies in ([], ["focus"]) else a.strategies
+    if len(set(names)) != len(names) or len(names) < a.table:
+        raise UsageError(f"need at least {a.table} distinct strategies")
+    check_players(names[:a.table])
+    for nm in names:
+        check_players([nm, nm])
+    matchups = list(itertools.combinations(names, a.table))
+    fair = 100.0 / a.table
+    tee = _Tee(sys.stdout) if a.save else None
+    if tee:
+        sys.stdout = tee
+    tot = {nm: defaultdict(float) for nm in names}
+    vps = {nm: [] for nm in names}
+    ahead = {x: {y: [0, 0] for y in names} for x in names}   # [times x ahead of y, games together]
+    match_rows, all_results = [], []
+    try:
+        print(f"Tournament: {len(names)} strategies, every combination of {a.table} "
+              f"({len(matchups)} matchups), {a.games} games each = {len(matchups) * a.games} games; "
+              f"seeds {a.seed}..{a.seed + a.games - 1} per matchup, seating shuffled per game")
+        for mi, specs in enumerate(matchups):
+            results = run_games(list(specs), a.games, a.seed, False, a.workers, a.leaders)
+            wins = defaultdict(float)
+            for r in results:
+                r["matchup"] = mi + 1
+                share = 1.0 / len(r["winners"])
+                rank = {}
+                for seat, (spec, pr) in enumerate(zip(r["specs"], r["players"])):
+                    t = tot[spec]
+                    t["games"] += 1
+                    t["rank"] += pr["rank"]
+                    vps[spec].append(pr["vp"])
+                    rank[spec] = pr["rank"]
+                    if seat in r["winners"]:
+                        t["wins"] += share
+                        wins[spec] += share
+                for x in specs:
+                    for y in specs:
+                        if x != y:
+                            ahead[x][y][1] += 1
+                            ahead[x][y][0] += rank[x] < rank[y]
+            all_results.extend(results)
+            match_rows.append({"matchup": mi + 1, "players": list(specs),
+                               "win_pct": {s: round(100 * wins[s] / a.games, 1) for s in specs}})
+            if sys.stderr.isatty():
+                sys.stderr.write(f"\rmatchup {mi + 1}/{len(matchups)}   ")
+        rows = []
+        for nm in names:
+            t, n = tot[nm], tot[nm]["games"]
+            lo, hi = wilson(t["wins"], n)
+            rows.append({"strategy": nm, "games": int(n), "win_pct": 100 * t["wins"] / n,
+                         "ci_low": lo, "ci_high": hi, "avg_vp": sum(vps[nm]) / n,
+                         "avg_rank": t["rank"] / n})
+        rows.sort(key=lambda r: -r["win_pct"])
+        order = [r["strategy"] for r in rows]
+        print(f"\nOverall (fair share {fair:.1f}%)\n")
+        hdr = f"{'#':>2} {'strategy':<24}{'games':>7}{'win %':>8}{'95% CI':>14}{'avg VP':>9}{'avg rank':>10}  verdict"
+        print(hdr)
+        print("-" * len(hdr))
+        for i, r in enumerate(rows):
+            r["verdict"] = ("above fair share" if r["ci_low"] > fair else
+                            "below fair share" if r["ci_high"] < fair else "no clear difference")
+            ci = f"{r['ci_low']:.1f}-{r['ci_high']:.1f}"
+            print(f"{i + 1:>2} {r['strategy']:<24}{r['games']:>7}{r['win_pct']:>7.1f}%{ci:>14}"
+                  f"{r['avg_vp']:>9.2f}{r['avg_rank']:>10.2f}  {r['verdict']}")
+        print("\nHead-to-head: % of shared games in which the ROW strategy finished ahead of the COLUMN strategy")
+        print(f"(columns numbered as in the table above; each pair shared {ahead[order[0]][order[1]][1]} games)\n")
+        print(f"{'':>2} {'':<24}" + "".join(f"{i + 1:>7}" for i in range(len(order))))
+        h2h = {}
+        for i, x in enumerate(order):
+            cells = []
+            h2h[x] = {}
+            for y in order:
+                if x == y:
+                    cells.append(f"{'-':>7}")
+                else:
+                    pct = 100 * ahead[x][y][0] / ahead[x][y][1]
+                    h2h[x][y] = round(pct, 1)
+                    cells.append(f"{pct:>6.0f}%")
+            print(f"{i + 1:>2} {x:<24}" + "".join(cells))
+        leader_rows = print_leaders(all_results, a.table)
+        print("\nBest and worst matchup for each strategy (its win % in that matchup):")
+        for x in order:
+            mine = [(m["win_pct"][x], [p for p in m["players"] if p != x]) for m in match_rows if x in m["players"]]
+            best, worst = max(mine), min(mine)
+            print(f"  {x:<24} best {best[0]:>5.1f}% vs {', '.join(best[1])}")
+            print(f"  {'':<24} worst {worst[0]:>4.1f}% vs {', '.join(worst[1])}")
+    finally:
+        if tee:
+            sys.stdout = tee.stream
+    if a.save:
+        meta = run_meta(a, {"strategies": names, "table": a.table, "matchups": len(matchups),
+                            "fair_share_pct": fair})
+        save_run(a.save, tee.buf.getvalue(),
+                 {"meta": meta, "overall": rows, "head_to_head": h2h, "matchups": match_rows,
+                  "leaders": leader_rows},
+                 {"games.csv": all_results})
+
+
+def cmd_leader_fit(a):
+    """Controlled test of which leaders suit which strategies.
+
+    For every (strategy, leader) pair: the strategy plays as that leader against three copies
+    of the baseline, whose leaders are random but distinct. The same seeds, seating and
+    opponent leaders are used for every strategy with a given leader, so each cell can be
+    compared directly with the baseline playing that same leader (a paired comparison).
+    fit = strategy's result with leader L  -  baseline's result with leader L
+    """
+    base = a.baseline
+    targets = list(FOCUS) if a.strategies in ([], ["focus"]) else a.strategies
+    names = [base] + [t for t in targets if t != base]
+    for nm in names:
+        check_players([nm, base])
+    leaders = [ld["name"] for ld in LEADERS]
+    if a.leader:
+        leaders = [l for l in leaders if l in a.leader]
+    tee = _Tee(sys.stdout) if a.save else None
+    if tee:
+        sys.stdout = tee
+    cells, per_file = {}, {}
+    try:
+        print(f"Leader fit: each strategy plays each leader vs {a.table - 1} x {base} "
+              f"(random distinct leaders), {a.games} games per pair, seeds {a.seed}.."
+              f"{a.seed + a.games - 1}; {len(names) * len(leaders) * a.games} games in total")
+        for li, L in enumerate(leaders):
+            for nm in names:
+                specs = [nm] + [base] * (a.table - 1)
+                # fixing index 0 to L; the opponents' leaders come from the seed and L only,
+                # so they are identical for every strategy tested with L
+                jobs_leaders = {0: L}
+                results = run_games_fixed(specs, a.games, a.seed, a.workers, jobs_leaders)
+                vps, wins, ranks = [], 0.0, 0
+                for r in results:
+                    me = next(i for i, p in enumerate(r["players"]) if p["leader"] == L)
+                    vps.append(r["players"][me]["vp"])
+                    ranks += r["players"][me]["rank"]
+                    if me in r["winners"]:
+                        wins += 1.0 / len(r["winners"])
+                cells[(nm, L)] = {"vps": vps, "wins": wins, "rank": ranks / len(results)}
+                per_file[f"games_{L.split()[-1].strip(chr(34)).lower()}_{nm}.csv"] = results
+                if sys.stderr.isatty():
+                    sys.stderr.write(f"\r{li + 1}/{len(leaders)} leaders  {nm:<24}")
+        if sys.stderr.isatty():
+            sys.stderr.write("\n")
+        short = {L: L.replace('Glossu "The Beast" ', "").split()[-1] if "Rabban" in L
+                 else L.split()[1] if L.split()[0] in ("Baron", "Count", "Countess", "Duke") else L.split()[0]
+                 for L in leaders}
+        n = a.games
+
+        def wp(nm, L):
+            return 100 * cells[(nm, L)]["wins"] / n
+
+        def mvp(nm, L):
+            return sum(cells[(nm, L)]["vps"]) / n
+
+        lead_order = sorted(leaders, key=lambda L: -wp(base, L))
+        hdr = f"{'':<24}" + "".join(f"{short[L]:>9}" for L in lead_order) + f"{'all':>9}"
+        print(f"\nWin % as each leader (fair share {100 / a.table:.0f}%; each cell {n} games,"
+              f" 95% interval about +/-{196 * (0.25 * 0.75 / n) ** 0.5:.0f} points)\n")
+        print(hdr)
+        print("-" * len(hdr))
+        rows_out = []
+        for nm in names:
+            allw = sum(cells[(nm, L)]["wins"] for L in leaders) / (n * len(leaders))
+            print(f"{nm:<24}" + "".join(f"{wp(nm, L):>9.1f}" for L in lead_order) + f"{100 * allw:>9.1f}")
+        print(f"\nFit: average VP as the leader minus {base}'s average VP as the same leader, same games")
+        print("(+ = this leader suits the strategy better than it suits the baseline; * = 95% interval excludes 0)\n")
+        print(hdr)
+        print("-" * len(hdr))
+        for nm in names:
+            line = f"{nm:<24}"
+            for L in lead_order:
+                d = [x - y for x, y in zip(cells[(nm, L)]["vps"], cells[(base, L)]["vps"])]
+                m = sum(d) / n
+                sd = (sum((x - m) ** 2 for x in d) / max(1, n - 1)) ** 0.5
+                se = sd / n ** 0.5
+                sig = "*" if nm != base and abs(m) > 1.96 * se else " "
+                line += f"{m:>+8.2f}{sig}"
+                rows_out.append({"strategy": nm, "leader": L, "games": n, "win_pct": wp(nm, L),
+                                 "avg_vp": mvp(nm, L), "avg_rank": cells[(nm, L)]["rank"],
+                                 "vp_vs_baseline": m, "vp_vs_baseline_se": se,
+                                 "significant": sig == "*"})
+            allm = sum(mvp(nm, L) - mvp(base, L) for L in leaders) / len(leaders)
+            print(line + f"{allm:>+9.2f}")
+        print("\nBest and worst leader for each strategy, by fit (VP vs baseline with that leader):")
+        for nm in names:
+            if nm == base:
+                continue
+            mine = [r for r in rows_out if r["strategy"] == nm]
+            best = max(mine, key=lambda r: r["vp_vs_baseline"])
+            worst = min(mine, key=lambda r: r["vp_vs_baseline"])
+            print(f"  {nm:<24} best {short[best['leader']]:<8} {best['vp_vs_baseline']:+.2f} VP"
+                  f"{' *' if best['significant'] else ''}   worst {short[worst['leader']]:<8}"
+                  f" {worst['vp_vs_baseline']:+.2f} VP{' *' if worst['significant'] else ''}")
+    finally:
+        if tee:
+            sys.stdout = tee.stream
+    if a.save:
+        meta = run_meta(a, {"baseline": base, "strategies": names, "leaders_tested": leaders,
+                            "table": a.table})
+        save_run(a.save, tee.buf.getvalue(), {"meta": meta, "cells": rows_out}, per_file)
+
+
+def run_games_fixed(specs, games, seed, workers, fixed):
+    """Like run_games, but with some leaders fixed: {spec index: leader name}."""
+    jobs = [(specs, seed + i, True, fixed) for i in range(games)]
+    workers = workers or os.cpu_count() or 1
+    if workers > 1 and games > 1:
+        with Pool(workers) as pool:
+            results = list(pool.imap_unordered(run_one, jobs, chunksize=4))
+    else:
+        results = [run_one(j) for j in jobs]
+    results.sort(key=lambda r: r["seed"])
+    return results
+
+
 # --------------------------------------------------------------------------- traces
 def player_measures(pr):
     d = max(1, pr["decisions"])
@@ -398,6 +692,8 @@ def trace_text(replay, agent):
     frames, out = replay["frames"], []
     res = replay["meta"]["result"]
     name = res["players"][agent]["name"]
+    if res["players"][agent].get("leader"):
+        name += " as " + res["players"][agent]["leader"]
     out.append(f"TRACE of {name} [{res['players'][agent]['strategy']}], seed {replay['meta']['seed']}, "
                f"players: {', '.join(replay['meta']['specs'])}")
     keys = ["vp", "spice", "solari", "water", "garrison", "conflict", "persuasion"]
@@ -446,12 +742,12 @@ def trace_text(replay, agent):
     return "\n".join(out) + "\n"
 
 
-def run_trace(specs, seed, agent, out_dir):
+def run_trace(specs, seed, agent, out_dir, leaders=False):
     """Play one fully recorded game and write trace.txt, trace.json, replay.html, result.json."""
     check_players(specs)
     if not 0 <= agent < len(specs):
         raise UsageError(f"--agent must be between 1 and {len(specs)}")
-    replay = build_replay(specs, seed)
+    replay = build_replay(specs, seed, leaders=leaders)
     res = replay["meta"]["result"]
     pr = res["players"][agent]
     summary = {
@@ -480,7 +776,7 @@ def cmd_trace(a):
     out = None
     if a.save:
         out = a.save if os.path.isabs(a.save) or os.sep in a.save else os.path.join(ROOT, "results", a.save)
-    summary, replay = run_trace(a.players, a.seed, a.agent - 1, out)
+    summary, replay = run_trace(a.players, a.seed, a.agent - 1, out, a.leaders)
     if not out:
         print(trace_text(replay, a.agent - 1))
     m = summary["measures"]
@@ -505,7 +801,7 @@ def cmd_cases(a):
                "expect": c["expect"], "what": c.get("what", "")}
         try:
             summary, _ = run_trace(c["players"], c.get("seed", 1), c.get("agent", 1) - 1,
-                                   os.path.join(out, c["id"]))
+                                   os.path.join(out, c["id"]), c.get("leaders", False))
             row.update(status=summary["terminal_status"], agent=summary["agent_strategy"],
                        agent_won=summary["agent_won"], total_fallbacks=summary["total_fallbacks"],
                        **summary["measures"])
@@ -533,7 +829,7 @@ def cmd_cases(a):
                          f"{r['decisions']} | {r['ms_per_decision']} | {nt} | {r['fallbacks']} | {'yes' if r['as_expected'] else 'NO'} |")
     table = "\n".join(lines)
     print(table)
-    meta = run_meta(argparse.Namespace(seed=None, games=len(cases)), {"cases_file": a.file})
+    meta = run_meta(argparse.Namespace(seed=None, games=len(cases), water=a.water), {"cases_file": a.file})
     with open(os.path.join(out, "cases.md"), "w") as fh:
         fh.write("$ " + meta["command"] + "\n\n" + table + "\n")
     with open(os.path.join(out, "cases.json"), "w") as fh:
@@ -545,7 +841,7 @@ def cmd_cases(a):
 
 def cmd_watch(a):
     check_players(a.players)
-    replay = build_replay(a.players, a.seed)
+    replay = build_replay(a.players, a.seed, leaders=a.leaders)
     out = a.out or os.path.join(ROOT, "replays", f"game_{a.seed}.html")
     write_viewer(replay, out)
     if a.json:
@@ -553,7 +849,8 @@ def cmd_watch(a):
             json.dump(replay, fh)
     res = replay["meta"]["result"]
     print(f"seed {a.seed}: " + ", ".join(
-        f"{p['name']} [{p['strategy']}] {p['vp']}VP" + (" *WIN*" if i in res["winners"] else "")
+        f"{p['name']} [{p['strategy']}{', ' + p['leader'] if p.get('leader') else ''}] {p['vp']}VP"
+        + (" *WIN*" if i in res["winners"] else "")
         for i, p in enumerate(res["players"])))
     print(f"replay: {out}  ({len(replay['frames'])} steps)")
     if a.open:
@@ -563,7 +860,8 @@ def cmd_watch(a):
 def cmd_list(_a):
     print("Built-in strategies:")
     for s in available_strategies():
-        print("  " + s)
+        print("  " + s + ("   [focus]" if s.split(":", 1)[-1] in FOCUS else ""))
+    print("\n[focus] = clearly beat three balanced over 1,000 games; run them with `benchmark focus`")
     print("\nAlso: weights:path/to/weights.json   or   your.module:YourStrategyClass")
 
 
@@ -585,7 +883,8 @@ def main(argv=None):
     b.set_defaults(func=cmd_batch)
 
     k = sub.add_parser("benchmark", help="run each strategy against copies of a baseline")
-    k.add_argument("strategies", nargs="*", help="strategies to test (default: all built-ins)")
+    k.add_argument("strategies", nargs="*",
+                   help="strategies to test (default: all built-ins; `focus` = the focus set)")
     k.add_argument("--baseline", default="balanced")
     k.add_argument("--table", type=int, default=4, help="players per game")
     k.add_argument("-n", "--games", type=int, default=400)
@@ -602,6 +901,26 @@ def main(argv=None):
     w.add_argument("--open", action="store_true", help="open in your browser")
     w.set_defaults(func=cmd_watch)
 
+    tn = sub.add_parser("tournament", help="every combination of strategies plays each other")
+    tn.add_argument("strategies", nargs="*", help="strategies (default: the focus set)")
+    tn.add_argument("--table", type=int, default=4, help="players per game")
+    tn.add_argument("-n", "--games", type=int, default=60, help="games per matchup")
+    tn.add_argument("--seed", type=int, default=1)
+    tn.add_argument("-w", "--workers", type=int, default=0)
+    tn.add_argument("--save", metavar="NAME", help="save everything to results/NAME/")
+    tn.set_defaults(func=cmd_tournament)
+
+    lf = sub.add_parser("leader-fit", help="which leaders suit which strategies (controlled test)")
+    lf.add_argument("strategies", nargs="*", help="strategies to test (default: the focus set)")
+    lf.add_argument("--baseline", default="balanced")
+    lf.add_argument("--leader", action="append", help="limit to this leader (repeatable)")
+    lf.add_argument("--table", type=int, default=4)
+    lf.add_argument("-n", "--games", type=int, default=100, help="games per strategy-leader pair")
+    lf.add_argument("--seed", type=int, default=1)
+    lf.add_argument("-w", "--workers", type=int, default=0)
+    lf.add_argument("--save", metavar="NAME", help="save everything to results/NAME/")
+    lf.set_defaults(func=cmd_leader_fit, leaders=True)
+
     t = sub.add_parser("trace", help="play one game and record every decision of one seat")
     t.add_argument("-p", "--players", nargs="+", required=True)
     t.add_argument("--seed", type=int, default=1)
@@ -617,7 +936,16 @@ def main(argv=None):
     l_ = sub.add_parser("list", help="list strategies")
     l_.set_defaults(func=cmd_list)
 
+    for sp in (b, k, tn, t, w):   # leaders are on by default wherever games are played
+        sp.add_argument("--no-leaders", dest="leaders", action="store_false",
+                        help="play without leaders (Signet Ring gives 1 solari), as before leaders were added")
+        sp.set_defaults(leaders=True)
+    for sp in (b, k, tn, t, w, c, lf):
+        sp.add_argument("--water", choices=WATER_MODES, default="capped",
+                        help="capped (default): water beyond 4 is worth little; "
+                             "flat: every water at full value, as in the U0-HW-11 baseline")
     a = ap.parse_args(argv)
+    set_water_mode(getattr(a, "water", "capped"))
     try:
         a.func(a)
     except UsageError as e:

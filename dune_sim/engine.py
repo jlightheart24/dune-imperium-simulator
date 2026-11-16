@@ -76,8 +76,11 @@ class Player:
         self.agents_used = 0
         self.mentat = False
         self.mentat_uses = 0
+        self.leader: Optional[dict] = None   # entry from data.LEADERS, or None (no leaders)
+        self.visited: set = set()            # spaces this player has used this round
+        self.held: Optional[Card] = None     # card set aside by Manipulate; only this player may buy it
         # statistics (do not affect play)
-        self.earned = {"spice": 0, "solari": 0, "water": 0, "troops": 0}
+        self.earned = {"spice": 0, "solari": 0, "water": 0, "troops": 0, "draw": 0}
         self.conflict_wins = 0
         # decision statistics for choose_turn (the main decision point)
         self.decisions = 0          # times the agent was asked to choose a turn
@@ -107,7 +110,9 @@ NEAR_TIE = 0.5   # utility margin below which two options count as a near-tie (1
 
 class Game:
     def __init__(self, strategies: list, seed: Optional[int] = None,
-                 names: Optional[List[str]] = None, record: bool = False):
+                 names: Optional[List[str]] = None, record: bool = False, leaders=None):
+        """leaders: None (no leaders, Signet Ring gives 1 solari), "random" (each player gets
+        a different random leader), or a list of leader names, one per seat."""
         self.seed = seed if seed is not None else random.randrange(1 << 30)
         self.rng = random.Random(self.seed)
         self.strategies = strategies
@@ -117,6 +122,14 @@ class Game:
                         for i, s in enumerate(strategies)]
         for p in self.players:
             self.rng.shuffle(p.deck)
+        if leaders:
+            if leaders == "random":
+                # separate generator so the rest of the game's randomness is unaffected
+                pick = random.Random(f"leaders|{self.seed}").sample(data.LEADERS, n)
+            else:
+                pick = [data.LEADER_BY_NAME[nm] for nm in leaders]
+            for p, ld in zip(self.players, pick):
+                p.leader = ld
 
         self.occupied: Dict[str, Optional[int]] = {s["name"]: None for s in SPACES}
         self.bonus_spice = {s["name"]: 0 for s in SPACES if s["maker"]}
@@ -154,6 +167,9 @@ class Game:
         self._pending_decision: Optional[dict] = None
         self.recording = record
         self.frames: Optional[list] = [] if record else None
+        for p in self.players:
+            if p.leader and p.leader.get("start"):
+                self.apply_ops(p, p.leader["start"], {})
         self._record("Game start", None)
 
     # ------------------------------------------------------------------ utils
@@ -172,7 +188,12 @@ class Game:
         g.recording = False
         g.rng = random.Random(self.rng.getrandbits(32))
         for p in g.players:
-            g.rng.shuffle(p.deck)
+            if p.leader and p.leader.get("prescience") and p.deck:
+                top = p.deck.pop()          # this leader knows their next card
+                g.rng.shuffle(p.deck)
+                p.deck.append(top)
+            else:
+                g.rng.shuffle(p.deck)
         g.rng.shuffle(g.imperium_deck)
         g.rng.shuffle(g.intrigue_deck)
         return g
@@ -313,6 +334,9 @@ class Game:
             played = p.in_play + p.revealed_cards
             if any(c.faction == f and c is not me for c in played):
                 self.apply_ops(p, op["then"], ctx)
+        elif "if_any_alliance" in op:
+            if any(v == p.idx for v in self.alliance.values()):
+                self.apply_ops(p, op["then"], ctx)
         elif "if_seat" in op:
             if p.seat:
                 self.apply_ops(p, op["then"], ctx)
@@ -333,6 +357,7 @@ class Game:
             p.earned["troops"] += v
         elif k == "draw":
             self.draw(p, v)
+            p.earned["draw"] += v
         elif k == "intrigue":
             self.draw_intrigue(p, v)
         elif k in ("spice", "solari", "water", "vp", "persuasion", "swords"):
@@ -345,12 +370,28 @@ class Game:
     def special(self, p: Player, name: str, ctx: dict):
         if name == "mentat":
             self.draw(p, 1)
+            p.earned["draw"] += 1
             p.mentat = True
             p.mentat_uses += 1
         elif name == "swordmaster":
             p.agents_total = 3
         elif name == "high_council":
             p.seat = True
+            if p.leader and p.leader.get("on_high_council"):
+                self.apply_ops(p, p.leader["on_high_council"], ctx)
+        elif name == "manipulate":
+            # take a card out of the Imperium row; the row refills. The card can be bought
+            # only by this player, this round, for 1 persuasion less. A card that is not
+            # bought (or is displaced by a second Manipulate) leaves the game.
+            if self.imperium_row:
+                c = self.strat(p).choose_reserve(self, p, list(self.imperium_row))
+                if not any(c is x for x in self.imperium_row):
+                    c = self.imperium_row[0]
+                self.imperium_row.remove(c)
+                if self.imperium_deck:
+                    self.imperium_row.append(self.imperium_deck.pop())
+                p.held = c
+                ctx["reserved"] = c.name
         elif name == "secrets":
             self.draw_intrigue(p, 1)
             for q in self.players:
@@ -367,13 +408,24 @@ class Game:
             raise ValueError(f"Unknown special {name}")
 
     # ------------------------------------------------------------ legality
+    def space_cost(self, p: Player, s: dict) -> dict:
+        d = p.leader.get("space_discount") if p.leader else None
+        if d and s["icon"] == d["icon"] and s["cost"].get("solari"):
+            cost = dict(s["cost"])
+            cost["solari"] = max(0, cost["solari"] - d["solari"])
+            return cost
+        return s["cost"]
+
     def space_ok(self, p: Player, s: dict) -> bool:
-        if self.occupied[s["name"]] is not None:
-            return False
+        occ = self.occupied[s["name"]]
+        if occ is not None:
+            shared = p.leader.get("ignore_occupied", ()) if p.leader else ()
+            if occ == p.idx or s["icon"] not in shared or s["name"] in p.visited:
+                return False
         for f, v in s["requires"].items():
             if p.influence[f] < v:
                 return False
-        if not self.can_pay(p, s["cost"]):
+        if not self.can_pay(p, self.space_cost(p, s)):
             return False
         if s["name"] == "High Council" and p.seat:
             return False
@@ -410,9 +462,15 @@ class Game:
         card = p.hand.pop(hand_index)
         p.in_play.append(card)
         p.agents_used += 1
-        self.occupied[space_name] = pi
-        self.pay(p, s["cost"])
+        if self.occupied[space_name] is None:   # a leader sharing a space does not displace
+            self.occupied[space_name] = pi
+        p.visited.add(space_name)
+        cost = self.space_cost(p, s)
+        self.pay(p, cost)
         ctx = {"space": s, "card": card, "recruited": 0}
+        ld = p.leader or {}
+        if cost.get("solari") and ld.get("on_pay_solari"):
+            self.apply_ops(p, ld["on_pay_solari"], ctx)
         if s["faction"]:
             self.change_influence(p, s["faction"], 1)
         if s["control"] and self.control.get(space_name) is not None:
@@ -423,7 +481,14 @@ class Game:
             p.earned["spice"] += self.bonus_spice[space_name]
             self.bonus_spice[space_name] = 0
         self.apply_ops(p, s["effects"], ctx)
-        self.apply_ops(p, card.agent, ctx)
+        if s["maker"] and ld.get("maker_tax"):
+            tax = min(p.spice, ld["maker_tax"]["spice"])
+            p.spice -= tax
+            p.earned["spice"] -= tax
+            self.gain(p, "draw", ld["maker_tax"]["draw"], ctx)
+        # with leaders in play, the Signet Ring triggers the leader's signet ability
+        signet = card.name == "Signet Ring" and p.leader is not None
+        self.apply_ops(p, p.leader["signet"] if signet else card.agent, ctx)
         deployed = 0
         if s["combat"]:
             max_n = min(p.garrison, 2 + ctx["recruited"])
@@ -432,6 +497,8 @@ class Game:
                 p.garrison -= deployed
                 p.conflict += deployed
         msg = f"{p.name} plays {card.name} -> {space_name}"
+        if ctx.get("reserved"):
+            msg += f", reserves {ctx['reserved']} from the Imperium row"
         if deployed:
             msg += f", deploys {deployed}"
         self._record(msg, pi)
@@ -447,6 +514,8 @@ class Game:
         bought = []
         while True:
             options = [c for c in self.imperium_row if c.cost <= budget]
+            if p.held is not None and held_price(p.held) <= budget and p.held not in options:
+                options.append(p.held)
             options += [RESERVE_CARDS[n] for n in data.BUYABLE_RESERVE
                         if self.reserve[n] > 0 and RESERVE_CARDS[n].cost <= budget]
             if not options:
@@ -454,12 +523,16 @@ class Game:
             c = self.strat(p).choose_purchase(self, p, options, budget)
             if c is None:
                 break
-            budget -= c.cost
-            if c in self.imperium_row:
+            if c is p.held:               # the reserved copy is always the cheaper one
+                budget -= held_price(c)
+                p.held = None
+            elif c in self.imperium_row:
+                budget -= c.cost
                 self.imperium_row.remove(c)
                 if self.imperium_deck:
                     self.imperium_row.append(self.imperium_deck.pop())
             else:
+                budget -= c.cost
                 self.reserve[c.name] -= 1
             p.discard.append(c)
             self.apply_ops(p, c.acquire, {"card": c})
@@ -498,6 +571,16 @@ class Game:
         for p in self.players:
             self.draw(p, data.HAND_SIZE)
         self._record(f"Round {self.round}: conflict {self.conflict_card['name']}", None)
+        for p in self.players:
+            ms = p.leader.get("masterstroke") if p.leader else None
+            if ms and ms["round"] == self.round:
+                left = list(FACTIONS)
+                for _ in range(ms["factions"]):
+                    f = self.strat(p).choose_influence(self, p, left)
+                    f = f if f in left else left[0]
+                    left.remove(f)
+                    self.change_influence(p, f, 1)
+                self._record(f"{p.name} ({p.leader['name']}) plays Masterstroke", p.idx)
 
         # Player turns
         self.phase = "player turns"
@@ -533,6 +616,8 @@ class Game:
             p.discard.extend(p.hand + p.in_play + p.revealed_cards)
             p.hand, p.in_play, p.revealed_cards = [], [], []
             p.agents_used = 0
+            p.visited = set()
+            p.held = None            # an unbought reserved card leaves the game
             p.mentat = False
             p.revealed = False
             p.persuasion = 0
@@ -668,6 +753,7 @@ class Game:
             "winners": winners,
             "players": [{
                 "name": q.name, "strategy": q.strategy_name, "vp": self.total_vp(q),
+                "leader": q.leader["name"] if q.leader else None,
                 "rank": standings.index(q) + 1, "spice": q.spice, "solari": q.solari,
                 "water": q.water, "deck_size": len(q.all_cards()),
                 "decisions": q.decisions, "decision_ms": 1000 * q.decision_time,
@@ -722,6 +808,9 @@ class Game:
             "alliance": dict(self.alliance),
             "players": [{
                 "name": p.name, "strategy": p.strategy_name, "vp": self.total_vp(p),
+                "leader": None if not p.leader else {
+                    "name": p.leader["name"], "ability": p.leader["ability"],
+                    "signet": p.leader["signet_text"]},
                 "spice": p.spice, "solari": p.solari, "water": p.water,
                 "garrison": p.garrison, "conflict": p.conflict,
                 "strength": self.strength(p), "swords": p.swords,
@@ -732,10 +821,16 @@ class Game:
                 "in_play": [c.name for c in p.in_play],
                 "revealed_cards": [c.name for c in p.revealed_cards],
                 "intrigue": [c.name for c in p.intrigue],
+                "held": None if p.held is None else {"name": p.held.name, "cost": held_price(p.held)},
                 "deck": len(p.deck), "discard": len(p.discard),
                 "deck_total": len(p.all_cards()),
             } for p in self.players],
         }
+
+
+def held_price(c: Card) -> int:
+    """Persuasion price of a card its owner reserved with Manipulate."""
+    return max(0, c.cost - 1)
 
 
 def _count_types(p: Player) -> Dict[str, int]:

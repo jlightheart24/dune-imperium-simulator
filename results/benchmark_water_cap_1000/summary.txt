@@ -1,0 +1,18 @@
+$ python3 -m dune_sim benchmark card_draw deckbuilder alliances bene_gesserit_faction rush_swordmaster emperor_faction rush_council rush_both factions emperor_cards -n 1000 --no-leaders --save benchmark_water_cap_1000
+Benchmark: 1 x <strategy> vs 3 x balanced, 1000 games each, seeds 1..1000, seating shuffled per game
+fair share = 25.0%
+
+strategy                       win %        95% CI   avg VP  +/-SE  base VP  avg rank  verdict
+----------------------------------------------------------------------------------------------
+card_draw                      25.7%     23.1-28.5     7.66   0.07     7.66      2.53  no clear difference
+deckbuilder                    25.8%     23.2-28.6     7.88   0.07     7.69      2.48  no clear difference
+alliances                      25.2%     22.6-28.0     7.71   0.07     7.64      2.49  no clear difference
+bene_gesserit_faction          30.0%     27.2-32.9     7.98   0.07     7.49      2.34  better than baseline
+rush_swordmaster               29.5%     26.8-32.4     7.69   0.07     7.53      2.42  better than baseline
+emperor_faction                24.7%     22.1-27.5     7.35   0.07     7.59      2.54  no clear difference
+rush_council                   17.3%     15.1-19.8     7.23   0.07     7.78      2.71  worse than baseline
+rush_both                      28.5%     25.8-31.4     7.90   0.07     7.63      2.39  better than baseline
+factions                       23.2%     20.7-25.9     7.65   0.07     7.65      2.54  no clear difference
+emperor_cards                  22.6%     20.1-25.3     7.37   0.07     7.62      2.57  no clear difference
+
+verdict: 'better'/'worse' when the 95% interval on win % excludes the fair share.

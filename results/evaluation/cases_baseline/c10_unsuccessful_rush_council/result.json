@@ -1,0 +1,29 @@
+{
+ "players": [
+  "rush_council",
+  "balanced",
+  "balanced",
+  "balanced"
+ ],
+ "seed": 7,
+ "agent_seat": 1,
+ "agent_strategy": "rush_council",
+ "terminal_status": "conflict deck exhausted after 10 rounds",
+ "agent_won": false,
+ "final_vp": [
+  8,
+  6,
+  5,
+  9
+ ],
+ "measures": {
+  "vp": 8,
+  "rank": 2,
+  "decisions": 20,
+  "avg_options": 15.0,
+  "ms_per_decision": 8.49,
+  "near_tie_pct": 31.6,
+  "fallbacks": 0
+ },
+ "total_fallbacks": 0
+}

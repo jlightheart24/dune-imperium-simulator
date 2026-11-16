@@ -1,0 +1,22 @@
+$ python3 -m dune_sim batch -n 2000 -p balanced balanced balanced balanced --save leaders_balanced_mirror_helena
+
+2000 games, 4 players, avg 9.6 rounds
+
+strategy                       win %        95% CI   avg VP  avg rank  alliances   deck  end $  3rd agent  council  mentats
+---------------------------------------------------------------------------------------------------------------------------
+balanced                       25.0%     24.1-26.0     7.83      2.50       0.82   22.5    4.7        53%      93%      1.1
+
+(fair share = 25.0% per seat; 95% CI = Wilson interval on win %; end $ = solari left at game end; mentats = Mentat uses per game)
+games ended by: 10 VP reached 82%, conflict deck exhausted 18%
+
+by leader (randomly assigned each game; fair share 25.0%)
+leader                          games   win %        95% CI   avg VP  avg rank
+------------------------------------------------------------------------------
+Baron Vladimir Harkonnen          998   34.4%     31.5-37.4     8.54      2.20
+Count Ilban Richese              1034   27.1%     24.5-29.9     7.96      2.44
+Glossu "The Beast" Rabban         995   26.6%     24.0-29.5     7.85      2.46
+Count Memnon Thorvald             978   25.7%     23.0-28.5     7.78      2.48
+Duke Leto Atreides                998   24.2%     21.7-27.0     7.75      2.57
+Paul Atreides                    1011   23.1%     20.7-25.8     7.71      2.56
+Helena Richese                    977   20.1%     17.7-22.7     7.57      2.64
+Countess Ariana Thorvald         1009   18.7%     16.4-21.3     7.47      2.65

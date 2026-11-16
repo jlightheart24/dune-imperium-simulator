@@ -1,0 +1,103 @@
+{
+ "meta": {
+  "command": "python3 -m dune_sim batch -n 1000 --no-leaders --water flat -p rush_both rush_swordmaster bene_gesserit_faction deckbuilder --save results/evaluation/top4_baseline",
+  "code_differs_from_commit": true,
+  "date": "2026-11-14T15:23:45",
+  "python": "3.9.6",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "git_commit": "11dab03a60e4b1208a54c96a03b044e075a8c989",
+  "seed": 1,
+  "games": 1000,
+  "leaders": "none",
+  "water": "flat",
+  "players": [
+   "rush_both",
+   "rush_swordmaster",
+   "bene_gesserit_faction",
+   "deckbuilder"
+  ],
+  "fixed_seats": false,
+  "avg_rounds": 9.746
+ },
+ "strategies": [
+  {
+   "strategy": "bene_gesserit_faction",
+   "seats": 1000,
+   "wins": 297.0,
+   "win_pct": 29.7,
+   "ci_low": 26.949921031879487,
+   "ci_high": 32.60545105072797,
+   "avg_vp": 7.85,
+   "vp_sd": 2.0113541571651554,
+   "vp_se": 0.06360460317890171,
+   "avg_rank": 2.341,
+   "alliances": 1.131,
+   "deck": 21.167,
+   "end_solari": 6.626,
+   "swordmaster_pct": 54.8,
+   "council_pct": 41.2,
+   "mentats": 0.99
+  },
+  {
+   "strategy": "rush_both",
+   "seats": 1000,
+   "wins": 250.0,
+   "win_pct": 25.0,
+   "ci_low": 22.41526427373505,
+   "ci_high": 27.776080655584483,
+   "avg_vp": 7.48,
+   "vp_sd": 2.1717081563406073,
+   "vp_se": 0.0686754418720136,
+   "avg_rank": 2.484,
+   "alliances": 0.762,
+   "deck": 22.45,
+   "end_solari": 8.528,
+   "swordmaster_pct": 98.8,
+   "council_pct": 100.0,
+   "mentats": 1.212
+  },
+  {
+   "strategy": "rush_swordmaster",
+   "seats": 1000,
+   "wins": 236.0,
+   "win_pct": 23.6,
+   "ci_low": 21.072293104092804,
+   "ci_high": 26.329767141268622,
+   "avg_vp": 7.297,
+   "vp_sd": 2.2864861729341377,
+   "vp_se": 0.07230504144953517,
+   "avg_rank": 2.606,
+   "alliances": 0.838,
+   "deck": 20.503,
+   "end_solari": 9.878,
+   "swordmaster_pct": 99.8,
+   "council_pct": 0.0,
+   "mentats": 1.54
+  },
+  {
+   "strategy": "deckbuilder",
+   "seats": 1000,
+   "wins": 217.0,
+   "win_pct": 21.7,
+   "ci_low": 19.256037369509343,
+   "ci_high": 24.360565090480364,
+   "avg_vp": 7.535,
+   "vp_sd": 2.089770834838628,
+   "vp_se": 0.06608435625881617,
+   "avg_rank": 2.569,
+   "alliances": 0.978,
+   "deck": 23.952,
+   "end_solari": 6.206,
+   "swordmaster_pct": 32.8,
+   "council_pct": 70.3,
+   "mentats": 1.095
+  }
+ ],
+ "win_pct_by_seat": {
+  "P1": 24.9,
+  "P2": 24.0,
+  "P3": 25.1,
+  "P4": 26.0
+ },
+ "leaders": []
+}

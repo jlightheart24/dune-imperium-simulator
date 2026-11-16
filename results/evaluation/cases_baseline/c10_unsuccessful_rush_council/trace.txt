@@ -1,0 +1,503 @@
+TRACE of P1 [rush_council], seed 7, players: rush_council, balanced, balanced, balanced
+
+=== Round 1: conflict Skirmish (B) ===
+
+[step 3] round 1
+  percepts : vp 0, spice 0, solari 0, water 1, garrison 3, conflict 0, persuasion 0, agents left 2
+             influence: emperor 0, guild 0, bene_gesserit 0, fremen 0
+             hand: Dune, The Desert Planet, Dagger, Dune, The Desert Planet, Signet Ring, Convincing
+                   Argument
+             occupied spaces: none
+  options  : 13 legal, decided in 7.01 ms
+      >>   23.58  Signet Ring -> Secure Contract
+           22.65  Signet Ring -> Carthag
+           21.98  Dune, The Desert Planet -> Secure Contract
+           21.00  Signet Ring -> Arrakeen
+           20.95  Signet Ring -> Imperial Basin
+           20.58  Signet Ring -> Hall of Oratory
+         ... 7 more
+  action   : P1 plays Signet Ring -> Secure Contract
+  effect   : solari +4
+
+[step 7] round 1
+  percepts : vp 0, spice 0, solari 4, water 1, garrison 3, conflict 0, persuasion 0, agents left 1
+             influence: emperor 0, guild 0, bene_gesserit 0, fremen 0
+             hand: Dune, The Desert Planet, Dagger, Dune, The Desert Planet, Convincing Argument
+             occupied spaces: Hardy Warriors, Stillsuits, Secure Contract, Carthag
+  options  : 7 legal, decided in 3.89 ms
+      >>   22.33  Dagger -> Hall of Oratory
+           21.38  Dune, The Desert Planet -> Imperial Basin
+           20.78  Dune, The Desert Planet -> Hagga Basin
+           20.38  Dagger -> Mentat
+           19.78  Dune, The Desert Planet -> Sell Melange
+           19.21  Reveal hand
+         ... 1 more
+  action   : P1 plays Dagger -> Hall of Oratory
+  effect   : garrison +1, persuasion +1
+
+[step 12] round 1
+  percepts : vp 0, spice 0, solari 4, water 1, garrison 4, conflict 0, persuasion 1, agents left 0
+             influence: emperor 0, guild 0, bene_gesserit 0, fremen 0
+             hand: Dune, The Desert Planet, Dune, The Desert Planet, Convincing Argument
+             occupied spaces: Wealth, Hardy Warriors, Stillsuits, Hall of Oratory, Secure Contract,
+                   Arrakeen, Carthag
+  options  : 1 legal (forced)
+  action   : P1 reveals Dune, The Desert Planet, Dune, The Desert Planet, Convincing Argument (swords 0); buys Chani
+  effect   : persuasion -1
+
+=== Combat Skirmish (B): P2 #1 (9), P3 #2 (6), P4 #3 (2) ===
+
+=== Round 2: conflict Cloak and Dagger ===
+
+[step 21] round 2
+  percepts : vp 0, spice 0, solari 4, water 1, garrison 4, conflict 0, persuasion 0, agents left 2
+             influence: emperor 0, guild 0, bene_gesserit 0, fremen 0
+             hand: Reconnaissance, Diplomacy, Convincing Argument, Dagger, Seek Allies
+             occupied spaces: Hardy Warriors, Carthag, Sietch Tabr
+  options  : 13 legal, decided in 7.0 ms
+      >>   32.88  Seek Allies -> Wealth
+           32.17  Diplomacy -> Wealth
+           31.68  Seek Allies -> Secrets
+           31.52  Seek Allies -> Stillsuits
+           30.97  Diplomacy -> Secrets
+           30.81  Diplomacy -> Stillsuits
+         ... 7 more
+  action   : P1 plays Seek Allies -> Wealth
+  effect   : solari +2, emperor influence +1
+
+[step 25] round 2
+  percepts : vp 0, spice 0, solari 6, water 1, garrison 4, conflict 0, persuasion 0, agents left 1
+             influence: emperor 1, guild 0, bene_gesserit 0, fremen 0
+             hand: Reconnaissance, Diplomacy, Convincing Argument, Dagger
+             occupied spaces: Wealth, Hardy Warriors, Stillsuits, Mentat, Carthag, Sietch Tabr,
+                   Imperial Basin
+  options  : 7 legal, decided in 0.01 ms by rule (priority space: High Council)
+            n/a  Reconnaissance -> Arrakeen
+            n/a  Diplomacy -> Foldspace
+            n/a  Diplomacy -> Secrets
+      >>    n/a  Dagger -> High Council
+            n/a  Dagger -> Rally Troops
+            n/a  Dagger -> Hall of Oratory
+         ... 1 more
+  action   : P1 plays Dagger -> High Council
+  effect   : solari -5
+
+[step 29] round 2
+  percepts : vp 0, spice 0, solari 1, water 1, garrison 4, conflict 0, persuasion 0, agents left 0
+             influence: emperor 1, guild 0, bene_gesserit 0, fremen 0
+             hand: Reconnaissance, Diplomacy, Convincing Argument
+             occupied spaces: Wealth, Secrets, Hardy Warriors, Stillsuits, High Council, Mentat,
+                   Carthag, Sietch Tabr, Imperial Basin
+  options  : 1 legal (forced)
+  action   : P1 reveals Reconnaissance, Diplomacy, Convincing Argument (swords 0); buys Carryall
+  effect   : no change to tracked values
+
+=== Combat Cloak and Dagger: P4 #1 (11), P3 #2 (9), P2 #3 (3) ===
+
+=== Round 3: conflict Raid Stockpiles ===
+
+[step 40] round 3
+  percepts : vp 0, spice 0, solari 1, water 1, garrison 4, conflict 0, persuasion 0, agents left 2
+             influence: emperor 1, guild 0, bene_gesserit 0, fremen 0
+             hand: Dune, The Desert Planet, Diplomacy, Convincing Argument, Dagger, Carryall
+             occupied spaces: Stillsuits, Hagga Basin
+  options  : 12 legal, decided in 6.25 ms
+      >>   51.53  Diplomacy -> Wealth
+           40.94  Dune, The Desert Planet -> Secure Contract
+           40.94  Carryall -> Secure Contract
+           40.04  Diplomacy -> Secrets
+           40.00  Reveal hand
+           39.30  Diplomacy -> Hardy Warriors
+         ... 6 more
+  action   : P1 plays Diplomacy -> Wealth
+  effect   : vp +1, solari +2, emperor influence +1
+
+[step 44] round 3
+  percepts : vp 1, spice 0, solari 3, water 1, garrison 4, conflict 0, persuasion 0, agents left 1
+             influence: emperor 2, guild 0, bene_gesserit 0, fremen 0
+             hand: Dune, The Desert Planet, Convincing Argument, Dagger, Carryall
+             occupied spaces: Wealth, Stillsuits, Secure Contract, Carthag, Sietch Tabr, Hagga Basin
+  options  : 7 legal, decided in 3.75 ms
+      >>   50.37  Dune, The Desert Planet -> Imperial Basin
+           50.37  Carryall -> Imperial Basin
+           50.28  Dagger -> Hall of Oratory
+           48.74  Reveal hand
+           48.49  Dagger -> Mentat
+           47.73  Dune, The Desert Planet -> Sell Melange
+         ... 1 more
+  action   : P1 plays Dune, The Desert Planet -> Imperial Basin, deploys 2
+  effect   : spice +1, garrison -2, conflict +2
+
+[step 49] round 3
+  percepts : vp 1, spice 1, solari 3, water 1, garrison 2, conflict 2, persuasion 0, agents left 0
+             influence: emperor 2, guild 0, bene_gesserit 0, fremen 0
+             hand: Convincing Argument, Dagger, Carryall
+             occupied spaces: Wealth, Stillsuits, Secure Contract, Carthag, Sietch Tabr, Imperial
+                   Basin, Hagga Basin, The Great Flat
+  options  : 1 legal (forced)
+  action   : P1 reveals Convincing Argument, Dagger, Carryall (swords 1); buys Thufir Hawat
+  effect   : spice +1
+
+=== Combat Raid Stockpiles: P3 #1 (9), P4 #2 (6), tie P1/P2 (5) ===
+
+=== Round 4: conflict Siege of Arrakeen ===
+
+[step 57] round 4
+  percepts : vp 1, spice 2, solari 3, water 1, garrison 2, conflict 0, persuasion 0, agents left 2
+             influence: emperor 2, guild 0, bene_gesserit 0, fremen 0
+             hand: Reconnaissance, Dagger, Dune, The Desert Planet, Chani, Convincing Argument
+             occupied spaces: High Council
+  options  : 13 legal, decided in 6.93 ms
+      >>   65.63  Chani -> Stillsuits
+           65.23  Chani -> Carthag
+           64.53  Reconnaissance -> Carthag
+           64.03  Chani -> Arrakeen
+           63.83  Chani -> Hardy Warriors
+           63.33  Reconnaissance -> Arrakeen
+         ... 7 more
+  action   : P1 plays Chani -> Stillsuits, deploys 1
+  effect   : water +2, garrison -1, conflict +1, fremen influence +1
+
+[step 61] round 4
+  percepts : vp 1, spice 2, solari 3, water 3, garrison 1, conflict 1, persuasion 0, agents left 1
+             influence: emperor 2, guild 0, bene_gesserit 0, fremen 1
+             hand: Reconnaissance, Dagger, Dune, The Desert Planet, Convincing Argument
+             occupied spaces: Heighliner, Hardy Warriors, Stillsuits, High Council, Arrakeen
+  options  : 10 legal, decided in 6.68 ms
+      >>   62.53  Reconnaissance -> Carthag
+           59.09  Reveal hand
+           55.92  Dagger -> Hall of Oratory
+           55.43  Dagger -> Mentat
+           54.97  Dune, The Desert Planet -> Imperial Basin
+           54.37  Dune, The Desert Planet -> Hagga Basin
+         ... 4 more
+  action   : P1 plays Reconnaissance -> Carthag, deploys 2
+  effect   : garrison -1, conflict +2
+
+[step 66] round 4
+  percepts : vp 1, spice 2, solari 3, water 3, garrison 0, conflict 3, persuasion 0, agents left 0
+             influence: emperor 2, guild 0, bene_gesserit 0, fremen 1
+             hand: Dagger, Dune, The Desert Planet, Convincing Argument
+             occupied spaces: Heighliner, Hardy Warriors, Stillsuits, High Council, Hall of Oratory,
+                   Arrakeen, Carthag, Sietch Tabr
+  options  : intrigue card played (a sub-decision; only turn choices are scored)
+  action   : P1 plays intrigue Charisma
+  effect   : persuasion +2
+
+[step 67] round 4
+  percepts : vp 1, spice 2, solari 3, water 3, garrison 0, conflict 3, persuasion 2, agents left 0
+             influence: emperor 2, guild 0, bene_gesserit 0, fremen 1
+             hand: Dagger, Dune, The Desert Planet, Convincing Argument
+             occupied spaces: Heighliner, Hardy Warriors, Stillsuits, High Council, Hall of Oratory,
+                   Arrakeen, Carthag, Sietch Tabr
+  options  : 1 legal (forced)
+  action   : P1 reveals Dagger, Dune, The Desert Planet, Convincing Argument (swords 1); buys Guild Ambassador, Arrakis Liaison
+  effect   : persuasion -2
+
+=== Combat Siege of Arrakeen: P2 #1 (9), P1 #2 (7), P3 #3 (5) ===
+
+=== Round 5: conflict Secure Imperial Basin ===
+
+[step 73] round 5
+  percepts : vp 1, spice 2, solari 7, water 3, garrison 0, conflict 0, persuasion 0, agents left 2
+             influence: emperor 2, guild 0, bene_gesserit 0, fremen 1
+             hand: Signet Ring, Dagger, Carryall, Dune, The Desert Planet, Dagger
+             occupied spaces: none
+  options  : 25 legal, decided in 15.22 ms
+      >>   75.23  Signet Ring -> Arrakeen
+           74.93  Signet Ring -> Carthag
+           70.94  Signet Ring -> Mentat
+           67.92  Dagger -> Mentat
+           67.05  Signet Ring -> Rally Troops
+           66.41  Dagger -> Rally Troops
+         ... 19 more
+  action   : P1 plays Signet Ring -> Arrakeen, deploys 1
+  effect   : solari +1, conflict +1
+
+[step 77] round 5
+  percepts : vp 1, spice 2, solari 8, water 3, garrison 0, conflict 1, persuasion 0, agents left 1
+             influence: emperor 2, guild 0, bene_gesserit 0, fremen 1
+             hand: Dagger, Carryall, Dune, The Desert Planet, Dagger, Convincing Argument
+             occupied spaces: Hardy Warriors, Arrakeen, Sietch Tabr, Imperial Basin
+  options  : 13 legal, decided in 6.91 ms
+      >>   65.30  Dagger -> Rally Troops
+           64.54  Dagger -> Mentat
+           63.48  Dagger -> Hall of Oratory
+           62.45  Carryall -> Hagga Basin
+           62.45  Dune, The Desert Planet -> Hagga Basin
+           61.89  Dune, The Desert Planet -> Secure Contract
+         ... 7 more
+  action   : P1 plays Dagger -> Rally Troops
+  effect   : solari -4, garrison +4
+
+[step 81] round 5
+  percepts : vp 1, spice 2, solari 4, water 3, garrison 4, conflict 1, persuasion 0, agents left 0
+             influence: emperor 2, guild 0, bene_gesserit 0, fremen 1
+             hand: Carryall, Dune, The Desert Planet, Dagger, Convincing Argument
+             occupied spaces: Wealth, Hardy Warriors, Stillsuits, Rally Troops, Arrakeen, Sietch
+                   Tabr, Imperial Basin, Hagga Basin
+  options  : 1 legal (forced)
+  action   : P1 reveals Carryall, Dune, The Desert Planet, Dagger, Convincing Argument (swords 1); buys Other Memory, Imperial Spy
+  effect   : spice +1
+
+=== Combat Secure Imperial Basin: P3 #1 (9), P2 #2 (8), P4 #3 (5) ===
+
+=== Round 6: conflict Sort Through the Chaos ===
+
+[step 92] round 6
+  percepts : vp 1, spice 3, solari 4, water 3, garrison 4, conflict 0, persuasion 0, agents left 2
+             influence: emperor 2, guild 0, bene_gesserit 0, fremen 1
+             hand: Arrakis Liaison, Diplomacy, Dune, The Desert Planet, Thufir Hawat, Convincing
+                   Argument
+             occupied spaces: Conspire, High Council, Arrakeen
+  options  : 24 legal, decided in 14.64 ms
+      >>   77.80  Thufir Hawat -> Selective Breeding
+           76.83  Diplomacy -> Stillsuits
+           76.03  Arrakis Liaison -> Stillsuits
+           75.03  Diplomacy -> Hardy Warriors
+           74.30  Diplomacy -> Selective Breeding
+           74.23  Arrakis Liaison -> Hardy Warriors
+         ... 18 more
+  action   : P1 plays Thufir Hawat -> Selective Breeding
+  effect   : spice -2, bene_gesserit influence +1
+
+[step 96] round 6
+  percepts : vp 1, spice 1, solari 4, water 3, garrison 4, conflict 0, persuasion 0, agents left 1
+             influence: emperor 2, guild 0, bene_gesserit 1, fremen 1
+             hand: Arrakis Liaison, Diplomacy, Dune, The Desert Planet, Convincing Argument, Guild
+                   Ambassador, Reconnaissance
+             occupied spaces: Conspire, Selective Breeding, High Council, Mentat, Swordmaster,
+                   Arrakeen, Sietch Tabr
+  options  : 19 legal, decided in 11.7 ms
+      >>   86.20  Diplomacy -> Stillsuits
+           86.00  Diplomacy -> Secrets
+           85.40  Arrakis Liaison -> Stillsuits
+           84.40  Diplomacy -> Hardy Warriors
+           83.60  Arrakis Liaison -> Hardy Warriors
+           75.80  Reconnaissance -> Carthag
+         ... 13 more
+  action   : P1 plays Diplomacy -> Stillsuits
+  effect   : vp +1, water +1, fremen influence +1
+
+[step 100] round 6
+  percepts : vp 2, spice 1, solari 4, water 4, garrison 4, conflict 0, persuasion 0, agents left 0
+             influence: emperor 2, guild 0, bene_gesserit 1, fremen 2
+             hand: Arrakis Liaison, Dune, The Desert Planet, Convincing Argument, Guild Ambassador,
+                   Reconnaissance
+             occupied spaces: Conspire, Selective Breeding, Stillsuits, High Council, Mentat,
+                   Swordmaster, Arrakeen, Carthag, Sietch Tabr, Imperial Basin
+  options  : 1 legal (forced)
+  action   : P1 reveals Arrakis Liaison, Dune, The Desert Planet, Convincing Argument, Guild Ambassador, Reconnaissance (swords 0); buys The Spice Must Flow
+  effect   : vp +1
+
+=== Combat Sort Through the Chaos: P3 #1 (5), P4 #2 (4), P2 #3 (3) ===
+
+=== Round 7: conflict Battle for Imperial Basin ===
+
+[step 108] round 7
+  percepts : vp 3, spice 1, solari 4, water 4, garrison 4, conflict 0, persuasion 0, agents left 2
+             influence: emperor 2, guild 0, bene_gesserit 1, fremen 2
+             hand: Chani, Dagger, Dune, The Desert Planet, The Spice Must Flow, Signet Ring
+             occupied spaces: Heighliner, High Council
+  options  : 27 legal, decided in 16.43 ms
+      >>  111.31  Chani -> Arrakeen
+          109.61  Chani -> Research Station
+          108.44  Signet Ring -> The Great Flat
+          108.18  Signet Ring -> Sietch Tabr
+          108.12  Dune, The Desert Planet -> The Great Flat
+          107.98  Signet Ring -> Carthag
+         ... 21 more
+  action   : P1 plays Chani -> Arrakeen, deploys 2
+  effect   : water +1, garrison -1, conflict +2
+
+[step 112] round 7
+  percepts : vp 3, spice 1, solari 4, water 5, garrison 3, conflict 2, persuasion 0, agents left 1
+             influence: emperor 2, guild 0, bene_gesserit 1, fremen 2
+             hand: Dagger, Dune, The Desert Planet, The Spice Must Flow, Signet Ring, Dune, The
+                   Desert Planet
+             occupied spaces: Heighliner, Hardy Warriors, High Council, Arrakeen, Sietch Tabr, The
+                   Great Flat
+  options  : 17 legal, decided in 9.69 ms
+      >>  104.38  Signet Ring -> Carthag
+          102.24  Signet Ring -> Hagga Basin
+          101.96  Signet Ring -> Imperial Basin
+          101.92  Dune, The Desert Planet -> Hagga Basin
+          101.64  Dune, The Desert Planet -> Imperial Basin
+          101.03  Signet Ring -> Research Station
+         ... 11 more
+  action   : P1 plays Signet Ring -> Carthag, deploys 1
+  effect   : solari +1, conflict +1
+
+[step 116] round 7
+  percepts : vp 3, spice 1, solari 5, water 5, garrison 3, conflict 3, persuasion 0, agents left 0
+             influence: emperor 2, guild 0, bene_gesserit 1, fremen 2
+             hand: Dagger, Dune, The Desert Planet, The Spice Must Flow, Dune, The Desert Planet
+             occupied spaces: Heighliner, Hardy Warriors, Stillsuits, High Council, Arrakeen,
+                   Carthag, Sietch Tabr, Imperial Basin, The Great Flat
+  options  : 1 legal (forced)
+  action   : P1 reveals Dagger, Dune, The Desert Planet, The Spice Must Flow, Dune, The Desert Planet (swords 1); buys Arrakis Liaison, Guild Administrator
+  effect   : spice +1
+
+=== Combat Battle for Imperial Basin: tie P3/P4 (8), tie P1/P2 (7) ===
+
+=== Round 8: conflict Battle for Carthag ===
+
+[step 124] round 8
+  percepts : vp 3, spice 2, solari 5, water 5, garrison 3, conflict 0, persuasion 0, agents left 2
+             influence: emperor 2, guild 0, bene_gesserit 1, fremen 2
+             hand: Diplomacy, Guild Ambassador, Other Memory, Convincing Argument, Reconnaissance
+             occupied spaces: Sietch Tabr
+  options  : 15 legal, decided in 8.96 ms
+      >>   98.74  Reconnaissance -> Arrakeen
+           97.10  Diplomacy -> Hardy Warriors
+           89.03  Other Memory -> Selective Breeding
+           88.14  Diplomacy -> Stillsuits
+           87.86  Reconnaissance -> Carthag
+           87.62  Other Memory -> Secrets
+         ... 9 more
+  action   : P1 plays Reconnaissance -> Arrakeen, deploys 2
+  effect   : garrison -1, conflict +2
+
+[step 128] round 8
+  percepts : vp 3, spice 2, solari 5, water 5, garrison 2, conflict 2, persuasion 0, agents left 1
+             influence: emperor 2, guild 0, bene_gesserit 1, fremen 2
+             hand: Diplomacy, Guild Ambassador, Other Memory, Convincing Argument, Arrakis Liaison
+             occupied spaces: Stillsuits, Swordmaster, Arrakeen, Carthag, Sietch Tabr
+  options  : 13 legal, decided in 7.87 ms
+      >>   94.90  Diplomacy -> Hardy Warriors
+           94.15  Arrakis Liaison -> Research Station
+           94.10  Arrakis Liaison -> Hardy Warriors
+           90.23  Other Memory -> Selective Breeding
+           89.72  Other Memory -> Secrets
+           89.08  Diplomacy -> Selective Breeding
+         ... 7 more
+  action   : P1 plays Diplomacy -> Hardy Warriors, deploys 3
+  effect   : water -1, garrison -1, conflict +3, fremen influence +1
+
+[step 133] round 8
+  percepts : vp 3, spice 2, solari 5, water 4, garrison 1, conflict 5, persuasion 0, agents left 0
+             influence: emperor 2, guild 0, bene_gesserit 1, fremen 3
+             hand: Guild Ambassador, Other Memory, Convincing Argument, Arrakis Liaison
+             occupied spaces: Secrets, Hardy Warriors, Stillsuits, Swordmaster, Sell Melange,
+                   Arrakeen, Carthag, Sietch Tabr
+  options  : 1 legal (forced)
+  action   : P1 reveals Guild Ambassador, Other Memory, Convincing Argument, Arrakis Liaison (swords 0); buys The Spice Must Flow
+  effect   : vp +1
+
+=== Combat Battle for Carthag: tie P1/P3 (10), P4 #3 (7) ===
+
+=== Round 9: conflict Battle for Arrakeen ===
+
+[step 142] round 9
+  percepts : vp 4, spice 5, solari 5, water 4, garrison 1, conflict 0, persuasion 0, agents left 2
+             influence: emperor 2, guild 0, bene_gesserit 1, fremen 3
+             hand: Carryall, Thufir Hawat, Convincing Argument, Imperial Spy, Guild Ambassador
+             occupied spaces: none
+  options  : intrigue card played (a sub-decision; only turn choices are scored)
+  action   : P1 plays intrigue Windfall
+  effect   : solari +2
+
+[step 143] round 9
+  percepts : vp 4, spice 5, solari 7, water 4, garrison 1, conflict 0, persuasion 0, agents left 2
+             influence: emperor 2, guild 0, bene_gesserit 1, fremen 3
+             hand: Carryall, Thufir Hawat, Convincing Argument, Imperial Spy, Guild Ambassador
+             occupied spaces: none
+  options  : 22 legal, decided in 13.47 ms
+      >>   95.59  Thufir Hawat -> Sietch Tabr
+           95.51  Thufir Hawat -> Arrakeen
+           95.51  Thufir Hawat -> Carthag
+           84.56  Thufir Hawat -> Selective Breeding
+           84.24  Thufir Hawat -> Secrets
+           82.77  Thufir Hawat -> Mentat
+         ... 16 more
+  action   : P1 plays Thufir Hawat -> Sietch Tabr, deploys 2
+  effect   : water +1, garrison -1, conflict +2
+
+[step 148] round 9
+  percepts : vp 4, spice 5, solari 7, water 5, garrison 0, conflict 2, persuasion 0, agents left 1
+             influence: emperor 2, guild 0, bene_gesserit 1, fremen 3
+             hand: Carryall, Convincing Argument, Imperial Spy, Guild Ambassador
+             occupied spaces: Heighliner, Foldspace, Mentat, Sietch Tabr
+  options  : 10 legal, decided in 5.66 ms
+      >>   80.80  Imperial Spy -> Conspire
+           78.81  Imperial Spy -> Wealth
+           78.32  Carryall -> Hagga Basin
+           77.83  Carryall -> Imperial Basin
+           77.35  Reveal hand
+           76.93  Carryall -> Secure Contract
+         ... 4 more
+  action   : P1 plays Imperial Spy -> Conspire
+  effect   : spice -4, solari +5, garrison +2, emperor influence +1
+
+[step 152] round 9
+  percepts : vp 4, spice 1, solari 12, water 5, garrison 2, conflict 2, persuasion 0, agents left 0
+             influence: emperor 3, guild 0, bene_gesserit 1, fremen 3
+             hand: Carryall, Convincing Argument, Guild Ambassador
+             occupied spaces: Conspire, Heighliner, Foldspace, Mentat, Arrakeen, Carthag, Sietch
+                   Tabr, Hagga Basin
+  options  : intrigue card played (a sub-decision; only turn choices are scored)
+  action   : P1 plays intrigue Water Peddlers Union
+  effect   : water +1
+
+[step 153] round 9
+  percepts : vp 4, spice 1, solari 12, water 6, garrison 2, conflict 2, persuasion 0, agents left 0
+             influence: emperor 3, guild 0, bene_gesserit 1, fremen 3
+             hand: Carryall, Convincing Argument, Guild Ambassador
+             occupied spaces: Conspire, Heighliner, Foldspace, Mentat, Arrakeen, Carthag, Sietch
+                   Tabr, Hagga Basin
+  options  : 1 legal (forced)
+  action   : P1 reveals Carryall, Convincing Argument, Guild Ambassador (swords 0); buys Sardaukar Legion
+  effect   : spice +1
+
+=== Combat Battle for Arrakeen: P4 #1 (10), P3 #2 (8), P1 #3 (4) ===
+
+=== Round 10: conflict Grand Vision ===
+
+[step 168] round 10
+  percepts : vp 4, spice 2, solari 14, water 6, garrison 2, conflict 0, persuasion 0, agents left 2
+             influence: emperor 3, guild 0, bene_gesserit 1, fremen 3
+             hand: Diplomacy, Dagger, The Spice Must Flow, Convincing Argument, Signet Ring
+             occupied spaces: Selective Breeding, Stillsuits, Sietch Tabr
+  options  : 21 legal, decided in 10.6 ms
+      >>   81.19  Diplomacy -> Hardy Warriors
+           67.28  Diplomacy -> Wealth
+           66.25  Diplomacy -> Secrets
+           64.80  Signet Ring -> Research Station
+           61.79  Dagger -> Mentat
+           61.37  Signet Ring -> Mentat
+         ... 15 more
+  action   : P1 plays Diplomacy -> Hardy Warriors, deploys 4
+  effect   : garrison -2, conflict +4, fremen influence +1
+
+[step 173] round 10
+  percepts : vp 4, spice 2, solari 14, water 6, garrison 0, conflict 4, persuasion 0, agents left 1
+             influence: emperor 3, guild 0, bene_gesserit 1, fremen 4
+             hand: Dagger, The Spice Must Flow, Convincing Argument, Signet Ring
+             occupied spaces: Selective Breeding, Hardy Warriors, Stillsuits, Mentat, Hall of
+                   Oratory, Research Station, Sietch Tabr
+  options  : 12 legal, decided in 7.08 ms
+      >>   78.36  Signet Ring -> Arrakeen
+           78.24  Dagger -> Rally Troops
+           77.82  Signet Ring -> Rally Troops
+           77.76  Signet Ring -> Carthag
+           77.66  Signet Ring -> Sell Melange
+           77.61  Signet Ring -> The Great Flat
+         ... 6 more
+  action   : P1 plays Signet Ring -> Arrakeen
+  effect   : solari +1, garrison +1
+
+[step 177] round 10
+  percepts : vp 4, spice 2, solari 15, water 6, garrison 1, conflict 4, persuasion 0, agents left 0
+             influence: emperor 3, guild 0, bene_gesserit 1, fremen 4
+             hand: Dagger, The Spice Must Flow, Convincing Argument, Other Memory
+             occupied spaces: Selective Breeding, Hardy Warriors, Stillsuits, Mentat, Hall of
+                   Oratory, Arrakeen, Research Station, Sietch Tabr, Imperial Basin
+  options  : 1 legal (forced)
+  action   : P1 reveals Dagger, The Spice Must Flow, Convincing Argument, Other Memory (swords 1); buys Reverend Mother Mohiam
+  effect   : spice +1
+
+=== Combat Grand Vision: P1 #1 (9), P3 #2 (6), P2 #3 (3) ===
+
+=== Game over: P4 9VP, P1 8VP, P2 6VP, P3 5VP ===
+
+RESULT: conflict deck exhausted after 10 rounds; P1 [rush_council] 8 VP (rank 2), P2 [balanced] 6 VP (rank 3), P3 [balanced] 5 VP (rank 4), P4 [balanced] 9 VP (rank 1)

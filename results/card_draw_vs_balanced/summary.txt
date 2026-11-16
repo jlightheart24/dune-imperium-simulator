@@ -1,0 +1,51 @@
+$ python3 -m dune_sim batch -n 300 --detail -p card_draw balanced balanced balanced --save card_draw_vs_balanced
+
+300 games, 4 players, avg 9.7 rounds
+
+strategy                       win %        95% CI   avg VP  avg rank  alliances   deck  end $  3rd agent  council  mentats
+---------------------------------------------------------------------------------------------------------------------------
+card_draw                      26.3%     21.7-31.6     7.75      2.44       1.18   22.9    7.5        54%      36%      1.4
+balanced                       24.6%     21.9-27.5     7.56      2.52       0.73   22.3    5.4        65%      97%      1.0
+
+(fair share = 25.0% per seat; 95% CI = Wilson interval on win %; end $ = solari left at game end; mentats = Mentat uses per game)
+games ended by: 10 VP reached 76%, conflict deck exhausted 24%
+
+== balanced: averages per player per game ==
+  earned over the game : spice 17.2, solari 21.9, water 7.9, troops recruited 21.2, extra cards drawn 6.3
+  conflict             : troops sent 21.9 per game (2.26 per round), fought in 77% of rounds, won 2.38 conflicts outright
+  when they fought     : 1st 32%, 2nd 32%, 3rd 29%, no reward 7% (0.9 troops per game lost for nothing)
+  at game end          : 22.3 cards owned, 0.4 trashed, 1.12 Spice Must Flow, 0.6 intrigue in hand
+  turn decisions       : 23.0 per game, 13.4 legal options each, 11.6 ms each, near-ties 38% of scored decisions, 0.00 fallbacks per game
+  bought cards by type : none 33%, fremen 30%, guild 13%, emperor 12%, bene_gesserit 12%
+  by round (held at end of round; troops/strength = committed to that round's conflict):
+  round     VP  spice  solari  water  garrison  cards  troops  strength  games
+      1   0.21   0.43    2.11   1.16      2.53   10.8    1.56      3.81    900
+      2   0.82   1.29    3.41   1.45      1.81   11.6    1.92      4.81    900
+      3   1.42   3.41    3.66   1.39      1.26   13.0    1.79      4.78    900
+      4   2.04   3.99    4.01   1.86      1.45   14.4    1.68      4.57    900
+      5   2.71   4.40    4.19   2.38      1.79   15.9    1.81      4.94    900
+      6   3.35   5.29    4.34   2.78      2.14   17.4    1.98      5.38    900
+      7   4.37   6.25    4.70   3.13      2.20   18.8    2.84      7.47    900
+      8   5.44   6.87    4.71   3.47      2.26   20.2    3.01      7.92    900
+      9   6.52   7.33    4.87   3.63      2.33   21.5    3.01      8.00    861
+     10   7.66   7.68    5.76   3.71      2.34   22.8    3.30      8.72    663
+
+== card_draw: averages per player per game ==
+  earned over the game : spice 13.6, solari 19.8, water 8.6, troops recruited 19.1, extra cards drawn 9.9
+  conflict             : troops sent 20.1 per game (2.07 per round), fought in 73% of rounds, won 2.05 conflicts outright
+  when they fought     : 1st 29%, 2nd 33%, 3rd 29%, no reward 9% (1.0 troops per game lost for nothing)
+  at game end          : 22.9 cards owned, 0.6 trashed, 0.65 Spice Must Flow, 0.6 intrigue in hand
+  turn decisions       : 23.3 per game, 14.7 legal options each, 14.0 ms each, near-ties 35% of scored decisions, 0.00 fallbacks per game
+  bought cards by type : none 34%, fremen 24%, bene_gesserit 17%, guild 13%, emperor 12%
+  by round (held at end of round; troops/strength = committed to that round's conflict):
+  round     VP  spice  solari  water  garrison  cards  troops  strength  games
+      1   0.22   0.32    1.60   1.21      2.69   10.9    1.45      3.39    300
+      2   0.83   0.97    3.07   1.61      2.22   12.1    1.55      3.88    300
+      3   1.46   2.08    4.04   2.17      1.78   13.7    1.73      4.57    300
+      4   2.16   3.26    4.69   2.60      1.67   15.2    1.57      4.25    300
+      5   2.82   3.54    4.87   3.38      1.93   16.7    1.75      4.64    300
+      6   3.50   4.10    5.42   4.17      2.26   18.1    1.86      5.09    300
+      7   4.51   4.78    6.66   4.81      2.21   19.5    2.66      7.04    300
+      8   5.52   5.40    7.32   5.21      2.29   20.9    2.71      7.29    300
+      9   6.65   5.60    7.36   5.32      2.18   22.1    2.79      7.89    287
+     10   7.64   6.00    7.52   5.24      2.01   23.0    2.91      7.89    221

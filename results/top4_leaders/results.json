@@ -1,0 +1,175 @@
+{
+ "meta": {
+  "command": "python3 -m dune_sim batch -n 2000 --detail -p bene_gesserit_faction rush_swordmaster rush_both deckbuilder --save top4_leaders",
+  "code_differs_from_commit": true,
+  "date": "2026-11-12T20:16:25",
+  "python": "3.9.6",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "git_commit": "11dab03a60e4b1208a54c96a03b044e075a8c989",
+  "seed": 1,
+  "games": 2000,
+  "leaders": "random",
+  "players": [
+   "bene_gesserit_faction",
+   "rush_swordmaster",
+   "rush_both",
+   "deckbuilder"
+  ],
+  "fixed_seats": false,
+  "avg_rounds": 9.656
+ },
+ "strategies": [
+  {
+   "strategy": "rush_both",
+   "seats": 2000,
+   "wins": 565.0,
+   "win_pct": 28.25,
+   "ci_low": 26.319993419832944,
+   "ci_high": 30.263401195789363,
+   "avg_vp": 7.9255,
+   "vp_sd": 2.184109639523326,
+   "vp_se": 0.04883817624286718,
+   "avg_rank": 2.388,
+   "alliances": 0.778,
+   "deck": 22.6645,
+   "end_solari": 7.3265,
+   "swordmaster_pct": 97.7,
+   "council_pct": 99.8,
+   "mentats": 1.2475
+  },
+  {
+   "strategy": "rush_swordmaster",
+   "seats": 2000,
+   "wins": 553.0,
+   "win_pct": 27.65,
+   "ci_low": 25.734024835075786,
+   "ci_high": 29.651670321667144,
+   "avg_vp": 7.6765,
+   "vp_sd": 2.296624695612291,
+   "vp_se": 0.05135408938193845,
+   "avg_rank": 2.481,
+   "alliances": 0.8955,
+   "deck": 21.007,
+   "end_solari": 8.7485,
+   "swordmaster_pct": 99.75,
+   "council_pct": 0.0,
+   "mentats": 1.4775
+  },
+  {
+   "strategy": "bene_gesserit_faction",
+   "seats": 2000,
+   "wins": 523.0,
+   "win_pct": 26.15,
+   "ci_low": 24.271045361983017,
+   "ci_high": 28.120401147561452,
+   "avg_vp": 7.962,
+   "vp_sd": 2.029190677931409,
+   "vp_se": 0.04537408295163513,
+   "avg_rank": 2.4015,
+   "alliances": 1.144,
+   "deck": 21.4405,
+   "end_solari": 5.6245,
+   "swordmaster_pct": 39.25,
+   "council_pct": 38.5,
+   "mentats": 1.0385
+  },
+  {
+   "strategy": "deckbuilder",
+   "seats": 2000,
+   "wins": 359.0,
+   "win_pct": 17.95,
+   "ci_low": 16.329985523404158,
+   "ci_high": 19.69290171478872,
+   "avg_vp": 7.497,
+   "vp_sd": 2.153209036433132,
+   "vp_se": 0.048147217752313044,
+   "avg_rank": 2.7295,
+   "alliances": 0.9715,
+   "deck": 23.866,
+   "end_solari": 5.349,
+   "swordmaster_pct": 28.7,
+   "council_pct": 64.2,
+   "mentats": 1.172
+  }
+ ],
+ "win_pct_by_seat": {
+  "P1": 22.15,
+  "P2": 23.5,
+  "P3": 26.6,
+  "P4": 27.75
+ },
+ "leaders": [
+  {
+   "leader": "Baron Vladimir Harkonnen",
+   "games": 1033,
+   "win_pct": 33.68828654404647,
+   "ci_low": 30.871124165029606,
+   "ci_high": 36.62632192509639,
+   "avg_vp": 8.378509196515004,
+   "avg_rank": 2.215876089060987
+  },
+  {
+   "leader": "Glossu \"The Beast\" Rabban",
+   "games": 1005,
+   "win_pct": 28.1592039800995,
+   "ci_low": 25.46563217436787,
+   "ci_high": 31.019112308809664,
+   "avg_vp": 7.817910447761194,
+   "avg_rank": 2.433830845771144
+  },
+  {
+   "leader": "Count Ilban Richese",
+   "games": 1002,
+   "win_pct": 28.043912175648703,
+   "ci_low": 25.350343567213653,
+   "ci_high": 30.90519408404278,
+   "avg_vp": 7.926147704590818,
+   "avg_rank": 2.4181636726546905
+  },
+  {
+   "leader": "Helena Richese",
+   "games": 1004,
+   "win_pct": 24.10358565737052,
+   "ci_low": 21.559797693106805,
+   "ci_high": 26.84479286953717,
+   "avg_vp": 7.662350597609562,
+   "avg_rank": 2.541832669322709
+  },
+  {
+   "leader": "Count Memnon Thorvald",
+   "games": 979,
+   "win_pct": 22.06332992849847,
+   "ci_low": 19.57771455200562,
+   "ci_high": 24.76733555576353,
+   "avg_vp": 7.593462717058222,
+   "avg_rank": 2.578140960163432
+  },
+  {
+   "leader": "Countess Ariana Thorvald",
+   "games": 992,
+   "win_pct": 21.27016129032258,
+   "ci_low": 18.836923928008233,
+   "ci_high": 23.925057495543463,
+   "avg_vp": 7.532258064516129,
+   "avg_rank": 2.618951612903226
+  },
+  {
+   "leader": "Paul Atreides",
+   "games": 1008,
+   "win_pct": 21.13095238095238,
+   "ci_low": 18.722738674744342,
+   "ci_high": 23.758376946514947,
+   "avg_vp": 7.5773809523809526,
+   "avg_rank": 2.5952380952380953
+  },
+  {
+   "leader": "Duke Leto Atreides",
+   "games": 977,
+   "win_pct": 21.084953940634595,
+   "ci_low": 18.6428571675962,
+   "ci_high": 23.753550162598607,
+   "avg_vp": 7.605936540429887,
+   "avg_rank": 2.6120777891504607
+  }
+ ]
+}

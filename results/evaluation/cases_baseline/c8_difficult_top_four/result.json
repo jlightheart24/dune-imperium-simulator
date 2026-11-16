@@ -1,0 +1,29 @@
+{
+ "players": [
+  "rush_both",
+  "rush_swordmaster",
+  "bene_gesserit_faction",
+  "deckbuilder"
+ ],
+ "seed": 7,
+ "agent_seat": 1,
+ "agent_strategy": "rush_both",
+ "terminal_status": "conflict deck exhausted after 10 rounds",
+ "agent_won": false,
+ "final_vp": [
+  7,
+  7,
+  9,
+  9
+ ],
+ "measures": {
+  "vp": 7,
+  "rank": 4,
+  "decisions": 29,
+  "avg_options": 12.1,
+  "ms_per_decision": 6.88,
+  "near_tie_pct": 25.9,
+  "fallbacks": 0
+ },
+ "total_fallbacks": 0
+}

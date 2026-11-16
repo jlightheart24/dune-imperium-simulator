@@ -54,6 +54,40 @@ are rejected with a one-line error and exit code 2. The replay viewer shows a de
 (options and utility scores) at each step, and `game.html#step=N` opens a replay at step N.
 The vertical-slice write-up is in `docs/vertical-slice.md`.
 
+## Evaluation (baseline and revised)
+
+```bash
+# every run in docs/project-evaluation.md, about 4 hours on 10 cores
+./results/evaluation/run_all.sh
+
+# the ten retained cases under the HW-11 baseline setting, then the current one
+python3 -m dune_sim cases --file cases/evaluation.json --water flat --save results/evaluation/cases_baseline
+python3 -m dune_sim cases --file cases/evaluation.json --save results/evaluation/cases_revised
+```
+
+`--water flat` values every unit of water fully, as the agent did at the vertical-slice
+checkpoint; the default caps water's value beyond 4. With `--water flat --no-leaders`
+the vertical-slice results reproduce exactly. `strategies/balanced_flat_water.json` is
+that older `balanced`, so old and new can play in one game.
+
+## Leaders
+
+Every game played from the command line gives each player a different random leader
+(the eight base-game leaders, defined in `LEADERS` in `dune_sim/data.py`). A leader has a
+passive ability and a signet ability that the Signet Ring card triggers. Results tables
+include a win rate by leader, and the viewer shows each player's leader.
+
+```bash
+python3 -m dune_sim batch -n 400 -p balanced balanced balanced balanced               # with leaders
+python3 -m dune_sim batch -n 400 -p balanced balanced balanced balanced --no-leaders  # as before leaders existed
+```
+
+`--no-leaders` reproduces results saved before leaders were added. The retained cases in
+`cases/vertical_slice.json` run without leaders. Helena Richese's signet reserves a card
+from the Imperium row: only she can buy it, that round, for 1 persuasion less, and it
+leaves the game if she does not. Leader abilities are simplified and were
+written from memory, so check them against the physical game.
+
 ## Replay viewer
 
 `watch` writes `replays/game_<seed>.html`, a single self-contained page. Controls:
@@ -70,7 +104,7 @@ which the viewer can load with its file picker.
 | `dune_sim/data.py` | all game content: board spaces, cards, conflicts, intrigue, in a small effect language |
 | `dune_sim/engine.py` | rules: rounds, agent/reveal turns, influence and alliances, combat, makers, endgame, replay frames |
 | `dune_sim/strategies.py` | the `Strategy` interface, `RandomStrategy`, `HeuristicStrategy` and its profiles |
-| `dune_sim/cli.py` | `batch` / `watch` / `list` |
+| `dune_sim/cli.py` | the commands: `batch`, `benchmark`, `tournament`, `leader-fit`, `trace`, `cases`, `watch`, `list` |
 | `viewer/viewer.html` | replay viewer template |
 
 ## Writing strategies
@@ -123,6 +157,5 @@ troop strengths. Profiles (`military`, `spice`, `factions`, `fremen_faction`,
 - **Imperium cards, conflict rewards and intrigue cards are approximations**: names kept,
   effects simplified. Edit `dune_sim/data.py` to match your copy; the engine only
   reads the effect DSL documented at the top of that file.
-- Not modelled yet: leaders and their abilities (the Signet Ring gives a placeholder 1 solari),
-  the 2-player rival rules, expansions, and card effects that hit opponents.
+- Not modelled yet: the 2-player rival rules, expansions, and card effects that hit opponents.
   Some cards that hit opponents (e.g. Mohiam) only keep their effects on you.

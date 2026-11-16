@@ -1,0 +1,11 @@
+$ python3 -m dune_sim batch -n 1000 --no-leaders -p balanced weights:strategies/balanced_flat_water.json weights:strategies/balanced_flat_water.json weights:strategies/balanced_flat_water.json --save results/evaluation/h2h_revised_vs_baseline
+
+1000 games, 4 players, avg 9.7 rounds
+
+strategy                                        win %        95% CI   avg VP  avg rank  alliances   deck  end $  3rd agent  council  mentats
+--------------------------------------------------------------------------------------------------------------------------------------------
+weights:strategies/balanced_flat_water.json     25.5%     24.0-27.1     7.58      2.51       0.79   22.4    5.7        64%      96%      1.0
+balanced                                        23.4%     20.9-26.1     7.63      2.48       0.81   22.4    5.7        66%      97%      1.0
+
+(fair share = 25.0% per seat; 95% CI = Wilson interval on win %; end $ = solari left at game end; mentats = Mentat uses per game)
+games ended by: 10 VP reached 76%, conflict deck exhausted 24%

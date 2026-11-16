@@ -1,0 +1,29 @@
+$ python3 -m dune_sim benchmark -n 200 --no-leaders --save benchmark_water_cap
+Benchmark: 1 x <strategy> vs 3 x balanced, 200 games each, seeds 1..200, seating shuffled per game
+fair share = 25.0%
+
+strategy                       win %        95% CI   avg VP  +/-SE  base VP  avg rank  verdict
+----------------------------------------------------------------------------------------------
+random                          0.0%       0.0-1.9     2.06   0.08     8.40      4.00  worse than baseline
+legacy                          6.0%      3.5-10.2     5.50   0.16     7.94      3.35  worse than baseline
+military                       19.5%     14.6-25.5     6.96   0.16     7.65      2.77  no clear difference
+spice                          15.5%     11.1-21.2     6.79   0.16     7.85      2.81  worse than baseline
+factions                       25.5%     20.0-32.0     7.70   0.15     7.54      2.48  no clear difference
+fremen_faction                 13.5%      9.4-18.9     6.30   0.15     7.78      3.04  worse than baseline
+deckbuilder                    30.5%     24.5-37.2     7.95   0.16     7.66      2.40  no clear difference
+thin_deck                      15.5%     11.1-21.2     7.00   0.15     7.79      2.86  worse than baseline
+spice_must_flow                16.0%     11.6-21.7     7.32   0.16     7.82      2.75  worse than baseline
+emperor_faction                27.5%     21.8-34.1     7.46   0.16     7.49      2.51  no clear difference
+guild_faction                  21.5%     16.4-27.7     7.47   0.16     7.67      2.60  no clear difference
+bene_gesserit_faction          29.0%     23.2-35.6     8.00   0.15     7.53      2.37  no clear difference
+alliances                      29.5%     23.6-36.2     7.78   0.16     7.60      2.45  no clear difference
+card_draw                      31.0%     25.0-37.7     7.99   0.17     7.74      2.42  no clear difference
+rush_council                   26.5%     20.9-33.0     7.61   0.15     7.54      2.50  no clear difference
+rush_swordmaster               28.5%     22.7-35.1     7.83   0.15     7.40      2.31  no clear difference
+rush_both                      26.0%     20.4-32.5     7.80   0.16     7.61      2.47  no clear difference
+emperor_cards                  25.5%     20.0-32.0     7.45   0.16     7.54      2.54  no clear difference
+guild_cards                    20.0%     15.0-26.1     7.15   0.16     7.80      2.71  no clear difference
+bene_gesserit_cards            21.5%     16.4-27.7     7.52   0.15     7.70      2.65  no clear difference
+fremen_cards                   24.0%     18.6-30.4     7.11   0.15     7.69      2.63  no clear difference
+
+verdict: 'better'/'worse' when the 95% interval on win % excludes the fair share.

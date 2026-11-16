@@ -79,6 +79,131 @@ class FailureHandling(unittest.TestCase):
         self.assertEqual(sum(p["fallbacks"] for p in res["players"]), 0)
 
 
+class Leaders(unittest.TestCase):
+    def test_random_leaders_are_distinct_and_repeatable(self):
+        a = run_one((SPECS, 9, True, True))
+        b = run_one((SPECS, 9, True, True))
+        names = [p["leader"] for p in a["players"]]
+        self.assertEqual(len(set(names)), 4)
+        self.assertEqual(names, [p["leader"] for p in b["players"]])
+        self.assertEqual(strip(a), strip(b))
+
+    def test_leader_draw_varies_by_matchup_and_is_even(self):
+        from collections import Counter
+        from dune_sim.cli import draw_leaders
+        a = draw_leaders(5, ["balanced", "military", "spice", "random"])
+        b = draw_leaders(5, ["balanced", "military", "spice", "alliances"])
+        self.assertNotEqual(a, b)                         # same seed, different line-up
+        self.assertEqual(a, draw_leaders(5, ["balanced", "military", "spice", "random"]))
+        counts = Counter(l for s in range(400) for l in draw_leaders(s, ["a", "b", "c", "d"]))
+        self.assertEqual(len(counts), 8)
+        for c in counts.values():                         # expected 200 each
+            self.assertTrue(140 < c < 260, counts)
+
+    def test_fixed_leader_gives_same_opponent_leaders_for_any_strategy(self):
+        from dune_sim.cli import draw_leaders
+        fixed = {0: "Paul Atreides"}
+        a = draw_leaders(3, ["military", "balanced", "balanced", "balanced"], fixed)
+        b = draw_leaders(3, ["rush_both", "balanced", "balanced", "balanced"], fixed)
+        self.assertEqual(a, b)
+        self.assertEqual(a[0], "Paul Atreides")
+        self.assertEqual(len(set(a)), 4)
+
+    def test_no_leaders_by_default_in_engine(self):
+        self.assertTrue(all(p["leader"] is None for p in run_one((SPECS, 9, True))["players"]))
+
+    def test_every_leader_plays_full_games_without_fallbacks(self):
+        from dune_sim import data
+        names = [ld["name"] for ld in data.LEADERS]
+        for i in range(0, 8, 4):
+            for seed in (1, 2):
+                g = Game([make_strategy("balanced") for _ in range(4)], seed=seed, leaders=names[i:i + 4])
+                res = g.play()
+                self.assertTrue(res["winners"])
+                self.assertEqual(sum(p["fallbacks"] for p in res["players"]), 0)
+
+    def test_leader_abilities(self):
+        from dune_sim import data
+        from dune_sim.data import SPACE_BY_NAME
+        mk = lambda nm: Game([make_strategy("random", 1), make_strategy("random", 2)], seed=1,  # noqa: E731
+                             leaders=[nm, "Paul Atreides" if nm != "Paul Atreides" else "Count Ilban Richese"])
+        g = mk('Glossu "The Beast" Rabban')
+        self.assertEqual((g.players[0].spice, g.players[0].solari), (1, 1))      # starting bonus
+        self.assertEqual((g.players[1].spice, g.players[1].solari), (0, 0))
+        g = mk("Duke Leto Atreides")                                             # Landsraad discount
+        self.assertEqual(g.space_cost(g.players[0], SPACE_BY_NAME["High Council"]), {"solari": 4})
+        self.assertEqual(g.space_cost(g.players[1], SPACE_BY_NAME["High Council"]), {"solari": 5})
+        self.assertEqual(g.space_cost(g.players[0], SPACE_BY_NAME["Conspire"]), {"spice": 4})
+        g = mk("Helena Richese")                                                 # shares Landsraad/city spaces
+        g.occupied["Arrakeen"] = 1
+        g.occupied["Wealth"] = 1
+        self.assertTrue(g.space_ok(g.players[0], SPACE_BY_NAME["Arrakeen"]))
+        self.assertFalse(g.space_ok(g.players[0], SPACE_BY_NAME["Wealth"]))
+        g = mk("Count Memnon Thorvald")                                          # influence with the council seat
+        before = sum(g.players[0].influence.values())
+        g.special(g.players[0], "high_council", {})
+        self.assertEqual(sum(g.players[0].influence.values()), before + 1)
+        self.assertEqual(len(data.LEADERS), 8)
+
+    def test_helena_reserves_a_card_and_buys_it_cheaper(self):
+        from dune_sim.engine import held_price
+        g = Game([make_strategy("balanced"), make_strategy("balanced")], seed=3,
+                 leaders=["Helena Richese", "Paul Atreides"])
+        p = g.players[0]
+        row_before = list(g.imperium_row)
+        g.apply_ops(p, p.leader["signet"], {})
+        c = p.held
+        self.assertIn(c, row_before)
+        self.assertEqual(len(g.imperium_row), len(row_before))        # the row refilled
+        self.assertEqual(sum(x is c for x in g.imperium_row),
+                         sum(x is c for x in row_before) - 1)         # one copy left the row
+        # with exactly the discounted price in persuasion she can buy it
+        p.hand, p.persuasion, p.seat = [], held_price(c), False
+        owned = len(p.all_cards())
+        g.strategies[0].choose_purchase = lambda game, pl, options, budget: (
+            c if any(o is c for o in options) else None)
+        g.reveal_turn(0)
+        self.assertIsNone(p.held)
+        self.assertEqual(len(p.all_cards()), owned + 1)
+        self.assertIn(c, p.discard)
+
+    def test_unbought_reserved_card_leaves_the_game(self):
+        g = Game([make_strategy("balanced") for _ in range(4)], seed=5,
+                 leaders=["Helena Richese", "Paul Atreides", "Duke Leto Atreides", "Count Ilban Richese"])
+        g.play()
+        self.assertTrue(all(p.held is None for p in g.players))
+
+
+class WaterSetting(unittest.TestCase):
+    def tearDown(self):
+        from dune_sim.strategies import set_water_mode
+        set_water_mode("capped")
+
+    def test_flat_water_reproduces_the_hw11_cases(self):
+        import json, os, tempfile
+        from dune_sim.strategies import set_water_mode
+        set_water_mode("flat")
+        old = json.load(open(os.path.join(os.path.dirname(__file__), "..", "results",
+                                          "vertical_slice", "cases.json")))["cases"]
+        for c in old[:5]:
+            spec = json.load(open(os.path.join(os.path.dirname(__file__), "..", "cases",
+                                               "vertical_slice.json")))
+            players = next(x for x in spec if x["id"] == c["id"])["players"]
+            summary, _ = run_trace(players, 7, 0, None)
+            self.assertEqual(summary["final_vp"][0], c["vp"], c["id"])
+            self.assertEqual(summary["measures"]["decisions"], c["decisions"], c["id"])
+
+    def test_capped_water_is_worth_less_beyond_four(self):
+        from dune_sim.strategies import set_water_mode
+        g = Game([make_strategy("balanced"), make_strategy("balanced")], seed=1)
+        s = make_strategy("balanced")
+        step = lambda n: s.water_value(g, g.players[0], n + 1) - s.water_value(g, g.players[0], n)  # noqa: E731
+        self.assertGreater(step(3), 5 * step(4))
+        set_water_mode("flat")
+        s = make_strategy("balanced")
+        self.assertAlmostEqual(step(3), step(4))
+
+
 class Trace(unittest.TestCase):
     def test_decisions_are_recorded_with_scores(self):
         summary, replay = run_trace(["balanced", "random", "random", "random"], 7, 0, None)

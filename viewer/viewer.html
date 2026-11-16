@@ -7,21 +7,21 @@
 <style>
 :root {
   --bg: #f6f3ee; --panel: #ffffff; --panel-2: #f0ece5; --ink: #1f1b16; --muted: #6f675c;
-  --line: #ddd5c8; --accent: #b4621d; --hl: #fff1c9;
+  --line: #ddd5c8; --accent: #b4621d; --hl: #fff1c9; --board: #ebe5da; --sand: #f3e3c3; --sand-line: #dcc493;
   --p0: #2f6fd6; --p1: #c23b3b; --p2: #2a9a5b; --p3: #8a4fc7;
   --f-emperor: #8c6d1f; --f-guild: #b8541f; --f-bene_gesserit: #5b5b8f; --f-fremen: #2f7f8f;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #15130f; --panel: #1f1c17; --panel-2: #2a261f; --ink: #ece6dc; --muted: #a39a8c;
-    --line: #3a342b; --accent: #e08a3c; --hl: #4a3d1c;
+    --line: #3a342b; --accent: #e08a3c; --hl: #4a3d1c; --board: #1a1712; --sand: #3a2e19; --sand-line: #5a4622;
     --p0: #6aa0ff; --p1: #ff7a7a; --p2: #5fd08f; --p3: #c08cff;
     --f-emperor: #d6b04f; --f-guild: #f0884a; --f-bene_gesserit: #9a9ae0; --f-fremen: #5fc3d4;
   }
 }
 :root[data-theme="dark"] {
   --bg: #15130f; --panel: #1f1c17; --panel-2: #2a261f; --ink: #ece6dc; --muted: #a39a8c;
-  --line: #3a342b; --accent: #e08a3c; --hl: #4a3d1c;
+  --line: #3a342b; --accent: #e08a3c; --hl: #4a3d1c; --board: #1a1712; --sand: #3a2e19; --sand-line: #5a4622;
   --p0: #6aa0ff; --p1: #ff7a7a; --p2: #5fd08f; --p3: #c08cff;
   --f-emperor: #d6b04f; --f-guild: #f0884a; --f-bene_gesserit: #9a9ae0; --f-fremen: #5fc3d4;
 }
@@ -46,15 +46,58 @@ main { padding: 12px 16px 24px; display: grid; gap: 12px;
 .event .msg { font-size: 15px; font-weight: 600; flex: 1 1 300px; }
 .chip { display: inline-block; padding: 1px 8px; border-radius: 999px; background: var(--panel-2);
   border: 1px solid var(--line); font-size: 12px; white-space: nowrap; }
-.board { grid-area: board; display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); align-content: start; }
-.area h3 { margin: 0 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
-.area { border-top: 3px solid var(--line); }
-.tiles { display: grid; gap: 6px; }
-.tile { border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; background: var(--panel-2); position: relative; }
-.tile .nm { font-weight: 600; display: flex; justify-content: space-between; gap: 6px; }
-.tile .fx { color: var(--muted); font-size: 12px; }
+.board { grid-area: board; display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 1250px) { .board { grid-template-columns: minmax(0, 1fr) 300px; } }
+.side { display: grid; gap: 12px; align-content: start; min-width: 0; grid-template-columns: minmax(0, 1fr); }
+.side .rank span:first-child { min-width: 0; overflow-wrap: anywhere; }
+.h { margin: 0 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.gameboard { background: var(--board); border: 1px solid var(--line); border-radius: 14px; padding: 10px; display: grid; gap: 10px;
+  grid-template-columns: minmax(0, 1fr); grid-template-areas: "landsraad" "choam" "factions" "arrakis" "conflict"; }
+@media (min-width: 900px) { .gameboard { grid-template-columns: 300px minmax(0, 2.4fr) minmax(0, 1fr);
+  grid-template-areas: "factions landsraad choam" "factions arrakis arrakis" "factions conflict conflict"; } }
+.region { border-radius: 10px; padding: 8px; background: var(--panel); border: 1px solid var(--line); min-width: 0; }
+.region h3 { margin: 0 0 6px; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.region.factions { grid-area: factions; display: grid; gap: 8px; background: none; border: 0; padding: 0; align-content: start; }
+.region.landsraad { grid-area: landsraad; } .region.choam { grid-area: choam; }
+.region.arrakis { grid-area: arrakis; background: var(--sand); border-color: var(--sand-line); }
+.region.conflictzone { grid-area: conflict; border-top: 3px solid var(--accent); }
+.faction { border-radius: 10px; padding: 8px; background: var(--panel); border: 1px solid var(--line); border-left: 5px solid var(--fc); }
+.faction h3 { color: var(--fc); display: flex; justify-content: space-between; }
+.faction .ally { letter-spacing: 0; text-transform: none; font-weight: 650; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.track { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; margin-top: 6px; }
+.track .cell { min-height: 24px; border-radius: 4px; background: var(--panel-2); border: 1px solid var(--line); padding: 1px 2px;
+  display: flex; flex-wrap: wrap; gap: 2px; align-items: center; align-content: center; position: relative; }
+.track .cell .n { font-size: 10px; color: var(--muted); width: 100%; line-height: 1; }
+.track .cell.vpmark, .track .cell.allymark { border-color: var(--fc); }
+.track .cell.allymark { border-width: 2px; }
+.track .dot { width: 8px; height: 8px; }
+.tiles { display: grid; gap: 6px; grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); }
+.tile { border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; background: var(--panel-2); display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.arrakis .tile { background: var(--panel); }
+.tile.maker { border-style: dashed; }
+.tile .nm { font-weight: 650; display: flex; justify-content: space-between; gap: 6px; }
+.tile .ic { font-size: 11px; }
+.tile .cost { font-size: 11px; color: var(--accent); font-weight: 600; }
+.tile .fx, .fx { color: var(--muted); font-size: 12px; }
+.tile .fx.bonus { color: var(--accent); font-weight: 600; }
+.tile .slot { margin-top: auto; padding-top: 4px; display: flex; align-items: center; gap: 5px; font-size: 12px; min-height: 22px; }
+.pawn { width: 14px; height: 14px; border-radius: 50% 50% 4px 4px; display: inline-block; flex: none; }
+.pawn.none { background: none; border: 1px dashed var(--line); }
 .tile.occ { border-width: 2px; }
 .tile.flash { background: var(--hl); }
+.cz { display: grid; gap: 10px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 700px) { .cz { grid-template-columns: 220px minmax(0, 1fr); } }
+.ccard { border: 1px solid var(--line); border-radius: 8px; padding: 8px; background: var(--panel-2); }
+.armies { display: grid; gap: 4px; align-content: start; }
+.army { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto 28px auto; gap: 8px; align-items: center; font-size: 12px; }
+.army b { font-size: 15px; text-align: right; font-variant-numeric: tabular-nums; }
+.cube { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 2px; }
+.mrow { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 6px; }
+.mcard { border: 1px solid var(--line); border-top: 4px solid var(--fc); border-radius: 6px; padding: 5px 7px; background: var(--panel-2); position: relative; min-height: 62px; }
+.mcard .mc { position: absolute; top: 4px; right: 6px; font-weight: 700; color: var(--accent); }
+.mcard .mn { font-weight: 600; font-size: 12px; padding-right: 16px; }
+.mcard .mt { font-size: 11px; color: var(--muted); }
 .agent { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; }
 .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex: none; }
 .conflict { border-top: 3px solid var(--accent); }
@@ -75,10 +118,10 @@ main { padding: 12px 16px 24px; display: grid; gap: 12px;
 .pl .nm { font-weight: 700; font-size: 15px; color: var(--pc); }
 .vp { font-size: 26px; font-weight: 750; font-variant-numeric: tabular-nums; line-height: 1; }
 .vp small { font-size: 12px; font-weight: 500; color: var(--muted); }
-.res { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; margin: 8px 0; }
+.res { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; margin: 8px 0; }
 .res div { background: var(--panel-2); border-radius: 6px; padding: 3px 6px; text-align: center; }
 .res b { display: block; font-size: 15px; font-variant-numeric: tabular-nums; }
-.res span { font-size: 11px; color: var(--muted); }
+.res span { font-size: 11px; color: var(--muted); overflow-wrap: anywhere; }
 .inf { display: grid; grid-template-columns: 96px 1fr 18px; gap: 4px 6px; align-items: center; font-size: 12px; }
 .bar { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px; }
 .bar i { height: 8px; border-radius: 2px; background: var(--line); }
@@ -168,38 +211,67 @@ function render() {
     <span class="chip">First player: ${esc(names[s.first])}</span>
     <span class="chip">Conflicts left: ${s.conflicts_left}</span>`;
 
-  // board grouped by area
+  // board laid out like the table: factions down the left, Landsraad and CHOAM across
+  // the top, Arrakis (cities and desert) in the middle, the conflict at the bottom
   const byArea = {};
   R.spaces.forEach(sp => (byArea[sp.area] = byArea[sp.area] || []).push(sp));
-  let html = AREA_ORDER.filter(a => byArea[a]).map(a => {
-    const col = AREA_COLOR[a] ? `var(${AREA_COLOR[a]})` : "var(--line)";
-    const tiles = byArea[a].map(sp => {
-      const b = s.board[sp.name], pb = prev && prev.board[sp.name];
-      const occ = b.agent != null;
-      const flash = occ && (!pb || pb.agent !== b.agent);
-      const tags = [sp.combat ? "⚔" : "", sp.cost && Object.keys(sp.cost).length ? costStr(sp.cost) : "",
-        Object.keys(sp.requires || {}).length ? "needs " + Object.entries(sp.requires).map(([k, v]) => `${v} ${FLABEL[k]}`).join("") : ""].filter(Boolean).join(" · ");
-      return `<div class="tile ${occ ? "occ" : ""} ${flash ? "flash" : ""}" style="${occ ? `border-color:${pc(b.agent)}` : ""}">
-        <div class="nm"><span>${esc(sp.name)}</span>${occ ? `<span class="agent" style="color:${pc(b.agent)}"><span class="dot" style="background:${pc(b.agent)}"></span>${esc(names[b.agent])}</span>` : ""}</div>
-        <div class="fx">${esc(sp.effect)}${tags ? ` <span>(${esc(tags)})</span>` : ""}</div>
-        ${b.bonus ? `<div class="fx" style="color:var(--accent)">+${b.bonus} bonus spice</div>` : ""}
-        ${b.control != null ? `<div class="fx">controlled by <b style="color:${pc(b.control)}">${esc(names[b.control])}</b></div>` : ""}
-      </div>`;
-    }).join("");
-    return `<div class="card area" style="border-top-color:${col}"><h3>${esc(a)}</h3><div class="tiles">${tiles}</div></div>`;
-  }).join("");
-
-  // conflict panel
-  if (cf) {
-    const ranked = s.players.map((p, k) => ({p, k})).filter(x => x.p.conflict > 0 || x.p.strength > 0)
-      .sort((a, b) => b.p.strength - a.p.strength);
-    html += `<div class="card conflict"><h3 style="margin:0 0 4px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)">Conflict · level ${cf.level}</h3>
-      <div style="font-weight:650;font-size:14px">${esc(cf.name)}${cf.control ? ` <span class="chip">control: ${esc(cf.control)}</span>` : ""}</div>
-      ${cf.rewards.map((r, k) => `<div class="fx muted">${["1st", "2nd", "3rd"][k]}: ${esc(r)}</div>`).join("")}
-      <div style="margin-top:6px">${ranked.length ? ranked.map(x => `<div class="rank"><span><span class="dot" style="background:${pc(x.k)}"></span> ${esc(x.p.name)}</span><span>${x.p.conflict} troops · ${x.p.revealed ? x.p.swords + " swords" : "swords hidden"} · <b>${x.p.strength}</b></span></div>`).join("") : `<span class="muted">No troops committed</span>`}</div>
+  const ICON = {emperor: "◆", guild: "⬢", bene_gesserit: "●", fremen: "▲", landsraad: "■", spice_trade: "◈", city: "⬟"};
+  const tile = (sp) => {
+    const b = s.board[sp.name], pb = prev && prev.board[sp.name];
+    const occ = b.agent != null;
+    const flash = occ && (!pb || pb.agent !== b.agent);
+    const cost = sp.cost && Object.keys(sp.cost).length ? costStr(sp.cost) : "";
+    const req = Object.keys(sp.requires || {}).length ? "needs " + Object.entries(sp.requires).map(([k, v]) => `${v} ${FLABEL[k]}`).join("") : "";
+    const fcol = FACTIONS.includes(sp.icon) ? `var(--f-${sp.icon})` : "var(--muted)";
+    return `<div class="tile ${occ ? "occ" : ""} ${flash ? "flash" : ""} ${sp.maker ? "maker" : ""}" style="${occ ? `border-color:${pc(b.agent)}` : ""}">
+      <div class="nm"><span><span class="ic" style="color:${fcol}" title="${esc(sp.icon.replace("_", " "))} space">${ICON[sp.icon] || "•"}</span> ${esc(sp.name)}</span>${sp.combat ? `<span class="muted" title="combat space: troops may be deployed">⚔</span>` : ""}</div>
+      ${cost || req ? `<div class="cost">${esc([cost && "cost " + cost, req].filter(Boolean).join(" · "))}</div>` : ""}
+      <div class="fx">${esc(sp.effect)}</div>
+      ${b.bonus ? `<div class="fx bonus">+${b.bonus} bonus spice</div>` : ""}
+      ${b.control != null ? `<div class="fx">control: <b style="color:${pc(b.control)}">${esc(names[b.control])}</b></div>` : ""}
+      <div class="slot">${occ ? `<span class="pawn" style="background:${pc(b.agent)}"></span><span style="color:${pc(b.agent)};font-weight:650">${esc(names[b.agent])}</span>` : `<span class="pawn none"></span>`}</div>
     </div>`;
-    const row = s.row.map(c => `<span style="${c.type ? `border-left:3px solid var(--f-${c.type})` : ""}">${esc(c.name)} <span class="muted">(${c.cost})</span> <span style="font-size:11px;${c.type ? `color:var(--f-${c.type})` : "color:var(--muted)"}">${c.type ? FLABEL[c.type] : "no type"}</span></span>`).join("");
-    html += `<div class="card"><h3 style="margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)">Imperium row</h3><div class="cards">${row}</div>
+  };
+  const tiles = (area) => (byArea[area] || []).map(tile).join("");
+  const factionStrip = (fa) => {
+    const ally = s.alliance[fa];
+    const cells = [0, 1, 2, 3, 4, 5, 6].map(n => {
+      const here = s.players.map((p, k) => p.influence[fa] === n ? `<span class="dot" style="background:${pc(k)}" title="${esc(names[k])}: ${n}"></span>` : "").join("");
+      return `<div class="cell ${n === 2 ? "vpmark" : ""} ${n === 4 ? "allymark" : ""}" title="${n === 2 ? "2 influence: 1 VP" : n === 4 ? "4 influence: alliance" : ""}"><span class="n">${n}</span>${here}</div>`;
+    }).join("");
+    return `<div class="faction" style="--fc:var(--f-${fa})">
+      <h3>${FLABEL[fa]}${ally != null ? ` <span class="ally" style="color:${pc(ally)}">★ ${esc(names[ally])}</span>` : ""}</h3>
+      <div class="pair">${tiles(FLABEL[fa])}</div>
+      <div class="track">${cells}</div>
+    </div>`;
+  };
+  const cubes = (n, k) => n ? Array.from({length: Math.min(n, 12)}, () => `<i class="cube" style="background:${pc(k)}"></i>`).join("") + (n > 12 ? ` +${n - 12}` : "") : `<span class="muted">—</span>`;
+  let conflictHtml = `<span class="muted">No conflict revealed</span>`;
+  if (cf) {
+    const order = s.players.map((p, k) => ({p, k})).sort((a, b) => b.p.strength - a.p.strength);
+    conflictHtml = `<div class="ccard"><div class="muted" style="font-size:11px;text-transform:uppercase;letter-spacing:.06em">Conflict · level ${cf.level}</div>
+        <div style="font-weight:650;font-size:14px">${esc(cf.name)}</div>
+        ${cf.control ? `<div class="fx">control of ${esc(cf.control)}</div>` : ""}
+        ${cf.rewards.map((r, k) => `<div class="fx">${["1st", "2nd", "3rd"][k]}: ${esc(r)}</div>`).join("")}</div>
+      <div class="armies">${order.map(x => `<div class="army">
+          <span style="color:${pc(x.k)};font-weight:650">${esc(x.p.name)}</span>
+          <span class="cubes" title="troops in the conflict">${cubes(x.p.conflict, x.k)}</span>
+          <span class="muted">${x.p.conflict ? (x.p.revealed ? x.p.swords + " swords" : "swords hidden") : ""}</span>
+          <b title="strength">${x.p.strength}</b>
+          <span class="muted" title="troops in garrison">garrison ${x.p.garrison}</span></div>`).join("")}</div>`;
+  }
+  let html = `<div class="gameboard">
+      <div class="region factions">${FACTIONS.map(factionStrip).join("")}</div>
+      <div class="region landsraad"><h3>Landsraad</h3><div class="tiles">${tiles("Landsraad")}</div></div>
+      <div class="region choam"><h3>CHOAM</h3><div class="tiles">${tiles("CHOAM")}</div></div>
+      <div class="region arrakis"><h3>Arrakis</h3><div class="tiles">${tiles("Arrakis")}</div>
+        <h3 style="margin-top:10px">Deep desert · makers</h3><div class="tiles">${tiles("Desert")}</div></div>
+      <div class="region conflictzone"><h3>Conflict</h3><div class="cz">${conflictHtml}</div></div>
+    </div>`;
+  let side = "";
+  {
+    const row = s.row.map(c => `<div class="mcard" style="--fc:${c.type ? `var(--f-${c.type})` : "var(--line)"}"><div class="mc">${c.cost}</div><div class="mn">${esc(c.name)}</div><div class="mt">${c.type ? FLABEL[c.type] : "no type"}</div></div>`).join("");
+    side += `<div class="card"><h3 class="h">Imperium row</h3><div class="mrow">${row}</div>
       <div class="fx muted" style="margin-top:6px">Reserve: ${Object.entries(s.reserve).map(([k, v]) => `${esc(k)} ×${v}`).join(" · ")}</div></div>`;
   }
   // decision panel: what the acting agent could do and how it scored each option
@@ -207,13 +279,13 @@ function render() {
   if (d) {
     const top = d.options.slice(0, 8).map(o => `<div class="rank" style="${o.chosen ? "font-weight:700;color:var(--accent)" : ""}">
         <span>${o.chosen ? "▶ " : ""}${esc(o.label)}</span><span>${o.score == null ? "n/a" : o.score.toFixed(2)}</span></div>`).join("");
-    html += `<div class="card conflict"><h3 style="margin:0 0 4px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)">Decision · ${esc(names[d.actor])}</h3>
+    side += `<div class="card conflict"><h3 class="h">Decision · ${esc(names[d.actor])}</h3>
       <div class="fx muted">${d.n_options} legal options · ${d.ms} ms${d.rule ? " · " + esc(d.rule) : ""} · utility score per option</div>
       ${d.fallback ? `<div class="fx" style="color:var(--p1)">Fallback: ${esc(d.fallback)} → reveal turn</div>` : ""}
       <div style="margin-top:4px">${top}</div>
       ${d.n_options > 8 ? `<div class="fx muted">… ${d.n_options - 8} more</div>` : ""}</div>`;
   }
-  $("board").innerHTML = html;
+  $("board").innerHTML = html + `<div class="side">${side}</div>`;
 
   // players
   const res = R.meta.result;
@@ -228,7 +300,8 @@ function render() {
     const won = lastFrame && res.winners.includes(k);
     return `<div class="card pl ${f.actor === k ? "active" : ""}" style="--pc:${pc(k)}">
       <div class="top"><div><div class="nm">${esc(p.name)} ${s.first === k ? "<span class='chip'>first</span>" : ""} ${won ? "<span class='win'>WINNER</span>" : ""}</div>
-        <div class="muted">${esc(p.strategy)}</div></div>
+        <div class="muted">${esc(p.strategy)}</div>
+        ${p.leader ? `<div title="${esc(p.leader.ability)} Signet: ${esc(p.leader.signet)}" style="font-weight:600">${esc(p.leader.name)}</div>` : ""}</div>
         <div class="vp">${p.vp}<small> VP</small></div></div>
       <div class="res">
         <div><b>${p.spice}</b><span>spice</span></div><div><b>${p.solari}</b><span>solari</span></div>
@@ -237,7 +310,9 @@ function render() {
         <div><b>${p.persuasion}</b><span>persuasion</span></div><div><b>${p.intrigue.length}</b><span>intrigue</span></div>
       </div>
       <div class="inf">${inf}</div>
+      ${p.leader ? `<div class="zone muted">${esc(p.leader.ability)}<br>Signet: ${esc(p.leader.signet)}</div>` : ""}
       <div class="zone"><b>Agents</b> ${agents} ${p.seat ? "<span class='chip'>High Council</span>" : ""} ${p.revealed ? "<span class='chip'>revealed</span>" : ""}</div>
+      ${p.held ? `<div class="zone"><b>Reserved</b><span class="chip">${esc(p.held.name)} (${p.held.cost})</span></div>` : ""}
       <div class="zone"><b>Hand</b>${cards(p.hand)}</div>
       <div class="zone"><b>Played</b>${cards(p.in_play)}</div>
       ${p.revealed_cards.length ? `<div class="zone"><b>Revealed</b>${cards(p.revealed_cards)}</div>` : ""}

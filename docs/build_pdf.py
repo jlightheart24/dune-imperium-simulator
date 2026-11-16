@@ -2,6 +2,7 @@
 
     python3 docs/build_pdf.py                   # project-definition.md
     python3 docs/build_pdf.py vertical-slice    # vertical-slice.md
+    python3 docs/build_pdf.py project-evaluation
 
 The PDF cites the current git HEAD as the submitted commit.
 

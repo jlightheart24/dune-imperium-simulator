@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import importlib
 import json
+import os
 import random
 from typing import Dict, List, Optional
 
@@ -31,6 +32,10 @@ class Strategy:
 
     def choose_purchase(self, game, p, options: list, budget: int):
         return None
+
+    def choose_reserve(self, game, p, row: list):
+        """Manipulate: pick the Imperium-row card to set aside (must be one of `row`)."""
+        return row[0]
 
     def choose_influence(self, game, p, factions: List[str]) -> str:
         return factions[0]
@@ -67,6 +72,9 @@ class RandomStrategy(Strategy):
 
     def choose_purchase(self, game, p, options, budget):
         return self.rng.choice(options) if self.rng.random() < 0.8 else None
+
+    def choose_reserve(self, game, p, row):
+        return self.rng.choice(row)
 
     def choose_influence(self, game, p, factions):
         return self.rng.choice(factions)
@@ -105,11 +113,15 @@ BASE_WEIGHTS: Dict = {
     "mentat_float": 1.4,   # multiplier on the first 2 solari (keeps Mentat affordable)
     "spice_need": 10,      # spice worth holding at full value (Heighliner + Conspire)
     "spice_excess": 0.3,   # value multiplier for spice beyond that (1.0 = flat valuation)
+    "water_need": 4,       # water worth holding at full value (two 2-water spaces)
+    "water_excess": 0.15,  # value multiplier for water beyond that
     "legacy": False,       # True = old linear solari / flat agent valuation
     # Spaces to take whenever legal and affordable, in priority order (skipped in the
     # final round, when they can no longer pay off). Empty = decide by evaluation only.
     "alliance": 0.0,       # extra value per alliance held, and pull toward winnable ones
     "priority_spaces": [],
+    # Spaces this strategy never uses.
+    "avoid_spaces": [],
     # Cards to buy whenever they are affordable, in priority order.
     "priority_cards": [],
     "card_persuasion": 1.0,  # value of each persuasion on a card when judging what to buy/keep
@@ -189,9 +201,37 @@ PROFILES["alliances"] = {
     "influence": {"emperor": 2.2, "guild": 2.2, "bene_gesserit": 2.2, "fremen": 2.2},
     "conflict": 0.8,
 }
+# Card draw: see as many cards per round as possible. Favours Research Station (draw 3),
+# Arrakeen, Mentat, Selective Breeding and cards whose agent effect draws.
+PROFILES["card_draw"] = {
+    "draw": 4.0, "water": 2.7,   # Research Station costs 2 water
+    "persuasion": 1.1,           # more cards in hand at reveal is the payoff
+    "conflict": 0.8,
+}
+# Rush profiles: save solari hard for the named purchase(s) and take them the moment they
+# are affordable. Solari is valued above the default until the purchases are made.
+PROFILES["rush_council"] = {      # High Council as fast as possible, never Swordmaster
+    "priority_spaces": ["High Council"], "avoid_spaces": ["Swordmaster"],
+    "solari": 1.6, "solari_need_max": 7,
+}
+PROFILES["rush_swordmaster"] = {  # Swordmaster as fast as possible, never High Council
+    "priority_spaces": ["Swordmaster"], "avoid_spaces": ["High Council"],
+    "solari": 1.6, "solari_need_max": 10,
+}
+PROFILES["rush_both"] = {         # Swordmaster first, then High Council, both as fast as possible
+    "priority_spaces": ["Swordmaster", "High Council"],
+    "solari": 1.6, "solari_need_max": 15,
+}
 # One profile per card type: strongly prefers buying that faction's cards.
 for _f in FACTIONS:
     PROFILES[_f + "_cards"] = {"card_type": {_f: 3.0}}
+
+
+# The focus set: strategies whose 95% interval on win rate against three `balanced`
+# was above the 25% fair share at 1,000 games each, no leaders, with the water cap
+# (results/benchmark_water_cap_1000). Chosen by the project owner as the group to study.
+# Use the word `focus` wherever the CLI takes strategy names, e.g. `benchmark focus`.
+FOCUS = ["bene_gesserit_faction", "rush_swordmaster", "rush_both"]
 
 
 def merged_weights(overrides: Dict) -> Dict:
@@ -226,9 +266,10 @@ class HeuristicStrategy(Strategy):
         """Solari the player still has a use for: Mentat float plus unbought sinks."""
         rl = self.rounds_left(game)
         need = 2                       # Mentat, every round
-        if not p.seat and rl >= 3:
+        avoid = self.w["avoid_spaces"]
+        if not p.seat and rl >= 3 and "High Council" not in avoid:
             need += 5                  # High Council seat
-        if p.agents_total < 3 and rl >= 3:
+        if p.agents_total < 3 and rl >= 3 and "Swordmaster" not in avoid:
             need += 8                  # Swordmaster
         if rl >= 2:
             need += 2                  # small float toward Rally Troops / card costs
@@ -254,6 +295,15 @@ class HeuristicStrategy(Strategy):
             return n * w["spice"]
         need = w["spice_need"]
         return w["spice"] * (min(n, need) + max(0, n - need) * w["spice_excess"])
+
+    def water_value(self, game, p, n: int) -> float:
+        """Total value of holding n water: full value up to water_need, heavily
+        discounted beyond, so a player holding 4 has little reason to take more."""
+        w = self.w
+        if w["legacy"]:
+            return n * w["water"]
+        need = w["water_need"]
+        return w["water"] * (min(n, need) + max(0, n - need) * w["water_excess"])
 
     def spice_delta(self, game, p, n: int) -> float:
         cur = p.spice
@@ -434,13 +484,15 @@ class HeuristicStrategy(Strategy):
         deck_mult = min(1.0, rl / 8.0)
         v = game.total_vp(p) * w["vp"]
         v += res_mult * (self.spice_value(game, p, p.spice) + self.solari_value(game, p, p.solari)
-                         + p.water * w["water"]
+                         + self.water_value(game, p, p.water)
                          + p.garrison * w["troop"] + len(p.intrigue) * w["intrigue"])
         for f in FACTIONS:
             v += p.influence[f] * w["influence"][f] * res_mult
         v += w["deck"] * deck_mult * self.deck_score(game, p)
         v += self.alliance_value(game, p)
         v += self.hand_reveal_value(game, p)
+        if p.held is not None:   # a reserved card: worth its 1-persuasion discount if we want it
+            v += w["persuasion"] * (1.0 if self.purchase_value(game, p, p.held) > 0 else 0.25)
         v += p.persuasion * w["persuasion"]
         if legacy:
             v += (p.agents_total - 2) * w["agent"] * min(1.0, rl / 5.0)
@@ -456,6 +508,9 @@ class HeuristicStrategy(Strategy):
 
     # ------------------------------------------------------------ decisions
     def choose_turn(self, game, p, actions):
+        if self.w["avoid_spaces"]:
+            actions = [a for a in actions
+                       if not (a[0] == "agent" and a[2] in self.w["avoid_spaces"])]
         if self.w["priority_spaces"] and self.rounds_left(game) > 1:
             for space in self.w["priority_spaces"]:
                 picks = [a for a in actions if a[0] == "agent" and a[2] == space]
@@ -492,15 +547,41 @@ class HeuristicStrategy(Strategy):
             for c in options:
                 if c.name == name:
                     return c
-        rl = self.rounds_left(game)
-        deck_mult = min(1.0, rl / 6.0)
         best, best_v = None, 0.0
         for c in options:
-            v = (self.card_power(game, p, c) - self.w["card_baseline"] * 0.5) * deck_mult
-            v += self.ops_value(game, p, c.acquire)
+            v = self.purchase_value(game, p, c)
             if v > best_v:
                 best, best_v = c, v
         return best
+
+    def purchase_value(self, game, p, c) -> float:
+        deck_mult = min(1.0, self.rounds_left(game) / 6.0)
+        v = (self.card_power(game, p, c) - self.w["card_baseline"] * 0.5) * deck_mult
+        return v + self.ops_value(game, p, c.acquire)
+
+    def expected_persuasion(self, game, p) -> int:
+        """Persuasion this player would have if they revealed their current hand now."""
+        n = p.persuasion + (2 if p.seat else 0)
+        for c in p.hand:
+            for op in c.reveal:
+                if "gain" in op:
+                    n += op["gain"].get("persuasion", 0)
+        return n
+
+    def choose_reserve(self, game, p, row):
+        """Take the card we most want and can expect to afford at the discount;
+        if there is none, take the strongest card so nobody else gets it."""
+        budget = self.expected_persuasion(game, p)
+        mine = [c for c in row if max(0, c.cost - 1) <= budget]
+        for name in self.w["priority_cards"]:
+            for c in mine:
+                if c.name == name:
+                    return c
+        if mine:
+            best = max(mine, key=lambda c: self.purchase_value(game, p, c))
+            if self.purchase_value(game, p, best) > 0:
+                return best
+        return max(row, key=lambda c: self.card_power(game, p, c))
 
     def choose_influence(self, game, p, factions):
         return max(factions, key=lambda f: self.influence_value(game, p, f))
@@ -538,6 +619,24 @@ class HeuristicStrategy(Strategy):
 
 
 # ---------------------------------------------------------------------------
+WATER_MODES = ("capped", "flat")
+
+
+def set_water_mode(mode: str) -> None:
+    """`capped` (default): water beyond water_need is worth water_excess of its value.
+    `flat`: every water at full value, as in the U0-HW-11 baseline. Stored in the
+    environment as well so worker processes started later use the same setting."""
+    if mode not in WATER_MODES:
+        raise ValueError(f"unknown water mode {mode!r}; choose from {WATER_MODES}")
+    os.environ["DUNE_WATER"] = mode
+    BASE_WEIGHTS["water_excess"] = 1.0 if mode == "flat" else _CAPPED_WATER_EXCESS
+
+
+_CAPPED_WATER_EXCESS = BASE_WEIGHTS["water_excess"]
+if os.environ.get("DUNE_WATER") == "flat":
+    BASE_WEIGHTS["water_excess"] = 1.0
+
+
 def available_strategies() -> List[str]:
     return ["random"] + [f"heuristic:{k}" for k in PROFILES]
 

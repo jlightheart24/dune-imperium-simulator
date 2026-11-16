@@ -1,0 +1,105 @@
+$ python3 -m dune_sim batch -n 2000 --detail -p bene_gesserit_faction rush_swordmaster rush_both deckbuilder --save top4_leaders
+
+2000 games, 4 players, avg 9.7 rounds
+
+strategy                       win %        95% CI   avg VP  avg rank  alliances   deck  end $  3rd agent  council  mentats
+---------------------------------------------------------------------------------------------------------------------------
+rush_both                      28.2%     26.3-30.3     7.93      2.39       0.78   22.7    7.3        98%     100%      1.2
+rush_swordmaster               27.6%     25.7-29.7     7.68      2.48       0.90   21.0    8.7       100%       0%      1.5
+bene_gesserit_faction          26.1%     24.3-28.1     7.96      2.40       1.14   21.4    5.6        39%      38%      1.0
+deckbuilder                    17.9%     16.3-19.7     7.50      2.73       0.97   23.9    5.3        29%      64%      1.2
+
+(fair share = 25.0% per seat; 95% CI = Wilson interval on win %; end $ = solari left at game end; mentats = Mentat uses per game)
+games ended by: 10 VP reached 79%, conflict deck exhausted 21%
+
+by leader (randomly assigned each game; fair share 25.0%)
+leader                          games   win %        95% CI   avg VP  avg rank
+------------------------------------------------------------------------------
+Baron Vladimir Harkonnen         1033   33.7%     30.9-36.6     8.38      2.22
+Glossu "The Beast" Rabban        1005   28.2%     25.5-31.0     7.82      2.43
+Count Ilban Richese              1002   28.0%     25.4-30.9     7.93      2.42
+Helena Richese                   1004   24.1%     21.6-26.8     7.66      2.54
+Count Memnon Thorvald             979   22.1%     19.6-24.8     7.59      2.58
+Countess Ariana Thorvald          992   21.3%     18.8-23.9     7.53      2.62
+Paul Atreides                    1008   21.1%     18.7-23.8     7.58      2.60
+Duke Leto Atreides                977   21.1%     18.6-23.8     7.61      2.61
+
+== deckbuilder: averages per player per game ==
+  earned over the game : spice 14.1, solari 16.2, water 6.7, troops recruited 17.0, extra cards drawn 12.2
+  conflict             : troops sent 17.3 per game (1.79 per round), fought in 65% of rounds, won 1.32 conflicts outright
+  when they fought     : 1st 21%, 2nd 33%, 3rd 35%, no reward 11% (1.3 troops per game lost for nothing)
+  at game end          : 23.9 cards owned, 0.9 trashed, 1.24 Spice Must Flow, 0.6 intrigue in hand
+  turn decisions       : 21.4 per game, 14.8 legal options each, 18.9 ms each, near-ties 33% of scored decisions, 0.00 fallbacks per game
+  bought cards by type : none 40%, fremen 23%, guild 15%, bene_gesserit 12%, emperor 11%
+  by round (held at end of round; troops/strength = committed to that round's conflict):
+  round     VP  spice  solari  water  garrison  cards  troops  strength  games
+      1   0.19   0.47    0.95   1.15      2.91   11.2    1.18      2.90   2000
+      2   0.85   1.19    1.73   1.46      2.47   12.5    1.48      3.75   2000
+      3   1.45   2.73    2.37   1.50      2.05   14.0    1.48      4.06   2000
+      4   2.14   3.33    2.88   1.88      2.14   15.6    1.38      3.87   2000
+      5   2.89   3.44    3.24   2.33      2.50   17.2    1.30      3.67   2000
+      6   3.63   3.85    3.62   2.63      2.89   18.8    1.37      3.95   2000
+      7   4.57   4.61    4.52   2.79      2.85   20.3    2.25      6.17   2000
+      8   5.54   4.94    5.21   2.85      2.87   21.7    2.44      6.75   1998
+      9   6.52   5.20    5.18   2.81      2.76   23.1    2.58      7.14   1881
+     10   7.49   5.51    5.36   2.65      2.64   24.3    2.73      7.59   1433
+
+== bene_gesserit_faction: averages per player per game ==
+  earned over the game : spice 16.3, solari 18.5, water 6.2, troops recruited 22.1, extra cards drawn 7.0
+  conflict             : troops sent 23.0 per game (2.39 per round), fought in 80% of rounds, won 3.09 conflicts outright
+  when they fought     : 1st 40%, 2nd 29%, 3rd 25%, no reward 6% (0.9 troops per game lost for nothing)
+  at game end          : 21.4 cards owned, 0.6 trashed, 0.64 Spice Must Flow, 0.8 intrigue in hand
+  turn decisions       : 21.8 per game, 14.1 legal options each, 17.9 ms each, near-ties 30% of scored decisions, 0.00 fallbacks per game
+  bought cards by type : none 27%, fremen 25%, bene_gesserit 22%, guild 14%, emperor 13%
+  by round (held at end of round; troops/strength = committed to that round's conflict):
+  round     VP  spice  solari  water  garrison  cards  troops  strength  games
+      1   0.26   0.55    1.28   1.28      2.36   10.7    1.86      4.58   2000
+      2   1.12   1.61    2.32   1.49      1.73   11.5    1.88      5.13   2000
+      3   1.89   3.22    3.07   1.54      1.39   12.8    1.94      5.68   2000
+      4   2.66   4.20    3.52   1.79      1.43   14.1    1.90      5.57   2000
+      5   3.44   4.51    4.00   2.20      1.70   15.4    2.09      6.00   2000
+      6   4.08   4.96    4.63   2.50      2.00   16.8    2.16      6.15   2000
+      7   5.09   5.45    5.51   2.79      2.19   18.1    2.92      7.91   2000
+      8   6.08   5.89    6.01   2.98      2.30   19.4    3.10      8.34   1998
+      9   7.02   6.51    5.61   2.89      2.21   20.7    3.14      8.53   1881
+     10   7.91   6.92    5.63   2.74      2.03   21.8    3.11      8.52   1433
+
+== rush_both: averages per player per game ==
+  earned over the game : spice 17.8, solari 27.3, water 8.0, troops recruited 21.4, extra cards drawn 9.2
+  conflict             : troops sent 21.6 per game (2.24 per round), fought in 76% of rounds, won 2.10 conflicts outright
+  when they fought     : 1st 29%, 2nd 33%, 3rd 31%, no reward 7% (0.9 troops per game lost for nothing)
+  at game end          : 22.7 cards owned, 0.3 trashed, 1.36 Spice Must Flow, 0.6 intrigue in hand
+  turn decisions       : 25.6 per game, 13.5 legal options each, 15.5 ms each, near-ties 33% of scored decisions, 0.00 fallbacks per game
+  bought cards by type : none 36%, fremen 31%, emperor 12%, guild 11%, bene_gesserit 10%
+  by round (held at end of round; troops/strength = committed to that round's conflict):
+  round     VP  spice  solari  water  garrison  cards  troops  strength  games
+      1   0.27   0.52    2.41   1.23      2.49   10.8    1.63      3.98   2000
+      2   1.00   0.99    3.57   1.58      1.83   11.6    1.61      3.98   2000
+      3   1.53   1.61    4.86   1.73      1.45   13.1    1.47      4.05   2000
+      4   2.11   2.08    5.71   1.99      1.46   14.6    1.49      4.05   2000
+      5   2.77   2.85    5.75   2.40      1.77   16.1    1.64      4.53   2000
+      6   3.43   4.23    5.35   2.74      2.33   17.6    1.87      5.12   2000
+      7   4.46   5.76    5.41   2.97      2.51   19.1    2.92      7.69   2000
+      8   5.63   6.86    5.83   3.04      2.76   20.6    3.23      8.72   1998
+      9   6.85   7.57    6.65   2.99      2.72   21.9    3.46      9.41   1881
+     10   8.03   8.13    7.75   2.91      2.67   23.1    3.54      9.71   1433
+
+== rush_swordmaster: averages per player per game ==
+  earned over the game : spice 19.7, solari 25.2, water 9.6, troops recruited 25.8, extra cards drawn 10.2
+  conflict             : troops sent 25.4 per game (2.64 per round), fought in 83% of rounds, won 2.71 conflicts outright
+  when they fought     : 1st 34%, 2nd 36%, 3rd 26%, no reward 5% (0.7 troops per game lost for nothing)
+  at game end          : 21.0 cards owned, 0.3 trashed, 0.42 Spice Must Flow, 0.6 intrigue in hand
+  turn decisions       : 26.8 per game, 13.7 legal options each, 16.1 ms each, near-ties 35% of scored decisions, 0.00 fallbacks per game
+  bought cards by type : fremen 36%, none 29%, guild 13%, emperor 12%, bene_gesserit 9%
+  by round (held at end of round; troops/strength = committed to that round's conflict):
+  round     VP  spice  solari  water  garrison  cards  troops  strength  games
+      1   0.27   0.55    2.38   1.25      2.43   10.8    1.68      4.10   2000
+      2   1.04   1.23    4.84   1.62      1.67   11.6    1.84      4.68   2000
+      3   1.65   2.51    5.80   1.84      1.31   12.8    1.83      4.94   2000
+      4   2.25   3.94    5.41   2.20      1.64   14.1    1.84      4.84   2000
+      5   2.89   4.98    5.14   2.81      2.25   15.4    2.14      5.70   2000
+      6   3.55   6.16    5.24   3.22      3.03   16.7    2.48      6.53   2000
+      7   4.55   7.36    5.89   3.42      3.29   18.0    3.56      9.01   2000
+      8   5.62   8.25    6.80   3.45      3.37   19.2    3.75      9.72   1998
+      9   6.72   8.63    7.92   3.28      3.47   20.4    3.85     10.24   1881
+     10   7.72   8.92    9.33   3.08      3.26   21.3    3.80     10.35   1433

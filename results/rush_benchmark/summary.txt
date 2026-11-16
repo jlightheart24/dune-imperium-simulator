@@ -1,0 +1,11 @@
+$ python3 -m dune_sim benchmark rush_council rush_swordmaster rush_both -n 200 --save rush_benchmark
+Benchmark: 1 x <strategy> vs 3 x balanced, 200 games each, seeds 1..200, seating shuffled per game
+fair share = 25.0%
+
+strategy                       win %        95% CI   avg VP  +/-SE  base VP  avg rank  verdict
+----------------------------------------------------------------------------------------------
+rush_council                   27.0%     21.3-33.5     7.50   0.16     7.37      2.40  no clear difference
+rush_swordmaster               28.0%     22.2-34.6     7.82   0.15     7.49      2.33  no clear difference
+rush_both                      34.5%     28.3-41.3     8.07   0.17     7.46      2.26  better than baseline
+
+verdict: 'better'/'worse' when the 95% interval on win % excludes the fair share.

@@ -1,0 +1,13 @@
+$ python3 -m dune_sim batch -n 1000 --no-leaders -p rush_both rush_swordmaster bene_gesserit_faction deckbuilder --save results/evaluation/top4_revised
+
+1000 games, 4 players, avg 9.7 rounds
+
+strategy                       win %        95% CI   avg VP  avg rank  alliances   deck  end $  3rd agent  council  mentats
+---------------------------------------------------------------------------------------------------------------------------
+bene_gesserit_faction          27.7%     25.0-30.6     7.85      2.36       1.15   21.2    6.6        54%      43%      1.0
+rush_swordmaster               25.8%     23.2-28.6     7.38      2.56       0.84   20.5   10.5       100%       0%      1.5
+rush_both                      25.4%     22.8-28.2     7.49      2.51       0.72   22.5    8.7        99%     100%      1.2
+deckbuilder                    21.1%     18.7-23.7     7.57      2.57       1.01   23.9    6.3        34%      69%      1.1
+
+(fair share = 25.0% per seat; 95% CI = Wilson interval on win %; end $ = solari left at game end; mentats = Mentat uses per game)
+games ended by: 10 VP reached 70%, conflict deck exhausted 30%
