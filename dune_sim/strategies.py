@@ -13,7 +13,7 @@ import os
 import random
 from typing import Dict, List, Optional
 
-from .data import FACTIONS
+from .data import FACTIONS, SPACES, VP_TO_END
 
 
 class Strategy:
@@ -134,6 +134,11 @@ BASE_WEIGHTS: Dict = {
     "opponent_margin": 2,  # assumed hidden strength per opponent still to act
     "aggression": 0.3,     # 0 = only fight if cheap, 1 = always throw troops in
     "control": 4.0,
+    # Blocking: how much an opponent's victory point counts against this player, as a
+    # share of the value of one of its own (0 = ignore opponents, the HW-11 behaviour).
+    "deny": 0.0,
+    "deny_win": 3.0,       # multiplier when the point would take that opponent to 10 VP
+    "deny_other": 1.0,     # multiplier for every other point (0 = block only the winning one)
 }
 
 PROFILES: Dict[str, Dict] = {
@@ -222,6 +227,16 @@ PROFILES["rush_both"] = {         # Swordmaster first, then High Council, both a
     "priority_spaces": ["Swordmaster", "High Council"],
     "solari": 1.6, "solari_need_max": 15,
 }
+# Blocking profiles: the same play as the named strategy, plus a penalty for victory
+# points opponents hold or are about to gain (see HeuristicStrategy.threat). `blocker`
+# is `balanced` with blocking, so its result against three `balanced` isolates the effect.
+PROFILES["blocker"] = dict(PROFILES["balanced"], deny=0.5)
+PROFILES["blocker_hard"] = dict(PROFILES["balanced"], deny=1.0)
+# `_win` variants block only the point that would take an opponent to 10 VP.
+PROFILES["blocker_win"] = dict(PROFILES["balanced"], deny=0.5, deny_other=0.0)
+for _n in ("bene_gesserit_faction", "rush_swordmaster", "rush_both"):
+    PROFILES[_n + "_block"] = dict(PROFILES[_n], deny=0.5)
+    PROFILES[_n + "_win"] = dict(PROFILES[_n], deny=0.5, deny_other=0.0)
 # One profile per card type: strongly prefers buying that faction's cards.
 for _f in FACTIONS:
     PROFILES[_f + "_cards"] = {"card_type": {_f: 3.0}}
@@ -232,6 +247,11 @@ for _f in FACTIONS:
 # (results/benchmark_water_cap_1000). Chosen by the project owner as the group to study.
 # Use the word `focus` wherever the CLI takes strategy names, e.g. `benchmark focus`.
 FOCUS = ["bene_gesserit_faction", "rush_swordmaster", "rush_both"]
+
+# The blocking variants. They are left out of a default `benchmark` (which tests the base
+# strategies) and run as a group with the word `blocking`, e.g. `benchmark blocking`.
+BLOCKING = ["blocker", "blocker_hard", "blocker_win"] + [
+    n + suffix for suffix in ("_block", "_win") for n in FOCUS]
 
 
 def merged_weights(overrides: Dict) -> Dict:
@@ -430,20 +450,89 @@ class HeuristicStrategy(Strategy):
                     tot += 0.5 * self.ops_value(game, p, [op])
         return tot
 
+    def estimated_strength(self, game, q) -> int:
+        """An opponent's strength in this round's conflict, with an allowance for what
+        they may still add before revealing."""
+        s = game.strength(q)
+        hidden = 0
+        if not q.revealed:
+            hidden += self.w["opponent_margin"] * max(1, game.agents_left(q))
+        if q.conflict == 0 and hidden:
+            hidden = hidden // 2  # they still might jump in
+        return s + hidden
+
     def opponent_strengths(self, game, p) -> List[int]:
-        out = []
-        margin = self.w["opponent_margin"]
+        return [self.estimated_strength(game, q) for q in game.players if q is not p]
+
+    # -------------------------------------------------------------- blocking
+    def influence_vp(self, game, q, f: str) -> int:
+        """Victory points player q would gain from one more influence with faction f."""
+        cur = q.influence[f]
+        if cur >= 6:
+            return 0
+        vp = 1 if cur + 1 == 2 else 0
+        holder = game.alliance[f]
+        if holder is None:
+            vp += 1 if cur + 1 >= 4 else 0
+        elif holder != q.idx and cur + 1 > game.players[holder].influence[f]:
+            vp += 1
+        return vp
+
+    def ops_vp(self, game, q, ops: list) -> int:
+        """Victory points player q would gain from a list of effects."""
+        vp = 0
+        for op in ops:
+            vp += op.get("gain", {}).get("vp", 0)
+            f = op.get("influence")
+            if f == "any":
+                vp += max(self.influence_vp(game, q, x) for x in FACTIONS)
+            elif f in FACTIONS:
+                vp += self.influence_vp(game, q, f)
+        return vp
+
+    def threat(self, game, p, my_strength: int) -> float:
+        """Penalty for victory points opponents hold or are about to gain. Three things
+        this player can change are counted: points already held (an alliance can be
+        taken away), the point on this round's conflict card (out-fight them), and a
+        point waiting on an open faction space (occupy it first). A point that would
+        take an opponent to 10 VP counts `deny_win` times as much."""
+        w = self.w
+        if not w["deny"]:
+            return 0.0
+        my_vp = game.total_vp(p)
+        card = game.conflict_card
+        fighting = card is not None and game.phase in ("player turns", "combat")
+        placing = game.phase == "player turns"
+        ranks = 3 if game.n >= 4 else 2
+        est = {q.idx: (my_strength if q is p else self.estimated_strength(game, q))
+               for q in game.players}
+        total = 0.0
         for q in game.players:
             if q is p:
                 continue
-            s = game.strength(q)
-            hidden = 0
-            if not q.revealed:
-                hidden += margin * max(1, game.agents_left(q))
-            if q.conflict == 0 and hidden:
-                hidden = hidden // 2  # they still might jump in
-            out.append(s + hidden)
-        return out
+            held = game.total_vp(q)
+            coming = 0.0
+            if fighting and est[q.idx] > 0:
+                rank = 1 + sum(1 for i, s in est.items() if i != q.idx and s >= est[q.idx])
+                if rank <= ranks:
+                    conf = w["conflict_confidence"] if placing else 1.0
+                    coming += conf * self.ops_vp(game, q, card["rewards"][rank - 1])
+            if placing and not q.revealed and game.agents_left(q) > 0:
+                # their hand is hidden, so each open scoring space is a coin flip
+                open_spaces = sum(1 for s in SPACES if s["faction"]
+                                  and self.influence_vp(game, q, s["faction"])
+                                  and game.space_ok(q, s))
+                if open_spaces:
+                    coming += 1.0 - 0.5 ** open_spaces
+            urgency = w["deny_other"]
+            if held + 1 >= VP_TO_END:
+                urgency = w["deny_win"]
+            elif held < my_vp - 2:
+                urgency *= 0.5  # well behind: less worth spending a turn on
+            if not urgency:
+                continue
+            total += urgency * (held + coming)
+        return w["deny"] * w["vp"] * total
 
     def expected_conflict_value(self, game, p, my_strength: int) -> float:
         card = game.conflict_card
@@ -503,7 +592,9 @@ class HeuristicStrategy(Strategy):
             if not p.revealed:
                 v += min(game.agents_left(p), len(p.hand)) * w["agent_turn"]
         v += (w["seat"] * min(1.0, rl / 6.0)) if p.seat else 0.0
-        v += self.expected_conflict_value(game, p, self.my_projected_strength(game, p))
+        mine = self.my_projected_strength(game, p)
+        v += self.expected_conflict_value(game, p, mine)
+        v -= self.threat(game, p, mine)
         return v
 
     # ------------------------------------------------------------ decisions
@@ -536,7 +627,7 @@ class HeuristicStrategy(Strategy):
         best_n, best_v = 0, -1e18
         for n in range(max_n + 1):
             st = self.my_projected_strength(game, p, n)
-            v = self.expected_conflict_value(game, p, st)
+            v = self.expected_conflict_value(game, p, st) - self.threat(game, p, st)
             v -= n * self.w["troop"] * (1.0 - self.w["aggression"])
             if v > best_v + 1e-9:
                 best_n, best_v = n, v
@@ -605,14 +696,16 @@ class HeuristicStrategy(Strategy):
         return None
 
     def choose_combat_intrigue(self, game, p, cards):
-        base = self.expected_conflict_value(game, p, game.strength(p))
+        base = (self.expected_conflict_value(game, p, game.strength(p))
+                - self.threat(game, p, game.strength(p)))
         best, best_gain = None, 0.5
         for c in cards:
             g = game.clone()
             q = g.players[p.idx]
             q.intrigue = [x for x in q.intrigue if x.name != c.name] + []
             g.apply_ops(q, c.effects, {})
-            gain = self.expected_conflict_value(g, q, g.strength(q)) - base
+            gain = (self.expected_conflict_value(g, q, g.strength(q))
+                    - self.threat(g, q, g.strength(q)) - base)
             if gain > best_gain:
                 best, best_gain = c, gain
         return best

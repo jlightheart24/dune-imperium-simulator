@@ -204,6 +204,67 @@ class WaterSetting(unittest.TestCase):
         self.assertAlmostEqual(step(3), step(4))
 
 
+class Blocking(unittest.TestCase):
+    """`deny` makes opponents' victory points count against the player."""
+
+    def game(self):
+        g = Game([make_strategy("blocker")] + [make_strategy("balanced")] * 3, seed=3)
+        g.phase = "player turns"
+        g.conflict_card = {"name": "t", "rewards": [[{"gain": {"vp": 1}}],
+                                                    [{"gain": {"solari": 4}}],
+                                                    [{"gain": {"solari": 2}}]]}
+        for q in g.players:
+            q.revealed, q.conflict, q.swords = True, 0, 0
+        return g
+
+    def test_balanced_ignores_opponents(self):
+        g = self.game()
+        g.players[1].vp, g.players[1].conflict = 9, 3
+        self.assertEqual(make_strategy("balanced").threat(g, g.players[0], 0), 0.0)
+
+    def test_outfighting_an_opponent_lowers_the_threat(self):
+        g = self.game()
+        g.players[1].conflict = 2             # strength 4, winning the VP
+        s = make_strategy("blocker")
+        self.assertGreater(s.threat(g, g.players[0], 0), s.threat(g, g.players[0], 6))
+
+    def test_the_winning_point_counts_for_more(self):
+        s = make_strategy("blocker")
+        saved = []
+        for vp in (5, 9):
+            g = self.game()
+            g.players[0].vp = 5
+            g.players[1].vp, g.players[1].conflict = vp, 2
+            saved.append(s.threat(g, g.players[0], 0) - s.threat(g, g.players[0], 6))
+        self.assertGreater(saved[1], 2 * saved[0])
+
+    def test_blocker_sends_troops_to_stop_the_winning_point(self):
+        g = self.game()
+        me, rival = g.players[0], g.players[1]
+        me.vp, rival.vp, rival.conflict = 9, 9, 1      # rival strength 2
+        me.garrison = 3
+        g.conflict_card["rewards"][0] = [{"gain": {"vp": 1}}]
+        self.assertGreaterEqual(make_strategy("blocker").choose_deploy(g, me, 2), 2)
+
+    def test_open_scoring_space_is_a_threat_until_taken(self):
+        g = self.game()
+        g.conflict_card = None
+        rival = g.players[1]
+        rival.revealed, rival.influence["emperor"] = False, 1
+        for q in g.players[2:]:
+            q.influence = {f: 0 for f in q.influence}
+        rival.influence.update({"guild": 0, "bene_gesserit": 0, "fremen": 0})
+        s = make_strategy("blocker")
+        before = s.threat(g, g.players[0], 0)
+        g.occupied["Wealth"] = 0
+        g.occupied["Conspire"] = 0
+        self.assertGreater(before, s.threat(g, g.players[0], 0))
+
+    def test_blocking_strategies_play_full_games(self):
+        res = run_one((["blocker", "rush_both_block", "balanced", "balanced"], 5, True))
+        self.assertEqual(sum(p["fallbacks"] for p in res["players"]), 0)
+
+
 class Trace(unittest.TestCase):
     def test_decisions_are_recorded_with_scores(self):
         summary, replay = run_trace(["balanced", "random", "random", "random"], 7, 0, None)

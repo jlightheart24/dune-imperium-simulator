@@ -57,7 +57,7 @@ The vertical-slice write-up is in `docs/vertical-slice.md`.
 ## Evaluation (baseline and revised)
 
 ```bash
-# every run in docs/project-evaluation.md, about 4 hours on 10 cores
+# every run in docs/project-evaluation.md, about 5 hours on 10 cores
 ./results/evaluation/run_all.sh
 
 # the ten retained cases under the HW-11 baseline setting, then the current one
@@ -69,6 +69,17 @@ python3 -m dune_sim cases --file cases/evaluation.json --save results/evaluation
 checkpoint; the default caps water's value beyond 4. With `--water flat --no-leaders`
 the vertical-slice results reproduce exactly. `strategies/balanced_flat_water.json` is
 that older `balanced`, so old and new can play in one game.
+
+## Blocking
+
+A strategy can count opponents' victory points against itself with the `deny` weight
+(0 by default). `blocker` is `balanced` with blocking; `_block` and `_win` versions of the
+three focus strategies block every opponent point or only the one that would reach 10 VP.
+At 1,000 games blocking did not raise any strategy's win rate.
+
+```bash
+python3 -m dune_sim benchmark blocking -n 1000 --no-leaders   # all nine blocking strategies
+```
 
 ## Leaders
 

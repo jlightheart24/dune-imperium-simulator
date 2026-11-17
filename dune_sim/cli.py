@@ -26,7 +26,7 @@ from multiprocessing import Pool
 
 from .data import LEADERS
 from .engine import Game, SPACES, fmt_ops
-from .strategies import FOCUS, WATER_MODES, available_strategies, make_strategy, set_water_mode
+from .strategies import BLOCKING, FOCUS, WATER_MODES, available_strategies, make_strategy, set_water_mode
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MIN_PLAYERS, MAX_PLAYERS = 2, 4
@@ -315,9 +315,12 @@ def cmd_benchmark(a):
     """Each strategy in one seat against (n-1) copies of the baseline, same seeds for all."""
     base = a.baseline
     targets = a.strategies or [s.split(":", 1)[-1] for s in available_strategies()
-                               if s.split(":", 1)[-1] != base]
+                               if s.split(":", 1)[-1] != base
+                               and s.split(":", 1)[-1] not in BLOCKING]
     if targets == ["focus"]:
         targets = list(FOCUS)
+    if targets == ["blocking"]:
+        targets = list(BLOCKING)
     check_players([base] * a.table)
     for t in targets:
         check_players([t, base])
