@@ -26,7 +26,7 @@ from multiprocessing import Pool
 
 from .data import LEADERS
 from .engine import Game, SPACES, fmt_ops
-from .strategies import BLOCKING, FOCUS, WATER_MODES, available_strategies, make_strategy, set_water_mode
+from .strategies import BLOCKING, FOCUS, ROLLOUT, WATER_MODES, available_strategies, make_strategy, set_water_mode
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MIN_PLAYERS, MAX_PLAYERS = 2, 4
@@ -316,11 +316,13 @@ def cmd_benchmark(a):
     base = a.baseline
     targets = a.strategies or [s.split(":", 1)[-1] for s in available_strategies()
                                if s.split(":", 1)[-1] != base
-                               and s.split(":", 1)[-1] not in BLOCKING]
+                               and s.split(":", 1)[-1] not in BLOCKING + ROLLOUT]
     if targets == ["focus"]:
         targets = list(FOCUS)
     if targets == ["blocking"]:
         targets = list(BLOCKING)
+    if targets == ["rollout"]:
+        targets = list(ROLLOUT)
     check_players([base] * a.table)
     for t in targets:
         check_players([t, base])
@@ -380,6 +382,8 @@ def print_detail(results):
             t["intrigue"] += pr["intrigue"]
             for k in ("decisions", "decision_ms", "options_total", "scored", "near_ties", "fallbacks"):
                 t[k] += pr[k]
+            for k in ("rollout_decisions", "rollout_changed"):
+                t[k] += pr.get(k, 0)
             for i, h in enumerate(pr["history"]):
                 d = rnd[spec][i]
                 d["n"] += 1
@@ -412,6 +416,9 @@ def print_detail(results):
         print(f"  turn decisions       : {t['decisions'] / n:.1f} per game, {t['options_total'] / dn:.1f} legal options each, "
               f"{t['decision_ms'] / dn:.1f} ms each, near-ties {100 * t['near_ties'] / max(1, t['scored']):.0f}% "
               f"of scored decisions, {t['fallbacks'] / n:.2f} fallbacks per game")
+        if t["rollout_decisions"]:
+            print(f"  rollouts             : {t['rollout_decisions'] / n:.1f} near-ties per game settled by rollouts, "
+                  f"{100 * t['rollout_changed'] / t['rollout_decisions']:.0f}% of them changed the choice")
         ct = {k[3:]: v for k, v in t.items() if k.startswith("ct_")}
         tot_ct = max(1, sum(ct.values()))
         print("  bought cards by type : " + ", ".join(

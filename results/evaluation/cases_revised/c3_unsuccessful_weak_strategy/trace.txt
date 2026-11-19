@@ -8,7 +8,7 @@ TRACE of P1 [fremen_faction], seed 7, players: fremen_faction, balanced, balance
              hand: Dune, The Desert Planet, Dagger, Dune, The Desert Planet, Signet Ring, Convincing
                    Argument
              occupied spaces: none
-  options  : 13 legal, decided in 7.04 ms
+  options  : 13 legal, decided in 5.57 ms
       >>   25.34  Signet Ring -> Carthag
            23.69  Signet Ring -> Arrakeen
            23.64  Signet Ring -> Imperial Basin
@@ -33,7 +33,7 @@ TRACE of P1 [fremen_faction], seed 7, players: fremen_faction, balanced, balance
              influence: emperor 0, guild 0, bene_gesserit 0, fremen 0
              hand: Dune, The Desert Planet, Dagger, Dune, The Desert Planet, Convincing Argument
              occupied spaces: Hardy Warriors, Stillsuits, Secure Contract, Carthag
-  options  : 5 legal, decided in 2.76 ms
+  options  : 5 legal, decided in 2.13 ms
       >>   17.81  Dagger -> Hall of Oratory
            16.86  Dune, The Desert Planet -> Imperial Basin
            15.66  Dune, The Desert Planet -> Hagga Basin
@@ -61,7 +61,7 @@ TRACE of P1 [fremen_faction], seed 7, players: fremen_faction, balanced, balance
              influence: emperor 0, guild 0, bene_gesserit 0, fremen 0
              hand: Reconnaissance, Diplomacy, Convincing Argument, Dagger, Seek Allies
              occupied spaces: Hardy Warriors, Stillsuits, Carthag
-  options  : 10 legal, decided in 5.35 ms
+  options  : 10 legal, decided in 4.3 ms
       >>   28.25  Seek Allies -> Wealth
            28.25  Seek Allies -> Secrets
            27.71  Dagger -> Mentat
@@ -78,7 +78,7 @@ TRACE of P1 [fremen_faction], seed 7, players: fremen_faction, balanced, balance
              hand: Reconnaissance, Diplomacy, Convincing Argument, Dagger
              occupied spaces: Wealth, Secrets, Hardy Warriors, Stillsuits, Secure Contract,
                    Arrakeen, Carthag
-  options  : 5 legal, decided in 2.7 ms
+  options  : 5 legal, decided in 2.05 ms
       >>   27.50  Dagger -> Mentat
            27.00  Dagger -> Hall of Oratory
            26.35  Diplomacy -> Foldspace
@@ -93,7 +93,7 @@ TRACE of P1 [fremen_faction], seed 7, players: fremen_faction, balanced, balance
              hand: Reconnaissance, Diplomacy, Convincing Argument, Dune, The Desert Planet
              occupied spaces: Wealth, Secrets, Hardy Warriors, Stillsuits, Mentat, Secure Contract,
                    Arrakeen, Carthag
-  options  : 5 legal, decided in 2.72 ms
+  options  : 5 legal, decided in 2.33 ms
       >>   24.80  Diplomacy -> Foldspace
            24.12  Dune, The Desert Planet -> Hagga Basin
            23.72  Dune, The Desert Planet -> Imperial Basin
@@ -121,7 +121,7 @@ TRACE of P1 [fremen_faction], seed 7, players: fremen_faction, balanced, balance
              influence: emperor 1, guild 1, bene_gesserit 0, fremen 0
              hand: Dagger, Signet Ring, Convincing Argument, Chani, Dune, The Desert Planet
              occupied spaces: High Council, Hagga Basin
-  options  : 17 legal, decided in 9.68 ms
+  options  : 17 legal, decided in 8.84 ms
       >>   44.61  Chani -> Stillsuits
            41.61  Signet Ring -> Carthag
            41.61  Chani -> Hardy Warriors
@@ -137,7 +137,7 @@ TRACE of P1 [fremen_faction], seed 7, players: fremen_faction, balanced, balance
              influence: emperor 1, guild 1, bene_gesserit 0, fremen 1
              hand: Dagger, Signet Ring, Convincing Argument, Dune, The Desert Planet
              occupied spaces: Stillsuits, High Council, Carthag, Hagga Basin, The Great Flat
-  options  : 13 legal, decided in 6.97 ms
+  options  : 13 legal, decided in 6.09 ms
       >>   42.41  Signet Ring -> Imperial Basin
            41.41  Dune, The Desert Planet -> Imperial Basin
            41.31  Signet Ring -> Arrakeen
@@ -167,7 +167,7 @@ TRACE of P1 [fremen_faction], seed 7, players: fremen_faction, balanced, balance
              influence: emperor 1, guild 1, bene_gesserit 0, fremen 1
              hand: Arrakis Liaison, Dagger, Signet Ring, Chani, Dune, The Desert Planet
              occupied spaces: High Council
-  options  : 28 legal, decided in 14.82 ms
+  options  : 28 legal, decided in 13.28 ms
       >>   75.02  Chani -> Hardy Warriors
            72.92  Arrakis Liaison -> Hardy Warriors
            64.48  Arrakis Liaison -> Stillsuits
@@ -183,7 +183,7 @@ TRACE of P1 [fremen_faction], seed 7, players: fremen_faction, balanced, balance
              influence: emperor 1, guild 1, bene_gesserit 0, fremen 2
              hand: Arrakis Liaison, Dagger, Signet Ring, Dune, The Desert Planet
              occupied spaces: Heighliner, Hardy Warriors, Stillsuits, High Council, Carthag
-  options  : 21 legal, decided in 11.99 ms
+  options  : 21 legal, decided in 10.05 ms
       >>   64.62  Signet Ring -> Sietch Tabr
            63.57  Signet Ring -> Secure Contract
            63.50  Dagger -> Mentat
@@ -223,7 +223,7 @@ TRACE of P1 [fremen_faction], seed 7, players: fremen_faction, balanced, balance
              influence: emperor 1, guild 1, bene_gesserit 0, fremen 2
              hand: Dagger, Reconnaissance, Fremen Camp, Convincing Argument, Foldspace
              occupied spaces: none
-  options  : 20 legal, decided in 11.15 ms
+  options  : 20 legal, decided in 9.81 ms
       >>   90.61  Foldspace -> Hardy Warriors
            87.81  Reconnaissance -> Arrakeen
            87.21  Reconnaissance -> Carthag
@@ -239,7 +239,7 @@ TRACE of P1 [fremen_faction], seed 7, players: fremen_faction, balanced, balance
              influence: emperor 1, guild 1, bene_gesserit 0, fremen 3
              hand: Dagger, Reconnaissance, Fremen Camp, Convincing Argument, Convincing Argument
              occupied spaces: Hardy Warriors, Stillsuits, Swordmaster, Arrakeen
-  options  : 13 legal, decided in 7.21 ms
+  options  : 13 legal, decided in 6.15 ms
       >>   90.61  Reconnaissance -> Sietch Tabr
            89.81  Reconnaissance -> Carthag
            88.56  Fremen Camp -> Imperial Basin
@@ -270,7 +270,7 @@ TRACE of P1 [fremen_faction], seed 7, players: fremen_faction, balanced, balance
              hand: Diplomacy, Dune, The Desert Planet, Arrakis Liaison, Dune, The Desert Planet,
                    Convincing Argument
              occupied spaces: Conspire, Swordmaster, Sietch Tabr
-  options  : 18 legal, decided in 9.65 ms
+  options  : 18 legal, decided in 9.13 ms
       >>  100.68  Diplomacy -> Hardy Warriors
            99.88  Arrakis Liaison -> Hardy Warriors
            98.09  Diplomacy -> Stillsuits
@@ -288,7 +288,7 @@ TRACE of P1 [fremen_faction], seed 7, players: fremen_faction, balanced, balance
                    Argument
              occupied spaces: Conspire, Hardy Warriors, High Council, Swordmaster, Sietch Tabr,
                    Hagga Basin
-  options  : 9 legal, decided in 5.11 ms
+  options  : 9 legal, decided in 4.46 ms
       >>  101.00  Arrakis Liaison -> Stillsuits
            99.95  Arrakis Liaison -> Arrakeen
            99.38  Arrakis Liaison -> Carthag
@@ -318,7 +318,7 @@ TRACE of P1 [fremen_faction], seed 7, players: fremen_faction, balanced, balance
              influence: emperor 1, guild 1, bene_gesserit 0, fremen 5
              hand: Dagger, Signet Ring, Stilgar, Convincing Argument, Arrakis Liaison
              occupied spaces: Secrets, Hardy Warriors
-  options  : 35 legal, decided in 18.57 ms
+  options  : 35 legal, decided in 16.85 ms
       >>  127.96  Arrakis Liaison -> Arrakeen
           114.83  Signet Ring -> Carthag
           113.83  Arrakis Liaison -> Carthag
@@ -334,7 +334,7 @@ TRACE of P1 [fremen_faction], seed 7, players: fremen_faction, balanced, balance
              influence: emperor 1, guild 1, bene_gesserit 0, fremen 5
              hand: Dagger, Signet Ring, Stilgar, Convincing Argument, Chani
              occupied spaces: Secrets, Hardy Warriors, Stillsuits, Arrakeen, Carthag, The Great Flat
-  options  : 25 legal, decided in 15.85 ms
+  options  : 25 legal, decided in 11.72 ms
       >>  115.55  Signet Ring -> Swordmaster
           115.00  Dagger -> Swordmaster
           114.55  Signet Ring -> Rally Troops
@@ -351,7 +351,7 @@ TRACE of P1 [fremen_faction], seed 7, players: fremen_faction, balanced, balance
              hand: Dagger, Stilgar, Convincing Argument, Chani
              occupied spaces: Secrets, Hardy Warriors, Stillsuits, Swordmaster, Arrakeen, Carthag,
                    Sietch Tabr, Imperial Basin, The Great Flat
-  options  : 8 legal, decided in 4.88 ms
+  options  : 8 legal, decided in 3.68 ms
       >>  114.86  Dagger -> Mentat
           114.30  Dagger -> Hall of Oratory
           112.90  Stilgar -> Secure Contract
@@ -368,7 +368,7 @@ TRACE of P1 [fremen_faction], seed 7, players: fremen_faction, balanced, balance
              hand: Stilgar, Convincing Argument, Chani, Foldspace
              occupied spaces: Wealth, Secrets, Hardy Warriors, Stillsuits, Mentat, Swordmaster,
                    Arrakeen, Carthag, Sietch Tabr, Imperial Basin, The Great Flat
-  options  : 10 legal, decided in 6.11 ms
+  options  : 10 legal, decided in 4.7 ms
       >>  133.73  Foldspace -> Heighliner
           126.58  Foldspace -> Selective Breeding
           126.22  Foldspace -> Conspire
@@ -399,7 +399,7 @@ TRACE of P1 [fremen_faction], seed 7, players: fremen_faction, balanced, balance
              hand: Reconnaissance, Missionaria Protectiva, Fremen Camp, Convincing Argument, Signet
                    Ring
              occupied spaces: Hagga Basin
-  options  : 22 legal, decided in 13.69 ms
+  options  : 22 legal, decided in 12.06 ms
       >>  143.41  Signet Ring -> Arrakeen
           142.82  Signet Ring -> Research Station
           141.92  Reconnaissance -> Research Station
@@ -416,7 +416,7 @@ TRACE of P1 [fremen_faction], seed 7, players: fremen_faction, balanced, balance
              hand: Reconnaissance, Missionaria Protectiva, Fremen Camp, Convincing Argument,
                    Foldspace
              occupied spaces: Secrets, Mentat, Hall of Oratory, Arrakeen, Hagga Basin
-  options  : 15 legal, decided in 9.81 ms
+  options  : 15 legal, decided in 7.85 ms
       >>  150.02  Foldspace -> Wealth
           143.13  Foldspace -> Hardy Warriors
           141.90  Foldspace -> Stillsuits
@@ -433,7 +433,7 @@ TRACE of P1 [fremen_faction], seed 7, players: fremen_faction, balanced, balance
              hand: Reconnaissance, Missionaria Protectiva, Fremen Camp, Convincing Argument, Stilgar
              occupied spaces: Wealth, Selective Breeding, Secrets, Mentat, Hall of Oratory, Secure
                    Contract, Arrakeen, Carthag, Hagga Basin
-  options  : 15 legal, decided in 9.49 ms
+  options  : 15 legal, decided in 8.05 ms
       >>  151.12  Reconnaissance -> Research Station
           150.77  Missionaria Protectiva -> Research Station
           149.72  Stilgar -> Hardy Warriors

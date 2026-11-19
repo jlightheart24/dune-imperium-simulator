@@ -1,0 +1,49 @@
+{
+ "meta": {
+  "command": "python3 -m dune_sim batch -n 200 --detail --no-leaders -p weights:strategies/balanced_no_caps.json weights:strategies/balanced_no_caps.json weights:strategies/balanced_no_caps.json weights:strategies/balanced_no_caps.json --save results/evaluation/mirror_no_caps",
+  "code_differs_from_commit": true,
+  "date": "2026-11-19T00:18:14",
+  "python": "3.9.6",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "git_commit": "f4a67f0ad9dcab059977d9986f28f3c90ce9c6ca",
+  "seed": 1,
+  "games": 200,
+  "leaders": "none",
+  "water": "capped",
+  "players": [
+   "weights:strategies/balanced_no_caps.json",
+   "weights:strategies/balanced_no_caps.json",
+   "weights:strategies/balanced_no_caps.json",
+   "weights:strategies/balanced_no_caps.json"
+  ],
+  "fixed_seats": false,
+  "avg_rounds": 9.695
+ },
+ "strategies": [
+  {
+   "strategy": "weights:strategies/balanced_no_caps.json",
+   "seats": 800,
+   "wins": 200.0,
+   "win_pct": 25.0,
+   "ci_low": 22.123646640276423,
+   "ci_high": 28.115305909579163,
+   "avg_vp": 7.375,
+   "vp_sd": 2.365664909296929,
+   "vp_se": 0.08363888496894586,
+   "avg_rank": 2.5,
+   "alliances": 0.77,
+   "deck": 22.3425,
+   "end_solari": 14.605,
+   "swordmaster_pct": 82.125,
+   "council_pct": 97.125,
+   "mentats": 1.04
+  }
+ ],
+ "win_pct_by_seat": {
+  "P1": 30.0,
+  "P2": 18.5,
+  "P3": 23.0,
+  "P4": 28.5
+ },
+ "leaders": []
+}

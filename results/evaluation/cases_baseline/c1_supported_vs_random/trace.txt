@@ -8,7 +8,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, random, random, random
              hand: Dune, The Desert Planet, Dagger, Dune, The Desert Planet, Signet Ring, Convincing
                    Argument
              occupied spaces: none
-  options  : 13 legal, decided in 5.9 ms
+  options  : 13 legal, decided in 5.39 ms
       >>   21.36  Signet Ring -> Carthag
            20.38  Signet Ring -> Secure Contract
            19.71  Signet Ring -> Arrakeen
@@ -33,7 +33,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, random, random, random
              influence: emperor 0, guild 0, bene_gesserit 0, fremen 0
              hand: Dune, The Desert Planet, Dagger, Dune, The Desert Planet, Convincing Argument
              occupied spaces: Foldspace, Sell Melange, Carthag, Imperial Basin
-  options  : 4 legal, decided in 1.77 ms
+  options  : 4 legal, decided in 1.63 ms
       >>   17.70  Dune, The Desert Planet -> Secure Contract
            17.06  Dagger -> Hall of Oratory
            15.51  Dune, The Desert Planet -> Hagga Basin
@@ -77,7 +77,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, random, random, random
              hand: Reconnaissance, Diplomacy, Convincing Argument, Seek Allies
              occupied spaces: Selective Breeding, Hardy Warriors, High Council, Rally Troops, Secure
                    Contract, Sell Melange, Imperial Basin
-  options  : 11 legal, decided in 5.38 ms
+  options  : 11 legal, decided in 4.48 ms
       >>   25.70  Seek Allies -> Wealth
            25.41  Seek Allies -> Stillsuits
            25.11  Seek Allies -> Secrets
@@ -108,7 +108,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, random, random, random
              hand: Dune, The Desert Planet, Convincing Argument, Arrakis Liaison, Dune, The Desert
                    Planet, Dagger
              occupied spaces: Sell Melange, Imperial Basin
-  options  : 9 legal, decided in 4.06 ms
+  options  : 9 legal, decided in 3.77 ms
       >>   38.30  Arrakis Liaison -> Stillsuits
            38.00  Dune, The Desert Planet -> Hagga Basin
            37.90  Arrakis Liaison -> Carthag
@@ -125,7 +125,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, random, random, random
              hand: Dune, The Desert Planet, Convincing Argument, Dune, The Desert Planet, Dagger
              occupied spaces: Wealth, Stillsuits, Secure Contract, Sell Melange, Carthag, Imperial
                    Basin
-  options  : 5 legal, decided in 2.26 ms
+  options  : 5 legal, decided in 2.14 ms
       >>   36.80  Dune, The Desert Planet -> The Great Flat
            35.93  Dagger -> Hall of Oratory
            35.84  Dagger -> Mentat
@@ -153,7 +153,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, random, random, random
              influence: emperor 1, guild 0, bene_gesserit 0, fremen 1
              hand: Diplomacy, Dagger, Convincing Argument, Reconnaissance, Chani
              occupied spaces: none
-  options  : 15 legal, decided in 6.96 ms
+  options  : 15 legal, decided in 6.31 ms
       >>   59.96  Diplomacy -> Conspire
            59.66  Chani -> Stillsuits
            58.96  Diplomacy -> Stillsuits
@@ -169,7 +169,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, random, random, random
              influence: emperor 2, guild 0, bene_gesserit 0, fremen 1
              hand: Dagger, Convincing Argument, Reconnaissance, Chani
              occupied spaces: Conspire, Stillsuits, Hall of Oratory
-  options  : 7 legal, decided in 3.35 ms
+  options  : 7 legal, decided in 3.06 ms
       >>   66.66  Reconnaissance -> Carthag
            66.06  Chani -> Carthag
            65.46  Reconnaissance -> Arrakeen
@@ -209,7 +209,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, random, random, random
              influence: emperor 2, guild 0, bene_gesserit 0, fremen 2
              hand: Signet Ring, Carryall, Reconnaissance, Dune, The Desert Planet, Arrakis Liaison
              occupied spaces: none
-  options  : 23 legal, decided in 12.25 ms
+  options  : 23 legal, decided in 10.35 ms
       >>   93.64  Signet Ring -> Sietch Tabr
            93.44  Signet Ring -> Carthag
            93.24  Signet Ring -> Arrakeen
@@ -225,7 +225,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, random, random, random
              influence: emperor 2, guild 0, bene_gesserit 0, fremen 2
              hand: Carryall, Reconnaissance, Dune, The Desert Planet, Arrakis Liaison
              occupied spaces: Secrets, Rally Troops, Hall of Oratory, Sietch Tabr
-  options  : 15 legal, decided in 7.7 ms
+  options  : 15 legal, decided in 6.52 ms
       >>   95.64  Dune, The Desert Planet -> Hagga Basin
            94.43  Carryall -> Hagga Basin
            93.14  Reconnaissance -> Carthag
@@ -265,7 +265,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, random, random, random
              influence: emperor 2, guild 0, bene_gesserit 0, fremen 2
              hand: Dagger, Diplomacy, Dune, The Desert Planet, Convincing Argument, Dagger
              occupied spaces: Sell Melange, Carthag
-  options  : 13 legal, decided in 7.0 ms
+  options  : 13 legal, decided in 5.94 ms
       >>   96.82  Diplomacy -> Heighliner
            95.76  Diplomacy -> Selective Breeding
            95.21  Diplomacy -> Stillsuits
@@ -281,7 +281,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, random, random, random
              influence: emperor 2, guild 1, bene_gesserit 0, fremen 2
              hand: Dagger, Dune, The Desert Planet, Convincing Argument, Dagger
              occupied spaces: Heighliner, Secrets, Sell Melange, Carthag
-  options  : 8 legal, decided in 4.33 ms
+  options  : 8 legal, decided in 3.75 ms
       >>   97.82  Dune, The Desert Planet -> Imperial Basin
            97.22  Dagger -> Mentat
            96.62  Dune, The Desert Planet -> The Great Flat
@@ -310,7 +310,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, random, random, random
              influence: emperor 2, guild 1, bene_gesserit 0, fremen 2
              hand: Chani, Piter de Vries, Convincing Argument, Convincing Argument, Dagger
              occupied spaces: Foldspace
-  options  : 17 legal, decided in 9.22 ms
+  options  : 17 legal, decided in 8.0 ms
       >>  124.81  Chani -> Stillsuits
           124.61  Chani -> Sietch Tabr
           124.41  Chani -> Carthag
@@ -326,7 +326,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, random, random, random
              influence: emperor 2, guild 1, bene_gesserit 0, fremen 3
              hand: Piter de Vries, Convincing Argument, Convincing Argument, Dagger
              occupied spaces: Foldspace, Stillsuits, High Council
-  options  : 11 legal, decided in 5.82 ms
+  options  : 11 legal, decided in 5.16 ms
       >>  125.64  Reveal hand
           124.56  Piter de Vries -> Sietch Tabr
           124.36  Piter de Vries -> Carthag
@@ -346,7 +346,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, random, random, random
              influence: emperor 2, guild 1, bene_gesserit 0, fremen 3
              hand: Assassination Mission, Diplomacy, Signet Ring, Arrakis Liaison, Fremen Camp
              occupied spaces: Swordmaster
-  options  : 32 legal, decided in 21.36 ms
+  options  : 32 legal, decided in 15.39 ms
       >>  150.08  Diplomacy -> Stillsuits
           149.28  Arrakis Liaison -> Stillsuits
           148.82  Diplomacy -> Hardy Warriors
@@ -362,7 +362,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, random, random, random
              influence: emperor 2, guild 1, bene_gesserit 0, fremen 4
              hand: Assassination Mission, Signet Ring, Arrakis Liaison, Fremen Camp
              occupied spaces: Wealth, Hardy Warriors, Stillsuits, Mentat, Swordmaster
-  options  : 21 legal, decided in 12.69 ms
+  options  : 21 legal, decided in 10.43 ms
       >>  146.14  Signet Ring -> Sietch Tabr
           146.00  Signet Ring -> Carthag
           145.54  Signet Ring -> Arrakeen

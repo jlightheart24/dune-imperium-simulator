@@ -139,6 +139,12 @@ BASE_WEIGHTS: Dict = {
     "deny": 0.0,
     "deny_win": 3.0,       # multiplier when the point would take that opponent to 10 VP
     "deny_other": 1.0,     # multiplier for every other point (0 = block only the winning one)
+    # Rollouts: on a near-tie, play each close turn forward to the end of the round several
+    # times, on copies where opponents' hands and intrigue are a random guess, and take the
+    # turn with the best average end-of-round value. 0 = off (the one-step agent).
+    "rollouts": 0,         # rollouts per close turn
+    "rollout_top": 3,      # at most this many of the best one-step turns are rolled out
+    "rollout_margin": 0.5, # a turn is close if within this of the best (the near-tie margin)
 }
 
 PROFILES: Dict[str, Dict] = {
@@ -237,6 +243,14 @@ PROFILES["blocker_win"] = dict(PROFILES["balanced"], deny=0.5, deny_other=0.0)
 for _n in ("bene_gesserit_faction", "rush_swordmaster", "rush_both"):
     PROFILES[_n + "_block"] = dict(PROFILES[_n], deny=0.5)
     PROFILES[_n + "_win"] = dict(PROFILES[_n], deny=0.5, deny_other=0.0)
+# Rollout profiles: the same play as the named strategy, but near-ties are settled by
+# rollouts (see HeuristicStrategy.rollout_choice). Against three of the base strategy,
+# the result isolates the effect of rollouts.
+PROFILES["balanced_rollout"] = dict(PROFILES["balanced"], rollouts=8)
+for _n in ("bene_gesserit_faction", "rush_swordmaster", "rush_both"):
+    PROFILES[_n + "_rollout"] = dict(PROFILES[_n], rollouts=8)
+ROLLOUT = ["balanced_rollout"] + [n + "_rollout" for n in
+                                  ("bene_gesserit_faction", "rush_swordmaster", "rush_both")]
 # One profile per card type: strongly prefers buying that faction's cards.
 for _f in FACTIONS:
     PROFILES[_f + "_cards"] = {"card_type": {_f: 3.0}}
@@ -365,6 +379,9 @@ class HeuristicStrategy(Strategy):
                 n = op.get("n", 1)
                 if f in FACTIONS:
                     v += n * self.influence_value(game, p, f)
+                elif f == "trailing":
+                    v += n * max([self.influence_value(game, p, g)
+                                  for g in game.trailing_factions(p)] or [0.0])
                 else:
                     v += n * max(self.influence_value(game, p, g) for g in FACTIONS)
             elif "trash" in op:
@@ -621,13 +638,49 @@ class HeuristicStrategy(Strategy):
             if v > best_v:
                 best, best_v = a, v
         game.last_scores = scores   # lets the engine record why this action was chosen
+        if self.w["rollouts"] and not game.in_rollout:
+            margin = self.w["rollout_margin"]
+            ranked = sorted(scores, key=lambda a: -scores[a])[:self.w["rollout_top"]]
+            close = [a for a in ranked if best_v - scores[a] < margin]
+            if len(close) >= 2:
+                best = self.rollout_choice(game, p, close)
         return best
+
+    def rollout_choice(self, game, p, candidates: list) -> tuple:
+        """Play each candidate turn forward to the end of the round `rollouts` times and
+        return the one with the best average value for p. Each rollout is a copy from p's
+        point of view: opponents' hands and intrigue cards are re-dealt at random from what
+        they could be (Game.redeal_hidden). Every candidate is tried on the same guesses,
+        so the comparison is between turns, not between guesses. Inside a rollout every
+        player, p included, plays its own strategy one step ahead, without rollouts."""
+        n = self.w["rollouts"]
+        seeds = [game.rng.getrandbits(32) for _ in range(n)]
+        totals = dict.fromkeys(candidates, 0.0)
+        for s in seeds:
+            for a in candidates:
+                g = game.clone(hide_for=p.idx, seed=s)
+                g.in_rollout = True
+                g.do_action(p.idx, a)
+                g.player_turns(p.idx + 1)
+                g.finish_round()
+                totals[a] += self.evaluate(g, g.players[p.idx])
+        pick = max(candidates, key=lambda a: totals[a])   # a tie keeps the one-step order
+        p.rollout_decisions += 1
+        p.rollout_changed += pick != candidates[0]
+        game.last_rule = "rollouts ({} each): ".format(n) + ", ".join(
+            "{} {:.2f}".format(game.action_label(p, a), totals[a] / n) for a in candidates)
+        return pick
 
     def choose_deploy(self, game, p, max_n):
         best_n, best_v = 0, -1e18
         for n in range(max_n + 1):
             st = self.my_projected_strength(game, p, n)
             v = self.expected_conflict_value(game, p, st) - self.threat(game, p, st)
+            ms = p.leader.get("masterstroke") if p.leader else None
+            if ms and not p.masterstroke_used and n >= ms["deploy"]:
+                # Baron: this deployment triggers Masterstroke
+                gains = sorted((self.influence_value(game, p, f) for f in FACTIONS), reverse=True)
+                v += sum(gains[:ms["factions"]])
             v -= n * self.w["troop"] * (1.0 - self.w["aggression"])
             if v > best_v + 1e-9:
                 best_n, best_v = n, v

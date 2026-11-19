@@ -90,7 +90,7 @@
     }
    ],
    "n_options": 13,
-   "ms": 7.28,
+   "ms": 6.36,
    "rule": null,
    "fallback": null
   },
@@ -176,7 +176,7 @@
     }
    ],
    "n_options": 14,
-   "ms": 7.58,
+   "ms": 7.92,
    "rule": null,
    "fallback": null
   },
@@ -287,7 +287,7 @@
     }
    ],
    "n_options": 19,
-   "ms": 10.3,
+   "ms": 8.65,
    "rule": null,
    "fallback": null
   },
@@ -363,7 +363,7 @@
     }
    ],
    "n_options": 12,
-   "ms": 6.42,
+   "ms": 5.59,
    "rule": null,
    "fallback": null
   },
@@ -412,7 +412,7 @@
     }
    ],
    "n_options": 5,
-   "ms": 2.85,
+   "ms": 2.37,
    "rule": null,
    "fallback": null
   },
@@ -473,7 +473,7 @@
     }
    ],
    "n_options": 9,
-   "ms": 5.05,
+   "ms": 4.16,
    "rule": null,
    "fallback": null
   },
@@ -493,11 +493,6 @@
      "chosen": true
     },
     {
-     "label": "Signet Ring -> Imperial Basin",
-     "score": 22.72,
-     "chosen": false
-    },
-    {
      "label": "Diplomacy -> Secrets",
      "score": 22.42,
      "chosen": false
@@ -509,6 +504,11 @@
     },
     {
      "label": "Dune, The Desert Planet -> Imperial Basin",
+     "score": 20.52,
+     "chosen": false
+    },
+    {
+     "label": "Signet Ring -> Imperial Basin",
      "score": 20.52,
      "chosen": false
     },
@@ -529,7 +529,7 @@
     }
    ],
    "n_options": 8,
-   "ms": 4.35,
+   "ms": 3.7,
    "rule": null,
    "fallback": null
   },
@@ -565,7 +565,7 @@
     }
    ],
    "n_options": 4,
-   "ms": 2.08,
+   "ms": 1.85,
    "rule": null,
    "fallback": null
   },
@@ -732,7 +732,7 @@
     }
    ],
    "n_options": 19,
-   "ms": 10.16,
+   "ms": 9.76,
    "rule": null,
    "fallback": null
   },
@@ -788,7 +788,7 @@
     }
    ],
    "n_options": 8,
-   "ms": 4.39,
+   "ms": 3.91,
    "rule": null,
    "fallback": null
   },
@@ -884,7 +884,7 @@
     }
    ],
    "n_options": 16,
-   "ms": 8.44,
+   "ms": 7.69,
    "rule": null,
    "fallback": null
   },
@@ -950,7 +950,7 @@
     }
    ],
    "n_options": 10,
-   "ms": 5.11,
+   "ms": 4.74,
    "rule": null,
    "fallback": null
   },
@@ -1036,7 +1036,7 @@
     }
    ],
    "n_options": 14,
-   "ms": 7.2,
+   "ms": 6.75,
    "rule": null,
    "fallback": null
   },
@@ -1082,7 +1082,7 @@
     }
    ],
    "n_options": 6,
-   "ms": 3.15,
+   "ms": 2.78,
    "rule": null,
    "fallback": null
   },
@@ -1138,7 +1138,7 @@
     }
    ],
    "n_options": 8,
-   "ms": 4.27,
+   "ms": 3.69,
    "rule": null,
    "fallback": null
   },
@@ -1184,7 +1184,7 @@
     }
    ],
    "n_options": 6,
-   "ms": 3.0,
+   "ms": 2.81,
    "rule": null,
    "fallback": null
   },
@@ -1253,7 +1253,7 @@
     }
    ],
    "n_options": 9,
-   "ms": 4.68,
+   "ms": 4.4,
    "rule": null,
    "fallback": null
   },
@@ -1502,7 +1502,7 @@
     }
    ],
    "n_options": 11,
-   "ms": 5.84,
+   "ms": 5.46,
    "rule": null,
    "fallback": null
   },
@@ -1649,7 +1649,7 @@
     }
    ],
    "n_options": 12,
-   "ms": 6.39,
+   "ms": 5.84,
    "rule": null,
    "fallback": null
   },
@@ -1715,7 +1715,7 @@
     }
    ],
    "n_options": 10,
-   "ms": 5.51,
+   "ms": 4.82,
    "rule": null,
    "fallback": null
   },
@@ -1771,7 +1771,7 @@
     }
    ],
    "n_options": 8,
-   "ms": 4.33,
+   "ms": 3.88,
    "rule": null,
    "fallback": null
   },
@@ -1817,7 +1817,7 @@
     }
    ],
    "n_options": 6,
-   "ms": 3.17,
+   "ms": 2.9,
    "rule": null,
    "fallback": null
   },
@@ -1883,7 +1883,7 @@
     }
    ],
    "n_options": 10,
-   "ms": 5.12,
+   "ms": 4.93,
    "rule": null,
    "fallback": null
   },
@@ -2089,7 +2089,7 @@
     }
    ],
    "n_options": 22,
-   "ms": 11.87,
+   "ms": 10.72,
    "rule": null,
    "fallback": null
   },
@@ -2180,7 +2180,7 @@
     }
    ],
    "n_options": 15,
-   "ms": 8.35,
+   "ms": 7.64,
    "rule": null,
    "fallback": null
   },
@@ -2311,7 +2311,7 @@
     }
    ],
    "n_options": 23,
-   "ms": 12.86,
+   "ms": 11.82,
    "rule": null,
    "fallback": null
   },
@@ -2372,7 +2372,7 @@
     }
    ],
    "n_options": 9,
-   "ms": 5.0,
+   "ms": 4.6,
    "rule": null,
    "fallback": null
   },
@@ -2443,7 +2443,7 @@
     }
    ],
    "n_options": 11,
-   "ms": 6.09,
+   "ms": 5.72,
    "rule": null,
    "fallback": null
   },
@@ -2519,7 +2519,7 @@
     }
    ],
    "n_options": 12,
-   "ms": 6.78,
+   "ms": 6.35,
    "rule": null,
    "fallback": null
   },
@@ -2646,7 +2646,7 @@
     }
    ],
    "n_options": 6,
-   "ms": 3.29,
+   "ms": 3.2,
    "rule": null,
    "fallback": null
   },
@@ -2871,7 +2871,7 @@
     }
    ],
    "n_options": 29,
-   "ms": 16.29,
+   "ms": 15.38,
    "rule": null,
    "fallback": null
   },
@@ -3002,7 +3002,7 @@
     }
    ],
    "n_options": 23,
-   "ms": 13.31,
+   "ms": 12.38,
    "rule": null,
    "fallback": null
   },
@@ -3093,7 +3093,7 @@
     }
    ],
    "n_options": 15,
-   "ms": 8.2,
+   "ms": 7.63,
    "rule": null,
    "fallback": null
   },
@@ -3350,7 +3350,7 @@
     }
    ],
    "n_options": 21,
-   "ms": 11.79,
+   "ms": 11.39,
    "rule": null,
    "fallback": null
   },
@@ -3416,7 +3416,7 @@
     }
    ],
    "n_options": 10,
-   "ms": 5.87,
+   "ms": 5.31,
    "rule": null,
    "fallback": null
   },
@@ -3512,7 +3512,7 @@
     }
    ],
    "n_options": 16,
-   "ms": 8.4,
+   "ms": 7.91,
    "rule": null,
    "fallback": null
   },
@@ -3578,7 +3578,7 @@
     }
    ],
    "n_options": 10,
-   "ms": 5.29,
+   "ms": 4.92,
    "rule": null,
    "fallback": null
   },
@@ -3660,7 +3660,7 @@
     }
    ],
    "n_options": 10,
-   "ms": 5.16,
+   "ms": 4.99,
    "rule": null,
    "fallback": null
   },
@@ -3809,7 +3809,7 @@
     }
    ],
    "n_options": 17,
-   "ms": 9.96,
+   "ms": 9.07,
    "rule": null,
    "fallback": null
   },
@@ -3945,7 +3945,7 @@
     }
    ],
    "n_options": 24,
-   "ms": 17.26,
+   "ms": 12.37,
    "rule": null,
    "fallback": null
   },
@@ -4192,7 +4192,7 @@
     }
    ],
    "n_options": 26,
-   "ms": 17.83,
+   "ms": 13.25,
    "rule": null,
    "fallback": null
   },
@@ -4253,7 +4253,7 @@
     }
    ],
    "n_options": 9,
-   "ms": 7.0,
+   "ms": 5.01,
    "rule": null,
    "fallback": null
   },
@@ -4344,7 +4344,7 @@
     }
    ],
    "n_options": 15,
-   "ms": 10.4,
+   "ms": 7.87,
    "rule": null,
    "fallback": null
   },
@@ -4430,7 +4430,7 @@
     }
    ],
    "n_options": 14,
-   "ms": 9.16,
+   "ms": 8.43,
    "rule": null,
    "fallback": null
   },
@@ -4511,7 +4511,7 @@
     }
    ],
    "n_options": 13,
-   "ms": 8.13,
+   "ms": 7.29,
    "rule": null,
    "fallback": null
   },
@@ -4591,7 +4591,7 @@
     }
    ],
    "n_options": 8,
-   "ms": 5.16,
+   "ms": 4.3,
    "rule": null,
    "fallback": null
   },
@@ -4712,7 +4712,7 @@
     }
    ],
    "n_options": 13,
-   "ms": 8.41,
+   "ms": 7.02,
    "rule": null,
    "fallback": null
   },
@@ -4818,7 +4818,7 @@
     }
    ],
    "n_options": 18,
-   "ms": 11.26,
+   "ms": 9.25,
    "rule": null,
    "fallback": null
   },
@@ -4894,7 +4894,7 @@
     }
    ],
    "n_options": 12,
-   "ms": 7.55,
+   "ms": 6.36,
    "rule": null,
    "fallback": null
   },
@@ -5050,7 +5050,7 @@
     }
    ],
    "n_options": 28,
-   "ms": 18.44,
+   "ms": 15.56,
    "rule": null,
    "fallback": null
   },
@@ -5096,7 +5096,7 @@
     }
    ],
    "n_options": 6,
-   "ms": 3.89,
+   "ms": 3.16,
    "rule": null,
    "fallback": null
   },
@@ -5157,7 +5157,7 @@
     }
    ],
    "n_options": 9,
-   "ms": 5.72,
+   "ms": 4.63,
    "rule": null,
    "fallback": null
   },
@@ -5307,7 +5307,7 @@
     }
    ],
    "n_options": 14,
-   "ms": 9.25,
+   "ms": 7.73,
    "rule": null,
    "fallback": null
   },
@@ -5396,7 +5396,7 @@
     }
    ],
    "n_options": 13,
-   "ms": 8.41,
+   "ms": 6.97,
    "rule": null,
    "fallback": null
   },
@@ -5427,7 +5427,7 @@
     }
    ],
    "n_options": 3,
-   "ms": 2.04,
+   "ms": 1.63,
    "rule": null,
    "fallback": null
   },
@@ -5554,7 +5554,7 @@
     }
    ],
    "n_options": 11,
-   "ms": 7.07,
+   "ms": 5.87,
    "rule": null,
    "fallback": null
   },
@@ -5700,7 +5700,7 @@
     }
    ],
    "n_options": 26,
-   "ms": 16.97,
+   "ms": 14.16,
    "rule": null,
    "fallback": null
   },
@@ -5811,7 +5811,7 @@
     }
    ],
    "n_options": 19,
-   "ms": 13.52,
+   "ms": 10.85,
    "rule": null,
    "fallback": null
   },
@@ -5912,7 +5912,7 @@
     }
    ],
    "n_options": 17,
-   "ms": 11.03,
+   "ms": 9.23,
    "rule": null,
    "fallback": null
   },
@@ -5963,7 +5963,7 @@
     }
    ],
    "n_options": 7,
-   "ms": 4.43,
+   "ms": 3.79,
    "rule": null,
    "fallback": null
   },
@@ -6089,7 +6089,7 @@
     }
    ],
    "n_options": 22,
-   "ms": 13.84,
+   "ms": 11.97,
    "rule": null,
    "fallback": null
   },
@@ -6160,7 +6160,7 @@
     }
    ],
    "n_options": 11,
-   "ms": 7.17,
+   "ms": 6.16,
    "rule": null,
    "fallback": null
   },
@@ -6254,7 +6254,7 @@
     }
    ],
    "n_options": 14,
-   "ms": 9.09,
+   "ms": 7.76,
    "rule": null,
    "fallback": null
   },
@@ -6285,7 +6285,7 @@
     }
    ],
    "n_options": 3,
-   "ms": 1.83,
+   "ms": 1.63,
    "rule": null,
    "fallback": null
   },
@@ -6431,7 +6431,7 @@
     }
    ],
    "n_options": 26,
-   "ms": 16.44,
+   "ms": 14.55,
    "rule": null,
    "fallback": null
   },
@@ -6470,7 +6470,7 @@
     }
    ],
    "n_options": 3,
-   "ms": 1.88,
+   "ms": 1.64,
    "rule": null,
    "fallback": null
   },
@@ -6747,7 +6747,7 @@
     }
    ],
    "n_options": 41,
-   "ms": 26.43,
+   "ms": 23.33,
    "rule": null,
    "fallback": null
   },
@@ -6863,7 +6863,7 @@
     }
    ],
    "n_options": 20,
-   "ms": 13.07,
+   "ms": 10.96,
    "rule": null,
    "fallback": null
   },
@@ -7014,7 +7014,7 @@
     }
    ],
    "n_options": 27,
-   "ms": 17.2,
+   "ms": 14.46,
    "rule": null,
    "fallback": null
   },
@@ -7135,7 +7135,7 @@
     }
    ],
    "n_options": 21,
-   "ms": 12.86,
+   "ms": 10.69,
    "rule": null,
    "fallback": null
   },
@@ -7331,7 +7331,7 @@
     }
    ],
    "n_options": 36,
-   "ms": 23.33,
+   "ms": 21.23,
    "rule": null,
    "fallback": null
   },
@@ -7452,7 +7452,7 @@
     }
    ],
    "n_options": 21,
-   "ms": 13.26,
+   "ms": 12.65,
    "rule": null,
    "fallback": null
   },
@@ -7598,7 +7598,7 @@
     }
    ],
    "n_options": 26,
-   "ms": 17.93,
+   "ms": 15.0,
    "rule": null,
    "fallback": null
   },
@@ -7742,7 +7742,7 @@
     }
    ],
    "n_options": 24,
-   "ms": 15.33,
+   "ms": 12.88,
    "rule": null,
    "fallback": null
   },
@@ -7893,7 +7893,7 @@
     }
    ],
    "n_options": 27,
-   "ms": 19.04,
+   "ms": 15.54,
    "rule": null,
    "fallback": null
   },
@@ -8043,7 +8043,7 @@
     }
    ],
    "n_options": 22,
-   "ms": 14.69,
+   "ms": 11.84,
    "rule": null,
    "fallback": null
   },
@@ -8181,7 +8181,7 @@
     }
    ],
    "n_options": 24,
-   "ms": 16.69,
+   "ms": 14.28,
    "rule": null,
    "fallback": null
   },

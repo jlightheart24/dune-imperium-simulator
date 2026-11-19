@@ -8,7 +8,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              hand: Dune, The Desert Planet, Dagger, Dune, The Desert Planet, Signet Ring, Convincing
                    Argument
              occupied spaces: none
-  options  : 13 legal, decided in 8.4 ms
+  options  : 13 legal, decided in 5.32 ms
       >>   24.26  Signet Ring -> Carthag
            21.81  Signet Ring -> Arrakeen
            21.76  Signet Ring -> Imperial Basin
@@ -33,7 +33,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              influence: emperor 0, guild 0, bene_gesserit 0, fremen 0
              hand: Dune, The Desert Planet, Dagger, Dune, The Desert Planet, Convincing Argument
              occupied spaces: Hardy Warriors, Stillsuits, Secure Contract, Carthag
-  options  : 5 legal, decided in 3.05 ms
+  options  : 5 legal, decided in 2.08 ms
       >>   16.92  Dagger -> Hall of Oratory
            15.97  Dune, The Desert Planet -> Imperial Basin
            15.37  Dune, The Desert Planet -> Hagga Basin
@@ -61,7 +61,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              influence: emperor 0, guild 0, bene_gesserit 0, fremen 0
              hand: Reconnaissance, Diplomacy, Convincing Argument, Dagger, Seek Allies
              occupied spaces: Hardy Warriors, Stillsuits, Carthag
-  options  : 10 legal, decided in 6.6 ms
+  options  : 10 legal, decided in 4.03 ms
       >>   30.28  Seek Allies -> Secrets
            29.57  Diplomacy -> Secrets
            25.98  Seek Allies -> Wealth
@@ -78,7 +78,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              hand: Reconnaissance, Diplomacy, Convincing Argument, Dagger
              occupied spaces: Wealth, Secrets, Hardy Warriors, Stillsuits, Secure Contract,
                    Arrakeen, Carthag
-  options  : 4 legal, decided in 2.48 ms
+  options  : 4 legal, decided in 1.71 ms
       >>   29.03  Dagger -> Hall of Oratory
            28.94  Dagger -> Mentat
            28.65  Diplomacy -> Foldspace
@@ -106,7 +106,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              hand: Dagger, Convincing Argument, Dune, The Desert Planet, Reconnaissance, Convincing
                    Argument
              occupied spaces: High Council, Arrakeen
-  options  : 8 legal, decided in 4.87 ms
+  options  : 8 legal, decided in 4.22 ms
       >>   43.17  Dune, The Desert Planet -> Hagga Basin
            43.07  Reconnaissance -> Carthag
            42.17  Dune, The Desert Planet -> Imperial Basin
@@ -123,7 +123,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              hand: Dagger, Convincing Argument, Reconnaissance, Convincing Argument
              occupied spaces: Stillsuits, High Council, Arrakeen, Sietch Tabr, Hagga Basin, The
                    Great Flat
-  options  : 4 legal, decided in 2.29 ms
+  options  : 4 legal, decided in 1.9 ms
       >>   40.87  Reconnaissance -> Carthag
            37.72  Dagger -> Hall of Oratory
            36.83  Dagger -> Mentat
@@ -169,7 +169,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              influence: emperor 0, guild 0, bene_gesserit 2, fremen 0
              hand: Test of Humanity, Arrakis Liaison, Signet Ring, Dune, The Desert Planet, Dagger
              occupied spaces: Sietch Tabr
-  options  : 26 legal, decided in 15.51 ms
+  options  : 26 legal, decided in 12.87 ms
       >>   69.53  Signet Ring -> Imperial Basin
            68.83  Signet Ring -> Carthag
            68.53  Dune, The Desert Planet -> Imperial Basin
@@ -185,7 +185,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              influence: emperor 0, guild 0, bene_gesserit 2, fremen 0
              hand: Test of Humanity, Arrakis Liaison, Dune, The Desert Planet, Dagger
              occupied spaces: Heighliner, High Council, Mentat, Sietch Tabr, Imperial Basin
-  options  : 12 legal, decided in 7.4 ms
+  options  : 12 legal, decided in 5.81 ms
       >>   64.11  Test of Humanity -> Secrets
            61.20  Test of Humanity -> Selective Breeding
            60.91  Arrakis Liaison -> Carthag
@@ -235,7 +235,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              influence: emperor 0, guild 0, bene_gesserit 3, fremen 0
              hand: Diplomacy, Chani, Arrakis Liaison, Reconnaissance, Assassination Mission
              occupied spaces: none
-  options  : 16 legal, decided in 9.96 ms
+  options  : 16 legal, decided in 7.95 ms
       >>   95.21  Diplomacy -> Secrets
            91.61  Diplomacy -> Selective Breeding
            88.41  Chani -> Carthag
@@ -251,7 +251,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              influence: emperor 0, guild 0, bene_gesserit 4, fremen 0
              hand: Chani, Arrakis Liaison, Reconnaissance, Assassination Mission
              occupied spaces: Secrets, Swordmaster, Secure Contract, Carthag
-  options  : 6 legal, decided in 3.81 ms
+  options  : 6 legal, decided in 3.11 ms
       >>  101.71  Reconnaissance -> Arrakeen
           101.01  Arrakis Liaison -> Stillsuits
           100.91  Arrakis Liaison -> Arrakeen
@@ -301,7 +301,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              hand: Dagger, Dune, The Desert Planet, Convincing Argument, Arrakis Liaison, Test of
                    Humanity
              occupied spaces: Secrets, Stillsuits, The Great Flat
-  options  : 17 legal, decided in 9.74 ms
+  options  : 17 legal, decided in 8.5 ms
       >>  105.43  Dagger -> Swordmaster
           104.72  Dune, The Desert Planet -> Imperial Basin
           104.34  Arrakis Liaison -> Carthag
@@ -318,7 +318,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              hand: Dune, The Desert Planet, Convincing Argument, Arrakis Liaison, Test of Humanity
              occupied spaces: Wealth, Secrets, Stillsuits, Swordmaster, Sietch Tabr, Imperial Basin,
                    The Great Flat
-  options  : 7 legal, decided in 4.22 ms
+  options  : 7 legal, decided in 3.66 ms
       >>  106.67  Dune, The Desert Planet -> Secure Contract
           106.21  Arrakis Liaison -> Carthag
           106.15  Dune, The Desert Planet -> Sell Melange
@@ -335,7 +335,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              hand: Convincing Argument, Arrakis Liaison, Test of Humanity
              occupied spaces: Wealth, Secrets, Stillsuits, High Council, Swordmaster, Secure
                    Contract, Sietch Tabr, Imperial Basin, The Great Flat
-  options  : 6 legal, decided in 3.59 ms
+  options  : 6 legal, decided in 3.09 ms
       >>  106.88  Arrakis Liaison -> Arrakeen
           106.17  Arrakis Liaison -> Carthag
           104.76  Test of Humanity -> Selective Breeding
@@ -364,7 +364,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              influence: emperor 0, guild 0, bene_gesserit 4, fremen 0
              hand: Signet Ring, Dagger, Bene Gesserit Sister, Imperial Spy, Convincing Argument
              occupied spaces: Hardy Warriors, Sietch Tabr
-  options  : 19 legal, decided in 11.74 ms
+  options  : 19 legal, decided in 9.49 ms
       >>  127.96  Signet Ring -> Arrakeen
           126.16  Signet Ring -> Carthag
           115.46  Bene Gesserit Sister -> Secrets
@@ -381,7 +381,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              hand: Dagger, Bene Gesserit Sister, Imperial Spy, Convincing Argument, Test of Humanity
              occupied spaces: Hardy Warriors, Rally Troops, Secure Contract, Arrakeen, Carthag,
                    Sietch Tabr
-  options  : 16 legal, decided in 9.49 ms
+  options  : 16 legal, decided in 7.74 ms
       >>  115.44  Imperial Spy -> Conspire
           115.13  Bene Gesserit Sister -> Secrets
           114.33  Test of Humanity -> Secrets
@@ -408,7 +408,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              hand: Dagger, Bene Gesserit Sister, Convincing Argument, Test of Humanity
              occupied spaces: Conspire, Hardy Warriors, Rally Troops, Secure Contract, Arrakeen,
                    Carthag, Research Station, Sietch Tabr
-  options  : 14 legal, decided in 7.66 ms
+  options  : 14 legal, decided in 6.57 ms
       >>  137.94  Bene Gesserit Sister -> Secrets
           137.14  Test of Humanity -> Secrets
           136.73  Bene Gesserit Sister -> Selective Breeding
@@ -459,7 +459,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              hand: Dune, The Desert Planet, Guild Administrator, Dagger, Assassination Mission,
                    Arrakis Liaison
              occupied spaces: Swordmaster
-  options  : 16 legal, decided in 9.39 ms
+  options  : 16 legal, decided in 8.13 ms
       >>  128.36  Arrakis Liaison -> Carthag
           127.73  Arrakis Liaison -> Stillsuits
           127.34  Arrakis Liaison -> Arrakeen
@@ -484,7 +484,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              influence: emperor 2, guild 0, bene_gesserit 5, fremen 0
              hand: Dune, The Desert Planet, Guild Administrator, Dagger, Assassination Mission
              occupied spaces: Heighliner, Selective Breeding, Swordmaster, Carthag, Hagga Basin
-  options  : 12 legal, decided in 6.67 ms
+  options  : 12 legal, decided in 6.5 ms
       >>  112.15  Dagger -> Rally Troops
           111.92  Dagger -> Mentat
           110.35  Dune, The Desert Planet -> Imperial Basin
@@ -501,7 +501,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              hand: Dune, The Desert Planet, Guild Administrator, Assassination Mission
              occupied spaces: Heighliner, Selective Breeding, Mentat, Swordmaster, Rally Troops,
                    Arrakeen, Carthag, Sietch Tabr, Hagga Basin
-  options  : 8 legal, decided in 4.8 ms
+  options  : 8 legal, decided in 4.22 ms
       >>  108.27  Guild Administrator -> Foldspace
           108.16  Dune, The Desert Planet -> Imperial Basin
           107.91  Dune, The Desert Planet -> Secure Contract
@@ -531,7 +531,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              influence: emperor 2, guild 1, bene_gesserit 5, fremen 0
              hand: Diplomacy, Chani, Bene Gesserit Sister, Arrakis Liaison, Stilgar
              occupied spaces: none
-  options  : 26 legal, decided in 14.63 ms
+  options  : 26 legal, decided in 13.58 ms
       >>  122.22  Diplomacy -> Heighliner
           113.10  Diplomacy -> Stillsuits
           112.84  Chani -> Carthag
@@ -547,7 +547,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              influence: emperor 2, guild 2, bene_gesserit 5, fremen 0
              hand: Chani, Bene Gesserit Sister, Arrakis Liaison, Stilgar
              occupied spaces: Heighliner, Arrakeen, Carthag, Research Station
-  options  : 18 legal, decided in 10.57 ms
+  options  : 18 legal, decided in 9.02 ms
       >>  118.46  Arrakis Liaison -> Stillsuits
           118.12  Chani -> Stillsuits
           116.70  Arrakis Liaison -> Hardy Warriors
@@ -564,7 +564,7 @@ TRACE of P1 [bene_gesserit_faction], seed 7, players: bene_gesserit_faction, bal
              hand: Chani, Bene Gesserit Sister, Stilgar
              occupied spaces: Heighliner, Hardy Warriors, Stillsuits, Mentat, Arrakeen, Carthag,
                    Research Station, The Great Flat
-  options  : 10 legal, decided in 6.83 ms
+  options  : 10 legal, decided in 5.13 ms
       >>  101.15  Bene Gesserit Sister -> Selective Breeding
           101.06  Bene Gesserit Sister -> Secrets
           100.40  Bene Gesserit Sister -> High Council

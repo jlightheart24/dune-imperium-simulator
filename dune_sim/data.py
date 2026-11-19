@@ -12,7 +12,8 @@ Effect DSL -- an effect list is a list of ops, each op is a small dict:
               "intrigue": 1, "draw": 1, "persuasion": 2, "swords": 3,
               "conflict_troops": 2}}          # conflict_troops: straight into the conflict
     {"pay": {"spice": 3}}                     # only valid inside optional/choice
-    {"influence": "fremen" | "any" | "space", "n": 1}
+    {"influence": "fremen" | "any" | "space" | "trailing", "n": 1}
+        # "trailing" = a faction where another player has more influence
     {"trash": 1}                              # may trash a card (hand/discard/in play)
     {"trash_self": True}
     {"acquire": "Foldspace"}                  # card from the reserve to your discard
@@ -309,7 +310,8 @@ INTRIGUE = [
 #   on_high_council  ops applied when the leader takes a High Council seat
 #   maker_tax        {"spice": n, "draw": m}      on desert spaces: n less spice, draw m cards
 #   ignore_occupied  [icons]   may use spaces with these icons even if an opponent is there
-#   masterstroke     {"round": r, "factions": n}  at the start of round r, +1 influence in n factions
+#   masterstroke     {"deploy": d, "factions": n}  once per game, on deploying d or more troops
+#                    in one turn, +1 influence in n factions
 #   prescience       True      knows the top card of their own deck when planning
 # NOTE: written from memory of the base game and simplified where an ability does not
 # fit the engine. Check against your copy and edit.
@@ -320,14 +322,16 @@ LEADERS = [
      "signet": [{"gain": {"draw": 1}}], "prescience": True},
     {"name": "Duke Leto Atreides", "house": "Atreides",
      "ability": "Landsraad Popularity: Landsraad spaces cost 1 solari less.",
-     "signet_text": "Prudent Diplomacy: may pay 1 spice for 1 influence with any faction.",
-     "signet": [{"optional": [{"pay": {"spice": 1}}, {"influence": "any"}]}],
+     "signet_text": "Prudent Diplomacy: may pay 1 spice for 1 influence with a faction "
+                    "where another player has more influence than he does.",
+     "signet": [{"optional": [{"pay": {"spice": 1}}, {"influence": "trailing"}]}],
      "space_discount": {"icon": "landsraad", "solari": 1}},
     {"name": "Baron Vladimir Harkonnen", "house": "Harkonnen",
-     "ability": "Masterstroke: at the start of round 2, +1 influence with two different factions.",
+     "ability": "Masterstroke: once per game, when he deploys 4 or more troops to the "
+                "conflict in one turn, +1 influence with two different factions.",
      "signet_text": "Scheme: may pay 1 solari to draw 1 intrigue card.",
      "signet": [{"optional": [{"pay": {"solari": 1}}, {"gain": {"intrigue": 1}}]}],
-     "masterstroke": {"round": 2, "factions": 2}},
+     "masterstroke": {"deploy": 4, "factions": 2}},
     {"name": "Glossu \"The Beast\" Rabban", "house": "Harkonnen",
      "ability": "Arrakis Fiefdom: starts with 1 extra spice and 1 extra solari.",
      "signet_text": "Brutality: gain 1 troop, or 2 if he holds an alliance.",

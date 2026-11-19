@@ -90,7 +90,7 @@
     }
    ],
    "n_options": 13,
-   "ms": 7.46,
+   "ms": 5.43,
    "rule": null,
    "fallback": null
   },
@@ -397,7 +397,7 @@
     }
    ],
    "n_options": 4,
-   "ms": 2.32,
+   "ms": 1.79,
    "rule": null,
    "fallback": null
   },
@@ -1111,7 +1111,7 @@
     }
    ],
    "n_options": 11,
-   "ms": 6.35,
+   "ms": 4.6,
    "rule": null,
    "fallback": null
   },
@@ -1415,7 +1415,7 @@
     }
    ],
    "n_options": 9,
-   "ms": 5.11,
+   "ms": 3.84,
    "rule": null,
    "fallback": null
   },
@@ -1652,7 +1652,7 @@
     }
    ],
    "n_options": 5,
-   "ms": 3.16,
+   "ms": 2.18,
    "rule": null,
    "fallback": null
   },
@@ -1969,7 +1969,7 @@
     }
    ],
    "n_options": 15,
-   "ms": 9.24,
+   "ms": 6.8,
    "rule": null,
    "fallback": null
   },
@@ -2162,7 +2162,7 @@
     }
    ],
    "n_options": 7,
-   "ms": 4.1,
+   "ms": 3.14,
    "rule": null,
    "fallback": null
   },
@@ -2444,7 +2444,7 @@
     }
    ],
    "n_options": 23,
-   "ms": 14.15,
+   "ms": 10.31,
    "rule": null,
    "fallback": null
   },
@@ -2828,7 +2828,7 @@
     }
    ],
    "n_options": 15,
-   "ms": 9.23,
+   "ms": 6.8,
    "rule": null,
    "fallback": null
   },
@@ -3545,7 +3545,7 @@
     }
    ],
    "n_options": 13,
-   "ms": 8.89,
+   "ms": 6.03,
    "rule": null,
    "fallback": null
   },
@@ -3731,7 +3731,7 @@
     }
    ],
    "n_options": 8,
-   "ms": 5.32,
+   "ms": 3.84,
    "rule": null,
    "fallback": null
   },
@@ -4117,7 +4117,7 @@
     }
    ],
    "n_options": 17,
-   "ms": 12.53,
+   "ms": 8.19,
    "rule": null,
    "fallback": null
   },
@@ -4415,7 +4415,7 @@
     }
    ],
    "n_options": 11,
-   "ms": 9.83,
+   "ms": 5.17,
    "rule": null,
    "fallback": null
   },
@@ -4855,7 +4855,7 @@
     }
    ],
    "n_options": 32,
-   "ms": 26.59,
+   "ms": 15.93,
    "rule": null,
    "fallback": null
   },
@@ -5279,7 +5279,7 @@
     }
    ],
    "n_options": 19,
-   "ms": 15.6,
+   "ms": 9.41,
    "rule": null,
    "fallback": null
   },
@@ -5340,7 +5340,7 @@
     }
    ],
    "n_options": 9,
-   "ms": 0.01,
+   "ms": 0.0,
    "rule": null,
    "fallback": null
   },

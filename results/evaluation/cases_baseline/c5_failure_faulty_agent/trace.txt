@@ -277,7 +277,7 @@ TRACE of P1 [faulty], seed 7, players: dune_sim.faulty:FaultyAgent, balanced, ba
              influence: emperor 0, guild 2, bene_gesserit 1, fremen 0
              hand: Dagger, Dune, The Desert Planet, Signet Ring, Convincing Argument, Fremen Camp
              occupied spaces: Heighliner, Mentat, Research Station
-  options  : 17 legal, decided in 0.01 ms
+  options  : 17 legal, decided in 0.0 ms
       >>    n/a  Dagger -> Hall of Oratory
             n/a  Dune, The Desert Planet -> Secure Contract
             n/a  Dune, The Desert Planet -> Sell Melange
@@ -294,7 +294,7 @@ TRACE of P1 [faulty], seed 7, players: dune_sim.faulty:FaultyAgent, balanced, ba
              hand: Dune, The Desert Planet, Signet Ring, Convincing Argument, Fremen Camp
              occupied spaces: Heighliner, Mentat, Hall of Oratory, Arrakeen, Carthag, Research
                    Station
-  options  : 13 legal, decided in 0.01 ms
+  options  : 13 legal, decided in 0.0 ms
             n/a  Dune, The Desert Planet -> Secure Contract
             n/a  Dune, The Desert Planet -> Sell Melange
             n/a  Dune, The Desert Planet -> Imperial Basin

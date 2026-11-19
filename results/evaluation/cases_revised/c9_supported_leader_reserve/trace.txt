@@ -8,7 +8,7 @@ TRACE of P1 as Helena Richese [balanced], seed 7, players: balanced, balanced, b
              hand: Dune, The Desert Planet, Dagger, Dune, The Desert Planet, Signet Ring, Convincing
                    Argument
              occupied spaces: none
-  options  : 13 legal, decided in 7.28 ms
+  options  : 13 legal, decided in 6.36 ms
       >>   20.76  Signet Ring -> Carthag
            20.18  Signet Ring -> Secure Contract
            19.38  Dune, The Desert Planet -> Secure Contract
@@ -33,7 +33,7 @@ TRACE of P1 as Helena Richese [balanced], seed 7, players: balanced, balanced, b
              influence: emperor 0, guild 0, bene_gesserit 0, fremen 0
              hand: Dune, The Desert Planet, Dagger, Dune, The Desert Planet, Convincing Argument
              occupied spaces: Hardy Warriors, Stillsuits, Secure Contract, Carthag
-  options  : 5 legal, decided in 2.85 ms
+  options  : 5 legal, decided in 2.37 ms
       >>   16.32  Dagger -> Hall of Oratory
            15.37  Dune, The Desert Planet -> Imperial Basin
            14.77  Dune, The Desert Planet -> Hagga Basin
@@ -61,7 +61,7 @@ TRACE of P1 as Helena Richese [balanced], seed 7, players: balanced, balanced, b
              influence: emperor 0, guild 0, bene_gesserit 0, fremen 0
              hand: Reconnaissance, Diplomacy, Convincing Argument, Dagger, Seek Allies
              occupied spaces: Hardy Warriors, Stillsuits, Arrakeen
-  options  : 10 legal, decided in 5.11 ms
+  options  : 10 legal, decided in 4.74 ms
       >>   25.48  Seek Allies -> Wealth
            25.29  Seek Allies -> Secrets
            24.77  Diplomacy -> Wealth
@@ -77,7 +77,7 @@ TRACE of P1 as Helena Richese [balanced], seed 7, players: balanced, balanced, b
              influence: emperor 1, guild 0, bene_gesserit 0, fremen 0
              hand: Reconnaissance, Diplomacy, Convincing Argument, Dagger
              occupied spaces: Wealth, Secrets, Hardy Warriors, Stillsuits, Mentat, Arrakeen, Carthag
-  options  : 6 legal, decided in 3.0 ms
+  options  : 6 legal, decided in 2.81 ms
       >>   24.98  Reconnaissance -> Carthag
            24.23  Dagger -> Hall of Oratory
            24.08  Diplomacy -> Foldspace
@@ -134,7 +134,7 @@ TRACE of P1 as Helena Richese [balanced], seed 7, players: balanced, balanced, b
              hand: Dune, The Desert Planet, Reconnaissance, Dune, The Desert Planet, Convincing
                    Argument
              occupied spaces: Stillsuits, High Council, Sietch Tabr, Hagga Basin
-  options  : 6 legal, decided in 3.17 ms
+  options  : 6 legal, decided in 2.9 ms
       >>   35.92  Reveal hand
            32.69  Dune, The Desert Planet -> Secure Contract
            32.14  Reconnaissance -> Carthag
@@ -153,7 +153,7 @@ TRACE of P1 as Helena Richese [balanced], seed 7, players: balanced, balanced, b
              influence: emperor 1, guild 0, bene_gesserit 0, fremen 0
              hand: Diplomacy, Dagger, Convincing Argument, Test of Humanity, Signet Ring
              occupied spaces: Imperial Basin
-  options  : 15 legal, decided in 8.35 ms
+  options  : 15 legal, decided in 7.64 ms
       >>   53.95  Signet Ring -> Arrakeen
            52.35  Signet Ring -> Carthag
            51.95  Diplomacy -> Stillsuits
@@ -169,7 +169,7 @@ TRACE of P1 as Helena Richese [balanced], seed 7, players: balanced, balanced, b
              influence: emperor 1, guild 0, bene_gesserit 0, fremen 0
              hand: Diplomacy, Dagger, Convincing Argument, Test of Humanity, Chani
              occupied spaces: Conspire, Arrakeen, Sietch Tabr, Imperial Basin, Hagga Basin
-  options  : 12 legal, decided in 6.78 ms
+  options  : 12 legal, decided in 6.35 ms
       >>   52.55  Diplomacy -> Stillsuits
            52.07  Diplomacy -> Wealth
            51.95  Chani -> Stillsuits
@@ -199,7 +199,7 @@ TRACE of P1 as Helena Richese [balanced], seed 7, players: balanced, balanced, b
              influence: emperor 1, guild 0, bene_gesserit 0, fremen 1
              hand: Signet Ring, Reconnaissance, Stilgar, Dune, The Desert Planet, Guild Ambassador
              occupied spaces: none
-  options  : 29 legal, decided in 16.29 ms
+  options  : 29 legal, decided in 15.38 ms
       >>   87.95  Stilgar -> Stillsuits
            86.15  Stilgar -> Hardy Warriors
            81.70  Signet Ring -> Arrakeen
@@ -215,7 +215,7 @@ TRACE of P1 as Helena Richese [balanced], seed 7, players: balanced, balanced, b
              influence: emperor 1, guild 0, bene_gesserit 0, fremen 2
              hand: Signet Ring, Reconnaissance, Dune, The Desert Planet, Guild Ambassador
              occupied spaces: Stillsuits, High Council, Mentat, Sietch Tabr
-  options  : 21 legal, decided in 11.79 ms
+  options  : 21 legal, decided in 11.39 ms
       >>   85.35  Signet Ring -> Arrakeen
            84.55  Signet Ring -> Sietch Tabr
            84.35  Signet Ring -> Carthag
@@ -245,7 +245,7 @@ TRACE of P1 as Helena Richese [balanced], seed 7, players: balanced, balanced, b
              influence: emperor 1, guild 0, bene_gesserit 0, fremen 2
              hand: Diplomacy, Test of Humanity, Dagger, Lady Jessica, Chani
              occupied spaces: Heighliner, Swordmaster, Sietch Tabr
-  options  : 26 legal, decided in 17.83 ms
+  options  : 26 legal, decided in 13.25 ms
       >>   92.35  Lady Jessica -> Secrets
            84.25  Diplomacy -> Hardy Warriors
            82.80  Diplomacy -> Secrets
@@ -262,7 +262,7 @@ TRACE of P1 as Helena Richese [balanced], seed 7, players: balanced, balanced, b
              hand: Diplomacy, Test of Humanity, Dagger, Chani
              occupied spaces: Heighliner, Secrets, Stillsuits, Swordmaster, Arrakeen, Carthag,
                    Sietch Tabr
-  options  : 13 legal, decided in 8.13 ms
+  options  : 13 legal, decided in 7.29 ms
       >>   95.19  Diplomacy -> Hardy Warriors
            93.32  Diplomacy -> Wealth
            92.72  Chani -> Hardy Warriors
@@ -293,7 +293,7 @@ TRACE of P1 as Helena Richese [balanced], seed 7, players: balanced, balanced, b
              hand: Convincing Argument, Dune, The Desert Planet, Convincing Argument, Dagger,
                    Missionaria Protectiva
              occupied spaces: Hardy Warriors, Imperial Basin
-  options  : 12 legal, decided in 7.55 ms
+  options  : 12 legal, decided in 6.36 ms
       >>  100.80  Missionaria Protectiva -> Carthag
           100.60  Missionaria Protectiva -> Arrakeen
            99.54  Dune, The Desert Planet -> Hagga Basin
@@ -337,7 +337,7 @@ TRACE of P1 as Helena Richese [balanced], seed 7, players: balanced, balanced, b
              hand: Convincing Argument, Dune, The Desert Planet, Convincing Argument
              occupied spaces: Hardy Warriors, Stillsuits, Swordmaster, Secure Contract, Arrakeen,
                    Carthag, Sietch Tabr, Imperial Basin, Hagga Basin
-  options  : 3 legal, decided in 2.04 ms
+  options  : 3 legal, decided in 1.63 ms
       >>   93.19  Dune, The Desert Planet -> Sell Melange
            93.03  Dune, The Desert Planet -> The Great Flat
            91.72  Reveal hand
@@ -373,7 +373,7 @@ TRACE of P1 as Helena Richese [balanced], seed 7, players: balanced, balanced, b
              influence: emperor 2, guild 0, bene_gesserit 1, fremen 3
              hand: Power Play, Test of Humanity, Stilgar, Spice Smugglers, Dune, The Desert Planet
              occupied spaces: Hardy Warriors
-  options  : 26 legal, decided in 16.97 ms
+  options  : 26 legal, decided in 14.16 ms
       >>  102.34  Power Play -> Wealth
            99.46  Power Play -> Foldspace
            94.36  Power Play -> Secrets
@@ -389,7 +389,7 @@ TRACE of P1 as Helena Richese [balanced], seed 7, players: balanced, balanced, b
              influence: emperor 4, guild 0, bene_gesserit 1, fremen 3
              hand: Test of Humanity, Stilgar, Spice Smugglers, Dune, The Desert Planet
              occupied spaces: Wealth, Heighliner, Secrets, Hardy Warriors, Mentat
-  options  : 22 legal, decided in 13.84 ms
+  options  : 22 legal, decided in 11.97 ms
       >>  109.06  Spice Smugglers -> Research Station
           106.39  Test of Humanity -> Mentat
           103.39  Spice Smugglers -> Carthag
@@ -407,7 +407,7 @@ TRACE of P1 as Helena Richese [balanced], seed 7, players: balanced, balanced, b
                    Chani
              occupied spaces: Wealth, Heighliner, Secrets, Hardy Warriors, Mentat, Hall of Oratory,
                    Arrakeen, Research Station, The Great Flat
-  options  : 26 legal, decided in 16.44 ms
+  options  : 26 legal, decided in 14.55 ms
       >>  117.22  Chani -> Sietch Tabr
           117.08  Chani -> Carthag
           116.79  Chani -> Arrakeen
@@ -447,7 +447,7 @@ TRACE of P1 as Helena Richese [balanced], seed 7, players: balanced, balanced, b
              influence: emperor 4, guild 0, bene_gesserit 1, fremen 3
              hand: Signet Ring, Reconnaissance, Diplomacy, Lady Jessica, Guild Administrator
              occupied spaces: none
-  options  : 41 legal, decided in 26.43 ms
+  options  : 41 legal, decided in 23.33 ms
       >>  117.99  Diplomacy -> Hardy Warriors
           107.63  Signet Ring -> Research Station
           106.29  Lady Jessica -> Mentat
@@ -463,7 +463,7 @@ TRACE of P1 as Helena Richese [balanced], seed 7, players: balanced, balanced, b
              influence: emperor 4, guild 0, bene_gesserit 1, fremen 4
              hand: Signet Ring, Reconnaissance, Lady Jessica, Guild Administrator
              occupied spaces: Selective Breeding, Hardy Warriors, Arrakeen, Research Station
-  options  : 36 legal, decided in 23.33 ms
+  options  : 36 legal, decided in 21.23 ms
       >>  119.25  Signet Ring -> Mentat
           117.89  Lady Jessica -> Arrakeen
           117.49  Signet Ring -> Arrakeen
@@ -480,7 +480,7 @@ TRACE of P1 as Helena Richese [balanced], seed 7, players: balanced, balanced, b
              hand: Reconnaissance, Lady Jessica, Guild Administrator, Arrakis Liaison
              occupied spaces: Conspire, Heighliner, Selective Breeding, Hardy Warriors, Mentat,
                    Arrakeen, Research Station
-  options  : 27 legal, decided in 19.04 ms
+  options  : 27 legal, decided in 15.54 ms
       >>  106.77  Lady Jessica -> Research Station
           103.53  Lady Jessica -> Secrets
           103.18  Lady Jessica -> Arrakeen
@@ -498,7 +498,7 @@ TRACE of P1 as Helena Richese [balanced], seed 7, players: balanced, balanced, b
                    Argument, Stilgar
              occupied spaces: Conspire, Heighliner, Selective Breeding, Hardy Warriors, Mentat,
                    Arrakeen, Research Station
-  options  : 24 legal, decided in 16.69 ms
+  options  : 24 legal, decided in 14.28 ms
       >>  107.75  Guild Administrator -> Foldspace
           105.26  Reveal hand
           103.59  Reconnaissance -> Sietch Tabr

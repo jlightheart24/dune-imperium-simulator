@@ -96,8 +96,10 @@ python3 -m dune_sim batch -n 400 -p balanced balanced balanced balanced --no-lea
 `--no-leaders` reproduces results saved before leaders were added. The retained cases in
 `cases/vertical_slice.json` run without leaders. Helena Richese's signet reserves a card
 from the Imperium row: only she can buy it, that round, for 1 persuasion less, and it
-leaves the game if she does not. Leader abilities are simplified and were
-written from memory, so check them against the physical game.
+leaves the game if she does not. Baron Harkonnen's Masterstroke triggers once per game, on a
+turn where he deploys 4 or more troops; Duke Leto's signet works only with a faction
+where another player has more influence. The abilities were checked by reading them
+against the game, and are still simplified.
 
 ## Replay viewer
 

@@ -90,7 +90,7 @@
     }
    ],
    "n_options": 13,
-   "ms": 5.72,
+   "ms": 4.67,
    "rule": null,
    "fallback": null
   },
@@ -176,7 +176,7 @@
     }
    ],
    "n_options": 14,
-   "ms": 6.02,
+   "ms": 4.9,
    "rule": null,
    "fallback": null
   },
@@ -230,7 +230,7 @@
     }
    ],
    "n_options": 6,
-   "ms": 2.52,
+   "ms": 2.12,
    "rule": null,
    "fallback": null
   },
@@ -301,7 +301,7 @@
     }
    ],
    "n_options": 11,
-   "ms": 4.55,
+   "ms": 4.02,
    "rule": null,
    "fallback": null
   },
@@ -430,7 +430,7 @@
     }
    ],
    "n_options": 13,
-   "ms": 5.13,
+   "ms": 4.52,
    "rule": null,
    "fallback": null
   },
@@ -521,7 +521,7 @@
     }
    ],
    "n_options": 15,
-   "ms": 5.98,
+   "ms": 5.09,
    "rule": null,
    "fallback": null
   },
@@ -577,7 +577,7 @@
     }
    ],
    "n_options": 8,
-   "ms": 3.18,
+   "ms": 2.73,
    "rule": null,
    "fallback": null
   },
@@ -774,7 +774,7 @@
     }
    ],
    "n_options": 14,
-   "ms": 5.89,
+   "ms": 5.09,
    "rule": null,
    "fallback": null
   },
@@ -885,7 +885,7 @@
     }
    ],
    "n_options": 19,
-   "ms": 8.64,
+   "ms": 6.67,
    "rule": null,
    "fallback": null
   },
@@ -941,7 +941,7 @@
     }
    ],
    "n_options": 8,
-   "ms": 3.65,
+   "ms": 2.89,
    "rule": null,
    "fallback": null
   },
@@ -1012,7 +1012,7 @@
     }
    ],
    "n_options": 11,
-   "ms": 4.86,
+   "ms": 4.03,
    "rule": null,
    "fallback": null
   },
@@ -1193,7 +1193,7 @@
     }
    ],
    "n_options": 25,
-   "ms": 11.05,
+   "ms": 9.09,
    "rule": null,
    "fallback": null
   },
@@ -1319,7 +1319,7 @@
     }
    ],
    "n_options": 22,
-   "ms": 9.69,
+   "ms": 8.02,
    "rule": null,
    "fallback": null
   },
@@ -1430,7 +1430,7 @@
     }
    ],
    "n_options": 19,
-   "ms": 8.3,
+   "ms": 6.91,
    "rule": null,
    "fallback": null
   },
@@ -1541,7 +1541,7 @@
     }
    ],
    "n_options": 19,
-   "ms": 8.26,
+   "ms": 6.92,
    "rule": null,
    "fallback": null
   },
@@ -1620,7 +1620,7 @@
     }
    ],
    "n_options": 11,
-   "ms": 5.04,
+   "ms": 4.07,
    "rule": null,
    "fallback": null
   },
@@ -1794,7 +1794,7 @@
     }
    ],
    "n_options": 22,
-   "ms": 9.68,
+   "ms": 8.0,
    "rule": null,
    "fallback": null
   },
@@ -1925,7 +1925,7 @@
     }
    ],
    "n_options": 23,
-   "ms": 9.55,
+   "ms": 8.28,
    "rule": null,
    "fallback": null
   },
@@ -2016,7 +2016,7 @@
     }
    ],
    "n_options": 15,
-   "ms": 6.35,
+   "ms": 5.47,
    "rule": null,
    "fallback": null
   },
@@ -2248,7 +2248,7 @@
     }
    ],
    "n_options": 16,
-   "ms": 8.1,
+   "ms": 5.64,
    "rule": null,
    "fallback": null
   },
@@ -2382,7 +2382,7 @@
     }
    ],
    "n_options": 22,
-   "ms": 10.91,
+   "ms": 7.72,
    "rule": null,
    "fallback": null
   },
@@ -2443,7 +2443,7 @@
     }
    ],
    "n_options": 9,
-   "ms": 4.52,
+   "ms": 3.31,
    "rule": null,
    "fallback": null
   },
@@ -2519,7 +2519,7 @@
     }
    ],
    "n_options": 12,
-   "ms": 5.74,
+   "ms": 4.42,
    "rule": null,
    "fallback": null
   },
@@ -2645,7 +2645,7 @@
     }
    ],
    "n_options": 14,
-   "ms": 6.73,
+   "ms": 5.12,
    "rule": null,
    "fallback": null
   },
@@ -2738,7 +2738,7 @@
     }
    ],
    "n_options": 15,
-   "ms": 7.57,
+   "ms": 5.81,
    "rule": null,
    "fallback": null
   },
@@ -2794,7 +2794,7 @@
     }
    ],
    "n_options": 8,
-   "ms": 3.94,
+   "ms": 3.01,
    "rule": null,
    "fallback": null
   },
@@ -2835,7 +2835,7 @@
     }
    ],
    "n_options": 5,
-   "ms": 2.58,
+   "ms": 1.97,
    "rule": null,
    "fallback": null
   },
@@ -2959,7 +2959,7 @@
     }
    ],
    "n_options": 12,
-   "ms": 6.07,
+   "ms": 4.53,
    "rule": null,
    "fallback": null
   },
@@ -3080,7 +3080,7 @@
     }
    ],
    "n_options": 21,
-   "ms": 10.04,
+   "ms": 7.85,
    "rule": null,
    "fallback": null
   },
@@ -3126,7 +3126,7 @@
     }
    ],
    "n_options": 6,
-   "ms": 3.13,
+   "ms": 2.41,
    "rule": null,
    "fallback": null
   },
@@ -3197,7 +3197,7 @@
     }
    ],
    "n_options": 11,
-   "ms": 5.29,
+   "ms": 4.14,
    "rule": null,
    "fallback": null
   },
@@ -3419,7 +3419,7 @@
     }
    ],
    "n_options": 30,
-   "ms": 14.21,
+   "ms": 10.8,
    "rule": null,
    "fallback": null
   },
@@ -3751,7 +3751,7 @@
     }
    ],
    "n_options": 27,
-   "ms": 13.0,
+   "ms": 9.5,
    "rule": null,
    "fallback": null
   },
@@ -3892,7 +3892,7 @@
     }
    ],
    "n_options": 25,
-   "ms": 11.93,
+   "ms": 9.27,
    "rule": null,
    "fallback": null
   },
@@ -4013,7 +4013,7 @@
     }
    ],
    "n_options": 21,
-   "ms": 9.42,
+   "ms": 7.47,
    "rule": null,
    "fallback": null
   },
@@ -4109,7 +4109,7 @@
     }
    ],
    "n_options": 16,
-   "ms": 7.45,
+   "ms": 6.0,
    "rule": null,
    "fallback": null
   },

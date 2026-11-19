@@ -1,0 +1,67 @@
+{
+ "meta": {
+  "command": "python3 -m dune_sim batch -n 1000 --no-leaders -p balanced weights:strategies/balanced_no_caps.json weights:strategies/balanced_no_caps.json weights:strategies/balanced_no_caps.json --save results/evaluation/h2h_caps_vs_no_caps",
+  "code_differs_from_commit": true,
+  "date": "2026-11-19T00:17:50",
+  "python": "3.9.6",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "git_commit": "f4a67f0ad9dcab059977d9986f28f3c90ce9c6ca",
+  "seed": 1,
+  "games": 1000,
+  "leaders": "none",
+  "water": "capped",
+  "players": [
+   "balanced",
+   "weights:strategies/balanced_no_caps.json",
+   "weights:strategies/balanced_no_caps.json",
+   "weights:strategies/balanced_no_caps.json"
+  ],
+  "fixed_seats": false,
+  "avg_rounds": 9.709
+ },
+ "strategies": [
+  {
+   "strategy": "balanced",
+   "seats": 1000,
+   "wins": 308.0,
+   "win_pct": 30.8,
+   "ci_low": 28.016572996279532,
+   "ci_high": 33.73037990943787,
+   "avg_vp": 7.971,
+   "vp_sd": 2.200227260989198,
+   "vp_se": 0.06957729514719604,
+   "avg_rank": 2.249,
+   "alliances": 0.785,
+   "deck": 22.351,
+   "end_solari": 5.441,
+   "swordmaster_pct": 63.7,
+   "council_pct": 95.7,
+   "mentats": 0.983
+  },
+  {
+   "strategy": "weights:strategies/balanced_no_caps.json",
+   "seats": 3000,
+   "wins": 692.0,
+   "win_pct": 23.066666666666666,
+   "ci_low": 21.59422439587972,
+   "ci_high": 24.607998783931095,
+   "avg_vp": 7.336,
+   "vp_sd": 2.3546306352538733,
+   "vp_se": 0.04298947711737551,
+   "avg_rank": 2.583666666666667,
+   "alliances": 0.7893333333333333,
+   "deck": 22.384666666666668,
+   "end_solari": 15.298,
+   "swordmaster_pct": 83.6,
+   "council_pct": 97.3,
+   "mentats": 1.0466666666666666
+  }
+ ],
+ "win_pct_by_seat": {
+  "P1": 22.0,
+  "P2": 23.7,
+  "P3": 25.7,
+  "P4": 28.6
+ },
+ "leaders": []
+}

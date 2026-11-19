@@ -78,6 +78,7 @@ class Player:
         self.mentat_uses = 0
         self.leader: Optional[dict] = None   # entry from data.LEADERS, or None (no leaders)
         self.visited: set = set()            # spaces this player has used this round
+        self.masterstroke_used = False
         self.held: Optional[Card] = None     # card set aside by Manipulate; only this player may buy it
         # statistics (do not affect play)
         self.earned = {"spice": 0, "solari": 0, "water": 0, "troops": 0, "draw": 0}
@@ -89,6 +90,8 @@ class Player:
         self.scored = 0             # decisions where the agent reported utility scores
         self.near_ties = 0          # ... of which best and second-best were within NEAR_TIE
         self.fallbacks = 0          # illegal actions or agent errors replaced by a reveal turn
+        self.rollout_decisions = 0  # near-ties settled by rollouts (strategies with rollouts > 0)
+        self.rollout_changed = 0    # ... where rollouts picked a different turn than the one-step score
         self.trashed = 0
         self.history: List[dict] = []   # one entry per round
         self._round_conflict = (0, 0)
@@ -166,6 +169,7 @@ class Game:
         self.last_rule: Optional[str] = None      # e.g. "priority space: Swordmaster"
         self._pending_decision: Optional[dict] = None
         self.recording = record
+        self.in_rollout = False   # True in a rollout's copies: no rollouts inside rollouts
         self.frames: Optional[list] = [] if record else None
         for p in self.players:
             if p.leader and p.leader.get("start"):
@@ -180,13 +184,21 @@ class Game:
     def strat(self, p: Player):
         return self.strategies[p.idx]
 
-    def clone(self, hide_for: Optional[int] = None) -> "Game":
-        """Deep copy for lookahead. Hidden information (deck orders) is reshuffled."""
+    def clone(self, hide_for: Optional[int] = None, seed: Optional[int] = None) -> "Game":
+        """Deep copy for lookahead. Hidden information (deck orders) is reshuffled.
+
+        hide_for: the seat whose point of view the copy takes. Everything that seat
+        cannot see is then re-dealt at random from what it could be (see `redeal_hidden`).
+        Without it the copy keeps every hand as it is (the one-step lookahead).
+        seed: the copy's random seed; by default it is drawn from this game's generator."""
         frames, self.frames = self.frames, None
         g = copy.deepcopy(self)
         self.frames = frames
         g.recording = False
-        g.rng = random.Random(self.rng.getrandbits(32))
+        g.rng = random.Random(self.rng.getrandbits(32) if seed is None else seed)
+        if hide_for is not None:
+            g.redeal_hidden(hide_for)
+            return g
         for p in g.players:
             if p.leader and p.leader.get("prescience") and p.deck:
                 top = p.deck.pop()          # this leader knows their next card
@@ -197,6 +209,46 @@ class Game:
         g.rng.shuffle(g.imperium_deck)
         g.rng.shuffle(g.intrigue_deck)
         return g
+
+    def redeal_hidden(self, viewer: int):
+        """Replace what `viewer` cannot see with one random guess consistent with what it
+        can. Every card a player owns is public (starting deck, purchases, discard pile,
+        cards played this round), so for each opponent only the split between hand and
+        draw deck is hidden: their hand and deck are pooled, shuffled and a hand of the
+        same size dealt back. Intrigue cards are secret: each opponent's intrigue cards are
+        pooled with the intrigue deck and the same number dealt back. The viewer's own
+        hand and intrigue stay as they are; its deck order, the Imperium deck and the
+        order of the remaining conflict cards within each level are reshuffled."""
+        rng = self.rng
+        intrigue_pool = list(self.intrigue_deck)
+        dealt = {}
+        for q in self.players:
+            if q.idx == viewer:
+                if q.leader and q.leader.get("prescience") and q.deck:
+                    top = q.deck.pop()          # this leader knows their next card
+                    rng.shuffle(q.deck)
+                    q.deck.append(top)
+                else:
+                    rng.shuffle(q.deck)
+                continue
+            pool = q.hand + q.deck
+            rng.shuffle(pool)
+            k = len(q.hand)
+            q.hand, q.deck = pool[:k], pool[k:]
+            intrigue_pool += q.intrigue
+            dealt[q.idx] = len(q.intrigue)
+        rng.shuffle(intrigue_pool)
+        for qi, k in dealt.items():
+            self.players[qi].intrigue = [intrigue_pool.pop() for _ in range(k)]
+        self.intrigue_deck = intrigue_pool
+        rng.shuffle(self.imperium_deck)
+        by_level: Dict[int, list] = {}
+        for c in self.conflict_deck:
+            by_level.setdefault(c["level"], []).append(c)
+        for cards in by_level.values():
+            rng.shuffle(cards)
+        # the deck is bottom to top: level 3, then 2, then 1
+        self.conflict_deck = [c for lv in sorted(by_level, reverse=True) for c in by_level[lv]]
 
     def total_vp(self, p: Player) -> int:
         return (p.vp + sum(1 for f in FACTIONS if p.influence[f] >= 2)
@@ -268,9 +320,16 @@ class Game:
         for op in ops:
             self.apply_op(p, op, ctx)
 
+    def trailing_factions(self, p: Player) -> List[str]:
+        """Factions where some other player has more influence than p."""
+        return [f for f in FACTIONS
+                if any(q.influence[f] > p.influence[f] for q in self.players if q is not p)]
+
     def ops_affordable(self, p: Player, ops: list) -> bool:
         cost: Dict[str, int] = {}
         for op in ops:
+            if op.get("influence") == "trailing" and not self.trailing_factions(p):
+                return False
             if "pay" in op:
                 for k, v in op["pay"].items():
                     cost[k] = cost.get(k, 0) + v
@@ -289,6 +348,12 @@ class Game:
                 f = (ctx.get("space") or {}).get("faction")
                 if f is None:
                     return
+            if f == "trailing":
+                options = self.trailing_factions(p)
+                if not options:
+                    return
+                pick = self.strat(p).choose_influence(self, p, list(options))
+                f = pick if pick in options else options[0]
             if f == "any":
                 f = self.strat(p).choose_influence(self, p, list(FACTIONS))
             self.change_influence(p, f, n)
@@ -496,11 +561,23 @@ class Game:
                 deployed = max(0, min(max_n, int(self.strat(p).choose_deploy(self, p, max_n))))
                 p.garrison -= deployed
                 p.conflict += deployed
+        ms = ld.get("masterstroke")
+        masterstroke = bool(ms) and not p.masterstroke_used and deployed >= ms["deploy"]
+        if masterstroke:
+            p.masterstroke_used = True
+            left = list(FACTIONS)
+            for _ in range(ms["factions"]):
+                f = self.strat(p).choose_influence(self, p, list(left))
+                f = f if f in left else left[0]
+                left.remove(f)
+                self.change_influence(p, f, 1)
         msg = f"{p.name} plays {card.name} -> {space_name}"
         if ctx.get("reserved"):
             msg += f", reserves {ctx['reserved']} from the Imperium row"
         if deployed:
             msg += f", deploys {deployed}"
+        if masterstroke:
+            msg += ", plays Masterstroke"
         self._record(msg, pi)
 
     def reveal_turn(self, pi: int):
@@ -571,26 +648,17 @@ class Game:
         for p in self.players:
             self.draw(p, data.HAND_SIZE)
         self._record(f"Round {self.round}: conflict {self.conflict_card['name']}", None)
-        for p in self.players:
-            ms = p.leader.get("masterstroke") if p.leader else None
-            if ms and ms["round"] == self.round:
-                left = list(FACTIONS)
-                for _ in range(ms["factions"]):
-                    f = self.strat(p).choose_influence(self, p, left)
-                    f = f if f in left else left[0]
-                    left.remove(f)
-                    self.change_influence(p, f, 1)
-                self._record(f"{p.name} ({p.leader['name']}) plays Masterstroke", p.idx)
+        self.player_turns(self.first_player)
+        self.finish_round()
 
-        # Player turns
+    def player_turns(self, start: int):
+        """Players take turns in seat order from `start` until everyone has revealed.
+        A rollout calls this mid-round with the seat after the player who just acted."""
         self.phase = "player turns"
-        order = [(self.first_player + i) % self.n for i in range(self.n)]
-        guard = 0
+        pi, steps = start % self.n, 0
         while not all(p.revealed for p in self.players):
-            for pi in order:
-                p = self.players[pi]
-                if p.revealed:
-                    continue
+            p = self.players[pi]
+            if not p.revealed:
                 self.active = pi
                 self.play_plots(pi)
                 acts = self.legal_actions(p)
@@ -599,11 +667,15 @@ class Game:
                 else:
                     action = self.decide_turn(p, acts)
                 self.do_action(pi, action)
-            guard += 1
-            if guard > 20:
+            pi = (pi + 1) % self.n
+            steps += 1
+            if steps > 20 * self.n:
                 raise RuntimeError("turn loop did not terminate")
         self.active = None
 
+    def finish_round(self):
+        """Combat, makers, recall and the end-of-game check."""
+        order = [(self.first_player + i) % self.n for i in range(self.n)]
         self.combat_phase(order)
 
         # Makers
@@ -759,6 +831,7 @@ class Game:
                 "decisions": q.decisions, "decision_ms": 1000 * q.decision_time,
                 "options_total": q.options_total, "scored": q.scored,
                 "near_ties": q.near_ties, "fallbacks": q.fallbacks,
+                "rollout_decisions": q.rollout_decisions, "rollout_changed": q.rollout_changed,
                 "earned": dict(q.earned), "conflict_wins": q.conflict_wins, "trashed": q.trashed,
                 "smf": sum(1 for c in q.all_cards() if c.name == "The Spice Must Flow"),
                 "history": q.history, "intrigue": len(q.intrigue),

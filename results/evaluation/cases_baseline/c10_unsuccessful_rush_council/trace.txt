@@ -8,7 +8,7 @@ TRACE of P1 [rush_council], seed 7, players: rush_council, balanced, balanced, b
              hand: Dune, The Desert Planet, Dagger, Dune, The Desert Planet, Signet Ring, Convincing
                    Argument
              occupied spaces: none
-  options  : 13 legal, decided in 7.01 ms
+  options  : 13 legal, decided in 5.48 ms
       >>   23.58  Signet Ring -> Secure Contract
            22.65  Signet Ring -> Carthag
            21.98  Dune, The Desert Planet -> Secure Contract
@@ -24,7 +24,7 @@ TRACE of P1 [rush_council], seed 7, players: rush_council, balanced, balanced, b
              influence: emperor 0, guild 0, bene_gesserit 0, fremen 0
              hand: Dune, The Desert Planet, Dagger, Dune, The Desert Planet, Convincing Argument
              occupied spaces: Hardy Warriors, Stillsuits, Secure Contract, Carthag
-  options  : 7 legal, decided in 3.89 ms
+  options  : 7 legal, decided in 2.96 ms
       >>   22.33  Dagger -> Hall of Oratory
            21.38  Dune, The Desert Planet -> Imperial Basin
            20.78  Dune, The Desert Planet -> Hagga Basin
@@ -54,7 +54,7 @@ TRACE of P1 [rush_council], seed 7, players: rush_council, balanced, balanced, b
              influence: emperor 0, guild 0, bene_gesserit 0, fremen 0
              hand: Reconnaissance, Diplomacy, Convincing Argument, Dagger, Seek Allies
              occupied spaces: Hardy Warriors, Carthag, Sietch Tabr
-  options  : 13 legal, decided in 7.0 ms
+  options  : 13 legal, decided in 5.77 ms
       >>   32.88  Seek Allies -> Wealth
            32.17  Diplomacy -> Wealth
            31.68  Seek Allies -> Secrets
@@ -101,7 +101,7 @@ TRACE of P1 [rush_council], seed 7, players: rush_council, balanced, balanced, b
              influence: emperor 1, guild 0, bene_gesserit 0, fremen 0
              hand: Dune, The Desert Planet, Diplomacy, Convincing Argument, Dagger, Carryall
              occupied spaces: Stillsuits, Hagga Basin
-  options  : 12 legal, decided in 6.25 ms
+  options  : 12 legal, decided in 5.28 ms
       >>   51.53  Diplomacy -> Wealth
            40.94  Dune, The Desert Planet -> Secure Contract
            40.94  Carryall -> Secure Contract
@@ -117,7 +117,7 @@ TRACE of P1 [rush_council], seed 7, players: rush_council, balanced, balanced, b
              influence: emperor 2, guild 0, bene_gesserit 0, fremen 0
              hand: Dune, The Desert Planet, Convincing Argument, Dagger, Carryall
              occupied spaces: Wealth, Stillsuits, Secure Contract, Carthag, Sietch Tabr, Hagga Basin
-  options  : 7 legal, decided in 3.75 ms
+  options  : 7 legal, decided in 3.07 ms
       >>   50.37  Dune, The Desert Planet -> Imperial Basin
            50.37  Carryall -> Imperial Basin
            50.28  Dagger -> Hall of Oratory
@@ -147,7 +147,7 @@ TRACE of P1 [rush_council], seed 7, players: rush_council, balanced, balanced, b
              influence: emperor 2, guild 0, bene_gesserit 0, fremen 0
              hand: Reconnaissance, Dagger, Dune, The Desert Planet, Chani, Convincing Argument
              occupied spaces: High Council
-  options  : 13 legal, decided in 6.93 ms
+  options  : 13 legal, decided in 5.92 ms
       >>   65.63  Chani -> Stillsuits
            65.23  Chani -> Carthag
            64.53  Reconnaissance -> Carthag
@@ -163,7 +163,7 @@ TRACE of P1 [rush_council], seed 7, players: rush_council, balanced, balanced, b
              influence: emperor 2, guild 0, bene_gesserit 0, fremen 1
              hand: Reconnaissance, Dagger, Dune, The Desert Planet, Convincing Argument
              occupied spaces: Heighliner, Hardy Warriors, Stillsuits, High Council, Arrakeen
-  options  : 10 legal, decided in 6.68 ms
+  options  : 10 legal, decided in 4.67 ms
       >>   62.53  Reconnaissance -> Carthag
            59.09  Reveal hand
            55.92  Dagger -> Hall of Oratory
@@ -203,7 +203,7 @@ TRACE of P1 [rush_council], seed 7, players: rush_council, balanced, balanced, b
              influence: emperor 2, guild 0, bene_gesserit 0, fremen 1
              hand: Signet Ring, Dagger, Carryall, Dune, The Desert Planet, Dagger
              occupied spaces: none
-  options  : 25 legal, decided in 15.22 ms
+  options  : 25 legal, decided in 11.26 ms
       >>   75.23  Signet Ring -> Arrakeen
            74.93  Signet Ring -> Carthag
            70.94  Signet Ring -> Mentat
@@ -219,7 +219,7 @@ TRACE of P1 [rush_council], seed 7, players: rush_council, balanced, balanced, b
              influence: emperor 2, guild 0, bene_gesserit 0, fremen 1
              hand: Dagger, Carryall, Dune, The Desert Planet, Dagger, Convincing Argument
              occupied spaces: Hardy Warriors, Arrakeen, Sietch Tabr, Imperial Basin
-  options  : 13 legal, decided in 6.91 ms
+  options  : 13 legal, decided in 6.41 ms
       >>   65.30  Dagger -> Rally Troops
            64.54  Dagger -> Mentat
            63.48  Dagger -> Hall of Oratory
@@ -250,7 +250,7 @@ TRACE of P1 [rush_council], seed 7, players: rush_council, balanced, balanced, b
              hand: Arrakis Liaison, Diplomacy, Dune, The Desert Planet, Thufir Hawat, Convincing
                    Argument
              occupied spaces: Conspire, High Council, Arrakeen
-  options  : 24 legal, decided in 14.64 ms
+  options  : 24 legal, decided in 12.51 ms
       >>   77.80  Thufir Hawat -> Selective Breeding
            76.83  Diplomacy -> Stillsuits
            76.03  Arrakis Liaison -> Stillsuits
@@ -268,7 +268,7 @@ TRACE of P1 [rush_council], seed 7, players: rush_council, balanced, balanced, b
                    Ambassador, Reconnaissance
              occupied spaces: Conspire, Selective Breeding, High Council, Mentat, Swordmaster,
                    Arrakeen, Sietch Tabr
-  options  : 19 legal, decided in 11.7 ms
+  options  : 19 legal, decided in 9.56 ms
       >>   86.20  Diplomacy -> Stillsuits
            86.00  Diplomacy -> Secrets
            85.40  Arrakis Liaison -> Stillsuits
@@ -299,7 +299,7 @@ TRACE of P1 [rush_council], seed 7, players: rush_council, balanced, balanced, b
              influence: emperor 2, guild 0, bene_gesserit 1, fremen 2
              hand: Chani, Dagger, Dune, The Desert Planet, The Spice Must Flow, Signet Ring
              occupied spaces: Heighliner, High Council
-  options  : 27 legal, decided in 16.43 ms
+  options  : 27 legal, decided in 13.85 ms
       >>  111.31  Chani -> Arrakeen
           109.61  Chani -> Research Station
           108.44  Signet Ring -> The Great Flat
@@ -317,7 +317,7 @@ TRACE of P1 [rush_council], seed 7, players: rush_council, balanced, balanced, b
                    Desert Planet
              occupied spaces: Heighliner, Hardy Warriors, High Council, Arrakeen, Sietch Tabr, The
                    Great Flat
-  options  : 17 legal, decided in 9.69 ms
+  options  : 17 legal, decided in 8.48 ms
       >>  104.38  Signet Ring -> Carthag
           102.24  Signet Ring -> Hagga Basin
           101.96  Signet Ring -> Imperial Basin
@@ -347,7 +347,7 @@ TRACE of P1 [rush_council], seed 7, players: rush_council, balanced, balanced, b
              influence: emperor 2, guild 0, bene_gesserit 1, fremen 2
              hand: Diplomacy, Guild Ambassador, Other Memory, Convincing Argument, Reconnaissance
              occupied spaces: Sietch Tabr
-  options  : 15 legal, decided in 8.96 ms
+  options  : 15 legal, decided in 7.15 ms
       >>   98.74  Reconnaissance -> Arrakeen
            97.10  Diplomacy -> Hardy Warriors
            89.03  Other Memory -> Selective Breeding
@@ -363,7 +363,7 @@ TRACE of P1 [rush_council], seed 7, players: rush_council, balanced, balanced, b
              influence: emperor 2, guild 0, bene_gesserit 1, fremen 2
              hand: Diplomacy, Guild Ambassador, Other Memory, Convincing Argument, Arrakis Liaison
              occupied spaces: Stillsuits, Swordmaster, Arrakeen, Carthag, Sietch Tabr
-  options  : 13 legal, decided in 7.87 ms
+  options  : 13 legal, decided in 6.42 ms
       >>   94.90  Diplomacy -> Hardy Warriors
            94.15  Arrakis Liaison -> Research Station
            94.10  Arrakis Liaison -> Hardy Warriors
@@ -402,7 +402,7 @@ TRACE of P1 [rush_council], seed 7, players: rush_council, balanced, balanced, b
              influence: emperor 2, guild 0, bene_gesserit 1, fremen 3
              hand: Carryall, Thufir Hawat, Convincing Argument, Imperial Spy, Guild Ambassador
              occupied spaces: none
-  options  : 22 legal, decided in 13.47 ms
+  options  : 22 legal, decided in 11.0 ms
       >>   95.59  Thufir Hawat -> Sietch Tabr
            95.51  Thufir Hawat -> Arrakeen
            95.51  Thufir Hawat -> Carthag
@@ -418,7 +418,7 @@ TRACE of P1 [rush_council], seed 7, players: rush_council, balanced, balanced, b
              influence: emperor 2, guild 0, bene_gesserit 1, fremen 3
              hand: Carryall, Convincing Argument, Imperial Spy, Guild Ambassador
              occupied spaces: Heighliner, Foldspace, Mentat, Sietch Tabr
-  options  : 10 legal, decided in 5.66 ms
+  options  : 10 legal, decided in 4.95 ms
       >>   80.80  Imperial Spy -> Conspire
            78.81  Imperial Spy -> Wealth
            78.32  Carryall -> Hagga Basin
@@ -458,7 +458,7 @@ TRACE of P1 [rush_council], seed 7, players: rush_council, balanced, balanced, b
              influence: emperor 3, guild 0, bene_gesserit 1, fremen 3
              hand: Diplomacy, Dagger, The Spice Must Flow, Convincing Argument, Signet Ring
              occupied spaces: Selective Breeding, Stillsuits, Sietch Tabr
-  options  : 21 legal, decided in 10.6 ms
+  options  : 21 legal, decided in 9.5 ms
       >>   81.19  Diplomacy -> Hardy Warriors
            67.28  Diplomacy -> Wealth
            66.25  Diplomacy -> Secrets
@@ -475,7 +475,7 @@ TRACE of P1 [rush_council], seed 7, players: rush_council, balanced, balanced, b
              hand: Dagger, The Spice Must Flow, Convincing Argument, Signet Ring
              occupied spaces: Selective Breeding, Hardy Warriors, Stillsuits, Mentat, Hall of
                    Oratory, Research Station, Sietch Tabr
-  options  : 12 legal, decided in 7.08 ms
+  options  : 12 legal, decided in 5.11 ms
       >>   78.36  Signet Ring -> Arrakeen
            78.24  Dagger -> Rally Troops
            77.82  Signet Ring -> Rally Troops

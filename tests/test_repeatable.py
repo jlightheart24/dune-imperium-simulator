@@ -145,6 +145,54 @@ class Leaders(unittest.TestCase):
         self.assertEqual(sum(g.players[0].influence.values()), before + 1)
         self.assertEqual(len(data.LEADERS), 8)
 
+    def test_leto_gains_influence_only_where_he_trails(self):
+        from dune_sim.data import LEADER_BY_NAME
+        class Keen(type(make_strategy("balanced"))):
+            def choose_option(self, game, p, branches):   # always takes the "you may"
+                return len(branches) - 1
+        g = Game([Keen(), make_strategy("balanced")], seed=1,
+                 leaders=["Duke Leto Atreides", "Paul Atreides"])
+        leto, other = g.players
+        signet = LEADER_BY_NAME["Duke Leto Atreides"]["signet"]
+        leto.spice = 3
+        g.apply_ops(leto, signet, {})                      # nobody is ahead: nothing happens
+        self.assertEqual((sum(leto.influence.values()), leto.spice), (0, 3))
+        other.influence["guild"] = 1
+        g.apply_ops(leto, signet, {})                      # only the Guild qualifies
+        self.assertEqual((leto.influence["guild"], sum(leto.influence.values()), leto.spice),
+                         (1, 1, 2))
+        g.apply_ops(leto, signet, {})                      # level again: nothing happens
+        self.assertEqual((sum(leto.influence.values()), leto.spice), (1, 2))
+
+    def test_baron_masterstroke_needs_four_troops_in_one_turn(self):
+        class Deploy(type(make_strategy("balanced"))):
+            n = 0
+            def choose_deploy(self, game, p, max_n):
+                return min(self.n, max_n)
+        def turn(n, garrison=6):
+            st = Deploy()
+            st.n = n
+            g = Game([st, make_strategy("balanced")], seed=1,
+                     leaders=["Baron Vladimir Harkonnen", "Paul Atreides"])
+            g.round, g.phase = 3, "player turns"
+            b = g.players[0]
+            b.garrison, b.water = garrison, 1
+            card = next(c for c in b.all_cards() if "fremen" in c.icons)
+            b.hand = [card]
+            return g, b, 0
+        g, b, hi = turn(3)
+        g.agent_turn(0, hi, "Hardy Warriors")              # 3 troops: no Masterstroke
+        self.assertEqual((sum(b.influence.values()), b.masterstroke_used), (1, False))
+        g, b, hi = turn(4)
+        g.agent_turn(0, hi, "Hardy Warriors")              # 4 troops: +1 with two factions
+        self.assertEqual((b.conflict, sum(b.influence.values()), b.masterstroke_used),
+                         (4, 3, True))
+        before = sum(b.influence.values())                 # once per game
+        card = next(c for c in b.all_cards() if "fremen" in c.icons)
+        b.hand, b.agents_used, b.garrison = [card], 0, 6
+        g.agent_turn(0, 0, "Stillsuits")
+        self.assertEqual(sum(b.influence.values()), before + 1)
+
     def test_helena_reserves_a_card_and_buys_it_cheaper(self):
         from dune_sim.engine import held_price
         g = Game([make_strategy("balanced"), make_strategy("balanced")], seed=3,
@@ -263,6 +311,64 @@ class Blocking(unittest.TestCase):
     def test_blocking_strategies_play_full_games(self):
         res = run_one((["blocker", "rush_both_block", "balanced", "balanced"], 5, True))
         self.assertEqual(sum(p["fallbacks"] for p in res["players"]), 0)
+
+
+class Rollouts(unittest.TestCase):
+    def mid_round_game(self, seed=4):
+        """A four-player game stopped in round 3 after a few turns, with intrigue in hand."""
+        g = Game([make_strategy(s, seed=k) for k, s in enumerate(["balanced"] * 4)], seed=seed)
+        g.play_round()
+        g.play_round()
+        g.round += 1
+        g.conflict_card = g.conflict_deck.pop()
+        for p in g.players:
+            g.draw(p, 5)
+        g.phase = "player turns"
+        for pi in range(3):
+            g.do_action(pi, g.legal_actions(g.players[pi])[0])
+        return g
+
+    def test_redeal_keeps_what_the_viewer_can_see(self):
+        g = self.mid_round_game()
+        names = lambda cards: sorted(c.name for c in cards)  # noqa: E731
+        changed = 0
+        for s in range(10):
+            c = g.clone(hide_for=0, seed=s)
+            self.assertEqual([x.name for x in c.players[0].hand], [x.name for x in g.players[0].hand])
+            self.assertEqual(names(c.players[0].intrigue), names(g.players[0].intrigue))
+            for p, q in zip(g.players, c.players):
+                self.assertEqual(len(q.hand), len(p.hand))
+                self.assertEqual(names(q.hand + q.deck), names(p.hand + p.deck))
+                self.assertEqual(names(q.discard), names(p.discard))
+                self.assertEqual(names(q.in_play), names(p.in_play))
+                self.assertEqual(len(q.intrigue), len(p.intrigue))
+                if p.idx and names(q.hand) != names(p.hand):
+                    changed += 1
+            all_intrigue = lambda x: names(x.intrigue_deck + [i for q in x.players for i in q.intrigue])  # noqa: E731
+            self.assertEqual(all_intrigue(c), all_intrigue(g))
+            self.assertEqual([x["level"] for x in c.conflict_deck], [x["level"] for x in g.conflict_deck])
+        self.assertGreater(changed, 0, "opponents' hands were never re-dealt")
+
+    def test_same_seed_same_guess(self):
+        g = self.mid_round_game()
+        a, b = g.clone(hide_for=0, seed=9), g.clone(hide_for=0, seed=9)
+        self.assertEqual([[x.name for x in q.hand] for q in a.players],
+                         [[x.name for x in q.hand] for q in b.players])
+
+    def test_rollout_agent_plays_repeatable_games_without_fallbacks(self):
+        specs = ["balanced_rollout", "balanced", "balanced", "balanced"]
+        a, b = run_one((specs, 3, True)), run_one((specs, 3, True))
+        self.assertEqual(strip(a), strip(b))
+        self.assertEqual(sum(p["fallbacks"] for p in a["players"]), 0)
+        for p in a["players"]:   # seats are shuffled
+            if p["strategy"] == "balanced_rollout":
+                self.assertGreater(p["rollout_decisions"], 0)
+            else:
+                self.assertEqual(p["rollout_decisions"], 0)
+
+    def test_rollouts_are_off_by_default(self):
+        for name in ("balanced", "bene_gesserit_faction", "rush_swordmaster", "rush_both"):
+            self.assertEqual(make_strategy(name).w["rollouts"], 0)
 
 
 class Trace(unittest.TestCase):

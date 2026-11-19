@@ -111,7 +111,8 @@ def convert(md):
         elif not ln.strip() or ln.startswith("<!--"):
             i += 1
         else:
-            para = []
+            para = [lines[i].strip()]   # always consume at least one line, so a stray
+            i += 1                      # table row cannot stall the loop
             while i < len(lines) and lines[i].strip() and not re.match(r"(```|#{1,3} |\||- |\d+\. )", lines[i]):
                 para.append(lines[i].strip())
                 i += 1

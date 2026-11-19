@@ -21,7 +21,7 @@
   "rank": 2,
   "decisions": 22,
   "avg_options": 12.4,
-  "ms_per_decision": 7.44,
+  "ms_per_decision": 6.12,
   "near_tie_pct": 36.4,
   "fallbacks": 0
  },

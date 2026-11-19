@@ -277,7 +277,7 @@ TRACE of P1 [faulty], seed 7, players: dune_sim.faulty:FaultyAgent, balanced, ba
              influence: emperor 0, guild 2, bene_gesserit 1, fremen 0
              hand: Foldspace, Crysknife, Signet Ring, Convincing Argument, Convincing Argument
              occupied spaces: Heighliner, Arrakeen, Research Station
-  options  : 20 legal, decided in 0.01 ms
+  options  : 20 legal, decided in 0.0 ms
             n/a  Foldspace -> Wealth
             n/a  Foldspace -> Foldspace
       >>    n/a  Foldspace -> Secrets

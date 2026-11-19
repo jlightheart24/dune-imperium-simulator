@@ -8,7 +8,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, balanced
              hand: Dune, The Desert Planet, Dagger, Dune, The Desert Planet, Signet Ring, Convincing
                    Argument
              occupied spaces: none
-  options  : 13 legal, decided in 5.72 ms
+  options  : 13 legal, decided in 4.67 ms
       >>   22.27  Signet Ring -> Carthag
            21.07  Signet Ring -> Arrakeen
            20.57  Signet Ring -> Imperial Basin
@@ -33,7 +33,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, balanced
              influence: emperor 1, guild 0, bene_gesserit 0, fremen 0
              hand: Dune, The Desert Planet, Dagger, Dune, The Desert Planet, Convincing Argument
              occupied spaces: Stillsuits, Carthag
-  options  : 6 legal, decided in 2.52 ms
+  options  : 6 legal, decided in 2.12 ms
       >>   19.61  Dune, The Desert Planet -> Secure Contract
            18.98  Dagger -> Hall of Oratory
            18.03  Dune, The Desert Planet -> Imperial Basin
@@ -61,7 +61,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, balanced
              influence: emperor 1, guild 0, bene_gesserit 0, fremen 0
              hand: Reconnaissance, Diplomacy, Convincing Argument, Dagger, Seek Allies
              occupied spaces: Stillsuits
-  options  : 15 legal, decided in 5.98 ms
+  options  : 15 legal, decided in 5.09 ms
       >>   38.74  Seek Allies -> Wealth
            38.04  Diplomacy -> Wealth
            35.03  Reconnaissance -> Carthag
@@ -107,7 +107,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, balanced
              hand: Convincing Argument, Diplomacy, Convincing Argument, Dune, The Desert Planet,
                    Reconnaissance
              occupied spaces: none
-  options  : 14 legal, decided in 5.89 ms
+  options  : 14 legal, decided in 5.09 ms
       >>   69.20  Diplomacy -> Stillsuits
            67.40  Diplomacy -> Hardy Warriors
            56.72  Dune, The Desert Planet -> Hagga Basin
@@ -123,7 +123,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, balanced
              influence: emperor 2, guild 0, bene_gesserit 0, fremen 1
              hand: Convincing Argument, Convincing Argument, Dune, The Desert Planet, Reconnaissance
              occupied spaces: Stillsuits, Hagga Basin
-  options  : 8 legal, decided in 3.65 ms
+  options  : 8 legal, decided in 2.89 ms
       >>   67.70  Dune, The Desert Planet -> The Great Flat
            67.40  Reconnaissance -> Carthag
            66.20  Reconnaissance -> Arrakeen
@@ -152,7 +152,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, balanced
              influence: emperor 2, guild 0, bene_gesserit 0, fremen 1
              hand: Dune, The Desert Planet, Opulence, Test of Humanity, Signet Ring, Dagger
              occupied spaces: Imperial Basin
-  options  : 22 legal, decided in 9.69 ms
+  options  : 22 legal, decided in 8.02 ms
       >>   65.61  Dagger -> Mentat
            65.44  Signet Ring -> Carthag
            64.56  Signet Ring -> Mentat
@@ -168,7 +168,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, balanced
              influence: emperor 2, guild 0, bene_gesserit 0, fremen 1
              hand: Dune, The Desert Planet, Opulence, Test of Humanity, Signet Ring, Dagger
              occupied spaces: Mentat, Sietch Tabr, Imperial Basin
-  options  : 19 legal, decided in 8.26 ms
+  options  : 19 legal, decided in 6.92 ms
       >>   66.01  Signet Ring -> Carthag
            65.61  Signet Ring -> Arrakeen
            64.51  Test of Humanity -> Secrets
@@ -184,7 +184,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, balanced
              influence: emperor 2, guild 0, bene_gesserit 0, fremen 1
              hand: Dune, The Desert Planet, Opulence, Test of Humanity, Dagger
              occupied spaces: Mentat, Carthag, Sietch Tabr, Imperial Basin
-  options  : 11 legal, decided in 5.04 ms
+  options  : 11 legal, decided in 4.07 ms
       >>   64.91  Test of Humanity -> Secrets
            64.76  Dagger -> Hall of Oratory
            63.51  Test of Humanity -> Hall of Oratory
@@ -232,7 +232,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, balanced
              hand: Dagger, Test of Humanity, Arrakis Liaison, Reconnaissance, Dune, The Desert
                    Planet
              occupied spaces: none
-  options  : 22 legal, decided in 9.68 ms
+  options  : 22 legal, decided in 8.0 ms
       >>   87.82  Arrakis Liaison -> Hardy Warriors
            86.16  Arrakis Liaison -> Stillsuits
            80.86  Dagger -> Mentat
@@ -248,7 +248,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, balanced
              influence: emperor 2, guild 0, bene_gesserit 2, fremen 2
              hand: Dagger, Test of Humanity, Reconnaissance, Dune, The Desert Planet
              occupied spaces: Hardy Warriors, Arrakeen
-  options  : 15 legal, decided in 6.35 ms
+  options  : 15 legal, decided in 5.47 ms
       >>   87.15  Dagger -> Rally Troops
            86.50  Dagger -> Mentat
            86.40  Reconnaissance -> Sietch Tabr
@@ -286,7 +286,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, balanced
              influence: emperor 2, guild 0, bene_gesserit 2, fremen 2
              hand: Reverend Mother Mohiam, Diplomacy, Signet Ring, Convincing Argument, Dagger
              occupied spaces: Wealth
-  options  : 22 legal, decided in 10.91 ms
+  options  : 22 legal, decided in 7.72 ms
       >>  105.87  Signet Ring -> Sietch Tabr
           105.67  Signet Ring -> Carthag
           105.46  Diplomacy -> Stillsuits
@@ -302,7 +302,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, balanced
              influence: emperor 2, guild 0, bene_gesserit 2, fremen 2
              hand: Reverend Mother Mohiam, Diplomacy, Convincing Argument, Dagger
              occupied spaces: Wealth, Arrakeen, Sietch Tabr
-  options  : 12 legal, decided in 5.74 ms
+  options  : 12 legal, decided in 4.42 ms
       >>  104.47  Diplomacy -> Stillsuits
           103.57  Diplomacy -> Heighliner
           102.67  Diplomacy -> Hardy Warriors
@@ -332,7 +332,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, balanced
              hand: Chani, Convincing Argument, Dune, The Desert Planet, Opulence, Dune, The Desert
                    Planet
              occupied spaces: none
-  options  : 14 legal, decided in 6.73 ms
+  options  : 14 legal, decided in 5.12 ms
       >>  128.80  Chani -> Stillsuits
           127.00  Chani -> Hardy Warriors
           120.60  Chani -> Sietch Tabr
@@ -349,7 +349,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, balanced
              influence: emperor 2, guild 0, bene_gesserit 2, fremen 4
              hand: Convincing Argument, Dune, The Desert Planet, Opulence, Dune, The Desert Planet
              occupied spaces: Heighliner, Stillsuits
-  options  : 8 legal, decided in 3.94 ms
+  options  : 8 legal, decided in 3.01 ms
       >>  121.05  Opulence -> Conspire
           119.75  Dune, The Desert Planet -> Imperial Basin
           119.06  Dune, The Desert Planet -> Sell Melange
@@ -387,7 +387,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, balanced
              influence: emperor 5, guild 0, bene_gesserit 2, fremen 4
              hand: Gun Thopter, Convincing Argument, Dagger, Reverend Mother Mohiam, Arrakis Liaison
              occupied spaces: Imperial Basin
-  options  : 21 legal, decided in 10.04 ms
+  options  : 21 legal, decided in 7.85 ms
       >>  143.91  Gun Thopter -> Sietch Tabr
           143.77  Gun Thopter -> Carthag
           143.50  Arrakis Liaison -> Stillsuits
@@ -403,7 +403,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, balanced
              influence: emperor 5, guild 0, bene_gesserit 2, fremen 4
              hand: Convincing Argument, Dagger, Reverend Mother Mohiam, Arrakis Liaison
              occupied spaces: Stillsuits, Sietch Tabr, Imperial Basin
-  options  : 11 legal, decided in 5.29 ms
+  options  : 11 legal, decided in 4.14 ms
       >>  139.80  Arrakis Liaison -> Carthag
           138.82  Arrakis Liaison -> Hardy Warriors
           138.75  Arrakis Liaison -> Arrakeen
@@ -441,7 +441,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, balanced
              influence: emperor 5, guild 0, bene_gesserit 2, fremen 4
              hand: Signet Ring, Dagger, Diplomacy, Arrakis Liaison, Imperial Spy
              occupied spaces: none
-  options  : 30 legal, decided in 14.21 ms
+  options  : 30 legal, decided in 10.8 ms
       >>  137.91  Signet Ring -> Research Station
           137.04  Arrakis Liaison -> Research Station
           137.02  Signet Ring -> Arrakeen
@@ -458,7 +458,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, balanced
              hand: Dagger, Diplomacy, Arrakis Liaison, Imperial Spy, Test of Humanity,
                    Reconnaissance, Arrakis Liaison
              occupied spaces: Swordmaster, Research Station
-  options  : 27 legal, decided in 13.0 ms
+  options  : 27 legal, decided in 9.5 ms
       >>  138.11  Dagger -> Mentat
           136.86  Test of Humanity -> Mentat
           136.82  Test of Humanity -> Selective Breeding
@@ -475,7 +475,7 @@ TRACE of P1 [balanced], seed 7, players: balanced, balanced
              hand: Diplomacy, Arrakis Liaison, Imperial Spy, Test of Humanity, Reconnaissance,
                    Arrakis Liaison, Arrakis Liaison
              occupied spaces: Heighliner, Mentat, Swordmaster, Research Station
-  options  : 21 legal, decided in 9.42 ms
+  options  : 21 legal, decided in 7.47 ms
       >>  135.57  Reconnaissance -> Arrakeen
           134.77  Arrakis Liaison -> Arrakeen
           134.75  Diplomacy -> Stillsuits

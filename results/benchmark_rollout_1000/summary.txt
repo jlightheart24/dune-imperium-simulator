@@ -1,0 +1,12 @@
+$ python3 -m dune_sim benchmark rollout -n 1000 --no-leaders -w 10 --save benchmark_rollout_1000
+Benchmark: 1 x <strategy> vs 3 x balanced, 1000 games each, seeds 1..1000, seating shuffled per game
+fair share = 25.0%
+
+strategy                       win %        95% CI   avg VP  +/-SE  base VP  avg rank  verdict
+----------------------------------------------------------------------------------------------
+balanced_rollout               29.0%     26.3-31.9     8.04   0.07     7.60      2.32  better than baseline
+bene_gesserit_faction_rollout   35.0%     32.1-38.0     8.25   0.07     7.39      2.20  better than baseline
+rush_swordmaster_rollout       37.3%     34.4-40.3     8.29   0.07     7.43      2.16  better than baseline
+rush_both_rollout              37.4%     34.5-40.4     8.44   0.07     7.59      2.19  better than baseline
+
+verdict: 'better'/'worse' when the 95% interval on win % excludes the fair share.

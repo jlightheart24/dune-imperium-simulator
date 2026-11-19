@@ -8,21 +8,21 @@
  "seed": 7,
  "agent_seat": 1,
  "agent_strategy": "rush_both",
- "terminal_status": "10 VP reached after 10 rounds",
- "agent_won": false,
+ "terminal_status": "10 VP reached after 8 rounds",
+ "agent_won": true,
  "final_vp": [
-  8,
   10,
-  9,
-  5
+  6,
+  4,
+  2
  ],
  "measures": {
-  "vp": 8,
-  "rank": 3,
-  "decisions": 28,
-  "avg_options": 11.9,
-  "ms_per_decision": 6.93,
-  "near_tie_pct": 38.5,
+  "vp": 10,
+  "rank": 1,
+  "decisions": 19,
+  "avg_options": 12.6,
+  "ms_per_decision": 5.6,
+  "near_tie_pct": 17.6,
   "fallbacks": 0
  },
  "total_fallbacks": 0

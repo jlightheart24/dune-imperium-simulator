@@ -1,0 +1,11 @@
+$ python3 -m dune_sim batch -n 1000 --no-leaders -p balanced weights:strategies/balanced_no_caps.json weights:strategies/balanced_no_caps.json weights:strategies/balanced_no_caps.json --save results/evaluation/h2h_caps_vs_no_caps
+
+1000 games, 4 players, avg 9.7 rounds
+
+strategy                                     win %        95% CI   avg VP  avg rank  alliances   deck  end $  3rd agent  council  mentats
+-----------------------------------------------------------------------------------------------------------------------------------------
+balanced                                     30.8%     28.0-33.7     7.97      2.25       0.79   22.4    5.4        64%      96%      1.0
+weights:strategies/balanced_no_caps.json     23.1%     21.6-24.6     7.34      2.58       0.79   22.4   15.3        84%      97%      1.0
+
+(fair share = 25.0% per seat; 95% CI = Wilson interval on win %; end $ = solari left at game end; mentats = Mentat uses per game)
+games ended by: 10 VP reached 77%, conflict deck exhausted 23%

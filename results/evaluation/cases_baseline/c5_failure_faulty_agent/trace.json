@@ -181,7 +181,7 @@
     }
    ],
    "n_options": 15,
-   "ms": 7.71,
+   "ms": 6.22,
    "rule": null,
    "fallback": null
   },
@@ -287,7 +287,7 @@
     }
    ],
    "n_options": 18,
-   "ms": 9.66,
+   "ms": 7.45,
    "rule": null,
    "fallback": null
   },
@@ -363,7 +363,7 @@
     }
    ],
    "n_options": 12,
-   "ms": 6.41,
+   "ms": 5.06,
    "rule": null,
    "fallback": null
   },
@@ -485,7 +485,7 @@
     }
    ],
    "n_options": 11,
-   "ms": 6.01,
+   "ms": 4.73,
    "rule": null,
    "fallback": null
   },
@@ -546,7 +546,7 @@
     }
    ],
    "n_options": 9,
-   "ms": 4.63,
+   "ms": 3.64,
    "rule": null,
    "fallback": null
   },
@@ -590,7 +590,7 @@
     }
    ],
    "n_options": 4,
-   "ms": 2.22,
+   "ms": 1.73,
    "rule": null,
    "fallback": null
   },
@@ -714,7 +714,7 @@
     }
    ],
    "n_options": 12,
-   "ms": 6.16,
+   "ms": 4.86,
    "rule": null,
    "fallback": null
   },
@@ -770,7 +770,7 @@
     }
    ],
    "n_options": 8,
-   "ms": 4.07,
+   "ms": 3.27,
    "rule": null,
    "fallback": null
   },
@@ -861,7 +861,7 @@
     }
    ],
    "n_options": 15,
-   "ms": 7.81,
+   "ms": 6.24,
    "rule": null,
    "fallback": null
   },
@@ -970,7 +970,7 @@
     }
    ],
    "n_options": 6,
-   "ms": 3.12,
+   "ms": 2.59,
    "rule": null,
    "fallback": null
   },
@@ -1036,7 +1036,7 @@
     }
    ],
    "n_options": 10,
-   "ms": 5.24,
+   "ms": 4.25,
    "rule": null,
    "fallback": null
   },
@@ -1102,7 +1102,7 @@
     }
    ],
    "n_options": 10,
-   "ms": 5.26,
+   "ms": 4.23,
    "rule": null,
    "fallback": null
   },
@@ -1351,7 +1351,7 @@
     }
    ],
    "n_options": 14,
-   "ms": 7.46,
+   "ms": 6.02,
    "rule": null,
    "fallback": null
   },
@@ -1528,7 +1528,7 @@
     }
    ],
    "n_options": 18,
-   "ms": 9.48,
+   "ms": 7.85,
    "rule": null,
    "fallback": null
   },
@@ -1594,7 +1594,7 @@
     }
    ],
    "n_options": 10,
-   "ms": 5.2,
+   "ms": 4.21,
    "rule": null,
    "fallback": null
   },
@@ -1645,7 +1645,7 @@
     }
    ],
    "n_options": 7,
-   "ms": 3.72,
+   "ms": 3.1,
    "rule": null,
    "fallback": null
   },
@@ -1759,7 +1759,7 @@
     }
    ],
    "n_options": 9,
-   "ms": 4.98,
+   "ms": 3.89,
    "rule": null,
    "fallback": null
   },
@@ -1843,7 +1843,7 @@
     }
    ],
    "n_options": 12,
-   "ms": 6.37,
+   "ms": 5.29,
    "rule": null,
    "fallback": null
   },
@@ -2005,7 +2005,7 @@
     }
    ],
    "n_options": 18,
-   "ms": 9.72,
+   "ms": 8.04,
    "rule": null,
    "fallback": null
   },
@@ -2217,7 +2217,7 @@
     }
    ],
    "n_options": 18,
-   "ms": 11.11,
+   "ms": 7.83,
    "rule": null,
    "fallback": null
   },
@@ -2293,7 +2293,7 @@
     }
    ],
    "n_options": 12,
-   "ms": 6.92,
+   "ms": 5.22,
    "rule": null,
    "fallback": null
   },
@@ -2384,7 +2384,7 @@
     }
    ],
    "n_options": 15,
-   "ms": 8.89,
+   "ms": 6.72,
    "rule": null,
    "fallback": null
   },
@@ -2478,7 +2478,7 @@
     }
    ],
    "n_options": 14,
-   "ms": 8.11,
+   "ms": 6.23,
    "rule": null,
    "fallback": null
   },
@@ -2534,7 +2534,7 @@
     }
    ],
    "n_options": 8,
-   "ms": 4.34,
+   "ms": 3.47,
    "rule": null,
    "fallback": null
   },
@@ -2905,7 +2905,7 @@
     }
    ],
    "n_options": 17,
-   "ms": 9.7,
+   "ms": 7.59,
    "rule": null,
    "fallback": null
   },
@@ -2966,7 +2966,7 @@
     }
    ],
    "n_options": 9,
-   "ms": 5.1,
+   "ms": 4.07,
    "rule": null,
    "fallback": null
   },
@@ -3096,7 +3096,7 @@
     }
    ],
    "n_options": 11,
-   "ms": 6.55,
+   "ms": 5.07,
    "rule": null,
    "fallback": null
   },
@@ -3192,7 +3192,7 @@
     }
    ],
    "n_options": 16,
-   "ms": 8.84,
+   "ms": 6.97,
    "rule": null,
    "fallback": null
   },
@@ -3238,7 +3238,7 @@
     }
    ],
    "n_options": 6,
-   "ms": 3.42,
+   "ms": 2.71,
    "rule": null,
    "fallback": null
   },
@@ -3287,7 +3287,7 @@
     }
    ],
    "n_options": 5,
-   "ms": 2.89,
+   "ms": 2.31,
    "rule": null,
    "fallback": null
   },
@@ -3351,7 +3351,7 @@
     }
    ],
    "n_options": 8,
-   "ms": 4.51,
+   "ms": 3.67,
    "rule": null,
    "fallback": null
   },
@@ -3545,7 +3545,7 @@
     }
    ],
    "n_options": 26,
-   "ms": 14.99,
+   "ms": 12.23,
    "rule": null,
    "fallback": null
   },
@@ -3691,7 +3691,7 @@
     }
    ],
    "n_options": 26,
-   "ms": 14.58,
+   "ms": 11.8,
    "rule": null,
    "fallback": null
   },
@@ -3772,7 +3772,7 @@
     }
    ],
    "n_options": 13,
-   "ms": 7.89,
+   "ms": 6.67,
    "rule": null,
    "fallback": null
   },
@@ -3936,7 +3936,7 @@
     }
    ],
    "n_options": 14,
-   "ms": 8.19,
+   "ms": 8.24,
    "rule": null,
    "fallback": null
   },
@@ -4037,7 +4037,7 @@
     }
    ],
    "n_options": 17,
-   "ms": 9.63,
+   "ms": 7.78,
    "rule": null,
    "fallback": null
   },
@@ -4098,7 +4098,7 @@
     }
    ],
    "n_options": 9,
-   "ms": 5.64,
+   "ms": 4.58,
    "rule": null,
    "fallback": null
   },
@@ -4149,7 +4149,7 @@
     }
    ],
    "n_options": 7,
-   "ms": 4.25,
+   "ms": 3.47,
    "rule": null,
    "fallback": null
   },
@@ -4193,7 +4193,7 @@
     }
    ],
    "n_options": 4,
-   "ms": 2.56,
+   "ms": 2.02,
    "rule": null,
    "fallback": null
   },
@@ -4500,7 +4500,7 @@
     }
    ],
    "n_options": 21,
-   "ms": 12.5,
+   "ms": 10.19,
    "rule": null,
    "fallback": null
   },
@@ -4865,7 +4865,7 @@
     }
    ],
    "n_options": 18,
-   "ms": 10.59,
+   "ms": 8.75,
    "rule": null,
    "fallback": null
   },
@@ -4941,7 +4941,7 @@
     }
    ],
    "n_options": 12,
-   "ms": 7.1,
+   "ms": 5.84,
    "rule": null,
    "fallback": null
   },
@@ -5057,7 +5057,7 @@
     }
    ],
    "n_options": 20,
-   "ms": 11.67,
+   "ms": 9.69,
    "rule": null,
    "fallback": null
   },
@@ -5128,7 +5128,7 @@
     }
    ],
    "n_options": 11,
-   "ms": 6.3,
+   "ms": 5.1,
    "rule": null,
    "fallback": null
   },
@@ -5232,7 +5232,7 @@
     }
    ],
    "n_options": 16,
-   "ms": 12.97,
+   "ms": 7.98,
    "rule": null,
    "fallback": null
   },
@@ -5393,7 +5393,7 @@
     }
    ],
    "n_options": 21,
-   "ms": 13.48,
+   "ms": 10.76,
    "rule": null,
    "fallback": null
   },
@@ -5580,7 +5580,7 @@
     }
    ],
    "n_options": 11,
-   "ms": 7.11,
+   "ms": 5.62,
    "rule": null,
    "fallback": null
   },
@@ -5736,7 +5736,7 @@
     }
    ],
    "n_options": 28,
-   "ms": 17.06,
+   "ms": 13.78,
    "rule": null,
    "fallback": null
   },
@@ -5843,7 +5843,7 @@
     }
    ],
    "n_options": 3,
-   "ms": 1.94,
+   "ms": 1.54,
    "rule": null,
    "fallback": null
   },
@@ -5959,7 +5959,7 @@
     }
    ],
    "n_options": 20,
-   "ms": 12.18,
+   "ms": 9.77,
    "rule": null,
    "fallback": null
   },
@@ -6028,7 +6028,7 @@
     }
    ],
    "n_options": 9,
-   "ms": 5.95,
+   "ms": 4.85,
    "rule": null,
    "fallback": null
   },
@@ -6124,7 +6124,7 @@
     }
    ],
    "n_options": 16,
-   "ms": 10.26,
+   "ms": 7.98,
    "rule": null,
    "fallback": null
   },
@@ -6150,7 +6150,7 @@
     }
    ],
    "n_options": 2,
-   "ms": 1.31,
+   "ms": 1.05,
    "rule": null,
    "fallback": null
   },
@@ -6415,7 +6415,7 @@
     }
    ],
    "n_options": 21,
-   "ms": 13.32,
+   "ms": 10.63,
    "rule": null,
    "fallback": null
   },
@@ -6536,7 +6536,7 @@
     }
    ],
    "n_options": 21,
-   "ms": 13.47,
+   "ms": 10.76,
    "rule": null,
    "fallback": null
   },
@@ -6697,7 +6697,7 @@
     }
    ],
    "n_options": 29,
-   "ms": 18.7,
+   "ms": 14.96,
    "rule": null,
    "fallback": null
   },
@@ -6758,7 +6758,7 @@
     }
    ],
    "n_options": 9,
-   "ms": 5.92,
+   "ms": 4.71,
    "rule": null,
    "fallback": null
   },
@@ -6919,7 +6919,7 @@
     }
    ],
    "n_options": 29,
-   "ms": 18.3,
+   "ms": 14.66,
    "rule": null,
    "fallback": null
   },
@@ -7077,7 +7077,7 @@
     }
    ],
    "n_options": 28,
-   "ms": 17.65,
+   "ms": 14.33,
    "rule": null,
    "fallback": null
   },
@@ -7133,7 +7133,7 @@
     }
    ],
    "n_options": 8,
-   "ms": 4.99,
+   "ms": 4.11,
    "rule": null,
    "fallback": null
   },
@@ -7254,7 +7254,7 @@
     }
    ],
    "n_options": 21,
-   "ms": 13.42,
+   "ms": 10.52,
    "rule": null,
    "fallback": null
   },
@@ -7361,7 +7361,7 @@
     }
    ],
    "n_options": 15,
-   "ms": 9.41,
+   "ms": 7.6,
    "rule": null,
    "fallback": null
   },
@@ -7541,7 +7541,7 @@
     }
    ],
    "n_options": 28,
-   "ms": 19.42,
+   "ms": 14.27,
    "rule": null,
    "fallback": null
   },
@@ -7647,7 +7647,7 @@
     }
    ],
    "n_options": 18,
-   "ms": 12.43,
+   "ms": 9.12,
    "rule": null,
    "fallback": null
   },
@@ -7746,7 +7746,7 @@
     }
    ],
    "n_options": 15,
-   "ms": 11.09,
+   "ms": 7.48,
    "rule": null,
    "fallback": null
   },
@@ -7847,7 +7847,7 @@
     }
    ],
    "n_options": 17,
-   "ms": 0.01,
+   "ms": 0.0,
    "rule": null,
    "fallback": null
   },
@@ -7978,7 +7978,7 @@
     }
    ],
    "n_options": 23,
-   "ms": 16.54,
+   "ms": 11.39,
    "rule": null,
    "fallback": null
   },
@@ -8054,7 +8054,7 @@
     }
    ],
    "n_options": 12,
-   "ms": 8.96,
+   "ms": 6.11,
    "rule": null,
    "fallback": null
   },
@@ -8120,7 +8120,7 @@
     }
    ],
    "n_options": 10,
-   "ms": 7.37,
+   "ms": 5.25,
    "rule": null,
    "fallback": null
   },
@@ -8201,7 +8201,7 @@
     }
    ],
    "n_options": 13,
-   "ms": 0.01,
+   "ms": 0.0,
    "rule": null,
    "fallback": null
   },
@@ -8339,7 +8339,7 @@
     }
    ],
    "n_options": 24,
-   "ms": 17.34,
+   "ms": 12.39,
    "rule": null,
    "fallback": null
   },
@@ -8395,7 +8395,7 @@
     }
    ],
    "n_options": 8,
-   "ms": 5.38,
+   "ms": 4.1,
    "rule": null,
    "fallback": null
   },
@@ -8483,7 +8483,7 @@
     }
    ],
    "n_options": 8,
-   "ms": 6.0,
+   "ms": 4.3,
    "rule": null,
    "fallback": null
   },
